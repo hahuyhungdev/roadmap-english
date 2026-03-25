@@ -7,7 +7,7 @@ level: B1+ / B2
 description: Explain the solution you implemented, the reasoning behind key decisions, trade-offs considered, and the final results — using professional B2-level language.
 ---
 
-# BUỔI 8: Explain a Solution + Decision
+# Session  8: Explain a Solution + Decision
 
 **Level:** B1+ / B2  
 **Focus:** Describe a solution clearly, justify your decisions, discuss trade-offs, and highlight measurable outcomes at B2 level.

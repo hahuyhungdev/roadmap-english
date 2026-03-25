@@ -2,12 +2,12 @@
 sessionNumber: 21
 title: Work-Life Balance & Stress Management
 topic: Well-being & Sustainable Career
-phase: PHASE 3 — Discussion & Impact Mastery
+phase: PHASE 4 — BEHAVIOR & CULTURE FIT
 level: B1+ / B2
 description: Discuss how you maintain work-life balance, handle stress, avoid burnout, and create sustainable working habits.
 ---
 
-# BUỔI 21: Work-Life Balance & Stress Management
+# Session  21: Work-Life Balance & Stress Management
 
 **Level:** B1+ / B2  
 **Focus:** Speak maturely about maintaining balance, managing stress, preventing burnout, and building healthy work habits.

@@ -7,7 +7,7 @@ level: B1+ / B2
 description: Discuss performance issues and cost implications in a real enterprise scenario, explain optimization strategies, and show awareness of business impact (speed vs cost, scale vs budget).
 ---
 
-# BUỔI 10: Performance / Cost Scenario
+# Session  10: Performance / Cost Scenario
 
 **Level:** B1+ / B2  
 **Focus:** Explain a performance-related scenario, discuss optimization choices, analyze cost implications, and link technical decisions to business outcomes using professional B2 language.

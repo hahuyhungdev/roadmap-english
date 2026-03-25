@@ -7,7 +7,7 @@ level: B1+
 description: Explain the key features of the system you work on, focusing on what they do, who benefits, and why they matter (high-level, user & business focused).
 ---
 
-# BUỔI 5: Main Features & Functionalities
+# Session  5: Main Features & Functionalities
 
 **Level:** B1+  
 **Focus:** Describe the most important features of the system clearly, using simple language and emphasizing user benefits and business value.

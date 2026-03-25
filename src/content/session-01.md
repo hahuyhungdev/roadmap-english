@@ -7,7 +7,7 @@ level: B1+
 description: Introduce your role, responsibilities, daily tasks, and collaboration at work in a clear and confident way.
 ---
 
-# BUỔI 1: Your Role & Work
+# Session  1: Your Role & Work
 
 **Level:** B1+  
 **Focus:** Speaking naturally about your job as a Frontend Developer

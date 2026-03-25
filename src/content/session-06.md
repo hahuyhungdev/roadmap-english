@@ -7,7 +7,7 @@ level: B1+ / B2
 description: Deliver a fluent, well-structured 3–5 minute explanation that integrates your role, system, daily work, tools, features, and challenges while expanding into new aspects such as business context, user impact, team dynamics, and future improvements. Only about 20% overlaps with previous lessons — the rest is fresh content and deeper insights.
 ---
 
-# BUỔI 6: Full Combined Explanation of Your Work
+# Session  6: Full Combined Explanation of Your Work
 
 **Level:** B1+ / B2  
 **Focus:** Speak confidently for 3–5 minutes by weaving together all parts of your job into one cohesive story, adding new angles like business context, measurable outcomes, team collaboration dynamics, and forward-looking ideas.

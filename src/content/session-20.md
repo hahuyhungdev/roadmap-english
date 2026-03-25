@@ -2,12 +2,12 @@
 sessionNumber: 20
 title: Strengths & Weaknesses
 topic: Self-Awareness & Reflection
-phase: PHASE 3 — Discussion & Impact Mastery
+phase: PHASE 4 — BEHAVIOR & CULTURE FIT
 level: B1+ / B2
 description: Discuss your professional strengths and weaknesses honestly, with examples, and show how you are working to improve your weaker areas.
 ---
 
-# BUỔI 20: Strengths & Weaknesses
+# Session  20: Strengths & Weaknesses
 
 **Level:** B1+ / B2  
 **Focus:** Speak honestly and professionally about your strengths, weaknesses, and self-improvement efforts with concrete examples.

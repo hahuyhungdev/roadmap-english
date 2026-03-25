@@ -2,12 +2,12 @@
 sessionNumber: 19
 title: Career Goals & Future Plans
 topic: Ambition & Long-term Development
-phase: PHASE 3 — Discussion & Impact Mastery
+phase: PHASE 4 — BEHAVIOR & CULTURE FIT
 level: B1+ / B2
 description: Talk about your short-term and long-term career goals, what kind of role or company you want in the future, and how you plan to achieve them.
 ---
 
-# BUỔI 19: Career Goals & Future Plans
+# Session  19: Career Goals & Future Plans
 
 **Level:** B1+ / B2  
 **Focus:** Speak clearly and confidently about your career ambitions, short-term and long-term goals, and concrete plans for professional growth.

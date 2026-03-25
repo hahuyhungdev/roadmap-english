@@ -7,7 +7,7 @@ level: B1+
 description: Describe your typical workday, common tasks, tools you use, and how you collaborate with the team.
 ---
 
-# BUỔI 3: A Typical Day & Daily Tasks
+# Session  3: A Typical Day & Daily Tasks
 
 **Level:** B1+  
 **Focus:** Speak naturally and fluently about what you do on a normal workday as a Frontend Developer.

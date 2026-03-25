@@ -7,7 +7,7 @@ level: B1+
 description: Explain the tools and technologies you use, why you use them, and how they help you in your work (keep it high-level and easy to understand).
 ---
 
-# BUỔI 4: Tools, Technologies & Tech Stack
+# Session  4: Tools, Technologies & Tech Stack
 
 **Level:** B1+  
 **Focus:** Describe the main tools and technologies you use as a Frontend Developer in a simple, clear way with business and user benefits.

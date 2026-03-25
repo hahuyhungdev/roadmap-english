@@ -7,7 +7,7 @@ level: B1+ / B2
 description: Discuss real trade-offs in frontend development, explain the reasoning behind choices, evaluate different options, and reflect on outcomes using professional B2-level language.
 ---
 
-# BUỔI 9: Trade-offs & Evaluation
+# Session  9: Trade-offs & Evaluation
 
 **Level:** B1+ / B2  
 **Focus:** Speak confidently about the compromises you make in frontend work, justify your decisions, compare alternatives, and evaluate results with clear, structured reasoning.

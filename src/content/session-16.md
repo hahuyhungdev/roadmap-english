@@ -7,7 +7,7 @@ level: B1+ / B2
 description: Talk about how you stay productive in daily work, your routines, tools, and habits that help you work efficiently as a frontend developer.
 ---
 
-# BUỔI 16: Productivity & Daily Life
+# Session  16: Productivity & Daily Life
 
 **Level:** B1+ / B2  
 **Focus:** Describe your daily routines, productivity habits, tools, and strategies that help you stay focused and deliver high-quality work consistently.

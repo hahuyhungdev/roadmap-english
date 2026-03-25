@@ -7,7 +7,7 @@ level: B1+ / B2
 description: Describe a real technical or user-related problem in detail, analyze its root causes, and explain its impact on users and the business — using structured, professional English at B2 level.
 ---
 
-# BUỔI 7: Describe a Problem + Root Cause
+# Session  7: Describe a Problem + Root Cause
 
 **Level:** B1+ / B2  
 **Focus:** Speak clearly and analytically about a specific problem, identify root causes, and discuss its consequences using precise vocabulary and logical structure.

@@ -7,7 +7,7 @@ level: B1+
 description: Explain your system clearly at a high level, describe its purpose, main users, and business value without going too technical.
 ---
 
-# BUỔI 2: Explain Your System (High-level)
+# Session  2: Explain Your System (High-level)
 
 **Level:** B1+  
 **Focus:** Speaking confidently about the overall system you work on, its purpose, users, and importance using simple, clear English.

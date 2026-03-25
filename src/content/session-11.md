@@ -7,7 +7,7 @@ level: B1+ / B2
 description: Describe a complex, cross-layer problem involving frontend, backend, and possibly infrastructure. Explain the full picture, how layers interacted, and your contribution as a frontend developer — using structured B2-level language.
 ---
 
-# BUỔI 11: Complex Problem (End-to-End)
+# Session  11: Complex Problem (End-to-End)
 
 **Level:** B1+ / B2  
 **Focus:** Speak fluently about a complicated problem that spans multiple layers (frontend + backend + infrastructure), show how everything connects, and highlight your role in solving it.

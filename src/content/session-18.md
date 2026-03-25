@@ -7,7 +7,7 @@ level: B1+ / B2
 description: Discuss how technology (especially AI, apps, and digital platforms) affects society, daily life, jobs, privacy, and the environment — with balanced opinions.
 ---
 
-# BUỔI 18: Society & Tech Impact
+# Session  18: Society & Tech Impact
 
 **Level:** B1+ / B2  
 **Focus:** Share thoughtful, balanced opinions on the positive and negative impacts of technology on society, jobs, privacy, and the future.

@@ -7,7 +7,7 @@ level: B1+ / B2
 description: Explain and strongly defend a technical decision you made, anticipate and respond to objections from stakeholders, and justify your choice with clear reasoning and business impact — at B2 level.
 ---
 
-# BUỔI 12: Defend Your Decision
+# Session  12: Defend Your Decision
 
 **Level:** B1+ / B2  
 **Focus:** Confidently explain, justify, and defend your technical decisions while handling objections professionally and linking them to business value.
