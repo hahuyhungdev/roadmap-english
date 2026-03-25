@@ -1,5 +1,5 @@
-import { FormEvent, useState } from "react";
-import { Sparkles, Send, Loader2 } from "lucide-react";
+import { Loader2, Send, Sparkles } from "lucide-react";
+import { useState, type FormEvent } from "react";
 import type { AiChatMessage, AiResponse } from "../types/ai";
 
 interface LessonAssistantProps {
@@ -7,7 +7,10 @@ interface LessonAssistantProps {
   lessonContent: string;
 }
 
-export default function LessonAssistant({ lessonTitle, lessonContent }: LessonAssistantProps) {
+export default function LessonAssistant({
+  lessonTitle,
+  lessonContent,
+}: LessonAssistantProps) {
   const [messages, setMessages] = useState<AiChatMessage[]>([]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
@@ -18,7 +21,10 @@ export default function LessonAssistant({ lessonTitle, lessonContent }: LessonAs
     const question = input.trim();
     if (!question || loading) return;
 
-    const nextMessages: AiChatMessage[] = [...messages, { role: "user", content: question }];
+    const nextMessages: AiChatMessage[] = [
+      ...messages,
+      { role: "user", content: question },
+    ];
     setMessages(nextMessages);
     setInput("");
     setError(null);
@@ -31,7 +37,10 @@ export default function LessonAssistant({ lessonTitle, lessonContent }: LessonAs
         body: JSON.stringify({
           lessonTitle,
           lessonContent,
-          messages: nextMessages.map((m) => ({ role: m.role, content: m.content })),
+          messages: nextMessages.map((m) => ({
+            role: m.role,
+            content: m.content,
+          })),
         }),
       });
 
@@ -40,9 +49,13 @@ export default function LessonAssistant({ lessonTitle, lessonContent }: LessonAs
         throw new Error(data.error || "Failed to get AI response");
       }
 
-      setMessages((prev) => [...prev, { role: "assistant", content: data.reply }]);
+      setMessages((prev) => [
+        ...prev,
+        { role: "assistant", content: data.reply },
+      ]);
     } catch (err) {
-      const message = err instanceof Error ? err.message : "Failed to get AI response";
+      const message =
+        err instanceof Error ? err.message : "Failed to get AI response";
       setError(message);
       setMessages((prev) => prev.slice(0, -1));
       setInput(question);
@@ -55,13 +68,16 @@ export default function LessonAssistant({ lessonTitle, lessonContent }: LessonAs
     <section className="mt-6 bg-white border border-gray-200 rounded-2xl p-4 md:p-5">
       <div className="flex items-center gap-2 mb-3">
         <Sparkles size={16} className="text-indigo-500" />
-        <h2 className="text-sm font-semibold text-gray-900">AI Lesson Assistant</h2>
+        <h2 className="text-sm font-semibold text-gray-900">
+          AI Lesson Assistant
+        </h2>
       </div>
 
       <div className="space-y-2 max-h-72 overflow-auto pr-1 mb-3">
         {messages.length === 0 && (
           <p className="text-xs text-gray-500">
-            Ask anything about this lesson: summary, examples, role-play, corrections, or quiz.
+            Ask anything about this lesson: summary, examples, role-play,
+            corrections, or quiz.
           </p>
         )}
 
