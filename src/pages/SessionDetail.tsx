@@ -110,7 +110,7 @@ export default function SessionDetail() {
         lessonContent={session.content}
       />
 
-      <div className="mt-8 flex items-center justify-between gap-4">
+      <div className="mt-8 flex items-center justify-between gap-4 pb-6">
         {prev ? (
           <button
             onClick={() => navigate(`/phrase/${phrase.id}/session/${prev.id}`)}
