@@ -6,6 +6,7 @@ import clsx from "clsx";
 import { getPhraseGroup, getSession } from "../lib/sessions";
 import { useProgressStore } from "../store/useProgressStore";
 import LessonAssistant from "../components/LessonAssistant";
+import PracticeCoach from "../components/PracticeCoach";
 
 export default function SessionDetail() {
   const { phraseId, id } = useParams<{ phraseId: string; id: string }>();
@@ -106,6 +107,11 @@ export default function SessionDetail() {
       </article>
 
       <LessonAssistant
+        lessonTitle={session.meta.title}
+        lessonContent={session.content}
+      />
+
+      <PracticeCoach
         lessonTitle={session.meta.title}
         lessonContent={session.content}
       />
