@@ -1,126 +1,93 @@
 ---
 sessionNumber: 19
-title: Career Goals & Future Plans
-topic: Ambition & Long-term Development
-phase: PHASE 4 — BEHAVIOR & CULTURE FIT
+title: Tell Me About Yourself & Professional Journey
+topic: Professional Introduction & Storytelling
+phase: PHASE 4 — Behavioral & Culture Fit Mastery
 level: B1+ / B2
-description: Talk about your short-term and long-term career goals, what kind of role or company you want in the future, and how you plan to achieve them.
+description: Master the most common opening interview question with a clear, structured, and engaging self-introduction at B2 level.
 ---
 
-# Session  19: Career Goals & Future Plans
+# BUỔI 19: Tell Me About Yourself & Professional Journey
 
 **Level:** B1+ / B2  
-**Focus:** Speak clearly and confidently about your career ambitions, short-term and long-term goals, and concrete plans for professional growth.
+**Focus:** Deliver a confident, concise, and professional self-introduction that highlights your background, relevant experience, and motivation.
 
-## 1) Vocabulary (Expanded & Sophisticated for B2)
+## 1) Vocabulary & Collocations
 
-- **career goal** (n) – what you want to achieve in your professional life
-  - My short-term career goal is to become a senior frontend developer.
+- **professional journey** – hành trình sự nghiệp  
+- **relevant experience** – kinh nghiệm liên quan  
+- **key achievement** – thành tựu nổi bật  
+- **career transition** – chuyển hướng sự nghiệp  
+- **cross-functional collaboration** – làm việc liên bộ phận  
+- **passion for** – đam mê với  
+- **eager to** – mong muốn  
+- **contribute to** – đóng góp cho  
 
-- **long-term vision** (n) – your big picture for the future
-  - My long-term vision is to move into a tech lead or frontend architect role.
+**Strong Collocations:**
+- summarize my professional background
+- transition from … to …
+- gain hands-on experience
+- take on more responsibility
+- seek new challenges
+- align with company goals
 
-- **professional development** (n) – activities that help you grow in your career
-  - I invest time every year in professional development.
+## 2) Useful Phrases & Patterns
 
-- **leadership role** (n) – position where you guide and manage others
-  - In the next 3–5 years, I would like to take on more leadership responsibilities.
+### Best Structure (Present-Past-Future)
+- **Present**: Current role + what you do
+- **Past**: Relevant experience & achievements
+- **Future**: Why this role/company + enthusiasm
 
-- **skill expansion** (n) – broadening your abilities
-  - I am focusing on skill expansion in areas like system design and mentoring.
+**Key Phrases:**
+- "Currently, I work as a Frontend Engineer at..."
+- "In my previous role, I was responsible for..."
+- "One of my key achievements was..."
+- "This experience helped me develop..."
+- "I'm particularly interested in this role because..."
+- "I'm excited about the opportunity to contribute to..."
 
-- **career progression** (n) – moving forward in your career
-  - Clear career progression is very important to me when choosing a company.
-
-- **milestone** (n) – an important step or achievement
-  - Completing a large-scale project was a significant milestone for me.
-
-- **aspiration** (n) – strong desire to achieve something
-  - One of my aspirations is to contribute to open-source projects.
-
-- **work environment** (n) – the setting and culture where you work
-  - I am looking for a work environment that encourages innovation and learning.
-
-- **personal brand** (n) – how you are perceived professionally
-  - Building a strong personal brand through blogging and speaking is part of my plan.
-
-## 2) Collocations, Chunking & Advanced Phrases
-
-### Strong Collocations
-
-- set clear career goals
-- pursue long-term ambitions
-- achieve professional growth
-- take on leadership roles
-- expand technical skills
-- plan career progression
-- reach the next milestone
-- align personal goals with company objectives
-- invest in self-development
-- realize my aspirations
-
-### Useful Chunking & Sentence Starters (B2)
-
-- In the short term, I want to…
-- Looking further ahead, my goal is to…
-- To achieve this, I plan to…
-- One of the reasons I’m aiming for this is…
-- I believe I can contribute more by…
-- In the next 2–3 years, I hope to…
-- What motivates me most is…
-- Ultimately, I would like to…
-
-### Advanced Phrasal Verbs
-
-- **work towards** → I am actively working towards a tech lead position.
-- **move into** → I hope to move into a more architectural role soon.
-- **build up** → I need to build up my mentoring and system design skills.
-- **look ahead** → When I look ahead, I see myself in a senior leadership position.
-- **take on** → I am ready to take on more responsibility in the coming year.
+### Advanced Sentence Starters
+- Over the past X years, I have...
+- What drives me in my career is...
+- Moving forward, I’m looking for an opportunity where...
 
 ## 3) Typical Dialogues
 
-### Dialogue 1 – Full Career Goals Explanation (3–4 minutes)
+### Dialogue 1 – Full Answer (2–3 minutes)
 
-**Teacher:** What are your career goals for the next few years?
+**Interviewer:** Tell me about yourself.
 
 **You:**  
-In the short term, over the next 1–2 years, I want to solidify my position as a strong senior frontend developer. This means taking ownership of larger features, improving my system design skills, and mentoring junior developers more actively.
+Thank you for the opportunity. Currently, I’m a Frontend Engineer at [Company], where I focus on building responsive and high-performance user interfaces using React. 
 
-Looking further ahead, my long-term goal is to move into a frontend architect or tech lead role. I want to be involved not only in coding but also in making important technical decisions, defining architecture, and helping shape the team’s technical direction.
+In the past three years, I’ve worked on several end-to-end features, including payment flows and dashboard systems. One of my key achievements was optimizing a slow checkout process, which reduced loading time by over 60% and improved user conversion. Before that, I worked remotely for a Singapore-based company, where I gained valuable experience collaborating with international teams across different time zones.
 
-To achieve these goals, I am actively working on expanding my knowledge in areas like performance optimization at scale, design systems, and leadership skills. I also plan to contribute more to open-source projects and perhaps start sharing my experience through technical blogs or conference talks.
-
-I am looking for a company that supports clear career progression and gives opportunities to take on more responsibility. Ultimately, I want to work in an environment where I can grow both technically and as a leader while delivering real value to users and the business.
+What I enjoy most is solving real user problems and working in cross-functional teams. That’s why I’m particularly excited about this opportunity at your company — I admire your focus on user-centric design and innovative products. I’m eager to bring my frontend expertise and collaborative mindset to help deliver excellent user experiences.
 
 ## 4) Reading Text
 
-Having clear career goals is essential for long-term satisfaction and success in technology. My short-term focus is to deepen my frontend expertise and take on more complex challenges, while my long-term aspiration is to transition into a leadership or architectural role. I believe continuous skill expansion, hands-on experience, and building a strong personal brand will help me reach these milestones. I am actively working towards an environment that values growth, innovation, and meaningful impact.
+A strong “Tell me about yourself” answer should be structured, concise, and relevant. The best approach follows the Present-Past-Future formula. Start with your current role, briefly mention relevant past experience and achievements, then connect your background to the position you’re applying for. Avoid repeating your resume — focus on telling a clear story that shows who you are professionally and why you’re a good fit.
 
 ## 5) List of Questions + Ideas
 
-### Basic to Intermediate
+### Common Variations
+1. Walk me through your resume.
+2. Tell me about your professional background.
+3. How would you describe your career so far?
+4. What should I know about you that’s not on your CV?
 
-1. What are your career goals for the next 2–3 years?
-2. Where do you see yourself in 5 years?
-3. What kind of role would you like to have in the future?
-4. What steps are you taking to achieve your goals?
+### B2-Level Follow-ups
+5. Why did you move from your previous company?
+6. What are you most proud of in your career?
+7. How does your experience align with this role?
+8. What motivates you in your work?
+9. Where do you see yourself in 3–5 years?
+10. Why are you interested in our company?
 
-### B2-Level Expanded Questions
-
-5. How do your career goals align with your current job?
-6. What skills do you need to develop to reach your long-term vision?
-7. How important is leadership in your future plans?
-8. Would you prefer to stay technical or move into management?
-9. What kind of company or work environment are you looking for?
-10. How do you measure progress towards your career goals?
-
-### Discussion & Critical Thinking
-
-11. Is it better to have very specific career goals or to stay flexible?
-12. How can developers balance technical depth with leadership growth?
-13. What role should companies play in supporting employee career development?
-14. How has your career vision changed over the past few years?
-15. What advice would you give to someone planning their tech career?
+### Discussion & Practice
+11. What makes a good self-introduction?
+12. How long should the answer be? (Best practice: 1.5 – 2.5 minutes)
+13. How do you avoid sounding like you’re reading from a script?
+14. How can you tailor this answer for different companies?
 
 ---

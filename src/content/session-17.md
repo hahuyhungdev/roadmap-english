@@ -1,124 +1,95 @@
 ---
 sessionNumber: 17
-title: Society & Tech Impact
-topic: Technology's Effect on Society
+title: Cost of Living, Financial Pressure & Lifestyle in Tech
+topic: Cost of Living and Financial Reality
 phase: PHASE 3 — Discussion & Impact Mastery
 level: B1+ / B2
-description: Discuss how technology (especially AI, apps, and digital platforms) affects society, daily life, jobs, privacy, and the environment — with balanced opinions.
+description: Discuss the rising cost of living, financial pressures on tech workers, and how it affects lifestyle and career choices.
 ---
 
-# Session  17: Society & Tech Impact
+# BUỔI 17: Cost of Living, Financial Pressure & Lifestyle in Tech
 
 **Level:** B1+ / B2  
-**Focus:** Share thoughtful, balanced opinions on the positive and negative impacts of technology on society, jobs, privacy, and the future.
+**Focus:** Talk honestly about financial pressures, cost of living, and how they influence your lifestyle and career decisions.
 
 ## 1) Vocabulary (Expanded & Sophisticated for B2)
 
-- **societal impact** (n) – how technology affects society as a whole
-  - The societal impact of AI is both exciting and concerning.
-
-- **digital transformation** (n) – major change caused by technology
-  - We are living through rapid digital transformation in every industry.
-
-- **job displacement** (n) – loss of jobs due to automation
-  - AI may cause job displacement in some routine tasks.
-
-- **privacy concern** (n) – worry about personal data being misused
-  - Privacy concerns are growing with the rise of data collection.
-
-- **digital divide** (n) – gap between people who have and don’t have access to technology
-  - The digital divide still exists between different countries and social groups.
-
-- **ethical dilemma** (n) – difficult moral choice
-  - AI development often involves complex ethical dilemmas.
-
-- **connectivity** (n) – being connected to the internet and others
-  - Increased connectivity has both positive and negative effects.
-
-- **addiction** (n) – excessive use that becomes harmful
-  - Social media addiction is a growing problem among young people.
-
-- **sustainability** (n) – ability to continue without harming the environment
-  - Tech companies need to focus more on environmental sustainability.
-
-- **human-centered design** (n) – design that puts people’s needs first
-  - We should always prioritize human-centered design in technology.
+- **cost of living** (n) – the amount of money needed to maintain a certain lifestyle  
+- **financial pressure** (n) – stress caused by money problems  
+- **inflation** (n) – general increase in prices  
+- **disposable income** (n) – money left after paying essential expenses  
+- **financial planning** (n) – managing money wisely for the future  
+- **lifestyle inflation** (n) – spending more as income increases  
+- **work-life trade-off** (n) – giving up personal time for money or career  
+- **salary adjustment** (n) – increase in pay to match rising costs  
+- **financial independence** (n) – ability to support yourself without relying on others  
+- **long-term financial security** (n) – stable financial situation in the future
 
 ## 2) Collocations, Chunking & Advanced Phrases
 
 ### Strong Collocations
+- rising cost of living
+- face financial pressure
+- manage disposable income
+- plan for financial security
+- experience lifestyle inflation
+- negotiate salary adjustment
+- balance career and lifestyle
+- maintain financial discipline
 
-- have a profound impact
-- raise ethical concerns
-- widen the digital divide
-- promote digital inclusion
-- address privacy issues
-- drive social change
-- create new opportunities
-- mitigate negative effects
-- balance innovation with responsibility
-- shape the future of society
-
-### Useful Chunking & Sentence Starters (B2)
-
-- On the positive side…
-- However, there are also concerns that…
-- In my opinion…
-- While technology brings many benefits…
-- One major challenge we face is…
-- To solve this problem, we need to…
-- Looking at the bigger picture…
-- I believe the key is to…
+### Useful Chunking & Sentence Starters
+- With the rising cost of living, …
+- One of the biggest pressures I feel is…
+- I try to manage my finances by…
+- In my city, the cost of housing has…
+- This situation has forced me to…
+- I believe companies should…
+- From a financial perspective, …
 
 ### Advanced Phrasal Verbs
-
-- **bring about** → Technology has brought about huge changes in how we work.
-- **keep up with** → Society needs to keep up with the pace of technological change.
-- **deal with** → We must deal with the negative effects of social media.
-- **open up** → The internet has opened up many new opportunities.
-- **cut down on** → We should cut down on excessive screen time.
+- **cut down on** → I’ve had to cut down on eating out.
+- **keep up with** → It’s hard to keep up with rising rent prices.
+- **save up for** → I’m trying to save up for future financial security.
+- **account for** → When choosing a job, I account for the cost of living in that area.
 
 ## 3) Typical Dialogues
 
-### Dialogue 1 – Balanced View (3–4 minutes)
+### Dialogue 1 – Main Discussion (3–4 minutes)
 
-**Teacher:** How do you think technology is affecting society?
+**Teacher:** How is the rising cost of living affecting tech professionals like you?
 
 **You:**  
-Technology has had a profound impact on society, and the effects are both positive and negative. On the positive side, it has improved connectivity, made information more accessible, and created many new job opportunities in the digital economy. Tools like AI are helping us solve complex problems faster and improving productivity in many fields.
+In recent years, the cost of living has increased significantly, especially in big cities like Ho Chi Minh City. Rent, food, and transportation costs have all gone up, which puts real financial pressure on many employees, even those working in tech.
 
-However, there are serious concerns as well. Job displacement caused by automation is a real issue, especially for routine tasks. Privacy concerns are growing because of how much personal data is being collected. There is also the problem of digital addiction and the spread of misinformation on social platforms.
+Although my salary is above average, my disposable income has not grown at the same rate as inflation. This forces me to be more careful with spending and to think twice before making big purchases. Some of my colleagues have started looking for higher-paying jobs or companies that offer better benefits or hybrid work arrangements to reduce commuting costs.
 
-In my view, the key is to find the right balance. We need responsible innovation — technology that is developed with human values, ethics, and sustainability in mind. As a developer, I believe we have a responsibility to think not only about what we can build, but also about how it will affect people and society in the long term.
+Personally, I try to maintain good financial discipline by tracking my expenses and saving a portion of my salary every month. I also consider the cost of living when evaluating new job offers. A higher salary in a very expensive city may not be better than a slightly lower salary with lower living costs and better work-life balance.
 
 ## 4) Reading Text
 
-Modern technology is reshaping society in powerful ways. While it brings tremendous benefits such as better access to education, healthcare, and global communication, it also creates challenges including privacy risks, job changes, and social inequality. The future depends on how responsibly we develop and use these technologies. A human-centered approach that considers both innovation and societal well-being is essential for positive long-term impact.
+The rising cost of living has become a major concern for many professionals in the technology industry. Even with competitive salaries, increasing expenses on housing, food, and daily needs can reduce disposable income and create financial stress. As a result, many tech workers now consider not only salary but also location, benefits, and lifestyle factors when making career decisions.
 
 ## 5) List of Questions + Ideas
 
 ### Basic to Intermediate
-
-1. What positive effects has technology had on society?
-2. What negative effects do you see?
-3. How has technology changed the way people work?
-4. Do you think AI will take away many jobs?
+1. Has the cost of living increased in your city?
+2. How does it affect your monthly budget?
+3. Do you save money every month?
+4. How important is salary when choosing a job?
 
 ### B2-Level Expanded Questions
-
-5. How can we reduce the negative impact of technology on society?
-6. What role should governments and companies play in managing tech impact?
-7. How does social media affect mental health and relationships?
-8. Is technology widening or narrowing the gap between rich and poor?
-9. What ethical responsibilities do developers have?
-10. How do you personally balance the benefits and risks of technology?
+5. How do you manage financial pressure while working in tech?
+6. Do you think companies should adjust salaries according to inflation?
+7. How does cost of living influence where you want to work?
+8. What is lifestyle inflation and have you experienced it?
+9. Would you accept a lower salary for better work-life balance?
+10. What financial goals are you working toward right now?
 
 ### Discussion & Critical Thinking
-
-11. Will AI create more jobs than it destroys?
-12. Should there be stronger regulations on tech companies?
-13. How important is digital literacy in today’s society?
-14. Can technology solve major global problems like climate change?
-15. What kind of future do you hope technology will create?
+11. Is money the most important factor in a job?
+12. Should companies help employees with rising living costs?
+13. How has inflation changed the lifestyle of tech workers?
+14. What is more important: high salary or financial peace of mind?
+15. How can young professionals build long-term financial security in uncertain times?
 
 ---

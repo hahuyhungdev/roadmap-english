@@ -1,124 +1,80 @@
 ---
 sessionNumber: 21
-title: Work-Life Balance & Stress Management
-topic: Well-being & Sustainable Career
-phase: PHASE 4 — BEHAVIOR & CULTURE FIT
+title: Career Goals, Ambition & Why This Company
+topic: Future Plans & Company Fit
+phase: PHASE 4 — Behavioral & Culture Fit Mastery
 level: B1+ / B2
-description: Discuss how you maintain work-life balance, handle stress, avoid burnout, and create sustainable working habits.
+description: Discuss your career goals, ambition, reasons for choosing the company, and what kind of environment you thrive in.
 ---
 
-# Session  21: Work-Life Balance & Stress Management
+# BUỔI 21: Career Goals, Ambition & Why This Company
 
 **Level:** B1+ / B2  
-**Focus:** Speak maturely about maintaining balance, managing stress, preventing burnout, and building healthy work habits.
+**Focus:** Show clear ambition, realistic goals, and genuine interest in the company and role.
 
-## 1) Vocabulary (Expanded & Sophisticated for B2)
+## 1) Vocabulary & Collocations
 
-- **work-life balance** (n) – healthy equilibrium between work and personal life
-  - Maintaining good work-life balance is essential for long-term success.
+- **short-term goal** – mục tiêu ngắn hạn  
+- **long-term aspiration** – hoài bão dài hạn  
+- **career advancement** – thăng tiến sự nghiệp  
+- **company culture** – văn hóa công ty  
+- **growth opportunity** – cơ hội phát triển  
+- **impactful contribution** – đóng góp có ảnh hưởng  
 
-- **burnout** (n) – extreme exhaustion from prolonged stress
-  - I learned to recognize early signs of burnout and take action.
+**Strong Collocations:**
+- pursue career growth
+- align with my goals
+- contribute meaningfully
+- thrive in a … environment
+- take on more responsibility
 
-- **stress management** (n) – techniques to handle pressure effectively
-  - Regular exercise is one of my most effective stress management tools.
+## 2) Useful Phrases & Patterns
 
-- **well-being** (n) – overall state of being healthy and happy
-  - Company culture plays a big role in employee well-being.
-
-- **boundary** (n) – clear line between work and personal time
-  - I have become much better at setting healthy boundaries.
-
-- **sustainable pace** (n) – working at a speed you can maintain long-term
-  - I prefer working at a sustainable pace rather than constant overtime.
-
-- **mental health** (n) – emotional and psychological well-being
-  - Taking care of mental health should be a priority for everyone.
-
-- **recharge** (v) – recover energy and motivation
-  - I make sure to fully recharge during weekends and holidays.
-
-- **prioritization** (n) – deciding what is most important
-  - Good prioritization helps me avoid unnecessary stress.
-
-- **resilience** (n) – ability to recover from difficulties
-  - Building resilience is key to handling high-pressure periods.
-
-## 2) Collocations, Chunking & Advanced Phrases
-
-### Strong Collocations
-
-- maintain work-life balance
-- prevent burnout
-- set healthy boundaries
-- manage stress effectively
-- prioritize mental health
-- work at a sustainable pace
-- recharge energy levels
-- build emotional resilience
-- practice self-care
-- achieve long-term well-being
-
-### Useful Chunking & Sentence Starters (B2)
-
-- For me, work-life balance means…
-- One way I manage stress is…
-- When I feel overwhelmed, I…
-- I have learned to…
-- To avoid burnout, I make sure to…
-- In my experience…
-- The most important lesson I’ve learned is…
-- I believe companies should…
-
-### Advanced Phrasal Verbs
-
-- **switch off** → I try to switch off completely after working hours.
-- **wind down** → I wind down in the evening by reading or exercising.
-- **cut back on** → Last year I had to cut back on overtime to protect my health.
-- **build up** → Regular breaks help me build up resilience to stress.
-- **look after** → It’s important to look after both physical and mental health.
+- In the short term, I aim to...
+- In the long term, I hope to...
+- I’m particularly drawn to this company because...
+- I believe I can add value by...
+- I’m looking for an environment where...
+- This role aligns well with my career goals because...
 
 ## 3) Typical Dialogues
 
-### Dialogue 1 – Honest Discussion (3–4 minutes)
+### Dialogue 1 – Full Answer (2.5–3.5 minutes)
 
-**Teacher:** How do you maintain work-life balance and manage stress?
+**Interviewer:** Where do you see yourself in 3–5 years? Why do you want to join our company?
 
 **You:**  
-Work-life balance is very important to me because I want to have a sustainable and enjoyable career. I maintain it by setting clear boundaries — I rarely check work messages after 7 pm and I protect my weekends for personal time and family.
+In the short term, within the next 2 years, I want to grow into a Senior Frontend Engineer role, where I can take more ownership of system architecture and mentor junior developers. 
 
-When deadlines create pressure, I use several stress management techniques. I practice prioritization every morning, break large tasks into smaller ones, and take short breaks during the day to recharge. Physical exercise and good sleep are also crucial for me.
+In the long term, I aspire to move into a Tech Lead or Frontend Architect position, where I can influence technical decisions at a higher level while still staying close to hands-on development.
 
-I have experienced mild burnout before, so now I pay close attention to early warning signs such as constant tiredness or loss of motivation. When I notice them, I talk openly with my manager and adjust my workload. I believe both individuals and companies have responsibility for well-being. A supportive environment that encourages sustainable pace and mental health awareness leads to happier and more productive teams in the long run.
+I’m interested in your company because of its strong reputation for building scalable, user-focused products and its commitment to innovation. I’ve been impressed by how your team uses modern technologies and encourages cross-functional collaboration. 
+
+Additionally, I value the hybrid working model your company offers, as it aligns with my preference for both focused individual work and regular team interaction. I believe my frontend experience combined with my collaborative mindset would allow me to contribute meaningfully to your upcoming projects while growing together with the team.
 
 ## 4) Reading Text
 
-In today’s demanding tech industry, maintaining work-life balance and managing stress are critical for long-term success and happiness. Successful professionals set clear boundaries, practice effective prioritization, and make time to recharge. Recognizing early signs of burnout and taking proactive steps helps build resilience and prevents serious problems. A healthy balance between work and personal life ultimately leads to better performance, creativity, and overall well-being.
+When answering career goals and “Why this company?”, interviewers want to see ambition, realism, and genuine research. Good answers connect your personal goals with the company’s direction and show that you’ve thought carefully about the fit.
 
 ## 5) List of Questions + Ideas
 
-### Basic to Intermediate
+### Common Questions
+1. Where do you see yourself in 3–5 years?
+2. Why do you want to work for us?
+3. What are your career goals?
+4. Why are you leaving your current job?
 
-1. How important is work-life balance to you?
-2. What do you do to manage stress?
-3. Have you ever experienced burnout?
-4. How do you relax after a busy workday?
+### B2-Level Expanded
+5. What kind of work environment do you thrive in?
+6. How does this role fit into your long-term plans?
+7. What are your salary expectations?
+8. What motivates you to do your best work?
+9. How do you define success in your career?
+10. What questions do you have for us?
 
-### B2-Level Expanded Questions
-
-5. How do you set and maintain healthy work boundaries?
-6. What strategies help you the most when dealing with high pressure?
-7. How has your approach to work-life balance changed over time?
-8. What role should companies play in supporting employee well-being?
-9. How do you recognize and prevent burnout?
-10. What is your ideal balance between work and personal life?
-
-### Discussion & Critical Thinking
-
-11. Is it possible to have perfect work-life balance in tech?
-12. How can remote work affect work-life balance positively and negatively?
-13. Should companies measure success by output or by sustainable effort?
-14. How important is mental health awareness in the workplace?
-15. What advice would you give to new developers about avoiding burnout?
+### Discussion & Best Practices
+11. How specific should your goals be?
+12. How to answer salary expectations professionally?
+13. How to show enthusiasm without sounding desperate?
 
 ---

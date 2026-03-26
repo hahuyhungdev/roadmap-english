@@ -1,126 +1,95 @@
 ---
 sessionNumber: 14
-title: Technology and AI Impact
-topic: AI, Future of Work & Technology Trends
+title: Impact of AI & New Technologies on Frontend Development
+topic: AI’s Influence on Frontend Work
 phase: PHASE 3 — Discussion & Impact Mastery
 level: B1+ / B2
-description: Discuss how new technologies and AI are changing frontend development, your work, productivity, and the future of the profession — with balanced, thoughtful opinions.
+description: Discuss how AI is changing frontend development, productivity, required skills, and the future of the profession with balanced opinions.
 ---
 
-# Session  14: Technology and AI Impact
+# BUỔI 14: Impact of AI & New Technologies on Frontend Development
 
 **Level:** B1+ / B2  
-**Focus:** Share thoughtful opinions on how AI and modern technologies are affecting frontend development and the broader software industry.
+**Focus:** Share thoughtful, balanced opinions about how AI is transforming frontend development and what it means for developers.
 
 ## 1) Vocabulary (Expanded & Sophisticated for B2)
 
-- **disruptive technology** (n) – technology that changes how things are done
-  - AI is a highly disruptive technology in software development.
-
-- **productivity boost** (n) – significant increase in how much work can be done
-  - AI tools have given me a noticeable productivity boost.
-
-- **automation** (n) – using machines or software to do tasks automatically
-  - Many repetitive coding tasks can now be handled through automation.
-
-- **augmentation** (n) – using technology to enhance human work (not replace)
-  - I see AI as an augmentation tool rather than a replacement for developers.
-
-- **skill obsolescence** (n) – when skills become outdated
-  - We need to continuously learn to avoid skill obsolescence.
-
-- **ethical consideration** (n) – moral aspects of using technology
-  - There are important ethical considerations when using AI-generated code.
-
-- **job transformation** (n) – how jobs are changing rather than disappearing
-  - AI is driving job transformation in the tech industry.
-
-- **human oversight** (n) – human control and review
-  - Good AI usage always requires strong human oversight.
-
-- **upskilling** (n) – learning new skills to stay relevant
-  - Continuous upskilling is essential in today’s fast-changing tech environment.
-
-- **future-proof** (adj) – likely to remain useful in the future
-  - I focus on future-proof skills such as system thinking and problem-solving.
+- **AI-assisted development** (n) – using AI tools to help write code  
+- **productivity boost** (n) – significant increase in work efficiency  
+- **code generation** (n) – AI creating code automatically  
+- **prompt engineering** (n) – skill of writing good instructions for AI  
+- **human oversight** (n) – human checking and improving AI output  
+- **skill shift** (n) – change in the skills that are needed  
+- **automation** (n) – replacing manual work with machines or AI  
+- **creative problem-solving** (n) – using imagination to solve complex issues  
+- **system architecture** (n) – high-level design of software systems  
+- **future-proof skills** (n) – skills that will remain valuable in the future
 
 ## 2) Collocations, Chunking & Advanced Phrases
 
 ### Strong Collocations
-
-- leverage AI tools
 - boost productivity
-- embrace new technologies
-- adapt to rapid changes
-- augment human capabilities
-- mitigate risks of AI
-- drive innovation
-- reshape the industry
-- maintain human oversight
-- invest in upskilling
+- accelerate development
+- require human oversight
+- shift from coding to architecture
+- master prompt engineering
+- maintain code quality
+- adapt to new technologies
+- embrace AI tools
+- balance speed and quality
 
-### Useful Chunking & Sentence Starters (B2)
-
-- In my opinion, AI is…
-- The impact of AI on frontend development is…
-- On one hand…, on the other hand…
-- I believe AI will… rather than…
-- From my daily experience…
-- The biggest challenge we face is…
-- To stay relevant, developers need to…
-- Looking ahead, I think…
+### Useful Chunking & Sentence Starters
+- On one hand, AI has…
+- On the other hand, …
+- AI is transforming the way we…
+- I believe the biggest change will be…
+- The key skill in the future will be…
+- While AI can help with…, it cannot replace…
+- In my opinion, developers should…
 
 ### Advanced Phrasal Verbs
-
-- **keep up with** → It’s important to keep up with rapidly evolving AI tools.
-- **take over** → AI will not completely take over creative frontend work.
-- **team up with** → I team up with AI tools to write code faster.
-- **phase out** → Some routine tasks are being phased out by automation.
-- **level up** → AI helps me level up my productivity significantly.
+- **keep up with** → It’s important to keep up with rapid AI advancements.
+- **rely on** → We should not rely too much on AI-generated code.
+- **adapt to** → Frontend developers need to adapt to AI-assisted workflows.
 
 ## 3) Typical Dialogues
 
-### Dialogue 1 – Balanced Opinion (3–4 minutes)
+### Dialogue 1 – Main Discussion (3–4 minutes)
 
-**Teacher:** How is AI changing your work as a frontend developer?
+**Teacher:** How is AI changing frontend development?
 
 **You:**  
-AI is having a significant impact on frontend development. Tools like GitHub Copilot and Cursor help me write boilerplate code and fix bugs much faster, giving me a real productivity boost. I can now focus more on architecture, user experience, and complex problem-solving instead of repetitive tasks.
+On one hand, AI has brought a significant productivity boost. Tools like GitHub Copilot and Cursor can generate code quickly, suggest better solutions, and even help with debugging. This allows us to focus more on system architecture and user experience rather than writing repetitive code.
 
-However, I don’t believe AI will replace frontend developers. Creative decisions, understanding user needs, and making thoughtful trade-offs still require human judgment and empathy. The biggest change is job transformation — developers who can effectively team up with AI will be much more valuable.
+On the other hand, I believe human oversight is still essential. AI-generated code can sometimes be inefficient or contain security risks. As frontend developers, we need new skills such as prompt engineering and the ability to review and improve AI output.
 
-The main challenge is keeping up with new tools while maintaining code quality and security. I make sure to review every piece of AI-generated code carefully. In the future, I think successful developers will be those who combine strong technical skills with the ability to leverage AI intelligently.
+In the future, I think the role will shift from pure coding to higher-level tasks like designing component systems, integrating AI features, and making important technical decisions. The developers who can combine technical knowledge with creative problem-solving will have the strongest advantage.
 
 ## 4) Reading Text
 
-Artificial intelligence is transforming the way frontend developers work. AI-powered tools can generate code, suggest improvements, and even help design user interfaces. This creates a significant productivity boost and allows developers to focus on higher-value tasks such as system design and user-centered decisions.
-
-While some routine work may be automated, the need for human creativity, ethical judgment, and holistic thinking remains essential. The future belongs to developers who embrace AI as an augmentation tool, continuously upskill, and maintain strong oversight over AI-generated outputs. Rather than fearing replacement, the industry is moving toward a new collaboration between human expertise and artificial intelligence.
+Artificial Intelligence is rapidly changing the software development landscape. In frontend development, AI tools can now generate UI components, write CSS, and suggest optimal solutions. While this increases speed and productivity, many experts argue that human creativity, judgment, and responsibility remain irreplaceable. The most successful developers will be those who learn to work effectively with AI rather than compete against it.
 
 ## 5) List of Questions + Ideas
 
 ### Basic to Intermediate
-
-1. How do you use AI tools in your daily work?
-2. What are the advantages of AI for frontend developers?
-3. Do you think AI will replace developers in the future?
-4. How has AI changed your productivity?
+1. How has AI changed your daily work?
+2. What AI tools have you used?
+3. What are the advantages of using AI in frontend development?
+4. What are the disadvantages?
 
 ### B2-Level Expanded Questions
-
-5. What is the biggest impact of AI on the software development industry?
-6. How do you balance using AI with maintaining code quality?
-7. What skills will be most important for developers in the AI era?
-8. What ethical considerations should we keep in mind when using AI?
-9. How do you stay updated with new AI technologies?
-10. Do you see AI more as a threat or an opportunity?
+5. Will AI replace frontend developers in the future?
+6. What new skills should frontend developers learn because of AI?
+7. How do you balance speed and code quality when using AI?
+8. What is “prompt engineering” and why is it important?
+9. How has your role changed or how do you expect it to change?
+10. Do you think AI will make developers more or less valuable?
 
 ### Discussion & Critical Thinking
-
-11. Will AI widen or reduce the gap between junior and senior developers?
-12. How should companies prepare their teams for AI-driven changes?
-13. What role should human oversight play when working with AI?
-14. How might AI change the way we evaluate developer performance?
-15. What advice would you give to frontend developers regarding AI and future skills?
+11. Should companies encourage or limit the use of AI coding tools?
+12. What is more important in the AI era: technical skills or soft skills?
+13. How can developers stay competitive in an AI-driven world?
+14. Is AI a threat or an opportunity for junior developers?
+15. How should education and training change to prepare developers for the AI future?
 
 ---

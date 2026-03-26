@@ -1,133 +1,122 @@
 ---
 sessionNumber: 13
-title: Work & Earning
-topic: Career, Salary & Compensation
+title: Work, Compensation & Career Progression
+topic: Compensation, Job Evaluation & Career Growth
 phase: PHASE 3 — Discussion & Impact Mastery
 level: B1+ / B2
-description: Talk confidently about your current work, salary expectations, compensation structure, career progression, and how you evaluate job offers — using natural and professional B2 English.
+description: Talk confidently about your current job, salary structure, how you evaluate job offers, and your short-term career progression using natural and professional B2 English.
 ---
 
-# Session  13: Work & Earning
+# BUỔI 13: Work, Compensation & Career Progression
 
 **Level:** B1+ / B2  
-**Focus:** Discuss your job, compensation, benefits, career growth, and money-related topics in a mature, confident way.
+**Focus:** Speak fluently and professionally about your current work, compensation, how you evaluate opportunities, and your career development plans.
 
 ## 1) Vocabulary (Expanded & Sophisticated for B2)
 
-- **compensation** (n) – total payment and benefits received for work
-  - My total compensation includes base salary, bonuses, and stock options.
+- **compensation package** (n) – total salary and benefits  
+  - The compensation package includes base salary, bonus, and health insurance.
 
-- **base salary** (n) – fixed amount paid monthly or yearly
-  - My base salary reflects my 5+ years of frontend experience.
+- **career progression** (n) – advancement in your professional path  
+  - I’m looking for clear career progression opportunities.
 
-- **performance bonus** (n) – extra money based on results
-  - We receive an annual performance bonus tied to company and individual goals.
+- **job offer evaluation** (n) – the process of assessing a new job opportunity  
+  - My job offer evaluation is based on salary, growth potential, and work culture.
 
-- **benefits package** (n) – all extra advantages besides salary
-  - The company offers a competitive benefits package including health insurance and remote work allowance.
+- **base salary** (n) – fixed monthly or yearly pay  
+  - The base salary is competitive but the bonus structure is more important to me.
 
-- **career progression** (n) – opportunities to advance in your career
-  - I’m looking for clear career progression and more challenging projects.
+- **performance bonus** (n) – extra pay based on individual or company performance  
+  - We receive a performance bonus twice a year.
 
-- **market rate** (n) – average salary for similar roles in the industry
-  - My current salary is slightly below market rate for senior frontend developers in Hong Kong.
+- **long-term incentive** (n) – rewards given over several years (stocks, RSUs)  
+  - Some companies offer long-term incentives through company stock.
 
-- **negotiate** (v) – discuss to reach a better agreement
-  - I successfully negotiated a higher base salary and additional annual leave.
+- **work-life integration** (n) – balancing work with personal life  
+  - I value companies that support healthy work-life integration.
 
-- **work-life balance** (n) – balance between work and personal life
-  - Good work-life balance is very important to me when choosing a job.
+- **upward mobility** (n) – ability to move to higher positions  
+  - I’m looking for a role with good upward mobility.
 
-- **total rewards** (n) – everything you receive from a job (money + non-money)
-  - I evaluate total rewards, not just the monthly salary.
+- **market rate** (n) – average salary for similar positions in the industry  
+  - I researched the market rate before negotiating my salary.
 
-- **professional development budget** (n) – money provided for training and learning
-  - The company provides an annual professional development budget for courses and conferences.
+- **professional development** (n) – continuous improvement of skills  
+  - The company supports professional development through training budgets.
 
 ## 2) Collocations, Chunking & Advanced Phrases
 
 ### Strong Collocations
-
-- competitive compensation
-- attractive benefits package
-- negotiate salary
-- career growth opportunities
-- performance-based bonus
-- market-competitive salary
-- long-term incentives
-- evaluate total rewards
-- maintain work-life balance
+- negotiate compensation
+- evaluate job offers
+- consider long-term growth
+- balance salary and benefits
+- seek career progression
+- assess total compensation
+- prioritize work-life balance
 - invest in professional development
 
-### Useful Chunking & Sentence Starters (B2)
-
-- In terms of compensation…
-- My current package consists of…
+### Useful Chunking & Sentence Starters (B2 level)
+- In terms of compensation, …
 - When evaluating a job offer, I consider…
-- I believe my experience justifies…
-- One thing I value highly is…
+- My current role offers…
+- What matters most to me is…
+- I’m looking for opportunities where…
 - From a long-term perspective…
-- I’m looking for a role that offers…
-- Overall, I’m quite satisfied with…
+- I believe a good compensation package should include…
+- Career progression is important to me because…
 
 ### Advanced Phrasal Verbs
-
-- **look for** → I’m looking for better career progression and higher compensation.
-- **bring up** → I brought up the topic of salary during the final interview round.
-- **settle for** → I didn’t want to settle for a lower salary than my market value.
-- **account for** → When calculating total rewards, I account for bonuses and benefits.
-- **aim for** → I aim for roles that offer both good pay and meaningful work.
+- **look into** → I always look into the company’s growth prospects.
+- **weigh up** → I weigh up salary against career growth opportunities.
+- **trade off** → Sometimes you have to trade off higher salary for better work-life balance.
+- **aim for** → I’m aiming for a senior frontend position in the next two years.
 
 ## 3) Typical Dialogues
 
-### Dialogue 1 – Full Explanation (3–4 minutes)
+### Dialogue 1 – Main Discussion (3–4 minutes)
 
-**Teacher:** Tell me about your current work and compensation.
-
-**You:**  
-I currently work as a frontend developer at a mid-sized enterprise company. My main responsibilities include building and optimizing user interfaces for our core business platform.
-
-In terms of compensation, my total package includes a competitive base salary, an annual performance bonus of up to 15%, and some stock options. The company also provides a strong benefits package with medical insurance, annual leave, and a professional development budget.
-
-While the salary is reasonable, I believe there is still room for improvement compared to the current market rate in Hong Kong for someone with my experience. When I evaluate new opportunities, I look at total rewards — not just the monthly salary — including career progression, work-life balance, and learning opportunities. I’m particularly interested in roles that offer more challenging projects and clear paths to senior or lead positions.
-
-### Dialogue 2 – Handling Objection / Negotiation Talk
-
-**Teacher:** Why do you think you deserve a higher salary?
+**Teacher:** Can you tell me about your current compensation and how you evaluate new job opportunities?
 
 **You:**  
-I’ve delivered several high-impact features that improved user experience and reduced loading times significantly. These improvements directly contributed to better business metrics. Combined with my 5+ years of hands-on experience with modern frontend technologies, I believe my contributions justify a salary closer to the upper end of the market rate.
+In my current role, the compensation package is reasonable. It includes a competitive base salary, performance bonuses twice a year, and some benefits like health insurance and annual leave. However, compared to the market rate for frontend engineers with my experience, I think there is still room for improvement.
+
+When I evaluate a new job offer, I don’t only look at the base salary. I weigh up several factors: the total compensation package, opportunities for career progression, the company’s stability, and work-life integration. For example, even if a company offers a higher salary, I might not accept it if there is no clear path for upward mobility or if the culture is too stressful.
+
+Right now, I’m aiming for a senior frontend role in the next 18 to 24 months. I believe that a good mix of challenging projects, learning opportunities, and fair compensation will help me reach that goal.
+
+### Dialogue 2 – Deeper Follow-up
+
+**Teacher:** What would make you accept a new job offer?
+
+**You:**  
+I would seriously consider an offer if it provides at least 15–20% higher total compensation and clear opportunities for growth. I also value hybrid working arrangements because I previously worked remotely and found it helped my productivity and personal life.
 
 ## 4) Reading Text
 
-As a frontend developer with several years of experience, I am satisfied with my current role but constantly evaluate whether my compensation matches my skills and market value. My total rewards include base salary, performance bonuses, health benefits, and support for professional development.
-
-When considering new opportunities, I look beyond money and focus on long-term factors such as career progression, challenging projects, work-life balance, and company culture. Good compensation should reflect both current contributions and future growth potential. I believe open and professional discussions about salary and benefits are normal and healthy in any career.
+Evaluating job offers is more complex than simply comparing salaries. Professionals today look at the full compensation package, including bonuses, benefits, and long-term incentives. Equally important are factors such as career progression, company culture, and work-life integration. In today’s competitive tech market, candidates with strong skills often prioritize companies that invest in their professional development and offer clear paths for advancement.
 
 ## 5) List of Questions + Ideas
 
 ### Basic to Intermediate
-
-1. What is your current job and main responsibilities?
-2. How is your compensation structured?
-3. What benefits do you receive?
-4. Are you satisfied with your current salary?
+1. Can you describe your current compensation package?
+2. What do you like and dislike about your current job?
+3. How do you evaluate a new job offer?
+4. What is most important to you in a job?
 
 ### B2-Level Expanded Questions
-
-5. How do you evaluate whether your compensation is fair?
-6. What factors are most important to you when considering a new job offer?
-7. Have you ever negotiated salary or benefits? How did it go?
-8. How important is work-life balance compared to higher pay for you?
-9. What does “good compensation” mean to you?
-10. Where do you see your career and earning potential in the next 3–5 years?
+5. How do you compare base salary versus total compensation?
+6. What role does career progression play in your job decisions?
+7. Have you ever negotiated salary? How did it go?
+8. What kind of company culture are you looking for?
+9. How important is work-life integration to you?
+10. Where do you see your career in the next 2–3 years?
 
 ### Discussion & Critical Thinking
-
-11. Why is it important to understand market rates for your role?
-12. How do you talk about salary expectations professionally?
-13. Should salary be the most important factor when choosing a job?
-14. How has the importance of compensation changed for you over the years?
-15. What advice would you give to someone negotiating their first developer salary?
+11. Is a high salary more important than career growth? Why or why not?
+12. How has the shift from remote to office work affected your view on compensation?
+13. Should companies offer more benefits instead of higher salaries?
+14. What makes a job offer truly attractive in today’s market?
+15. How do economic conditions influence your job decisions?
 
 ---

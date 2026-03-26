@@ -1,124 +1,81 @@
 ---
 sessionNumber: 20
-title: Strengths & Weaknesses
-topic: Self-Awareness & Reflection
-phase: PHASE 4 — BEHAVIOR & CULTURE FIT
+title: Strengths, Weaknesses & Self-Awareness
+topic: Self-Reflection & Honesty
+phase: PHASE 4 — Behavioral & Culture Fit Mastery
 level: B1+ / B2
-description: Discuss your professional strengths and weaknesses honestly, with examples, and show how you are working to improve your weaker areas.
+description: Discuss your professional strengths and weaknesses honestly with concrete examples and show how you are improving.
 ---
 
-# Session  20: Strengths & Weaknesses
+# BUỔI 20: Strengths, Weaknesses & Self-Awareness
 
 **Level:** B1+ / B2  
-**Focus:** Speak honestly and professionally about your strengths, weaknesses, and self-improvement efforts with concrete examples.
+**Focus:** Answer the classic “strengths and weaknesses” question with authenticity, balance, and maturity.
 
-## 1) Vocabulary (Expanded & Sophisticated for B2)
+## 1) Vocabulary & Collocations
 
-- **strength** (n) – something you are good at
-  - One of my biggest strengths is creating clean and responsive user interfaces.
+- **self-awareness** – nhận thức bản thân  
+- **core strength** – điểm mạnh cốt lõi  
+- **area for improvement** – lĩnh vực cần cải thiện  
+- **constructive feedback** – phản hồi xây dựng  
+- **personal development** – phát triển bản thân  
+- **overcome challenges** – vượt qua thách thức  
 
-- **weakness** (n) – an area that needs improvement
-  - A current weakness of mine is public speaking in large meetings.
+**Strong Collocations:**
+- leverage my strengths
+- work on my weaknesses
+- actively seek feedback
+- turn weakness into strength
+- continuous self-improvement
 
-- **self-awareness** (n) – understanding your own strengths and limitations
-  - Good self-awareness helps me grow faster as a professional.
+## 2) Useful Phrases & Patterns
 
-- **area for improvement** (n) – something you are actively working on
-  - Time estimation is one area for improvement I am focusing on.
+### Best Practices for Weaknesses:
+- Choose a real but non-critical weakness
+- Show self-awareness + action + progress
+- Never say “I’m a perfectionist” (too cliché)
 
-- **personal development** (n) – improving yourself
-  - I treat every weakness as an opportunity for personal development.
-
-- **core competency** (n) – main skill or ability
-  - My core competencies are React architecture and performance optimization.
-
-- **constructive feedback** (n) – helpful criticism
-  - I actively seek constructive feedback from my teammates and managers.
-
-- **growth mindset** (n) – belief that abilities can be developed
-  - I have a strong growth mindset and enjoy learning from challenges.
-
-- **overcome a weakness** (v) – successfully improve a weak area
-  - I have been working hard to overcome my tendency to over-engineer solutions.
-
-- **leverage strengths** (v) – make the best use of what you are good at
-  - I try to leverage my strengths when contributing to team projects.
-
-## 2) Collocations, Chunking & Advanced Phrases
-
-### Strong Collocations
-
-- play to my strengths
-- acknowledge my weaknesses
-- work on areas for improvement
-- seek constructive feedback
-- demonstrate self-awareness
-- show a growth mindset
-- turn weaknesses into strengths
-- leverage my core competencies
-- continuously improve
-- reflect on my performance
-
-### Useful Chunking & Sentence Starters (B2)
-
-- One of my key strengths is…
-- A weakness I am aware of is…
-- To improve this, I have been…
-- I believe my greatest strength lies in…
-- I am actively working on…
-- Feedback from my team has helped me…
-- In the future, I aim to…
-- Overall, I see myself as someone who…
-
-### Advanced Phrasal Verbs
-
-- **work on** → I am currently working on improving my estimation skills.
-- **build on** → I want to build on my strength in UI/UX implementation.
-- **open up about** → It’s important to open up about weaknesses in performance reviews.
-- **focus on** → I focus on turning weaknesses into learning opportunities.
-- **stand out** → My attention to detail helps me stand out in frontend work.
+**Useful Patterns:**
+- "One of my key strengths is..."
+- "A weakness I’ve been working on is..."
+- "In the past, I struggled with..., but now I..."
+- "I’ve improved this by..."
+- "I actively seek feedback to..."
 
 ## 3) Typical Dialogues
 
-### Dialogue 1 – Honest Self-Reflection (3–4 minutes)
+### Dialogue 1 – Full Answer (2–3 minutes)
 
-**Teacher:** What are your strengths and weaknesses as a frontend developer?
+**Interviewer:** What are your greatest strengths and weaknesses?
 
 **You:**  
-One of my key strengths is my attention to detail and ability to create pixel-perfect, responsive interfaces that deliver excellent user experiences. I am also quite strong at performance optimization and collaborating closely with designers. These strengths have helped me deliver several high-impact features successfully.
+One of my key strengths is my ability to deliver clean, user-friendly interfaces under tight deadlines. I’m good at breaking down complex requirements and collaborating effectively with backend and design teams. For example, last quarter I led the frontend part of a major feature that was delivered two weeks ahead of schedule.
 
-On the other hand, a weakness I recognize is that I sometimes spend too much time perfecting small details instead of delivering faster. This can affect timelines. To address this, I have started using time-boxing techniques and asking for earlier feedback from the team. Another area I am improving is public speaking — I used to feel nervous presenting in sprint reviews, so I have been practicing by volunteering to present more often and recording myself.
-
-I believe showing self-awareness and a growth mindset is very important. I actively seek feedback and treat every weakness as a chance to improve rather than a fixed limitation.
+As for weaknesses, I used to struggle with delegating tasks. I tended to take on too much myself because I wanted everything to meet my standards. I realized this was affecting team efficiency. To improve, I started assigning clearer responsibilities and holding regular check-ins. Over the past year, I’ve become much better at trusting my teammates while still maintaining quality. I now actively ask for feedback to continue growing in this area.
 
 ## 4) Reading Text
 
-Being able to talk honestly about strengths and weaknesses demonstrates maturity and self-awareness. My main strengths lie in building high-quality user interfaces and optimizing performance, while I continue to work on better time management and confidence in presenting to larger groups. By maintaining a growth mindset and actively seeking feedback, I turn potential weaknesses into opportunities for continuous improvement.
+Interviewers ask about strengths and weaknesses to assess your self-awareness and honesty. The best answers are balanced: highlight real strengths with examples, and for weaknesses, choose something genuine but not critical to the job. Most importantly, always show what actions you are taking to improve.
 
 ## 5) List of Questions + Ideas
 
-### Basic to Intermediate
+### Common Questions
+1. What are your strengths?
+2. What is your greatest weakness?
+3. How do you handle constructive criticism?
+4. What do your colleagues say about you?
 
-1. What are your main strengths as a frontend developer?
-2. What is one weakness you are aware of?
-3. How are you trying to improve your weaknesses?
-4. Do you find it easy or difficult to talk about your weaknesses?
+### B2-Level Expanded
+5. Can you give an example of how you used your strength in a project?
+6. How has your weakness affected your work in the past?
+7. What steps have you taken to overcome your weakness?
+8. How do you know when you need to improve in an area?
+9. What feedback have you received recently?
+10. How do you measure your own progress?
 
-### B2-Level Expanded Questions
-
-5. How do your strengths help the team achieve its goals?
-6. Can you give a specific example of how you turned a weakness into an improvement?
-7. How do you seek and use constructive feedback?
-8. Which weakness do you consider most important to overcome right now?
-9. How has your self-awareness changed over the years?
-10. In what areas do you want to become even stronger in the future?
-
-### Discussion & Critical Thinking
-
-11. Why is self-awareness important in a professional career?
-12. Is it better to focus more on strengths or on fixing weaknesses?
-13. How can companies help employees develop a growth mindset?
-14. How honest should you be about weaknesses in a job interview?
-15. What role does feedback play in personal and professional growth?
+### Discussion
+11. Why do interviewers ask about weaknesses?
+12. What makes a weakness answer convincing?
+13. How honest should you be?
 
 ---
