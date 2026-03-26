@@ -12,13 +12,14 @@ export default function PracticeCoach({
   lessonContent,
 }: PracticeCoachProps) {
   function getErrorMessage(err: unknown): string {
+    if (err instanceof Error) return err.message;
     if (
-      err &&
       typeof err === "object" &&
+      err !== null &&
       "message" in err &&
-      typeof (err as any).message === "string"
+      typeof (err as { message: unknown }).message === "string"
     ) {
-      return (err as any).message;
+      return (err as { message: string }).message;
     }
     return String(err);
   }
