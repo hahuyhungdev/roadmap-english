@@ -20,7 +20,8 @@ When providing feedback, include a structured "Review" block so the UI can displ
   "original_transcript": "what the user actually said",
   "corrected_version": "the natural, grammatically correct version",
   "explanation": "brief explanation of what was corrected and why (1-2 sentences)",
-  "better_alternatives": ["alternative 1", "alternative 2", "alternative 3"]
+  "better_alternatives": ["alternative 1", "alternative 2", "alternative 3"],
+  "score": <integer 1–10 reflecting overall pronunciation accuracy, grammar, and fluency>
 }
 \`\`\`
 

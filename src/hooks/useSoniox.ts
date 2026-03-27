@@ -84,6 +84,9 @@ export default function useSoniox(options?: UseSonioxOptions): UseSonioxResult {
   const streamRef = useRef<MediaStream | null>(null);
   const audioCtxRef = useRef<AudioContext | null>(null);
   const analyserRef = useRef<AnalyserNode | null>(null);
+  // Used for Web Speech API fallback when no Soniox API key is set
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const recognitionRef = useRef<any>(null);
   const silenceTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const wasSilentRef = useRef(true); // true = currently in silence period
   const transcriptRef = useRef(""); // mirror of transcript state, avoids stale closures
@@ -99,6 +102,15 @@ export default function useSoniox(options?: UseSonioxOptions): UseSonioxResult {
   const API_KEY = process.env.NEXT_PUBLIC_SONIOX_API_KEY as string;
 
   const stop = useCallback(() => {
+    // Stop Web Speech API fallback if active
+    if (recognitionRef.current) {
+      try {
+        recognitionRef.current.abort();
+      } catch {
+        /* ignore */
+      }
+      recognitionRef.current = null;
+    }
     if (silenceTimerRef.current) {
       clearTimeout(silenceTimerRef.current);
       silenceTimerRef.current = null;
@@ -152,9 +164,76 @@ export default function useSoniox(options?: UseSonioxOptions): UseSonioxResult {
       if (isRecording) return;
 
       if (!API_KEY) {
-        setError(
-          "Missing NEXT_PUBLIC_SONIOX_API_KEY — add it to your .env file.",
-        );
+        // Fall back to browser built-in SpeechRecognition (Chrome / Edge)
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const w = (typeof window !== "undefined" ? window : null) as any;
+        const SR = w?.SpeechRecognition ?? w?.webkitSpeechRecognition ?? null;
+
+        if (!SR) {
+          setError(
+            "No NEXT_PUBLIC_SONIOX_API_KEY set. Add it to .env.local, or use Chrome/Edge for built-in speech recognition.",
+          );
+          return;
+        }
+
+        const recognition = new SR();
+        recognition.lang = "en-US";
+        recognition.continuous = false;
+        recognition.interimResults = true;
+        recognitionRef.current = recognition;
+
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        recognition.onresult = (ev: any) => {
+          let finalText = "";
+          let partialText = "";
+          for (let i = ev.resultIndex; i < ev.results.length; i++) {
+            const t = ev.results[i][0].transcript;
+            if (ev.results[i].isFinal) finalText += t;
+            else partialText += t;
+          }
+          if (partialText) {
+            partialRef.current = partialText;
+            setPartial(partialText);
+          }
+          if (finalText) {
+            const next = transcriptRef.current
+              ? `${transcriptRef.current} ${finalText}`
+              : finalText;
+            transcriptRef.current = next;
+            setTranscript(next);
+            partialRef.current = "";
+            setPartial("");
+          }
+        };
+
+        recognition.onend = () => {
+          recognitionRef.current = null;
+          setIsRecording(false);
+          const final = (transcriptRef.current || partialRef.current).trim();
+          if (final) options?.onSilence?.(final);
+          transcriptRef.current = "";
+          partialRef.current = "";
+          setTranscript("");
+          setPartial("");
+        };
+
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        recognition.onerror = (ev: any) => {
+          recognitionRef.current = null;
+          setIsRecording(false);
+          if (ev.error !== "no-speech" && ev.error !== "aborted") {
+            setError(`Speech recognition error: ${ev.error as string}`);
+          }
+        };
+
+        try {
+          recognition.start();
+          setIsRecording(true);
+        } catch (err) {
+          setError(
+            `Could not start speech recognition: ${getErrorMessage(err)}`,
+          );
+        }
         return;
       }
 
