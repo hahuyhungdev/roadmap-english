@@ -51,22 +51,26 @@ function normalizeSpacedTranscript(text: string): string {
 
   // 4) Join short splits where a long token is followed by a very short token
   //    (fixes cases like "Hell o" -> "Hello"). This is heuristic.
-  s = s.split(" ").reduce((acc: string[], tok) => {
-    const prev = acc[acc.length - 1];
-    const raw = tok.replace(/[.,!?;:]$/g, "");
-    if (
-      prev &&
-      prev.replace(/[.,!?;:]$/g, "").length >= 3 &&
-      raw.length <= 1 &&
-      /^[A-Za-z]+$/.test(raw)
-    ) {
-      // merge into previous token
-      acc[acc.length - 1] = prev + raw + (/[.,!?;:]$/.test(tok) ? tok.slice(-1) : "");
-    } else {
-      acc.push(tok);
-    }
-    return acc;
-  }, [] as string[]).join(" ");
+  s = s
+    .split(" ")
+    .reduce((acc: string[], tok) => {
+      const prev = acc[acc.length - 1];
+      const raw = tok.replace(/[.,!?;:]$/g, "");
+      if (
+        prev &&
+        prev.replace(/[.,!?;:]$/g, "").length >= 3 &&
+        raw.length <= 1 &&
+        /^[A-Za-z]+$/.test(raw)
+      ) {
+        // merge into previous token
+        acc[acc.length - 1] =
+          prev + raw + (/[.,!?;:]$/.test(tok) ? tok.slice(-1) : "");
+      } else {
+        acc.push(tok);
+      }
+      return acc;
+    }, [] as string[])
+    .join(" ");
 
   // Final cleanup: collapse accidental joins like "Canyou" into "Can you" is hard
   // heuristically ensure spacing around punctuation and keep single space separators.
@@ -136,7 +140,9 @@ export default async function handler(
   // Allow overriding the model via env var. Use DeepSeek-compatible model names
   // e.g. "deepseek-chat" or "deepseek-reasoner" (DeepSeek V3.2 variants).
   const model =
-    getEnv("VITE_DEEPSEEK_MODEL") || getEnv("DEEPSEEK_MODEL") || "deepseek-chat";
+    getEnv("VITE_DEEPSEEK_MODEL") ||
+    getEnv("DEEPSEEK_MODEL") ||
+    "deepseek-chat";
 
   // If a message history is provided, include it after the system prompt
   if (history.length) {
@@ -159,7 +165,11 @@ export default async function handler(
 
     const data = await upstream.json();
     if (!upstream.ok) {
-      const errMsg = data?.error?.message || data?.message || JSON.stringify(data) || "DeepSeek API request failed";
+      const errMsg =
+        data?.error?.message ||
+        data?.message ||
+        JSON.stringify(data) ||
+        "DeepSeek API request failed";
       console.warn("DeepSeek API error:", errMsg, data);
       return res.status(upstream.status).json({ error: errMsg });
     }
@@ -183,7 +193,8 @@ export default async function handler(
     let audioContent: string | undefined = undefined;
     // Prefer simple API-key-based TTS if provided, otherwise fall back to
     // service account JWT OAuth flow. Accept either VITE_ or plain env var.
-    const googleApiKey = getEnv("VITE_GOOGLE_TTS_API_KEY") || getEnv("GOOGLE_TTS_API_KEY");
+    const googleApiKey =
+      getEnv("VITE_GOOGLE_TTS_API_KEY") || getEnv("GOOGLE_TTS_API_KEY");
     // Choose TTS input text: prefer the corrected version if present, otherwise use the reply.
     const ttsInputRaw = reviewObj?.corrected_version || reply || "";
     const ttsInput = normalizeSpacedTranscript(ttsInputRaw);

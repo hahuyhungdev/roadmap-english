@@ -1,10 +1,22 @@
 import { useEffect, useRef, useState } from "react";
 import useSoniox from "../hooks/useSoniox";
-import { Play, Mic, X, ChevronDown } from "lucide-react";
+import { Mic, Square, X, ChevronDown } from "lucide-react";
 
 interface PracticeCoachProps {
   lessonTitle?: string;
   lessonContent?: string;
+}
+
+function getYouTubeId(url: string): string | null {
+  const patterns = [
+    /(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\s]+)/,
+    /youtube\.com\/embed\/([^?\s]+)/,
+  ];
+  for (const p of patterns) {
+    const m = url.match(p);
+    if (m) return m[1];
+  }
+  return null;
 }
 
 export default function PracticeCoach({
@@ -23,22 +35,8 @@ export default function PracticeCoach({
     }
     return String(err);
   }
-  const { start, stop, isRecording, transcript, partial, error } = useSoniox();
-  const [finalTranscript, setFinalTranscript] = useState("");
-  const [reply, setReply] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [isExpanded, setIsExpanded] = useState(true);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  useEffect(() => {
-    // sync partial to live display
-  }, [partial]);
-
-  async function handleStopAndSend() {
-    // stop capture
-    stop();
-    const text = (transcript || "") + (partial ? ` ${partial}` : "");
-    setFinalTranscript(text.trim());
+  async function callCoach(text: string) {
     if (!text.trim()) return;
     setLoading(true);
     try {
@@ -49,13 +47,13 @@ export default function PracticeCoach({
           transcript: text.trim(),
           topic: lessonTitle || undefined,
           history: [],
-          // include lesson content to give context
           lessonContent: lessonContent || undefined,
         }),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "Coach API failed");
       setReply(data.reply || "");
+      setFinalTranscript(text.trim());
       if (data.audioContent) {
         const audio = `data:audio/mp3;base64,${data.audioContent}`;
         if (audioRef.current) {
@@ -71,6 +69,91 @@ export default function PracticeCoach({
     }
   }
 
+  const { start, stop, isRecording, transcript, partial, error } = useSoniox({
+    onSilence: callCoach,
+    silenceMs: 2500,
+    silenceThreshold: -50,
+  });
+
+  const [finalTranscript, setFinalTranscript] = useState("");
+  const [reply, setReply] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(true);
+  const [youtubeUrl, setYoutubeUrl] = useState("");
+  const [testText, setTestText] = useState("");
+  const [ytStatus, setYtStatus] = useState<
+    "idle" | "loading" | "ready" | "error"
+  >("idle");
+  const [ytTitle, setYtTitle] = useState("");
+
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const ytAudioRef = useRef<HTMLAudioElement | null>(null);
+
+  const ytVideoId = youtubeUrl ? getYouTubeId(youtubeUrl) : null;
+
+  // Auto-load audio when URL is pasted
+  useEffect(() => {
+    if (!ytVideoId) return;
+    let cancelled = false;
+    setYtStatus("loading");
+    fetch(`/api/ytstream?url=${encodeURIComponent(youtubeUrl)}`)
+      .then((r) => r.json())
+      .then((data) => {
+        if (cancelled || !ytAudioRef.current) return;
+        if (data.audioUrl) {
+          ytAudioRef.current.src = data.audioUrl;
+          ytAudioRef.current.load();
+          setYtTitle(data.title || "");
+          setYtStatus("ready");
+        } else {
+          setYtStatus("error");
+        }
+      })
+      .catch(() => {
+        if (!cancelled) setYtStatus("error");
+      });
+    return () => {
+      cancelled = true;
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [ytVideoId]);
+
+  async function loadYouTubeAudio() {
+    if (!ytVideoId) return;
+    setYtStatus("loading");
+    try {
+      const res = await fetch(`/api/ytstream?url=${encodeURIComponent(youtubeUrl)}`);
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Failed to load YouTube audio");
+      if (ytAudioRef.current) {
+        ytAudioRef.current.src = data.audioUrl;
+        ytAudioRef.current.load();
+      }
+      setYtTitle(data.title || "");
+      setYtStatus("ready");
+    } catch (e) {
+      setYtStatus("error");
+      alert(getErrorMessage(e));
+    }
+  }
+
+  async function startWithYouTube() {
+    if (!ytAudioRef.current || ytStatus !== "ready") {
+      alert("YouTube audio not loaded yet. Please wait and try again.");
+      return;
+    }
+    try {
+      // captureStream() works on <audio> elements without CORS issues
+      const stream = (ytAudioRef.current as HTMLAudioElement & {
+        captureStream: () => MediaStream;
+      }).captureStream();
+      await start({ stream });
+      ytAudioRef.current.play().catch(() => {});
+    } catch (e) {
+      alert(`Cannot capture YouTube audio: ${getErrorMessage(e)}`);
+    }
+  }
+
   return (
     <>
       {isExpanded && (
@@ -82,6 +165,12 @@ export default function PracticeCoach({
               <span className="text-sm font-semibold text-gray-900">
                 Speaking Lab
               </span>
+              {isRecording && (
+                <span className="flex items-center gap-1 text-xs text-red-500 font-medium">
+                  <span className="w-1.5 h-1.5 bg-red-500 rounded-full animate-pulse" />
+                  Listening
+                </span>
+              )}
             </div>
             <div className="flex items-center gap-1">
               <button
@@ -95,7 +184,7 @@ export default function PracticeCoach({
                   if (isRecording) stop();
                   setFinalTranscript("");
                   setReply("");
-                  // cleared
+                  setYtStatus("idle");
                 }}
                 className="p-1 text-gray-500 hover:text-gray-700 transition-colors"
               >
@@ -107,20 +196,100 @@ export default function PracticeCoach({
           {/* Content */}
           <div className="flex-1 overflow-y-auto p-3 space-y-3">
             {/* Control Buttons */}
-            <div className="flex items-center gap-2">
+            <div className="flex gap-2">
               <button
-                onClick={() => start()}
+                onClick={() => start({ source: "mic" })}
                 disabled={isRecording}
-                className="flex-1 inline-flex items-center justify-center gap-2 px-3 py-2 bg-green-500 text-white text-xs font-medium rounded-lg hover:bg-green-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                className="flex-1 inline-flex items-center justify-center gap-1 px-2 py-2 bg-green-500 text-white text-xs font-medium rounded-lg hover:bg-green-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
               >
-                <Mic size={14} /> Start
+                <Mic size={13} /> Mic
               </button>
               <button
-                onClick={handleStopAndSend}
-                disabled={!isRecording}
-                className="flex-1 inline-flex items-center justify-center gap-2 px-3 py-2 bg-indigo-600 text-white text-xs font-medium rounded-lg hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                onClick={startWithYouTube}
+                disabled={isRecording || ytStatus !== "ready"}
+                className="flex-1 inline-flex items-center justify-center gap-1 px-2 py-2 bg-blue-500 text-white text-xs font-medium rounded-lg hover:bg-blue-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                title={ytStatus !== "ready" ? "Paste YouTube URL and wait for it to load" : "Use YouTube audio as source"}
               >
-                <Play size={14} /> Stop
+                <Mic size={13} /> YouTube
+              </button>
+              <button
+                onClick={() => {
+                  stop();
+                  ytAudioRef.current?.pause();
+                  const text =
+                    (transcript || "") + (partial ? ` ${partial}` : "");
+                  const trimmed = text.trim();
+                  if (trimmed) callCoach(trimmed);
+                }}
+                disabled={!isRecording}
+                className="flex-1 inline-flex items-center justify-center gap-1 px-2 py-2 bg-indigo-600 text-white text-xs font-medium rounded-lg hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+              >
+                <Square size={13} /> Done
+              </button>
+            </div>
+
+            {/* YouTube URL */}
+            <div>
+              <input
+                type="url"
+                placeholder="Paste YouTube URL..."
+                value={youtubeUrl}
+                onChange={(e) => {
+                  setYoutubeUrl(e.target.value);
+                  setYtStatus("idle");
+                }}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") loadYouTubeAudio();
+                }}
+                className="w-full text-xs px-2 py-1.5 border border-gray-200 rounded-md focus:outline-none focus:ring-1 focus:ring-indigo-400"
+              />
+              {/* Status */}
+              <div className="mt-1 flex items-center justify-between">
+                {ytStatus === "idle" && ytVideoId && (
+                  <button
+                    onClick={loadYouTubeAudio}
+                    className="text-xs text-blue-600 hover:underline"
+                  >
+                    Load audio
+                  </button>
+                )}
+                {ytStatus === "loading" && (
+                  <p className="text-xs text-gray-400 animate-pulse">Loading audio...</p>
+                )}
+                {ytStatus === "ready" && ytTitle && (
+                  <p className="text-xs text-green-500 truncate flex-1">{ytTitle}</p>
+                )}
+                {ytStatus === "error" && (
+                  <p className="text-xs text-red-400">Failed to load</p>
+                )}
+              </div>
+            </div>
+
+            {/* Test text */}
+            <div className="flex gap-2">
+              <input
+                type="text"
+                placeholder="Test: type any English sentence here..."
+                value={testText}
+                onChange={(e) => setTestText(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" && testText.trim()) {
+                    callCoach(testText.trim());
+                    setTestText("");
+                  }
+                }}
+                className="flex-1 text-xs px-2 py-1.5 border border-gray-200 rounded-md focus:outline-none focus:ring-1 focus:ring-indigo-400"
+              />
+              <button
+                onClick={() => {
+                  if (testText.trim()) {
+                    callCoach(testText.trim());
+                    setTestText("");
+                  }
+                }}
+                className="px-2 py-1.5 bg-orange-500 text-white text-xs font-medium rounded hover:bg-orange-600 transition-colors"
+              >
+                Send
               </button>
             </div>
 
@@ -130,17 +299,27 @@ export default function PracticeCoach({
               </div>
             )}
 
-            {/* User's Speech */}
-            {(transcript || finalTranscript) && (
+            {/* Real-time partial transcript */}
+            {partial && (
+              <div className="p-2 bg-yellow-50 border border-yellow-300 rounded-lg">
+                <p className="text-xs text-yellow-600 font-semibold mb-1 flex items-center gap-1">
+                  <span className="w-1.5 h-1.5 bg-yellow-400 rounded-full animate-pulse" />
+                  Live
+                </p>
+                <p className="text-sm text-gray-900 font-medium leading-relaxed">
+                  {partial}
+                </p>
+              </div>
+            )}
+
+            {/* Confirmed transcript */}
+            {finalTranscript && (
               <div className="p-2 bg-blue-50 border border-blue-200 rounded-lg">
                 <p className="text-xs text-blue-600 font-semibold mb-1">
-                  Your speech:
+                  Transcript
                 </p>
                 <p className="text-xs text-gray-800 leading-relaxed">
-                  {transcript}{" "}
-                  {partial && (
-                    <span className="text-gray-500 italic">{partial}</span>
-                  )}
+                  {finalTranscript}
                 </p>
               </div>
             )}
@@ -178,6 +357,9 @@ export default function PracticeCoach({
         </div>
       )}
 
+      {/* Hidden audio — used for YouTube stream capture */}
+      <audio ref={ytAudioRef} style={{ display: "none" }} />
+      {/* Coach TTS audio */}
       <audio ref={audioRef} />
     </>
   );
