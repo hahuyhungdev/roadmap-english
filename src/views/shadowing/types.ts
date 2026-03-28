@@ -19,6 +19,7 @@ export type SpeakingReview = {
 export type ShadowTurn = {
   id: string;
   text: string;
+  sentenceIdx?: number;
   feedback: string | null;
   review: SpeakingReview | null;
   audioUrl?: string;

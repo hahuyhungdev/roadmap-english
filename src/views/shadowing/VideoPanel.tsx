@@ -3,8 +3,6 @@
 import { useEffect, useRef, useState } from "react";
 import YouTube, { type YouTubeEvent } from "react-youtube";
 import {
-  SkipBack,
-  SkipForward,
   Repeat2,
   BookmarkPlus,
   BookmarkX,
@@ -18,16 +16,12 @@ interface VideoPanelProps {
   videoId: string | null;
   playerRef: React.MutableRefObject<YTPlayer | null>;
   onPlayerReady: (event: YouTubeEvent) => void;
-  playbackRate: number;
-  onPlaybackRateChange: (rate: number) => void;
 }
 
 export function VideoPanel({
   videoId,
   playerRef,
   onPlayerReady,
-  playbackRate,
-  onPlaybackRateChange,
 }: VideoPanelProps) {
   // ── A-B loop (self-contained) ──
   const [loopA, setLoopA] = useState<number | null>(null);
@@ -84,57 +78,6 @@ export function VideoPanel({
       {/* Controls */}
       {videoId && (
         <div className="bg-white border border-gray-200 rounded-2xl p-4 shadow-sm space-y-4">
-          {/* Playback speed */}
-          <div>
-            <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">
-              Playback Speed
-            </p>
-            <div className="flex gap-2 flex-wrap">
-              {[0.5, 0.75, 1.0, 1.25, 1.5].map((rate) => (
-                <button
-                  key={rate}
-                  onClick={() => {
-                    onPlaybackRateChange(rate);
-                    playerRef.current?.setPlaybackRate(rate);
-                  }}
-                  className={clsx(
-                    "px-3 py-1.5 rounded-lg text-xs font-semibold border transition-all",
-                    playbackRate === rate
-                      ? "bg-indigo-600 text-white border-indigo-600 shadow-sm"
-                      : "bg-white text-gray-600 border-gray-200 hover:border-indigo-300 hover:text-indigo-600",
-                  )}
-                >
-                  {rate}x
-                </button>
-              ))}
-            </div>
-          </div>
-
-          {/* Seek */}
-          <div>
-            <div className="flex items-center justify-between mb-2">
-              <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">
-                Seek
-              </p>
-              <span className="text-[10px] text-gray-400">← → keys</span>
-            </div>
-            <div className="flex gap-2">
-              {([-10, -5, 5, 10] as const).map((d) => (
-                <button
-                  key={d}
-                  onClick={() => {
-                    const c = playerRef.current?.getCurrentTime() ?? 0;
-                    playerRef.current?.seekTo(c + d, true);
-                  }}
-                  className="flex items-center gap-1 px-3 py-1.5 text-xs font-medium text-gray-600 border border-gray-200 rounded-lg hover:border-indigo-300 hover:text-indigo-600 transition-all"
-                >
-                  {d < 0 ? <SkipBack size={13} /> : <SkipForward size={13} />}
-                  {Math.abs(d)}s
-                </button>
-              ))}
-            </div>
-          </div>
-
           {/* A-B Loop */}
           <div>
             <div className="flex items-center justify-between mb-2">

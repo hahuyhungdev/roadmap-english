@@ -37,7 +37,7 @@ export function AudioReplay({ url }: AudioReplayProps) {
         onClick={toggle}
         title={playing ? "Stop playback" : "Replay your recording"}
         className={clsx(
-          "shrink-0 w-7 h-7 flex items-center justify-center rounded-full border transition-colors mt-1",
+          "shrink-0 w-7 h-7 flex items-center justify-center rounded-full border transition-colors",
           playing
             ? "bg-indigo-100 border-indigo-300 text-indigo-600"
             : "bg-white border-gray-200 text-gray-400 hover:border-indigo-300 hover:text-indigo-600",
@@ -52,3 +52,4 @@ export function AudioReplay({ url }: AudioReplayProps) {
     </>
   );
 }
+

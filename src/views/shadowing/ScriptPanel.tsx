@@ -8,13 +8,12 @@ import {
   Settings2,
   Star,
   Trash2,
-  Volume2,
-  VolumeX,
 } from "lucide-react";
 import clsx from "clsx";
 import type { Sentence } from "./types";
 import { TTS_VOICES, TTS_SPEEDS } from "./constants";
-import { fmtTime } from "./utils";
+import { AudioReplay } from "./AudioReplay";
+import { SentenceCard } from "./SentenceCard";
 
 export interface ScriptPanelProps {
   videoId: string | null;
@@ -40,9 +39,6 @@ export interface ScriptPanelProps {
   // Callbacks
   onFetchScript: () => void;
   onJumpToSentence: (idx: number) => void;
-  onHear: (idx: number) => void;
-  onShadow: (idx: number) => void;
-  onStopRecording: () => void;
   onToggleTtsSettings: () => void;
   onClearSession: () => void;
   onSetTtsVoice: (v: string) => void;
@@ -68,9 +64,6 @@ export function ScriptPanel({
   hasTurns,
   onFetchScript,
   onJumpToSentence,
-  onHear,
-  onShadow,
-  onStopRecording,
   onToggleTtsSettings,
   onClearSession,
   onSetTtsVoice,
@@ -212,105 +205,41 @@ export function ScriptPanel({
           </div>
         )}
         {sentences.length > 0 && (
-          <div className="space-y-0.5 py-1">
+          <>
             <p className="text-[10px] text-gray-400 px-1 pb-1.5">
               Shift+&#x2190;&#x2192; to navigate
             </p>
-            {sentences.map((s, i) => {
-              // Bug fix: each row has its own playing/loading state
-              const isThisHearing = hearingIdx === i && ttsPlaying;
-              const isThisLoading = hearingIdx === i && ttsLoading;
-              const isThisRecording = isRecording && recordingForIdx === i;
-
-              return (
-                <button
+            <div className="flex items-center gap-2 overflow-x-auto pb-4 px-1">
+              {sentences.map((_, i) => (
+                <SentenceCard
                   key={i}
-                  ref={(el) => {
+                  idx={i}
+                  active={i === activeSentenceIdx}
+                  onClick={onJumpToSentence}
+                  setRef={(el) => {
                     sentenceItemRefs.current[i] = el;
                   }}
-                  onClick={() => onJumpToSentence(i)}
-                  className={clsx(
-                    "w-full text-left px-3 py-2 rounded-xl border transition-all",
-                    i === activeSentenceIdx
-                      ? "border-indigo-300 bg-indigo-50 shadow-sm"
-                      : "border-transparent hover:border-gray-200 hover:bg-gray-50",
-                  )}
-                >
-                  <div className="flex items-start gap-2">
-                    <span className="shrink-0 font-mono text-[10px] text-gray-400 mt-0.5 w-10">
-                      {fmtTime(s.startMs)}
-                    </span>
-                    <p
-                      className={clsx(
-                        "flex-1 text-xs leading-relaxed",
-                        i === activeSentenceIdx
-                          ? "text-indigo-900 font-medium"
-                          : "text-gray-700",
-                      )}
-                    >
-                      {s.text}
-                    </p>
-                  </div>
+                />
+              ))}
+            </div>
 
-                  {/* Hear + Shadow pills */}
-                  <div className="flex gap-1.5 mt-1.5 pl-12">
-                    {/* Hear pill — active only for this sentence */}
-                    <span
-                      role="button"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        onHear(i);
-                      }}
-                      className={clsx(
-                        "flex items-center gap-1 px-2 py-0.5 text-[10px] font-semibold rounded-full border cursor-pointer transition-colors",
-                        isThisHearing
-                          ? "text-red-500 bg-red-50 border-red-100 hover:bg-red-100"
-                          : "text-emerald-600 bg-emerald-50 border-emerald-100 hover:bg-emerald-100",
-                      )}
-                    >
-                      {isThisLoading ? (
-                        <Loader2 size={9} className="animate-spin" />
-                      ) : isThisHearing ? (
-                        <VolumeX size={9} />
-                      ) : (
-                        <Volume2 size={9} />
-                      )}
-                      {isThisHearing ? "Stop" : "Hear"}
-                    </span>
-
-                    {/* Shadow pill */}
-                    <span
-                      role="button"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        if (isThisRecording) onStopRecording();
-                        else if (!isRecording) onShadow(i);
-                      }}
-                      className={clsx(
-                        "flex items-center gap-1 px-2 py-0.5 text-[10px] font-semibold rounded-full border cursor-pointer transition-colors",
-                        isThisRecording
-                          ? "text-red-600 bg-red-50 border-red-200 hover:bg-red-100"
-                          : isRecording
-                            ? "text-gray-400 bg-gray-50 border-gray-200 cursor-not-allowed"
-                            : "text-indigo-600 bg-indigo-50 border-indigo-100 hover:bg-indigo-100",
-                      )}
-                    >
-                      {isThisRecording ? (
-                        <>
-                          <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
-                          Stop
-                        </>
-                      ) : (
-                        <>
-                          <Mic size={9} /> Shadow
-                        </>
-                      )}
-                    </span>
-                  </div>
-                </button>
-              );
-            })}
-          </div>
+            <div className="mx-1 rounded-xl border border-indigo-100 bg-indigo-50 p-4 shadow-sm">
+              {activeSentenceIdx < 0 ? (
+                <div className="text-center text-sm text-gray-500">
+                  Select a sentence index above to see its content.
+                </div>
+              ) : (
+                <div>
+                  <p className="text-[10px] uppercase tracking-[0.18em] text-indigo-600 font-semibold">
+                    Sentence {activeSentenceIdx + 1}
+                  </p>
+                  <p className="mt-3 text-sm leading-7 text-indigo-900">
+                    {sentences[activeSentenceIdx].text}
+                  </p>
+                </div>
+              )}
+            </div>
+          </>
         )}
       </div>
     </>
