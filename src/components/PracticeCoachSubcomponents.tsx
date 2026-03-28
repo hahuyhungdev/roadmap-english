@@ -8,20 +8,20 @@ import type { Turn } from "../hooks/useCoachSession";
 export const StatusBar: FC<{
   isRecording: boolean;
   isPlaying: boolean;
+  canSend: boolean;
+  draftText: string;
   onStart: () => void;
   onStop: () => void;
-}> = ({ isRecording, isPlaying, onStart, onStop }) => {
+  onSend: () => void;
+}> = ({ isRecording, isPlaying, canSend, draftText, onStart, onStop, onSend }) => {
   return (
-    <div className="px-3 py-2 border-t border-gray-100 shrink-0">
-      {!isRecording ? (
-        <button
-          onClick={onStart}
-          className="w-full py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium rounded-lg transition-colors flex items-center justify-center gap-2"
-        >
-          <Play size={14} />
-          Start Practice
-        </button>
-      ) : (
+    <div className="px-3 py-2 border-t border-gray-100 shrink-0 space-y-2">
+      {draftText ? (
+        <div className="text-xs text-gray-500 text-right italic truncate">
+          Draft: {draftText}
+        </div>
+      ) : null}
+      {isRecording ? (
         <div className="flex flex-col gap-2">
           <div className="text-xs text-gray-500 text-center">
             🎤 Listening...
@@ -35,6 +35,31 @@ export const StatusBar: FC<{
             Stop
           </button>
         </div>
+      ) : canSend ? (
+        <div className="flex flex-col gap-2">
+          <button
+            onClick={onSend}
+            className="w-full py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-medium rounded-lg transition-colors flex items-center justify-center gap-2"
+          >
+            <Play size={14} />
+            Send Transcript
+          </button>
+          <button
+            onClick={onStart}
+            className="w-full py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium rounded-lg transition-colors flex items-center justify-center gap-2"
+          >
+            <Play size={14} />
+            Record Again
+          </button>
+        </div>
+      ) : (
+        <button
+          onClick={onStart}
+          className="w-full py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium rounded-lg transition-colors flex items-center justify-center gap-2"
+        >
+          <Play size={14} />
+          Start Practice
+        </button>
       )}
     </div>
   );
@@ -104,12 +129,13 @@ export const PracticeCoachHeader: FC<{
 // ============ CONVERSATION AREA COMPONENT ============
 export const ConversationArea: FC<{
   turns: Turn[];
+  transcript: string;
   partial: string;
   loading: boolean;
   isRecording: boolean;
   lessonTitle?: string;
   bottomRef: React.RefObject<HTMLDivElement | null>;
-}> = ({ turns, partial, loading, isRecording, lessonTitle, bottomRef }) => {
+}> = ({ turns, transcript, partial, loading, isRecording, lessonTitle, bottomRef }) => {
   return (
     <div className="flex-1 overflow-y-auto p-3 space-y-3 min-h-0">
       {turns.length === 0 && !partial && !loading && (
@@ -197,14 +223,6 @@ export const ConversationArea: FC<{
         </div>
       ))}
 
-      {/* Live partial transcript */}
-      {partial && (
-        <div className="flex justify-end">
-          <div className="max-w-[82%] bg-indigo-100 border border-indigo-200 rounded-2xl rounded-tr-sm px-3 py-2">
-            <p className="text-xs text-indigo-600 leading-relaxed">{partial}</p>
-          </div>
-        </div>
-      )}
 
       {/* Typing indicator */}
       {loading && (

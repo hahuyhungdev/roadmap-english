@@ -3,12 +3,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 
 type UseSonioxOptions = {
-  /** Called when silence is detected after the user stops speaking */
-  onSilence?: (fullTranscript: string) => void;
-  /** Silence threshold in dB (default: -45) */
-  silenceThreshold?: number;
-  /** How many ms of silence before triggering auto-stop (default: 900) */
-  silenceMs?: number;
   /** Audio source: 'mic' (default) or 'tab' (capture tab/system audio for testing) */
   source?: "mic" | "tab";
 };
@@ -19,6 +13,7 @@ type UseSonioxResult = {
     stream?: MediaStream;
   }) => Promise<void>;
   stop: () => void;
+  reset: () => void;
   isRecording: boolean;
   transcript: string;
   partial: string;
@@ -82,13 +77,9 @@ export default function useSoniox(options?: UseSonioxOptions): UseSonioxResult {
   const wsRef = useRef<WebSocket | null>(null);
   const mediaRef = useRef<MediaRecorder | null>(null);
   const streamRef = useRef<MediaStream | null>(null);
-  const audioCtxRef = useRef<AudioContext | null>(null);
-  const analyserRef = useRef<AnalyserNode | null>(null);
   // Used for Web Speech API fallback when no Soniox API key is set
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const recognitionRef = useRef<any>(null);
-  const silenceTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const wasSilentRef = useRef(true); // true = currently in silence period
   const transcriptRef = useRef(""); // mirror of transcript state, avoids stale closures
   const partialRef = useRef(""); // mirror of partial state
   const [isRecording, setIsRecording] = useState(false);
@@ -105,15 +96,11 @@ export default function useSoniox(options?: UseSonioxOptions): UseSonioxResult {
     // Stop Web Speech API fallback if active
     if (recognitionRef.current) {
       try {
-        recognitionRef.current.abort();
+        recognitionRef.current.stop();
       } catch {
         /* ignore */
       }
       recognitionRef.current = null;
-    }
-    if (silenceTimerRef.current) {
-      clearTimeout(silenceTimerRef.current);
-      silenceTimerRef.current = null;
     }
     try {
       if (mediaRef.current && mediaRef.current.state !== "inactive")
@@ -125,12 +112,6 @@ export default function useSoniox(options?: UseSonioxOptions): UseSonioxResult {
       streamRef.current?.getTracks().forEach((t) => t.stop());
     } catch (err) {
       console.warn("stop tracks error", err);
-    }
-    try {
-      audioCtxRef.current?.close();
-      audioCtxRef.current = null;
-    } catch (err) {
-      console.warn("close audio ctx error", err);
     }
     try {
       if (wsRef.current?.readyState === WebSocket.OPEN) {
@@ -146,6 +127,13 @@ export default function useSoniox(options?: UseSonioxOptions): UseSonioxResult {
       console.warn("ws close error", err);
     }
     setIsRecording(false);
+  }, []);
+
+  const reset = useCallback(() => {
+    transcriptRef.current = "";
+    partialRef.current = "";
+    setTranscript("");
+    setPartial("");
   }, []);
 
   useEffect(() => {
@@ -178,7 +166,7 @@ export default function useSoniox(options?: UseSonioxOptions): UseSonioxResult {
 
         const recognition = new SR();
         recognition.lang = "en-US";
-        recognition.continuous = false;
+        recognition.continuous = true;
         recognition.interimResults = true;
         recognitionRef.current = recognition;
 
@@ -209,12 +197,6 @@ export default function useSoniox(options?: UseSonioxOptions): UseSonioxResult {
         recognition.onend = () => {
           recognitionRef.current = null;
           setIsRecording(false);
-          const final = (transcriptRef.current || partialRef.current).trim();
-          if (final) options?.onSilence?.(final);
-          transcriptRef.current = "";
-          partialRef.current = "";
-          setTranscript("");
-          setPartial("");
         };
 
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -411,68 +393,9 @@ export default function useSoniox(options?: UseSonioxOptions): UseSonioxResult {
             }
             setIsRecording(true);
 
-            // Silence detection via AudioContext + AnalyserNode
-            // Note: AudioContext may not work with tab capture streams on some browsers
-            try {
-              const ctx = new AudioContext();
-              audioCtxRef.current = ctx;
-              const source = ctx.createMediaStreamSource(stream);
-              const analyser = ctx.createAnalyser();
-              analyser.fftSize = 2048;
-              analyser.smoothingTimeConstant = 0.4;
-              source.connect(analyser);
-              analyserRef.current = analyser;
-              wasSilentRef.current = true;
-
-              const threshold = options?.silenceThreshold ?? -45;
-              const silenceMs = options?.silenceMs ?? 900;
-
-              function measureRMS(): number {
-                if (!analyser) return -Infinity;
-                const buf = new Float32Array(analyser.fftSize);
-                analyser.getFloatTimeDomainData(buf);
-                let sum = 0;
-                for (let i = 0; i < buf.length; i++) sum += buf[i] * buf[i];
-                return 10 * Math.log10(sum / buf.length + 1e-10);
-              }
-
-              function tick() {
-                if (!isRecording) return;
-                const db = measureRMS();
-                const silent = db < threshold;
-                if (silent) {
-                  if (!wasSilentRef.current) {
-                    wasSilentRef.current = true;
-                    if (silenceTimerRef.current)
-                      clearTimeout(silenceTimerRef.current);
-                    silenceTimerRef.current = setTimeout(() => {
-                      if (isRecording) {
-                        const text =
-                          (transcriptRef.current || "") +
-                          (partialRef.current ? ` ${partialRef.current}` : "");
-                        const full = normalizeSpacedTranscript(text.trim());
-                        if (full) options?.onSilence?.(full);
-                        stop();
-                      }
-                    }, silenceMs);
-                  }
-                } else {
-                  wasSilentRef.current = false;
-                  if (silenceTimerRef.current) {
-                    clearTimeout(silenceTimerRef.current);
-                    silenceTimerRef.current = null;
-                  }
-                }
-                requestAnimationFrame(tick);
-              }
-              requestAnimationFrame(tick);
-            } catch (err) {
-              // AudioContext not available — silence detection skipped; still record
-              console.warn(
-                "AudioContext unavailable, silence detection disabled:",
-                err,
-              );
-            }
+            // Manual mode: do not use silence detection. Recording continues until the user stops it.
+            // The MediaRecorder stream remains open and Soniox will finalize when stop() is called.
+            // No additional AudioContext-based silence timer is needed.
           },
           { once: true },
         );
@@ -482,8 +405,8 @@ export default function useSoniox(options?: UseSonioxOptions): UseSonioxResult {
         setIsRecording(false);
       }
     },
-    [options?.silenceThreshold, options?.silenceMs, options?.onSilence],
+    [options?.source],
   );
 
-  return { start, stop, isRecording, transcript, partial, error };
+  return { start, stop, reset, isRecording, transcript, partial, error };
 }

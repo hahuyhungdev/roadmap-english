@@ -29,7 +29,7 @@ export type SonioxStatus =
   | "idle"
   | "connecting"
   | "speaking"   // user is speaking
-  | "processing" // silence detected, finalizing
+  | "processing" // finalizing user speech
   | "error";
 
 export interface UseVoicePracticeOptions {
@@ -37,10 +37,6 @@ export interface UseVoicePracticeOptions {
   systemPrompt?: string;
   /** Called with parsed review after each coach response. */
   onReview?: (review: SpeakingReview) => void;
-  /** Minimum silence duration (ms) before triggering end-of-speech (default 800). */
-  silenceThresholdMs?: number;
-  /** Minimum audio level to consider "speaking" (0–1, default 0.02). */
-  energyThreshold?: number;
 }
 
 export interface UseVoicePracticeReturn {

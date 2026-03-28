@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState, useEffectEvent } from "react";
 import useSoniox from "../hooks/useSoniox";
 import { useCoachSession } from "../hooks/useCoachSession";
 import {
@@ -42,13 +42,12 @@ export default function PracticeCoach({
   const {
     start: startSoniox,
     stop: stopSoniox,
+    reset: resetTranscript,
     isRecording,
+    transcript,
     partial,
     error,
   } = useSoniox({
-    onSilence: callCoach,
-    silenceMs: 2500,
-    silenceThreshold: -50,
     source: "mic",
   });
 
@@ -61,6 +60,13 @@ export default function PracticeCoach({
     startRef.current = startSoniox;
     stopRef.current = stopSoniox;
   });
+
+  // Reset the started flag when recording stops
+  useEffect(() => {
+    if (!isRecording) {
+      hasStartedRef.current = false;
+    }
+  }, [isRecording]);
 
   // Cleanup on unmount
   useEffect(() => {
@@ -78,21 +84,32 @@ export default function PracticeCoach({
   }, [turns]);
 
   // ==== Handlers ====
-  const handleStart = () => {
+  const handleStart = useEffectEvent(() => {
     if (!hasStartedRef.current) {
       startRef.current({ source: "mic" });
       hasStartedRef.current = true;
     }
-  };
+  });
 
-  const handleStop = () => {
+  const handleStop = useEffectEvent(() => {
     stopRef.current();
     hasStartedRef.current = false;
-  };
+  });
+
+  const handleSend = useEffectEvent(async () => {
+    const finalTranscript = (transcript || partial).trim();
+    if (!finalTranscript) return;
+
+    stopRef.current();
+    hasStartedRef.current = false;
+    await callCoach(finalTranscript);
+    resetTranscript();
+  });
 
   const handleClear = () => {
     if (isRecording) stopRef.current();
     clearSession();
+    resetTranscript();
     hasStartedRef.current = false;
   };
 
@@ -113,6 +130,7 @@ export default function PracticeCoach({
           />
           <ConversationArea
             turns={turns}
+            transcript={transcript}
             partial={partial}
             loading={loading}
             isRecording={isRecording}
@@ -123,8 +141,11 @@ export default function PracticeCoach({
           <StatusBar
             isRecording={isRecording}
             isPlaying={isPlaying}
+            draftText={(transcript || partial).trim()}
+            canSend={Boolean((transcript || partial).trim())}
             onStart={handleStart}
             onStop={handleStop}
+            onSend={handleSend}
           />
         </ExpandedPanel>
       )}

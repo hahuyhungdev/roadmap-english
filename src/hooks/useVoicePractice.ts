@@ -4,12 +4,10 @@
  * A self-contained React hook that orchestrates:
  *   1. Microphone capture (MediaStream API)
  *   2. Real-time streaming transcription (Soniox WebSocket)
- *   3. End-of-speech detection (AudioContext + AnalyserNode)
- *   4. Coach API call → parses structured JSON review block
- *   5. TTS playback (Web Speech Synthesis API — zero API key required)
+ *   3. Coach API call → parses structured JSON review block
+ *   4. TTS playback (Web Speech Synthesis API — zero API key required)
  *
- * Designed for minimum latency: the API call fires the moment silence is
- * detected, before the user has finished "letting go" of the mic.
+ * Designed for manual stop mode: the user controls when recording ends.
  */
 
 import { useCallback, useEffect, useRef, useState } from "react";
@@ -132,11 +130,7 @@ async function speak(text: string): Promise<void> {
 export function useVoicePractice(
   options: UseVoicePracticeOptions = {},
 ): UseVoicePracticeReturn {
-  const {
-    onReview,
-    silenceThresholdMs = 900,
-    energyThreshold = 0.02,
-  } = options;
+  const { onReview } = options;
 
   // ── Public state ──────────────────────────────────────────────────────────
   const [status, setStatus] = useState<SonioxStatus>("idle");
@@ -149,18 +143,14 @@ export function useVoicePractice(
   const micStreamRef = useRef<MediaStream | null>(null);
   const audioCtxRef = useRef<AudioContext | null>(null);
   const analyserRef = useRef<AnalyserNode | null>(null);
-  const silenceTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const isSpeakingRef = useRef(false);
   const currentTranscriptRef = useRef("");
   const wsRef = useRef<WebSocket | null>(null);
   const historyRef = useRef<CoachingMessage[]>([]);
-  const speakingResolvedRef = useRef<(() => void) | null>(null);
   const cancelledRef = useRef(false);
 
   // ── Cleanup helper ────────────────────────────────────────────────────────
   function stopAll() {
     cancelledRef.current = true;
-    if (silenceTimerRef.current) clearTimeout(silenceTimerRef.current);
 
     wsRef.current?.close();
     wsRef.current = null;
@@ -217,13 +207,11 @@ export function useVoicePractice(
         if (data.transcript && !data.is_final) {
           currentTranscriptRef.current = data.transcript;
           setTranscript(data.transcript);
-          resetSilenceTimer();
         }
 
         if (data.is_final) {
           currentTranscriptRef.current = data.transcript ?? "";
           setTranscript(data.transcript ?? "");
-          clearSilenceTimer();
           onFinal(data.transcript ?? "");
         }
       };
@@ -251,29 +239,6 @@ export function useVoicePractice(
         },
       });
     });
-  }
-
-  // ── Silence / end-of-speech detection ────────────────────────────────────
-  function resetSilenceTimer() {
-    if (silenceTimerRef.current) clearTimeout(silenceTimerRef.current);
-    if (!isSpeakingRef.current) {
-      isSpeakingRef.current = true;
-    }
-    silenceTimerRef.current = setTimeout(() => {
-      isSpeakingRef.current = false;
-      // Signal that silence is long enough — speech has ended
-      if (speakingResolvedRef.current) {
-        speakingResolvedRef.current();
-        speakingResolvedRef.current = null;
-      }
-    }, silenceThresholdMs);
-  }
-
-  function clearSilenceTimer() {
-    if (silenceTimerRef.current) {
-      clearTimeout(silenceTimerRef.current);
-      silenceTimerRef.current = null;
-    }
   }
 
   // ── Mic capture + audio level monitoring ──────────────────────────────────
@@ -305,21 +270,10 @@ export function useVoicePractice(
     const bufferLength = analyser.fftSize;
     const timeData = new Float32Array(bufferLength);
 
-    // Poll audio level; when above threshold → reset silence timer
+    // Poll audio continuously and send captured audio until the user stops.
     function pollLevel() {
       if (!analyserRef.current) return;
       analyserRef.current.getFloatTimeDomainData(timeData);
-
-      // RMS amplitude
-      let rms = 0;
-      for (let i = 0; i < bufferLength; i++) {
-        rms += timeData[i] * timeData[i];
-      }
-      rms = Math.sqrt(rms / bufferLength);
-
-      if (rms > energyThreshold) {
-        resetSilenceTimer();
-      }
 
       if (isConnected()) {
         // Send raw PCM 16-bit mono audio chunk
@@ -332,8 +286,6 @@ export function useVoicePractice(
       }
     }
 
-    // Kick off silence timer immediately so idle state feels right
-    resetSilenceTimer();
     requestAnimationFrame(pollLevel);
   }
 
@@ -399,7 +351,7 @@ export function useVoicePractice(
       setError(msg);
       setStatus("error");
     }
-  }, [silenceThresholdMs, energyThreshold]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   // ── Handle completed speech turn ───────────────────────────────────────────
   async function handleFinalTranscript(finalText: string) {

@@ -77,8 +77,8 @@ export default function ShadowingClient() {
       ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length)
       : null;
 
-  // ── Soniox silence callback ────────────────────────────────────────────────
-  const handleSilence = useCallback(
+  // ── Manual submission helper ─────────────────────────────────────────────
+  const submitTranscript = useCallback(
     async (transcript: string) => {
       const text = transcript.trim();
       if (!text) return;
@@ -133,12 +133,10 @@ export default function ShadowingClient() {
     start: startSoniox,
     stop: stopSoniox,
     isRecording,
+    transcript,
     partial,
     error: sonioxError,
   } = useSoniox({
-    onSilence: handleSilence,
-    silenceMs: 2000,
-    silenceThreshold: -50,
     source: "mic",
   });
   const startRef = useRef(startSoniox);
@@ -148,6 +146,14 @@ export default function ShadowingClient() {
     stopRef.current = stopSoniox;
   });
   useEffect(() => () => stopRef.current(), []);
+
+  async function finishRecording() {
+    stopRef.current();
+    const finalText = (transcript || partial).trim();
+    if (finalText) {
+      await submitTranscript(finalText);
+    }
+  }
 
   // ── Start recording: Soniox/Web Speech + MediaRecorder ────────────────────
   function startRecording() {
@@ -453,7 +459,7 @@ export default function ShadowingClient() {
               onJumpToSentence={goToSentenceIdx}
               onHear={handleSentenceHear}
               onShadow={handleSentenceShadow}
-              onStopRecording={() => stopRef.current()}
+              onStopRecording={() => void finishRecording()}
               onToggleTtsSettings={() => setShowTtsSettings((v) => !v)}
               onClearSession={() => {
                 setTurns([]);
@@ -472,11 +478,12 @@ export default function ShadowingClient() {
             <PracticeFeed
               turns={turns}
               isRecording={isRecording}
+              transcript={transcript}
               partial={partial}
               coachLoading={coachLoading}
               sonioxError={sonioxError}
               onToggleRecording={() => {
-                if (isRecording) stopRef.current();
+                if (isRecording) void finishRecording();
                 else startRecording();
               }}
             />

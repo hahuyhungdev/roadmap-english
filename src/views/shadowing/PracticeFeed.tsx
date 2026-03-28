@@ -10,6 +10,7 @@ import { ReviewCard } from "./ReviewCard";
 interface PracticeFeedProps {
   turns: ShadowTurn[];
   isRecording: boolean;
+  transcript: string;
   partial: string;
   coachLoading: boolean;
   sonioxError: string | undefined;
@@ -19,6 +20,7 @@ interface PracticeFeedProps {
 export function PracticeFeed({
   turns,
   isRecording,
+  transcript,
   partial,
   coachLoading,
   sonioxError,
@@ -97,11 +99,12 @@ export function PracticeFeed({
           </div>
         ))}
 
-        {/* Partial transcript preview while recording */}
-        {isRecording && partial && (
+        {/* Live transcript preview while recording */}
+        {isRecording && (transcript || partial) && (
           <div className="flex justify-end">
             <div className="max-w-[82%] bg-indigo-100 text-indigo-700 rounded-2xl rounded-tr-sm px-3 py-2 text-xs italic opacity-70">
-              {partial}…
+              {transcript ? `${transcript}${partial ? ` ${partial}` : ""}` : partial}
+              {partial && "…"}
             </div>
           </div>
         )}
@@ -131,7 +134,7 @@ export function PracticeFeed({
         </button>
         {isRecording && (
           <p className="text-center text-[11px] text-gray-400 mt-1.5">
-            Auto-submits after 2s silence…
+            Recording continues until you stop it.
           </p>
         )}
       </div>
