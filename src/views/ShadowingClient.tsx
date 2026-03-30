@@ -1,8 +1,9 @@
 "use client";
 
 import { Keyboard } from "lucide-react";
-import { useShadowingSession } from "./shadowing/useShadowingSession";
+
 import { ShortcutsModal } from "./shadowing/ShortcutsModal";
+import { useShadowingSession } from "./shadowing/useShadowingSession";
 import { VideoPanel } from "./shadowing/VideoPanel";
 import { ScriptPanel } from "./shadowing/ScriptPanel";
 import { PracticeFeed } from "./shadowing/PracticeFeed";
@@ -210,7 +211,7 @@ export default function ShadowingClient() {
               hasTurns={hasTurns}
               onFetchScript={handleFetchScript}
               onJumpToSentence={goToSentenceIdx}
-              onToggleTtsSettings={() => setShowTtsSettings((v) => !v)}
+              onToggleTtsSettings={() => setShowTtsSettings((v: boolean) => !v)}
               onClearSession={onClearSession}
               onSetTtsProvider={() => {}}
               onSetTtsAccent={() => {}}
