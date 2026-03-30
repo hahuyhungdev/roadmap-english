@@ -325,16 +325,7 @@ export async function GET(req: NextRequest) {
         console.warn("get_video_info fallback failed for", videoId, e instanceof Error ? e.message : String(e));
       }
 
-      // Try ytdl-core fallback first (more robust on server), then youtubei parse
-      try {
-        const parsedYtdl = await fetchViaYtdl(videoId, cookie);
-        if (parsedYtdl && parsedYtdl.length) {
-          return NextResponse.json({ sentences: parsedYtdl, videoId, language: "en", fallback: "ytdl" });
-        }
-      } catch (e) {
-        console.warn("ytdl fallback failed:", e instanceof Error ? e.message : String(e));
-      }
-
+      // Try youtubei player -> caption XML parse first (no login required), then ytdl-core as a last resort
       try {
         const parsed = await fetchPlayerAndParse(videoId);
         if (parsed && parsed.length) {
@@ -342,6 +333,15 @@ export async function GET(req: NextRequest) {
         }
       } catch (e) {
         console.warn("youtubei fallback parse attempt failed:", e instanceof Error ? e.message : String(e));
+      }
+
+      try {
+        const parsedYtdl = await fetchViaYtdl(videoId, cookie);
+        if (parsedYtdl && parsedYtdl.length) {
+          return NextResponse.json({ sentences: parsedYtdl, videoId, language: "en", fallback: "ytdl" });
+        }
+      } catch (e) {
+        console.warn("ytdl fallback failed:", e instanceof Error ? e.message : String(e));
       }
 
       // No fallback worked
