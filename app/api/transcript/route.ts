@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { getTranscript } from "@/lib/youtube";
 
 export const runtime = "nodejs";
 
@@ -243,6 +244,32 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: "Invalid YouTube URL" }, { status: 400 });
 
   const videoId = match[1];
+
+  // Quick IP check to help diagnose production failures where outbound IP
+  // is blocked/ratelimited by YouTube (useful to confirm AWS/Vercel IP ranges).
+  try {
+    const ipCheck = await fetch("https://api.ipify.org?format=json", { signal: AbortSignal.timeout(5000) });
+    if (ipCheck.ok) {
+      const data = await ipCheck.json();
+      const ip = (data && (data.ip ?? data.address)) || null;
+      console.log("Outbound IP:", ip);
+    } else {
+      console.warn("ipify returned non-ok status", ipCheck.status);
+    }
+  } catch (e) {
+    console.warn("Outbound IP check failed:", e instanceof Error ? e.message : String(e));
+  }
+
+  // Quick service-layer attempt using `src/lib/youtube.ts` which implements
+  // a fast fallback chain (youtube-transcript -> Innertube with cookie)
+  try {
+    const res = await getTranscript(videoId);
+    if (res && res.text) {
+      return NextResponse.json({ transcript: res.text, source: res.source });
+    }
+  } catch (err) {
+    console.info("getTranscript service failed, falling back to legacy flow:", err instanceof Error ? err.message : String(err));
+  }
 
   try {
     // 1. Fetch watch page → cookies + INNERTUBE_API_KEY
