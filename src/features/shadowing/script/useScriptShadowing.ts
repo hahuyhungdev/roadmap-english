@@ -354,7 +354,104 @@ export function useScriptShadowing() {
       setScriptError("Please paste a script or text");
       return;
     }
-    const result = splitScriptIntoSentences(trimmed);
+    // If the script looks like dialogue/markdown with speaker prefixes
+    // (e.g. "John: Hello" or "- John: Hello"), prefer extracting only
+    // the main character's lines to practice with. Otherwise fall back to
+    // generic sentence splitting.
+    let result: ReturnType<typeof splitScriptIntoSentences> = [];
+
+    // Split into raw lines to detect speaker patterns and blockquote dialogues
+    const lines = trimmed
+      .split(/\r?\n+/)
+      .map((l) => l.trim())
+      .filter(Boolean);
+
+    const speakerRegex = /^(?:[-*]\s*)?([A-Za-z0-9 _'"-]{1,40}):\s*(.+)$/;
+    const speakers: Record<string, string[]> = {};
+    // First pass: explicit "Name: text" style
+    for (const line of lines) {
+      const m = line.match(speakerRegex);
+      if (m) {
+        const who = m[1].trim();
+        const text = m[2].trim();
+        speakers[who] = speakers[who] || [];
+        speakers[who].push(text);
+      }
+    }
+
+    // If no explicit speaker prefixes, detect blockquote-style dialogues
+    let usedBlockquotes = false;
+    if (Object.keys(speakers).length === 0) {
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        const bq = line.match(/^[>]+\s*(.+)$/);
+        if (bq) {
+          usedBlockquotes = true;
+          // Try to find a preceding heading as the speaker label (e.g. "# Title")
+          // Preserve the nearest preceding heading as markdown (if any).
+          // Use the heading text as the speaker key but include the
+          // markdown heading line once before the blockquote content so
+          // the original structure is retained for users.
+          let whoKey = "QUOTE";
+          let headingLine: string | null = null;
+          for (let j = i - 1; j >= 0; j--) {
+            const hd = lines[j].match(/^#{1,6}\s*(.+)$/);
+            if (hd) {
+              // Normalize heading content: remove redundant leading chars (emoji,
+              // numbering) and trailing punctuation but keep the main text.
+              let content = hd[1].trim();
+              // Remove leading markers like bullets/spaces
+              content = content.replace(/^[-*\s]+/, "");
+              // Remove leading non-alphanumeric (emoji/symbols)
+              content = content.replace(/^[^a-zA-Z0-9]+/, "");
+              // Remove leading enumerations like "7.", "1)", "7-" etc
+              content = content.replace(/^\d+[\.\)\-:]*\s*/, "");
+              // Strip trailing punctuation like ?, !, .
+              content = content.replace(/[!?\.\s]+$/, "").trim();
+              whoKey = content || "QUOTE";
+              // Keep the heading content but do not include the leading '#'
+              headingLine = content;
+              break;
+            }
+          }
+
+          speakers[whoKey] = speakers[whoKey] || [];
+          // Insert heading content (without leading '#') once before first blockquote
+          if (headingLine && speakers[whoKey].length === 0) {
+            speakers[whoKey].push(headingLine);
+          }
+          speakers[whoKey].push(bq[1].trim());
+        }
+      }
+    }
+
+    // If still no speaker info, fall back to using all text as a single chunk
+    if (Object.keys(speakers).length === 0) {
+      speakers["MAIN"] = [trimmed];
+    }
+
+    const speakerNames = Object.keys(speakers);
+    if (speakerNames.length > 0) {
+      // If blockquotes were the source and there are multiple small sections,
+      // prefer concatenating all blockquote replies so users can practice the
+      // assistant/reply text together (common in FAQ-style markdown).
+      if (usedBlockquotes && speakerNames.length > 1) {
+        const allText = speakerNames
+          .map((k) => speakers[k].join("\n\n"))
+          .join("\n\n");
+        result = splitScriptIntoSentences(allText);
+      } else {
+        // Determine the main speaker (most lines)
+        speakerNames.sort((a, b) => speakers[b].length - speakers[a].length);
+        const main = speakerNames[0];
+        const mainText = speakers[main].join("\n\n");
+        result = splitScriptIntoSentences(mainText);
+      }
+    } else {
+      // Fallback
+      result = splitScriptIntoSentences(trimmed);
+    }
+
     if (result.length === 0) {
       setScriptError("Could not extract sentences");
       return;
