@@ -325,6 +325,31 @@ export async function GET(req: NextRequest) {
         console.warn("get_video_info fallback failed for", videoId, e instanceof Error ? e.message : String(e));
       }
 
+      // 2c. Try lightweight `youtube-transcript` package as a quick fallback
+      try {
+        const mod = await import("youtube-transcript");
+        const YoutubeTranscript = (mod as any).YoutubeTranscript ?? (mod as any).default ?? mod;
+        if (typeof YoutubeTranscript?.fetchTranscript === "function") {
+          try {
+            const raw = await YoutubeTranscript.fetchTranscript(videoId, { lang: "en" });
+            if (Array.isArray(raw) && raw.length) {
+              const sentences = raw.map((s: any, i: number) => {
+                const offset = Number(s.offset ?? s.start ?? 0);
+                const duration = Number(s.duration ?? 0);
+                return { text: String(s.text ?? s.transcript ?? "").trim(), startMs: Math.round(offset * 1000), endMs: Math.round((offset + duration) * 1000) };
+              }).filter((x: any) => x.text);
+              if (sentences.length) {
+                return NextResponse.json({ sentences, videoId, language: "en", fallback: "youtube-transcript" });
+              }
+            }
+          } catch (e) {
+            console.warn("youtube-transcript fetch failed for", videoId, e instanceof Error ? e.message : String(e));
+          }
+        }
+      } catch (e) {
+        /* optional package not available or failed to import */
+      }
+
       // Try youtubei player -> caption XML parse first (no login required), then ytdl-core as a last resort
       try {
         const parsed = await fetchPlayerAndParse(videoId);
