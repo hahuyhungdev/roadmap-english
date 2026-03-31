@@ -146,7 +146,7 @@ export default function YouTubeShadowingClient() {
                     : "https://tactiq.io/tools/youtube-transcript";
                   window.open(target, "_blank", "noopener,noreferrer");
                 }}
-                disabled={s.scriptLoading}
+                disabled={s.scriptLoading || s.importingTranscript}
                 className="w-full py-1.5 rounded-xl text-sm font-semibold flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white transition-all disabled:opacity-40"
               >
                 {s.scriptLoading ? (
@@ -181,13 +181,32 @@ export default function YouTubeShadowingClient() {
                   <div className="flex gap-2 mt-2">
                     <button
                       onClick={() => {
-                        s.handleImportTranscript(pasteText);
+                        s.handleImportTranscript(pasteText, { useAI: false });
                         setPasteText("");
                         setShowPaste(false);
                       }}
+                      disabled={s.importingTranscript}
+                      className="py-1 px-3 bg-gray-100 text-sm rounded-lg"
+                    >
+                      Import (local)
+                    </button>
+                    <button
+                      onClick={() => {
+                        s.handleImportTranscript(pasteText, { useAI: true });
+                        setPasteText("");
+                        setShowPaste(false);
+                      }}
+                      disabled={s.importingTranscript}
                       className="py-1 px-3 bg-indigo-600 text-white rounded-lg text-sm"
                     >
-                      Import
+                      {s.importingTranscript ? (
+                        <span className="inline-flex items-center gap-2">
+                          <Loader2 size={12} className="animate-spin" />
+                          Importing…
+                        </span>
+                      ) : (
+                        "Import with AI"
+                      )}
                     </button>
                     <button
                       onClick={() => {
@@ -232,6 +251,7 @@ export default function YouTubeShadowingClient() {
                           s.sentenceRefs.current[i] = el;
                         }}
                         onClick={() => s.goToSentence(i)}
+                        disabled={s.importingTranscript}
                         className={clsx(
                           "shrink-0 w-8 h-8 text-xs font-semibold rounded-lg border transition-all",
                           i === s.activeSentenceIdx
@@ -244,7 +264,7 @@ export default function YouTubeShadowingClient() {
                     ))}
                   </div>
                   <div className="mx-1 rounded-xl border border-indigo-100 bg-indigo-50 p-4 shadow-sm">
-                    {s.activeSentenceIdx < 0 ? (
+                    {s.activeSentenceIdx < 0 || s.activeSentenceIdx >= s.sentences.length ? (
                       <p className="text-center text-sm text-gray-500">
                         Select a sentence above.
                       </p>
@@ -254,7 +274,7 @@ export default function YouTubeShadowingClient() {
                           Sentence {s.activeSentenceIdx + 1}
                         </p>
                         <p className="mt-3 text-sm leading-7 text-indigo-900">
-                          {s.sentences[s.activeSentenceIdx].text}
+                          {s.sentences[s.activeSentenceIdx]?.text ?? ""}
                         </p>
                       </div>
                     )}
@@ -294,13 +314,16 @@ export default function YouTubeShadowingClient() {
                   <div className="flex gap-2">
                     <button
                       onClick={s.onListenSentence}
-                      disabled={s.tts.loading || s.tts.playing}
+                      disabled={
+                        s.importingTranscript || s.tts.loading || s.tts.playing
+                      }
                       className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-indigo-600 border border-indigo-200 rounded-lg bg-indigo-50 hover:bg-indigo-100 disabled:opacity-50"
                     >
                       <Play size={12} /> Listen
                     </button>
                     <button
                       onClick={s.onToggleRecording}
+                      disabled={s.importingTranscript}
                       className={clsx(
                         "flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg border transition-all",
                         s.isRecording

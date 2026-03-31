@@ -26,6 +26,7 @@ export function useYouTubeShadowing() {
   const [sentences, setSentences] = useState<Sentence[]>([]);
   const [scriptLoading, setScriptLoading] = useState(false);
   const [scriptError, setScriptError] = useState("");
+  const [importingTranscript, setImportingTranscript] = useState(false);
   const [activeSentenceIdx, setActiveSentenceIdx] = useState(-1);
   const activeSentenceIdxRef = useRef(-1);
   const sentenceRefs = useRef<(HTMLButtonElement | null)[]>([]);
@@ -414,46 +415,106 @@ export function useYouTubeShadowing() {
     return ((h * 60 + min) * 60 + sec) * 1000 + ms;
   }
 
-  function handleImportTranscript(raw: string) {
+  async function handleImportTranscript(
+    raw: string,
+    opts?: { useAI?: boolean; model?: string },
+  ) {
     if (!raw) return;
-    // normalize line endings
-    const lines = raw
-      .split(/\r?\n/)
-      .map((l) => l.trim())
-      .filter(Boolean);
-    const items: { startMs: number; text: string }[] = [];
+    const useAI = Boolean(opts?.useAI);
+    setScriptError("");
+    if (useAI) setImportingTranscript(true);
+    else setScriptLoading(true);
 
-    const tsRe = /^(\d{1,2}:\d{2}:\d{2}\.\d{1,3})\s+(.*)$/;
-    for (const line of lines) {
-      if (line.startsWith("#")) continue; // skip headers
-      const m = line.match(tsRe);
-      if (m) {
-        const startMs = parseTimestampToMs(m[1]);
-        const text = m[2].trim();
-        items.push({ startMs, text });
-      } else {
-        // continuation line: append to last item if exists
-        if (items.length > 0) {
-          items[items.length - 1].text += " " + line;
+    const localParse = () => {
+      const lines = raw
+        .split(/\r?\n/)
+        .map((l) => l.trim())
+        .filter(Boolean);
+      const items: { startMs: number; text: string }[] = [];
+      const tsRe = /^(\d{1,2}:\d{2}:\d{2}\.\d{1,3})\s+(.*)$/;
+      for (const line of lines) {
+        if (line.startsWith("#")) continue;
+        const m = line.match(tsRe);
+        if (m) {
+          const startMs = parseTimestampToMs(m[1]);
+          const text = m[2].trim();
+          items.push({ startMs, text });
+        } else {
+          if (items.length > 0) items[items.length - 1].text += " " + line;
         }
+      }
+
+      if (!items.length) return null;
+
+      const sentencesData: Sentence[] = items.map((it, i) => {
+        const startMs = it.startMs;
+        const endMs =
+          i < items.length - 1 ? items[i + 1].startMs : startMs + 3000;
+        return { text: it.text.trim(), startMs, endMs };
+      });
+
+      return sentencesData;
+    };
+
+    // If explicit AI import requested, call server-side cleaner and fail if it errors
+    if (useAI) {
+      try {
+        const body: any = { raw };
+        if (opts?.model) body.model = opts.model;
+        const res = await fetch("/api/transcript", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(body),
+        });
+
+        const json = await res.json().catch(() => null);
+        if (res.ok && json && Array.isArray(json.segments)) {
+          const segs: any[] = json.segments;
+          const starts = segs.map((s) => Number(s.start ?? s.timestamp ?? 0));
+          const sentencesData: Sentence[] = segs.map((s: any, i: number) => {
+            const start = Number(s.start ?? s.timestamp ?? 0);
+            const startMs = Math.round(start * 1000);
+            const endMs =
+              i < starts.length - 1
+                ? Math.round((starts[i + 1] ?? start) * 1000)
+                : startMs + 3000;
+            return {
+              text: String(s.text ?? s.caption ?? "").trim(),
+              startMs,
+              endMs,
+            };
+          });
+
+          if (sentencesData.length > 0) {
+            setSentences(sentencesData);
+            sentenceRefs.current = [];
+            setImportingTranscript(false);
+            return;
+          }
+        }
+
+        // If AI returned nothing usable, show error
+        setScriptError(json?.error ?? "AI import failed");
+        setImportingTranscript(false);
+        return;
+      } catch (e: any) {
+        setScriptError(String(e?.message ?? e));
+        setImportingTranscript(false);
+        return;
       }
     }
 
-    if (!items.length) {
+    // fallback: local parsing
+    const fallback = localParse();
+    if (fallback && fallback.length) {
+      setSentences(fallback);
+      sentenceRefs.current = [];
+      setScriptError("");
+    } else {
       setScriptError("Could not parse pasted transcript");
-      return;
     }
 
-    const sentencesData: Sentence[] = items.map((it, i) => {
-      const startMs = it.startMs;
-      const endMs =
-        i < items.length - 1 ? items[i + 1].startMs : startMs + 3000;
-      return { text: it.text.trim(), startMs, endMs };
-    });
-
-    setSentences(sentencesData);
-    sentenceRefs.current = [];
-    setScriptError("");
+    setScriptLoading(false);
   }
 
   function goToSentence(idx: number) {
@@ -505,6 +566,7 @@ export function useYouTubeShadowing() {
     handleFetchScript,
     handleImportTranscript,
     goToSentence,
+    importingTranscript,
     onToggleRecording: () => {
       if (isRecording) {
         stopRef.current();

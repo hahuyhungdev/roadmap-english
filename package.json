@@ -7,7 +7,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "clean:transcript": "node ./scripts/clean_transcript.mjs"
   },
   "homepage": "https://huyhung.github.io/roadmap-english-ai",
   "dependencies": {
