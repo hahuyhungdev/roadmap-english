@@ -23,7 +23,7 @@ export function ReviewCard({ review }: ReviewCardProps) {
         <ChevronRight
           size={12}
           className={clsx(
-            "text-indigo-400 transition-transform",
+            "text-indigo-500 transition-transform",
             open && "rotate-90",
           )}
         />
@@ -35,7 +35,7 @@ export function ReviewCard({ review }: ReviewCardProps) {
               <p className="text-[10px] uppercase tracking-wider text-red-500 font-semibold mb-1">
                 You said
               </p>
-              <p className="text-xs text-gray-700 bg-white rounded-lg px-2.5 py-1.5 border border-red-100 leading-relaxed">
+              <p className="text-xs text-gray-700  rounded-lg px-2.5 py-1.5 border border-red-100 leading-relaxed">
                 {review.original_transcript}
               </p>
             </div>
@@ -43,7 +43,7 @@ export function ReviewCard({ review }: ReviewCardProps) {
               <p className="text-[10px] uppercase tracking-wider text-green-600 font-semibold mb-1">
                 Better version
               </p>
-              <p className="text-xs text-gray-800 bg-white rounded-lg px-2.5 py-1.5 border border-green-100 font-medium leading-relaxed">
+              <p className="text-xs text-gray-800  rounded-lg px-2.5 py-1.5 border border-green-100 font-medium leading-relaxed">
                 {review.corrected_version}
               </p>
             </div>
@@ -55,14 +55,14 @@ export function ReviewCard({ review }: ReviewCardProps) {
           )}
           {review.better_alternatives?.length > 0 && (
             <div>
-              <p className="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1">
+              <p className="text-[10px] uppercase tracking-wider text-gray-500 font-semibold mb-1">
                 Alternatives
               </p>
               <div className="flex flex-wrap gap-1.5">
                 {review.better_alternatives.map((alt, i) => (
                   <span
                     key={i}
-                    className="text-xs bg-white border border-indigo-100 text-indigo-700 rounded-full px-2 py-0.5"
+                    className="text-xs  border border-indigo-100 text-indigo-700 rounded-full px-2 py-0.5"
                   >
                     {alt}
                   </span>

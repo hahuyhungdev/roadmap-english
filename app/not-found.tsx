@@ -27,7 +27,7 @@ export default function NotFound() {
           Back to Home
         </Link>
 
-        <p className="text-xs text-gray-400 mt-6">
+        <p className="text-xs text-gray-500 mt-6">
           If you think this is a mistake, please check the URL and try again.
         </p>
       </div>

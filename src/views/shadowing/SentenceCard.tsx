@@ -23,8 +23,8 @@ export function SentenceCard({
       className={clsx(
         "h-10 min-w-[38px] rounded-full border px-3 text-xs font-semibold transition-all flex items-center justify-center",
         active
-          ? "border-indigo-300 bg-indigo-600 text-white shadow-sm"
-          : "border-gray-200 bg-white text-gray-600 hover:border-indigo-300 hover:bg-indigo-50",
+          ? "border-indigo-400 bg-indigo-600 text-white shadow-sm"
+          : "border-gray-200  text-gray-600 hover:border-indigo-400 hover:bg-indigo-50",
       )}
       title={`Sentence ${idx + 1}`}
     >

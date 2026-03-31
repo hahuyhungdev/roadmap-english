@@ -76,7 +76,7 @@ export default function ShadowingClient() {
         </div>
         <button
           onClick={() => setShowShortcuts(true)}
-          className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-gray-500 border border-gray-200 rounded-lg hover:border-indigo-300 hover:text-indigo-600 transition-all shrink-0 mt-1"
+          className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-gray-500 border border-gray-200 rounded-lg hover:border-indigo-400 hover:text-indigo-600 transition-all shrink-0 mt-1"
         >
           <Keyboard size={13} /> Shortcuts (?)
         </button>
@@ -118,8 +118,8 @@ export default function ShadowingClient() {
                 placeholder="Paste a YouTube URL…"
                 className={
                   urlError
-                    ? "w-full px-4 py-2.5 rounded-xl border text-sm outline-none transition-colors border-red-300 bg-red-50 focus:border-red-400"
-                    : "w-full px-4 py-2.5 rounded-xl border text-sm outline-none transition-colors border-gray-200 bg-white focus:border-indigo-300"
+                    ? "w-full px-4 py-2.5 rounded-xl border text-sm outline-none transition-colors border-red-400 bg-red-50 focus:border-red-500"
+                    : "w-full px-4 py-2.5 rounded-xl border text-sm outline-none transition-colors border-gray-200  focus:border-indigo-400"
                 }
               />
               {urlError && (
@@ -144,8 +144,8 @@ export default function ShadowingClient() {
               placeholder="Paste your script or text here (e.g., a paragraph, article, or lesson)..."
               className={
                 scriptError
-                  ? "w-full px-4 py-2.5 rounded-xl border text-sm outline-none transition-colors border-red-300 bg-red-50 focus:border-red-400 resize-none h-24"
-                  : "w-full px-4 py-2.5 rounded-xl border text-sm outline-none transition-colors border-gray-200 bg-white focus:border-indigo-300 resize-none h-24"
+                  ? "w-full px-4 py-2.5 rounded-xl border text-sm outline-none transition-colors border-red-400 bg-red-50 focus:border-red-500 resize-none h-24"
+                  : "w-full px-4 py-2.5 rounded-xl border text-sm outline-none transition-colors border-gray-200  focus:border-indigo-400 resize-none h-24"
               }
             />
             {scriptError && (
@@ -178,7 +178,7 @@ export default function ShadowingClient() {
 
         {/* Right: Script + Practice */}
         <div
-          className={`flex flex-col bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden ${
+          className={`flex flex-col  border border-gray-200 rounded-2xl shadow-sm overflow-hidden ${
             mode === "youtube" ? "lg:col-span-2" : ""
           }`}
           style={{ minHeight: "600px" }}

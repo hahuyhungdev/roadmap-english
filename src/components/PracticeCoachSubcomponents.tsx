@@ -13,7 +13,15 @@ export const StatusBar: FC<{
   onStart: () => void;
   onStop: () => void;
   onSend: () => void;
-}> = ({ isRecording, isPlaying, canSend, draftText, onStart, onStop, onSend }) => {
+}> = ({
+  isRecording,
+  isPlaying,
+  canSend,
+  draftText,
+  onStart,
+  onStop,
+  onSend,
+}) => {
   return (
     <div className="px-3 py-2 border-t border-gray-100 shrink-0 space-y-2">
       {draftText ? (
@@ -75,14 +83,14 @@ export const ControlButtons: FC<{
       <button
         onClick={onClear}
         title="Clear conversation"
-        className="p-1.5 text-gray-400 hover:text-gray-600 transition-colors"
+        className="p-1.5 text-gray-500 hover:text-gray-600 transition-colors"
       >
         <RotateCcw size={13} />
       </button>
       <button
         onClick={onCollapse}
         title="Close"
-        className="p-1.5 text-gray-400 hover:text-gray-600 transition-colors"
+        className="p-1.5 text-gray-500 hover:text-gray-600 transition-colors"
       >
         <span className="text-lg">✕</span>
       </button>
@@ -111,7 +119,7 @@ export const PracticeCoachHeader: FC<{
           Practice Coach
         </span>
         {lessonTitle && (
-          <span className="text-xs text-indigo-400 truncate">
+          <span className="text-xs text-indigo-500 truncate">
             · {lessonTitle}
           </span>
         )}
@@ -135,11 +143,19 @@ export const ConversationArea: FC<{
   isRecording: boolean;
   lessonTitle?: string;
   bottomRef: React.RefObject<HTMLDivElement | null>;
-}> = ({ turns, transcript, partial, loading, isRecording, lessonTitle, bottomRef }) => {
+}> = ({
+  turns,
+  transcript,
+  partial,
+  loading,
+  isRecording,
+  lessonTitle,
+  bottomRef,
+}) => {
   return (
     <div className="flex-1 overflow-y-auto p-3 space-y-3 min-h-0">
       {turns.length === 0 && !partial && !loading && (
-        <p className="text-xs text-gray-400 text-center py-12 leading-relaxed">
+        <p className="text-xs text-gray-500 text-center py-12 leading-relaxed">
           {isRecording ? (
             <>
               🎤 Listening...
@@ -148,7 +164,7 @@ export const ConversationArea: FC<{
               {lessonTitle && (
                 <>
                   <br />
-                  <span className="text-indigo-400">Topic: {lessonTitle}</span>
+                  <span className="text-indigo-500">Topic: {lessonTitle}</span>
                 </>
               )}
             </>
@@ -160,7 +176,7 @@ export const ConversationArea: FC<{
               {lessonTitle && (
                 <>
                   <br />
-                  <span className="text-indigo-400">Topic: {lessonTitle}</span>
+                  <span className="text-indigo-500">Topic: {lessonTitle}</span>
                 </>
               )}
             </>
@@ -190,7 +206,7 @@ export const ConversationArea: FC<{
                     Feedback
                   </p>
                   <div className="space-y-1">
-                    <p className="text-xs text-gray-400 line-through leading-relaxed">
+                    <p className="text-xs text-gray-500 line-through leading-relaxed">
                       {turn.review.original_transcript}
                     </p>
                     <p className="text-xs text-emerald-700 font-medium leading-relaxed">
@@ -208,7 +224,7 @@ export const ConversationArea: FC<{
                         (alt: string, i: number) => (
                           <span
                             key={i}
-                            className="text-[11px] bg-white border border-amber-200 text-amber-700 px-2 py-0.5 rounded-full"
+                            className="text-[11px]  border border-amber-200 text-amber-700 px-2 py-0.5 rounded-full"
                           >
                             {alt}
                           </span>
@@ -223,15 +239,14 @@ export const ConversationArea: FC<{
         </div>
       ))}
 
-
       {/* Typing indicator */}
       {loading && (
         <div className="flex justify-start">
           <div className="bg-gray-100 border border-gray-200 rounded-2xl rounded-tl-sm px-4 py-3">
             <div className="flex gap-1">
-              <span className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce [animation-delay:0ms]" />
-              <span className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce [animation-delay:150ms]" />
-              <span className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce [animation-delay:300ms]" />
+              <span className="w-1.5 h-1.5 bg-gray-500 rounded-full animate-bounce [animation-delay:0ms]" />
+              <span className="w-1.5 h-1.5 bg-gray-500 rounded-full animate-bounce [animation-delay:150ms]" />
+              <span className="w-1.5 h-1.5 bg-gray-500 rounded-full animate-bounce [animation-delay:300ms]" />
             </div>
           </div>
         </div>
@@ -258,7 +273,7 @@ export const ExpandedPanel: FC<{
 }> = ({ children }) => {
   return (
     <div
-      className="fixed top-12 right-4 w-96 bg-white border border-gray-200 rounded-xl shadow-xl z-40 flex flex-col"
+      className="bg-white fixed top-12 right-4 w-96  border border-gray-200 rounded-xl shadow-xl z-40 flex flex-col"
       style={{ maxHeight: "calc(100vh - 2rem)" }}
     >
       {children}

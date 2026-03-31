@@ -12,7 +12,11 @@ import {
 } from "lucide-react";
 import clsx from "clsx";
 import { useVoicePractice } from "../hooks/useVoicePractice";
-import type { ConversationTurn, SpeakingReview, SonioxStatus } from "../types/speaking";
+import type {
+  ConversationTurn,
+  SpeakingReview,
+  SonioxStatus,
+} from "../types/speaking";
 import { useEffect, useRef, useState } from "react";
 
 // ─── Status badge ────────────────────────────────────────────────────────────
@@ -23,13 +27,13 @@ const STATUS_CONFIG: Record<
 > = {
   idle: {
     label: "Ready",
-    dot: "bg-gray-300",
-    text: "text-gray-400",
+    dot: "bg-gray-400",
+    text: "text-gray-500",
     bg: "bg-gray-100",
   },
   connecting: {
     label: "Connecting…",
-    dot: "bg-yellow-400 animate-pulse",
+    dot: "bg-yellow-500 animate-pulse",
     text: "text-yellow-600",
     bg: "bg-yellow-50",
   },
@@ -41,7 +45,7 @@ const STATUS_CONFIG: Record<
   },
   processing: {
     label: "Thinking…",
-    dot: "bg-amber-400 animate-pulse",
+    dot: "bg-amber-500 animate-pulse",
     text: "text-amber-600",
     bg: "bg-amber-50",
   },
@@ -72,7 +76,7 @@ function ReviewPanel({ review }: { review: SpeakingReview }) {
         <ChevronRight
           size={12}
           className={clsx(
-            "text-indigo-400 transition-transform",
+            "text-indigo-500 transition-transform",
             expanded && "rotate-90",
           )}
         />
@@ -86,7 +90,7 @@ function ReviewPanel({ review }: { review: SpeakingReview }) {
               <p className="text-[10px] uppercase tracking-wider text-red-500 font-semibold mb-1">
                 You said
               </p>
-              <p className="text-xs text-gray-700 bg-white rounded-lg px-2.5 py-1.5 border border-red-100 leading-relaxed">
+              <p className="text-xs text-gray-700  rounded-lg px-2.5 py-1.5 border border-red-100 leading-relaxed">
                 {review.original_transcript}
               </p>
             </div>
@@ -94,7 +98,7 @@ function ReviewPanel({ review }: { review: SpeakingReview }) {
               <p className="text-[10px] uppercase tracking-wider text-green-600 font-semibold mb-1">
                 Better version
               </p>
-              <p className="text-xs text-gray-800 bg-white rounded-lg px-2.5 py-1.5 border border-green-100 font-medium leading-relaxed">
+              <p className="text-xs text-gray-800  rounded-lg px-2.5 py-1.5 border border-green-100 font-medium leading-relaxed">
                 {review.corrected_version}
               </p>
             </div>
@@ -120,7 +124,7 @@ function ReviewPanel({ review }: { review: SpeakingReview }) {
                 {review.better_alternatives.map((alt, i) => (
                   <span
                     key={i}
-                    className="text-xs px-2.5 py-1 rounded-full bg-white border border-gray-200 text-gray-700 hover:border-indigo-200 hover:text-indigo-600 transition-colors cursor-default"
+                    className="text-xs px-2.5 py-1 rounded-full  border border-gray-200 text-gray-700 hover:border-indigo-200 hover:text-indigo-600 transition-colors cursor-default"
                   >
                     {alt}
                   </span>
@@ -146,12 +150,12 @@ function TurnBubble({ turn }: { turn: ConversationTurn }) {
           "max-w-[78%] rounded-2xl px-4 py-3 leading-relaxed text-sm",
           isUser
             ? "bg-indigo-600 text-white rounded-br-md"
-            : "bg-white border border-gray-200 text-gray-800 rounded-bl-md shadow-sm",
+            : " border border-gray-200 text-gray-800 rounded-bl-md shadow-sm",
         )}
       >
         <div className="flex items-start gap-2">
           {!isUser && (
-            <Volume2 size={13} className="text-indigo-400 mt-0.5 shrink-0" />
+            <Volume2 size={13} className="text-indigo-500 mt-0.5 shrink-0" />
           )}
           <span className={clsx(isUser ? "text-white" : "text-gray-800")}>
             {turn.text}
@@ -159,9 +163,7 @@ function TurnBubble({ turn }: { turn: ConversationTurn }) {
         </div>
 
         {/* Coach review */}
-        {isUser && turn.review && (
-          <ReviewPanel review={turn.review} />
-        )}
+        {isUser && turn.review && <ReviewPanel review={turn.review} />}
       </div>
     </div>
   );
@@ -182,13 +184,15 @@ function LiveTranscript({
   return (
     <div
       className={clsx(
-        "fixed bottom-24 left-1/2 -translate-x-1/2 z-40 transition-all duration-300",
-        visible && text ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2 pointer-events-none",
+        "fixed bottom-24 left-1/2 -translate-x-1/2 z-40 transition-all duration-400",
+        visible && text
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 translate-y-2 pointer-events-none",
       )}
     >
       <div className="bg-gray-900/90 backdrop-blur-sm text-white text-sm px-5 py-2.5 rounded-2xl shadow-xl max-w-xl text-center border border-white/10">
         {text || (
-          <span className="text-gray-400 italic">
+          <span className="text-gray-500 italic">
             {status === "connecting" ? "Connecting to mic…" : "Listening…"}
           </span>
         )}
@@ -204,8 +208,8 @@ function MicPulse({ active }: { active: boolean }) {
     <div className="relative flex items-center justify-center">
       {active && (
         <>
-          <span className="absolute w-20 h-20 rounded-full bg-indigo-400/20 animate-ping" />
-          <span className="absolute w-14 h-14 rounded-full bg-indigo-400/25 animate-ping [animation-delay:150ms]" />
+          <span className="absolute w-20 h-20 rounded-full bg-indigo-500/20 animate-ping" />
+          <span className="absolute w-14 h-14 rounded-full bg-indigo-500/25 animate-ping [animation-delay:150ms]" />
         </>
       )}
       <div
@@ -213,7 +217,7 @@ function MicPulse({ active }: { active: boolean }) {
           "w-16 h-16 rounded-full flex items-center justify-center transition-all duration-200",
           active
             ? "bg-indigo-600 shadow-lg shadow-indigo-200 text-white"
-            : "bg-gray-100 text-gray-400",
+            : "bg-gray-100 text-gray-500",
         )}
       >
         {active ? <Mic size={24} /> : <MicOff size={24} />}
@@ -260,7 +264,10 @@ export default function SpeakingLab() {
   const isActive = status === "speaking" || status === "connecting";
 
   return (
-    <div className="max-w-4xl mx-auto flex flex-col" style={{ height: "calc(100vh - 9rem)" }}>
+    <div
+      className="max-w-4xl mx-auto flex flex-col"
+      style={{ height: "calc(100vh - 9rem)" }}
+    >
       {/* Page header */}
       <div className="flex items-center justify-between mb-5 shrink-0">
         <div>
@@ -279,7 +286,9 @@ export default function SpeakingLab() {
               cfg.text,
             )}
           >
-            <span className={clsx("w-1.5 h-1.5 rounded-full shrink-0", cfg.dot)} />
+            <span
+              className={clsx("w-1.5 h-1.5 rounded-full shrink-0", cfg.dot)}
+            />
             {cfg.label}
           </div>
 
@@ -289,7 +298,7 @@ export default function SpeakingLab() {
                 clearHistory();
                 setVocabulary([]);
               }}
-              className="flex items-center gap-1.5 text-xs text-gray-400 hover:text-gray-600 px-2.5 py-1.5 rounded-lg hover:bg-gray-100 transition-colors"
+              className="flex items-center gap-1.5 text-xs text-gray-500 hover:text-gray-600 px-2.5 py-1.5 rounded-lg hover:bg-gray-100 transition-colors"
               title="Clear conversation"
             >
               <Trash2 size={12} />
@@ -302,20 +311,24 @@ export default function SpeakingLab() {
       {/* Main content: 2-column layout */}
       <div className="flex gap-5 flex-1 min-h-0">
         {/* Left: conversation */}
-        <div className="flex flex-col flex-1 min-w-0 rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden">
+        <div className="flex flex-col flex-1 min-w-0 rounded-2xl border border-gray-200  shadow-sm overflow-hidden">
           {/* Conversation scroll area */}
-          <div ref={scrollRef} className="flex-1 overflow-y-auto px-4 py-4 space-y-3">
+          <div
+            ref={scrollRef}
+            className="flex-1 overflow-y-auto px-4 py-4 space-y-3"
+          >
             {turns.length === 0 && (
               <div className="flex flex-col items-center justify-center h-full text-center pb-12 gap-3">
                 <div className="w-14 h-14 bg-indigo-50 rounded-2xl flex items-center justify-center">
-                  <Mic size={20} className="text-indigo-400" />
+                  <Mic size={20} className="text-indigo-500" />
                 </div>
                 <div>
                   <p className="text-sm font-medium text-gray-700 mb-1">
                     Ready to practice
                   </p>
-                  <p className="text-xs text-gray-400 max-w-[16rem] leading-relaxed">
-                    Press Start, speak naturally, and get instant feedback on your English.
+                  <p className="text-xs text-gray-500 max-w-[16rem] leading-relaxed">
+                    Press Start, speak naturally, and get instant feedback on
+                    your English.
                   </p>
                 </div>
               </div>
@@ -327,8 +340,8 @@ export default function SpeakingLab() {
 
             {isAiResponding && (
               <div className="flex justify-start">
-                <div className="bg-white border border-gray-200 rounded-2xl rounded-bl-md px-4 py-3 shadow-sm">
-                  <div className="flex items-center gap-2 text-xs text-gray-400">
+                <div className=" border border-gray-200 rounded-2xl rounded-bl-md px-4 py-3 shadow-sm">
+                  <div className="flex items-center gap-2 text-xs text-gray-500">
                     <RefreshCw size={11} className="animate-spin" />
                     Coach is thinking…
                   </div>
@@ -374,7 +387,7 @@ export default function SpeakingLab() {
             </div>
 
             {/* Hotkey hint */}
-            <p className="text-center text-[10px] text-gray-400 mt-2">
+            <p className="text-center text-[10px] text-gray-500 mt-2">
               {isActive
                 ? "Speak naturally — the coach responds automatically"
                 : "Click Start or press Space to begin"}
@@ -383,13 +396,13 @@ export default function SpeakingLab() {
         </div>
 
         {/* Right: vocabulary panel */}
-        <div className="w-72 shrink-0 flex flex-col rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden">
+        <div className="w-72 shrink-0 flex flex-col rounded-2xl border border-gray-200  shadow-sm overflow-hidden">
           <div className="px-4 py-3 border-b border-gray-100 shrink-0">
             <h2 className="text-xs font-semibold text-gray-700 flex items-center gap-1.5">
               <Lightbulb size={12} className="text-amber-500" />
               Vocabulary & Corrections
             </h2>
-            <p className="text-[10px] text-gray-400 mt-0.5">
+            <p className="text-[10px] text-gray-500 mt-0.5">
               {vocabulary.length} saved
             </p>
           </div>
@@ -398,7 +411,7 @@ export default function SpeakingLab() {
             {vocabulary.length === 0 && (
               <div className="flex flex-col items-center justify-center h-full text-center pb-8 gap-2">
                 <CheckCircle2 size={18} className="text-gray-200" />
-                <p className="text-xs text-gray-400 leading-relaxed">
+                <p className="text-xs text-gray-500 leading-relaxed">
                   Corrections will appear here as you practice
                 </p>
               </div>
@@ -409,7 +422,7 @@ export default function SpeakingLab() {
                 key={i}
                 className="rounded-xl border border-gray-100 bg-gray-50/70 p-2.5 text-xs group"
               >
-                <p className="text-gray-400 line-through text-[11px] mb-0.5">
+                <p className="text-gray-500 line-through text-[11px] mb-0.5">
                   {v.original_transcript}
                 </p>
                 <p className="text-gray-800 font-medium leading-snug">
@@ -423,7 +436,7 @@ export default function SpeakingLab() {
                     {v.better_alternatives.map((alt, j) => (
                       <span
                         key={j}
-                        className="text-[10px] px-1.5 py-0.5 rounded-full bg-white border border-gray-200 text-gray-500"
+                        className="text-[10px] px-1.5 py-0.5 rounded-full  border border-gray-200 text-gray-500"
                       >
                         {alt}
                       </span>

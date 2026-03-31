@@ -27,9 +27,7 @@ export default function SessionHubClient({
         <div>
           <div className="flex items-center gap-2 mb-1">
             <BookOpen size={18} className="text-indigo-500" />
-            <h1 className="text-2xl font-bold text-gray-900">
-              English Phases
-            </h1>
+            <h1 className="text-2xl font-bold text-gray-900">English Phases</h1>
           </div>
           <p className="text-gray-500 text-sm">
             {totalLessons} lessons across {phrases.length} phases
@@ -37,7 +35,7 @@ export default function SessionHubClient({
         </div>
       </div>
 
-      <div className="bg-white border border-gray-200 rounded-2xl p-5 mb-7 flex items-center gap-5 shadow-sm">
+      <div className=" border border-gray-200 rounded-2xl p-5 mb-7 flex items-center gap-5 shadow-sm">
         <div className="flex-1">
           <div className="flex justify-between text-xs text-gray-500 mb-2">
             <span>Overall Progress</span>
@@ -47,7 +45,7 @@ export default function SessionHubClient({
           </div>
           <div className="w-full bg-gray-100 rounded-full h-2.5 overflow-hidden">
             <div
-              className="bg-linear-to-r from-indigo-500 to-indigo-400 h-2.5 rounded-full transition-all duration-700"
+              className="bg-linear-to-r from-indigo-500 to-indigo-500 h-2.5 rounded-full transition-all duration-700"
               style={{ width: `${pct}%` }}
             />
           </div>
@@ -70,13 +68,13 @@ export default function SessionHubClient({
             <Link
               key={phase.id}
               href={`/phase/${phase.id}`}
-              className="group flex items-start gap-4 bg-white border border-gray-200 rounded-2xl p-4 hover:border-indigo-200 hover:shadow-sm transition-all"
+              className="group flex items-start gap-4  border border-gray-200 rounded-2xl p-4 hover:border-indigo-200 hover:shadow-sm transition-all"
             >
               <div
                 className={`shrink-0 w-10 h-10 rounded-xl flex items-center justify-center text-sm font-bold transition-colors ${
                   isDone
                     ? "bg-indigo-100 text-indigo-600"
-                    : "bg-gray-100 text-gray-400 group-hover:bg-indigo-50 group-hover:text-indigo-500"
+                    : "bg-gray-100 text-gray-500 group-hover:bg-indigo-50 group-hover:text-indigo-500"
                 }`}
               >
                 {String(i + 1).padStart(2, "0")}
@@ -94,14 +92,14 @@ export default function SessionHubClient({
                     />
                   )}
                 </div>
-                <p className="text-xs text-gray-400 mb-3">
+                <p className="text-xs text-gray-500 mb-3">
                   {done} of {total} lessons done
                 </p>
 
                 <div className="w-full bg-gray-100 rounded-full h-1.5 overflow-hidden">
                   <div
                     className={`h-1.5 rounded-full transition-all duration-700 ${
-                      isDone ? "bg-indigo-500" : "bg-indigo-400"
+                      isDone ? "bg-indigo-500" : "bg-indigo-500"
                     }`}
                     style={{ width: `${phasePct}%` }}
                   />
@@ -110,7 +108,7 @@ export default function SessionHubClient({
 
               <ChevronRight
                 size={17}
-                className="shrink-0 text-gray-300 group-hover:text-indigo-400 transition-colors mt-1"
+                className="shrink-0 text-gray-400 group-hover:text-indigo-500 transition-colors mt-1"
               />
             </Link>
           );

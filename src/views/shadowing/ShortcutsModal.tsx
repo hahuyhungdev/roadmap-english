@@ -14,7 +14,7 @@ export function ShortcutsModal({ onClose }: ShortcutsModalProps) {
       onClick={onClose}
     >
       <div
-        className="bg-white rounded-2xl p-6 shadow-2xl w-full max-w-sm"
+        className=" rounded-2xl p-6 shadow-2xl w-full max-w-sm"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-center justify-between mb-4">
@@ -24,7 +24,7 @@ export function ShortcutsModal({ onClose }: ShortcutsModalProps) {
           </div>
           <button
             onClick={onClose}
-            className="w-7 h-7 flex items-center justify-center rounded-lg text-gray-400 hover:text-gray-600 hover:bg-gray-100 transition-colors"
+            className="w-7 h-7 flex items-center justify-center rounded-lg text-gray-500 hover:text-gray-600 hover:bg-gray-100 transition-colors"
           >
             <X size={14} />
           </button>
@@ -39,7 +39,7 @@ export function ShortcutsModal({ onClose }: ShortcutsModalProps) {
             </div>
           ))}
         </div>
-        <p className="text-xs text-gray-400 mt-4 text-center">
+        <p className="text-xs text-gray-500 mt-4 text-center">
           Active when not focused on an input field
         </p>
       </div>

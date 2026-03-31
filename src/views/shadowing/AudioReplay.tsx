@@ -39,8 +39,8 @@ export function AudioReplay({ url }: AudioReplayProps) {
         className={clsx(
           "shrink-0 w-7 h-7 flex items-center justify-center rounded-full border transition-colors",
           playing
-            ? "bg-indigo-100 border-indigo-300 text-indigo-600"
-            : "bg-white border-gray-200 text-gray-400 hover:border-indigo-300 hover:text-indigo-600",
+            ? "bg-indigo-100 border-indigo-400 text-indigo-600"
+            : " border-gray-200 text-gray-500 hover:border-indigo-400 hover:text-indigo-600",
         )}
       >
         {playing ? (
@@ -52,4 +52,3 @@ export function AudioReplay({ url }: AudioReplayProps) {
     </>
   );
 }
-

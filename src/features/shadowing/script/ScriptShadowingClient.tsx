@@ -29,7 +29,7 @@ export default function ScriptShadowingClient() {
             Paste any text and practice sentence by sentence with AI feedback.
           </p>
         </div>
-        <span className="text-xs text-gray-400 mt-2">
+        <span className="text-xs text-gray-500 mt-2">
           Press{" "}
           <kbd className="font-mono bg-gray-100 px-1.5 py-0.5 rounded">?</kbd>{" "}
           for shortcuts
@@ -45,8 +45,8 @@ export default function ScriptShadowingClient() {
           className={clsx(
             "w-full px-4 py-2.5 rounded-xl border text-sm outline-none transition-colors resize-none h-24",
             s.scriptError
-              ? "border-red-300 bg-red-50 focus:border-red-400"
-              : "border-gray-200 bg-white focus:border-indigo-300",
+              ? "border-red-400 bg-red-50 focus:border-red-500"
+              : "border-gray-200  focus:border-indigo-400",
           )}
         />
         {s.scriptError && (
@@ -62,7 +62,7 @@ export default function ScriptShadowingClient() {
 
       {/* Main panel */}
       <div
-        className="flex flex-col bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden"
+        className="flex flex-col  border border-gray-200 rounded-2xl shadow-sm overflow-hidden"
         style={{ minHeight: "600px" }}
       >
         {/* ── Script section ── */}
@@ -78,7 +78,7 @@ export default function ScriptShadowingClient() {
                 Script
               </span>
               {s.sentences.length > 0 && (
-                <span className="text-[11px] text-gray-400 bg-gray-100 px-1.5 py-0.5 rounded-full">
+                <span className="text-[11px] text-gray-500 bg-gray-100 px-1.5 py-0.5 rounded-full">
                   {s.sentences.length}
                 </span>
               )}
@@ -88,7 +88,7 @@ export default function ScriptShadowingClient() {
                 <span className="flex items-center gap-1 px-2 py-0.5 text-xs font-bold bg-amber-50 text-amber-600 border border-amber-200 rounded-full">
                   <Star
                     size={10}
-                    className="fill-amber-400 text-amber-400 shrink-0"
+                    className="fill-amber-500 text-amber-500 shrink-0"
                   />
                   {s.overallScore}/10
                 </span>
@@ -110,7 +110,7 @@ export default function ScriptShadowingClient() {
                 <button
                   onClick={s.onClearSession}
                   title="Clear session"
-                  className="w-7 h-7 flex items-center justify-center rounded-lg text-gray-300 hover:text-red-400 hover:bg-red-50 transition-colors"
+                  className="w-7 h-7 flex items-center justify-center rounded-lg text-gray-400 hover:text-red-500 hover:bg-red-50 transition-colors"
                 >
                   <Trash2 size={14} />
                 </button>
@@ -126,14 +126,14 @@ export default function ScriptShadowingClient() {
               </div>
             )}
             {s.sentences.length === 0 && (
-              <div className="flex flex-col items-center justify-center h-24 text-center text-gray-300 gap-2">
+              <div className="flex flex-col items-center justify-center h-24 text-center text-gray-400 gap-2">
                 <FileText size={28} strokeWidth={1} />
                 <p className="text-xs">Process a script above to start.</p>
               </div>
             )}
             {s.sentences.length > 0 && (
               <>
-                <p className="text-[10px] text-gray-400 px-1 pb-1.5">
+                <p className="text-[10px] text-gray-500 px-1 pb-1.5">
                   A/D or ←/→ to navigate
                 </p>
                 <div className="flex items-center gap-2 overflow-x-auto pb-4 px-1">
@@ -148,7 +148,7 @@ export default function ScriptShadowingClient() {
                         "shrink-0 w-8 h-8 text-xs font-semibold rounded-lg border transition-all",
                         i === s.activeSentenceIdx
                           ? "bg-indigo-600 text-white border-indigo-600 shadow-sm"
-                          : "bg-white text-gray-500 border-gray-200 hover:border-indigo-300 hover:text-indigo-600",
+                          : " text-gray-500 border-gray-200 hover:border-indigo-400 hover:text-indigo-600",
                       )}
                     >
                       {i + 1}
@@ -195,7 +195,7 @@ export default function ScriptShadowingClient() {
 
           <div className="flex-1 px-4 py-4 space-y-4 overflow-auto">
             {s.activeSentenceIdx < 0 ? (
-              <div className="flex flex-col items-center justify-center h-full text-center text-gray-400 gap-2">
+              <div className="flex flex-col items-center justify-center h-full text-center text-gray-500 gap-2">
                 <p className="text-sm">Choose a sentence above</p>
               </div>
             ) : (
@@ -204,13 +204,13 @@ export default function ScriptShadowingClient() {
                 <div className="flex gap-2">
                   <button
                     onClick={s.onPrev}
-                    className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-gray-700 border border-gray-200 rounded-lg bg-white hover:bg-gray-50"
+                    className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-gray-700 border border-gray-200 rounded-lg  hover:bg-gray-50"
                   >
                     <ArrowLeft size={12} /> Prev
                   </button>
                   <button
                     onClick={s.onNext}
-                    className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-gray-700 border border-gray-200 rounded-lg bg-white hover:bg-gray-50"
+                    className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-gray-700 border border-gray-200 rounded-lg  hover:bg-gray-50"
                   >
                     Next <ArrowRight size={12} />
                   </button>
@@ -229,7 +229,7 @@ export default function ScriptShadowingClient() {
                       "flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg border transition-all",
                       s.isRecording
                         ? "bg-red-50 text-red-600 border-red-200 hover:bg-red-100"
-                        : "bg-white text-gray-700 border-gray-200 hover:bg-gray-50",
+                        : " text-gray-700 border-gray-200 hover:bg-gray-50",
                     )}
                   >
                     {s.isRecording ? (
@@ -261,7 +261,7 @@ export default function ScriptShadowingClient() {
                   .map((turn) => (
                     <div
                       key={turn.id}
-                      className="rounded-xl border border-gray-200 bg-white p-3 space-y-1.5"
+                      className="rounded-xl border border-gray-200  p-3 space-y-1.5"
                     >
                       <p className="text-xs text-gray-500 italic">
                         "{turn.text}"
@@ -275,7 +275,7 @@ export default function ScriptShadowingClient() {
                         <span className="inline-flex items-center gap-1 text-[11px] font-bold text-amber-600 bg-amber-50 px-2 py-0.5 rounded-full">
                           <Star
                             size={9}
-                            className="fill-amber-400 text-amber-400"
+                            className="fill-amber-500 text-amber-500"
                           />
                           {turn.review.score}/10
                         </span>
@@ -283,7 +283,7 @@ export default function ScriptShadowingClient() {
                     </div>
                   ))}
                 {s.coachLoading && (
-                  <p className="text-xs text-indigo-400 animate-pulse">
+                  <p className="text-xs text-indigo-500 animate-pulse">
                     Getting AI feedback…
                   </p>
                 )}

@@ -28,7 +28,7 @@ export default function PhraseDetailClient({ phase }: { phase: PhraseGroup }) {
       <div className="mb-5">
         <Link
           href="/"
-          className="inline-flex items-center gap-1 text-sm text-gray-400 hover:text-indigo-600 transition-colors"
+          className="inline-flex items-center gap-1 text-sm text-gray-500 hover:text-indigo-600 transition-colors"
         >
           <ChevronLeft size={15} /> All Phases
         </Link>
@@ -48,7 +48,7 @@ export default function PhraseDetailClient({ phase }: { phase: PhraseGroup }) {
         </div>
       </div>
 
-      <div className="bg-white border border-gray-200 rounded-2xl p-5 mb-7 flex items-center gap-5 shadow-sm">
+      <div className=" border border-gray-200 rounded-2xl p-5 mb-7 flex items-center gap-5 shadow-sm">
         <div className="flex-1">
           <div className="flex justify-between text-xs text-gray-500 mb-2">
             <span>Phase Progress</span>
@@ -58,7 +58,7 @@ export default function PhraseDetailClient({ phase }: { phase: PhraseGroup }) {
           </div>
           <div className="w-full bg-gray-100 rounded-full h-2.5 overflow-hidden">
             <div
-              className="bg-linear-to-r from-indigo-500 to-indigo-400 h-2.5 rounded-full transition-all duration-700"
+              className="bg-linear-to-r from-indigo-500 to-indigo-500 h-2.5 rounded-full transition-all duration-700"
               style={{ width: `${pct}%` }}
             />
           </div>
@@ -90,7 +90,7 @@ export default function PhraseDetailClient({ phase }: { phase: PhraseGroup }) {
                 "group flex items-center gap-3 rounded-2xl px-4 py-3.5 border transition-all cursor-pointer",
                 completed
                   ? "border-indigo-100 bg-indigo-50/50"
-                  : "border-gray-200 bg-white hover:border-indigo-200 hover:shadow-sm",
+                  : "border-gray-200  hover:border-indigo-200 hover:shadow-sm",
               )}
             >
               <button
@@ -98,7 +98,7 @@ export default function PhraseDetailClient({ phase }: { phase: PhraseGroup }) {
                   e.stopPropagation();
                   toggleCompleted(session.id);
                 }}
-                className="shrink-0 text-gray-300 hover:text-indigo-500 transition-colors"
+                className="shrink-0 text-gray-400 hover:text-indigo-500 transition-colors"
                 aria-label={
                   completed ? "Mark as not completed" : "Mark as completed"
                 }
@@ -110,7 +110,7 @@ export default function PhraseDetailClient({ phase }: { phase: PhraseGroup }) {
                 )}
               </button>
 
-              <span className="shrink-0 text-xs font-medium text-gray-300 w-6 text-center group-hover:text-indigo-400 transition-colors">
+              <span className="shrink-0 text-xs font-medium text-gray-400 w-6 text-center group-hover:text-indigo-500 transition-colors">
                 {String(session.meta.sessionNumber).padStart(2, "0")}
               </span>
 
@@ -118,13 +118,13 @@ export default function PhraseDetailClient({ phase }: { phase: PhraseGroup }) {
                 <span
                   className={clsx(
                     "text-sm font-medium block truncate",
-                    completed ? "text-gray-400 line-through" : "text-gray-800",
+                    completed ? "text-gray-500 line-through" : "text-gray-800",
                   )}
                 >
                   {session.meta.title}
                 </span>
                 {session.meta.description && (
-                  <span className="text-xs text-gray-400 line-clamp-1">
+                  <span className="text-xs text-gray-500 line-clamp-1">
                     {session.meta.description}
                   </span>
                 )}
@@ -132,7 +132,7 @@ export default function PhraseDetailClient({ phase }: { phase: PhraseGroup }) {
 
               <ChevronRight
                 size={16}
-                className="shrink-0 text-gray-300 group-hover:text-indigo-400 transition-colors"
+                className="shrink-0 text-gray-400 group-hover:text-indigo-500 transition-colors"
               />
             </div>
           );

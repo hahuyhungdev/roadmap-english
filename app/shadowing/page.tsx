@@ -16,22 +16,22 @@ export default function ShadowingPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* YouTube Mode Card */}
           <Link href="/shadowing/youtube" className="block">
-            <div className="bg-slate-700 hover:bg-slate-600 transition-colors rounded-lg p-8 h-full cursor-pointer border border-slate-600 hover:border-slate-500">
+            <div className="rounded-lg  p-8 h-full cursor-pointer border border-slate-600 hover:border-slate-500">
               <div className="mb-4">
                 <div className="text-5xl mb-4">🎥</div>
               </div>
               <h2 className="text-2xl font-bold text-white mb-3">
                 YouTube Mode
               </h2>
-              <p className="text-slate-300 mb-6">
+              <p className="text-slate-500 mb-6">
                 Practice shadowing by following along with YouTube videos.
                 Perfect for learning from native speakers.
               </p>
-              <ul className="space-y-2 text-sm text-slate-400">
+              <ul className="space-y-2 text-sm text-slate-500">
                 <li className="flex items-start gap-3">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="w-5 h-5 text-emerald-400 mt-1"
+                    className="w-5 h-5 text-emerald-500 mt-1"
                     viewBox="0 0 20 20"
                     fill="currentColor"
                     aria-hidden
@@ -47,7 +47,7 @@ export default function ShadowingPage() {
                 <li className="flex items-start gap-3">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="w-5 h-5 text-emerald-400 mt-1"
+                    className="w-5 h-5 text-emerald-500 mt-1"
                     viewBox="0 0 20 20"
                     fill="currentColor"
                     aria-hidden
@@ -63,7 +63,7 @@ export default function ShadowingPage() {
                 <li className="flex items-start gap-3">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="w-5 h-5 text-emerald-400 mt-1"
+                    className="w-5 h-5 text-emerald-500 mt-1"
                     viewBox="0 0 20 20"
                     fill="currentColor"
                     aria-hidden
@@ -82,22 +82,22 @@ export default function ShadowingPage() {
 
           {/* Script Mode Card */}
           <Link href="/shadowing/script" className="block">
-            <div className="bg-slate-700 hover:bg-slate-600 transition-colors rounded-lg p-8 h-full cursor-pointer border border-slate-600 hover:border-slate-500">
+            <div className="rounded-lg  p-8 h-full cursor-pointer border border-slate-600 hover:border-slate-500">
               <div className="mb-4">
                 <div className="text-5xl mb-4">📝</div>
               </div>
               <h2 className="text-2xl font-bold text-white mb-3">
                 Script Mode
               </h2>
-              <p className="text-slate-300 mb-6">
+              <p className="text-slate-500 mb-6">
                 Paste any text or script and practice with smart sentence
                 splitting. Great for controlled, focused practice.
               </p>
-              <ul className="space-y-2 text-sm text-slate-400">
+              <ul className="space-y-2 text-sm text-slate-500">
                 <li className="flex items-start gap-3">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="w-5 h-5 text-emerald-400 mt-1"
+                    className="w-5 h-5 text-emerald-500 mt-1"
                     viewBox="0 0 20 20"
                     fill="currentColor"
                     aria-hidden
@@ -113,7 +113,7 @@ export default function ShadowingPage() {
                 <li className="flex items-start gap-3">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="w-5 h-5 text-emerald-400 mt-1"
+                    className="w-5 h-5 text-emerald-500 mt-1"
                     viewBox="0 0 20 20"
                     fill="currentColor"
                     aria-hidden
@@ -129,7 +129,7 @@ export default function ShadowingPage() {
                 <li className="flex items-start gap-3">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="w-5 h-5 text-emerald-400 mt-1"
+                    className="w-5 h-5 text-emerald-500 mt-1"
                     viewBox="0 0 20 20"
                     fill="currentColor"
                     aria-hidden
@@ -147,21 +147,14 @@ export default function ShadowingPage() {
           </Link>
         </div>
 
-        <div className="mt-12 p-6 bg-slate-700 rounded-lg border border-slate-600">
-          <p className="text-slate-300 text-center text-sm">
+        <div className="mt-12 p-6  rounded-lg border border-slate-600">
+          <p className="text-slate-500 text-center text-sm">
             💡 Tip: Use keyboard shortcuts like{" "}
-            <span className="font-mono bg-slate-800 px-2 py-1 rounded">
-              Space
-            </span>{" "}
-            to listen,{" "}
-            <span className="font-mono bg-slate-800 px-2 py-1 rounded">
-              A/D
-            </span>{" "}
-            to navigate, and{" "}
-            <span className="font-mono bg-slate-800 px-2 py-1 rounded">R</span>{" "}
+            <span className="font-mono px-2 py-1 rounded">Space</span> to
+            listen, <span className="font-mono px-2 py-1 rounded">A/D</span> to
+            navigate, and <span className="font-mono px-2 py-1 rounded">R</span>{" "}
             to record. Press{" "}
-            <span className="font-mono bg-slate-800 px-2 py-1 rounded">?</span>{" "}
-            for help.
+            <span className="font-mono px-2 py-1 rounded">?</span> for help.
           </p>
         </div>
       </div>

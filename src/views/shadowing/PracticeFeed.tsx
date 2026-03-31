@@ -54,14 +54,14 @@ export function PracticeFeed({
               <button
                 type="button"
                 onClick={onPrevSentence}
-                className="flex-1 inline-flex items-center justify-center gap-2 px-3 py-1.5 text-xs font-semibold text-gray-700 border border-gray-200 rounded-lg bg-white hover:bg-gray-100 transition-all"
+                className="flex-1 inline-flex items-center justify-center gap-2 px-3 py-1.5 text-xs font-semibold text-gray-700 border border-gray-200 rounded-lg  hover:bg-gray-100 transition-all"
               >
                 <ArrowLeft size={12} /> Previous
               </button>
               <button
                 type="button"
                 onClick={onNextSentence}
-                className="flex-1 inline-flex items-center justify-center gap-2 px-3 py-1.5 text-xs font-semibold text-gray-700 border border-gray-200 rounded-lg bg-white hover:bg-gray-100 transition-all"
+                className="flex-1 inline-flex items-center justify-center gap-2 px-3 py-1.5 text-xs font-semibold text-gray-700 border border-gray-200 rounded-lg  hover:bg-gray-100 transition-all"
               >
                 Next <ArrowRight size={12} />
               </button>
@@ -79,9 +79,8 @@ export function PracticeFeed({
               </button>
             ) : activeSentenceAudioUrl ? (
               <div className="flex items-center gap-2">
-              
-                  <AudioReplay url={activeSentenceAudioUrl} />
-                 
+                <AudioReplay url={activeSentenceAudioUrl} />
+
                 <button
                   type="button"
                   onClick={onToggleRecording}

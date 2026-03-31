@@ -28,11 +28,15 @@ export default function SessionDetailClient({
   const next = idx >= 0 ? phase.sessions[idx + 1] : undefined;
 
   return (
-    <div className="max-w-4xl mx-auto">
+    <div
+      className="max-w-6xl mx-auto
+      overflow-x-scroll h-[calc(100vh-10rem)]
+    "
+    >
       <div className="flex items-center justify-between mb-6">
         <Link
           href={`/phase/${phase.id}`}
-          className="flex items-center gap-1 text-sm text-gray-400 hover:text-indigo-600 transition-colors"
+          className="flex items-center gap-1 text-sm text-gray-500 hover:text-indigo-600 transition-colors"
         >
           <ChevronLeft size={16} /> {phase.title}
         </Link>
@@ -42,7 +46,7 @@ export default function SessionDetailClient({
             "flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-full border transition-all",
             completed
               ? "bg-indigo-50 text-indigo-600 border-indigo-200"
-              : "bg-white text-gray-500 border-gray-200 hover:border-indigo-300",
+              : " text-gray-500 border-gray-200 hover:border-indigo-400",
           )}
         >
           {completed ? <CheckCircle2 size={13} /> : <Circle size={13} />}
@@ -70,7 +74,7 @@ export default function SessionDetailClient({
             </span>
           )}
           {session.meta.date && (
-            <span className="text-xs text-gray-400">
+            <span className="text-xs text-gray-500">
               {new Date(session.meta.date).toLocaleDateString("en-US", {
                 year: "numeric",
                 month: "long",
@@ -82,7 +86,7 @@ export default function SessionDetailClient({
       </div>
 
       <article
-        className="bg-white border border-gray-200 rounded-2xl p-6 md:p-8 prose prose-gray max-w-none
+        className=" border border-gray-200 rounded-2xl p-6 md:p-8 prose prose-gray max-w-none
         prose-p:text-gray-700 prose-p:leading-7 prose-p:my-4
         prose-headings:text-gray-900 prose-headings:font-semibold
         prose-h1:text-2xl prose-h1:mb-4 prose-h1:mt-0
@@ -93,7 +97,7 @@ export default function SessionDetailClient({
         prose-strong:text-gray-900
         prose-code:text-indigo-700 prose-code:bg-indigo-50 prose-code:px-1 prose-code:py-0.5 prose-code:rounded
         prose-pre:bg-gray-900 prose-pre:text-gray-100 prose-pre:rounded-xl
-        prose-blockquote:border-l-4 prose-blockquote:border-indigo-300 prose-blockquote:bg-indigo-50/70
+        prose-blockquote:border-l-4 prose-blockquote:border-indigo-400 prose-blockquote:bg-indigo-50/70
         prose-blockquote:rounded-r-lg prose-blockquote:px-4 prose-blockquote:py-2 prose-blockquote:not-italic prose-blockquote:text-gray-700
         prose-table:text-sm prose-th:text-gray-700 prose-td:text-gray-700"
       >
@@ -115,10 +119,8 @@ export default function SessionDetailClient({
       <div className="mt-8 flex items-center justify-between gap-4 pb-6">
         {prev ? (
           <button
-            onClick={() =>
-              router.push(`/phase/${phase.id}/session/${prev.id}`)
-            }
-            className="flex items-center gap-2 text-sm text-gray-500 hover:text-indigo-600 px-3 py-2 rounded-lg border border-gray-200 hover:border-indigo-200 bg-white transition-colors"
+            onClick={() => router.push(`/phase/${phase.id}/session/${prev.id}`)}
+            className="flex items-center gap-2 text-sm text-gray-500 hover:text-indigo-600 px-3 py-2 rounded-lg border border-gray-200 hover:border-indigo-200  transition-colors"
           >
             <ChevronLeft size={15} /> {prev.meta.title}
           </button>
@@ -127,10 +129,8 @@ export default function SessionDetailClient({
         )}
         {next ? (
           <button
-            onClick={() =>
-              router.push(`/phase/${phase.id}/session/${next.id}`)
-            }
-            className="flex items-center gap-2 text-sm text-gray-500 hover:text-indigo-600 px-3 py-2 rounded-lg border border-gray-200 hover:border-indigo-200 bg-white transition-colors"
+            onClick={() => router.push(`/phase/${phase.id}/session/${next.id}`)}
+            className="flex items-center gap-2 text-sm text-gray-500 hover:text-indigo-600 px-3 py-2 rounded-lg border border-gray-200 hover:border-indigo-200  transition-colors"
           >
             {next.meta.title} <ChevronRight size={15} />
           </button>

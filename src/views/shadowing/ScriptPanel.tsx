@@ -91,7 +91,7 @@ export function ScriptPanel({
           <FileText size={14} className="text-indigo-500" />
           <span className="text-sm font-semibold text-gray-800">Script</span>
           {sentences.length > 0 && (
-            <span className="text-[11px] text-gray-400 bg-gray-100 px-1.5 py-0.5 rounded-full">
+            <span className="text-[11px] text-gray-500 bg-gray-100 px-1.5 py-0.5 rounded-full">
               {sentences.length}
             </span>
           )}
@@ -101,7 +101,7 @@ export function ScriptPanel({
             <span className="flex items-center gap-1 px-2 py-0.5 text-xs font-bold bg-amber-50 text-amber-600 border border-amber-200 rounded-full">
               <Star
                 size={10}
-                className="fill-amber-400 text-amber-400 shrink-0"
+                className="fill-amber-500 text-amber-500 shrink-0"
               />
               {overallScore}/10
             </span>
@@ -113,7 +113,7 @@ export function ScriptPanel({
               "w-7 h-7 flex items-center justify-center rounded-lg transition-colors",
               showTtsSettings
                 ? "bg-indigo-100 text-indigo-600"
-                : "text-gray-400 hover:text-indigo-600 hover:bg-gray-100",
+                : "text-gray-500 hover:text-indigo-600 hover:bg-gray-100",
             )}
           >
             <Settings2 size={14} />
@@ -122,7 +122,7 @@ export function ScriptPanel({
             <button
               onClick={onClearSession}
               title="Clear session"
-              className="w-7 h-7 flex items-center justify-center rounded-lg text-gray-300 hover:text-red-400 hover:bg-red-50 transition-colors"
+              className="w-7 h-7 flex items-center justify-center rounded-lg text-gray-400 hover:text-red-500 hover:bg-red-50 transition-colors"
             >
               <Trash2 size={14} />
             </button>
@@ -133,7 +133,7 @@ export function ScriptPanel({
       {/* TTS settings drawer */}
       {showTtsSettings && (
         <div className="px-4 py-3 border-b border-gray-100 bg-gray-50/60 shrink-0">
-          <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-wider mb-3">
+          <p className="text-[10px] font-semibold text-gray-500 uppercase tracking-wider mb-3">
             Voice Settings
           </p>
           <div className="grid grid-cols-3 gap-2 mb-3">
@@ -152,7 +152,7 @@ export function ScriptPanel({
                     onSetTtsAccent(accents[0].value);
                   }
                 }}
-                className="w-full px-2 py-1.5 text-xs border border-gray-200 rounded-lg outline-none focus:border-indigo-300 bg-white"
+                className="w-full px-2 py-1.5 text-xs border border-gray-200 rounded-lg outline-none focus:border-indigo-400 "
               >
                 {TTS_PROVIDERS.map((p) => (
                   <option key={p.value} value={p.value}>
@@ -168,7 +168,7 @@ export function ScriptPanel({
               <select
                 value={ttsAccent}
                 onChange={(e) => onSetTtsAccent(e.target.value)}
-                className="w-full px-2 py-1.5 text-xs border border-gray-200 rounded-lg outline-none focus:border-indigo-300 bg-white"
+                className="w-full px-2 py-1.5 text-xs border border-gray-200 rounded-lg outline-none focus:border-indigo-400 "
               >
                 {(
                   TTS_ACCENTS[ttsProvider as keyof typeof TTS_ACCENTS] || []
@@ -186,7 +186,7 @@ export function ScriptPanel({
               <select
                 value={ttsSpeed}
                 onChange={(e) => onSetTtsSpeed(Number(e.target.value))}
-                className="w-full px-2 py-1.5 text-xs border border-gray-200 rounded-lg outline-none focus:border-indigo-300 bg-white"
+                className="w-full px-2 py-1.5 text-xs border border-gray-200 rounded-lg outline-none focus:border-indigo-400 "
               >
                 {TTS_SPEEDS.map((s) => (
                   <option key={s.value} value={s.value}>
@@ -197,7 +197,7 @@ export function ScriptPanel({
             </div>
           </div>
 
-          <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-wider mb-2">
+          <p className="text-[10px] font-semibold text-gray-500 uppercase tracking-wider mb-2">
             Playback Options
           </p>
           <div className="space-y-2">
@@ -206,7 +206,7 @@ export function ScriptPanel({
                 type="checkbox"
                 checked={autoPronounceSentence}
                 onChange={(e) => onSetAutoPronounceSentence(e.target.checked)}
-                className="w-3.5 h-3.5 rounded border-gray-300 accent-indigo-600"
+                className="w-3.5 h-3.5 rounded border-gray-400 accent-indigo-600"
               />
               <span className="text-xs text-gray-600">
                 Auto-pronounce each sentence
@@ -217,7 +217,7 @@ export function ScriptPanel({
                 type="checkbox"
                 checked={loopSentence}
                 onChange={(e) => onSetLoopSentence(e.target.checked)}
-                className="w-3.5 h-3.5 rounded border-gray-300 accent-indigo-600"
+                className="w-3.5 h-3.5 rounded border-gray-400 accent-indigo-600"
               />
               <span className="text-xs text-gray-600">
                 Loop sentence (3x, 3s apart)
@@ -230,7 +230,7 @@ export function ScriptPanel({
       {/* Fetch button */}
       <div className="px-4 py-2 shrink-0">
         {!videoId ? (
-          <p className="text-xs text-gray-400 text-center py-1">
+          <p className="text-xs text-gray-500 text-center py-1">
             Load a video first to fetch its script.
           </p>
         ) : (
@@ -263,7 +263,7 @@ export function ScriptPanel({
           </div>
         )}
         {!scriptError && sentences.length === 0 && !scriptLoading && (
-          <div className="flex flex-col items-center justify-center h-24 text-center text-gray-300 gap-2">
+          <div className="flex flex-col items-center justify-center h-24 text-center text-gray-400 gap-2">
             <FileText size={28} strokeWidth={1} />
             <p className="text-xs">
               {videoId
@@ -274,7 +274,7 @@ export function ScriptPanel({
         )}
         {sentences.length > 0 && (
           <>
-            <p className="text-[10px] text-gray-400 px-1 pb-1.5">
+            <p className="text-[10px] text-gray-500 px-1 pb-1.5">
               Shift+&#x2190;&#x2192; to navigate
             </p>
             <div className="flex items-center gap-2 overflow-x-auto pb-4 px-1">

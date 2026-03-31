@@ -49,15 +49,15 @@ export function TTSSettingsPanel({
           "w-7 h-7 flex items-center justify-center rounded-lg transition-colors",
           open
             ? "bg-indigo-100 text-indigo-600"
-            : "text-gray-400 hover:text-indigo-600 hover:bg-gray-100",
+            : "text-gray-500 hover:text-indigo-600 hover:bg-gray-100",
         )}
       >
         <Settings2 size={14} />
       </button>
 
       {open && (
-        <div className="absolute right-4 top-12 z-20 w-72 bg-white border border-gray-200 rounded-xl shadow-lg p-4">
-          <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-wider mb-3">
+        <div className="bg-white absolute right-4 top-12 z-20 w-72  border border-gray-200 rounded-xl shadow-lg p-4">
+          <p className="text-[10px] font-semibold text-gray-500 uppercase tracking-wider mb-3">
             Voice Settings
           </p>
 
@@ -83,7 +83,7 @@ export function TTSSettingsPanel({
                     "flex-1 py-1.5 text-xs rounded-lg border transition-colors font-medium",
                     provider === p
                       ? "bg-indigo-600 text-white border-indigo-600"
-                      : "bg-white text-gray-600 border-gray-200 hover:border-indigo-300",
+                      : " text-gray-600 border-gray-200 hover:border-indigo-400",
                   )}
                 >
                   {p === "edge" ? "Edge (Browser)" : "Google Cloud"}
@@ -100,7 +100,7 @@ export function TTSSettingsPanel({
             <select
               value={accent}
               onChange={(e) => onAccentChange(e.target.value)}
-              className="w-full px-2 py-1.5 text-xs border border-gray-200 rounded-lg outline-none focus:border-indigo-300 bg-white"
+              className="w-full px-2 py-1.5 text-xs border border-gray-200 rounded-lg outline-none focus:border-indigo-400 "
             >
               {accents.map(
                 (a: { value: string; label: string }, idx: number) => (
@@ -126,7 +126,7 @@ export function TTSSettingsPanel({
                     "flex-1 py-1 text-[11px] rounded-lg border transition-colors",
                     speed === s.value
                       ? "bg-indigo-600 text-white border-indigo-600"
-                      : "bg-white text-gray-600 border-gray-200 hover:border-indigo-300",
+                      : " text-gray-600 border-gray-200 hover:border-indigo-400",
                   )}
                 >
                   {s.label}
@@ -138,7 +138,7 @@ export function TTSSettingsPanel({
           {/* Playback options (Script mode only) */}
           {onAutoPronounceSentenceChange !== undefined && (
             <>
-              <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-wider mb-2">
+              <p className="text-[10px] font-semibold text-gray-500 uppercase tracking-wider mb-2">
                 Playback
               </p>
               <div className="space-y-2">
@@ -149,7 +149,7 @@ export function TTSSettingsPanel({
                     onChange={(e) =>
                       onAutoPronounceSentenceChange(e.target.checked)
                     }
-                    className="w-3.5 h-3.5 rounded border-gray-300 accent-indigo-600"
+                    className="w-3.5 h-3.5 rounded border-gray-400 accent-indigo-600"
                   />
                   <span className="text-xs text-gray-600">Auto-pronounce</span>
                 </label>
@@ -159,7 +159,7 @@ export function TTSSettingsPanel({
                       type="checkbox"
                       checked={loopSentence}
                       onChange={(e) => onLoopSentenceChange(e.target.checked)}
-                      className="w-3.5 h-3.5 rounded border-gray-300 accent-indigo-600"
+                      className="w-3.5 h-3.5 rounded border-gray-400 accent-indigo-600"
                     />
                     <span className="text-xs text-gray-600">
                       Loop 3× (3s apart)
