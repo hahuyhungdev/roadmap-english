@@ -1,4 +1,4 @@
-import { db } from "./db";
+import { db, withRetry } from "./db";
 import {
   ttsCache,
   youtubeTranscripts,
@@ -138,22 +138,26 @@ export async function cacheScript(
 export type ShadowingSessionRow = typeof shadowingSessions.$inferSelect;
 
 export async function listShadowingSessions(): Promise<ShadowingSessionRow[]> {
-  return db
-    .select()
-    .from(shadowingSessions)
-    .orderBy(desc(shadowingSessions.updatedAt))
-    .limit(50);
+  return withRetry(() =>
+    db
+      .select()
+      .from(shadowingSessions)
+      .orderBy(desc(shadowingSessions.updatedAt))
+      .limit(50),
+  );
 }
 
 export async function getShadowingSession(
   id: number,
 ): Promise<ShadowingSessionRow | null> {
-  const rows = await db
-    .select()
-    .from(shadowingSessions)
-    .where(eq(shadowingSessions.id, id))
-    .limit(1);
-  return rows[0] ?? null;
+  return withRetry(async () => {
+    const rows = await db
+      .select()
+      .from(shadowingSessions)
+      .where(eq(shadowingSessions.id, id))
+      .limit(1);
+    return rows[0] ?? null;
+  });
 }
 
 export async function createShadowingSession(data: {
