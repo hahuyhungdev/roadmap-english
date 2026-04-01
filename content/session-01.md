@@ -15,47 +15,48 @@ description: Introduce your role, responsibilities, daily tasks, and collaborati
 ## 1) Vocabulary & Collocations
 
 - **responsibility** (n) – something you are in charge of doing  
-  *Example:* One of my main responsibilities is to build responsive user interfaces.  
-  *Example:* I take responsibility for ensuring the application performs well across different devices.
+  _Example:_ One of my main responsibilities is to build responsive user interfaces.  
+  _Example:_ I take responsibility for ensuring the application performs well across different devices.
 
 - **collaboration** (n) / **collaborate** (v) – working together with others  
-  *Example:* Good collaboration between frontend and backend teams leads to better results.  
-  *Example:* I collaborate closely with designers and product managers every day.
+  _Example:_ Good collaboration between frontend and backend teams leads to better results.  
+  _Example:_ I collaborate closely with designers and product managers every day.
 
 - **maintain** (v) – to keep something in good condition or working properly  
-  *Example:* I maintain the existing codebase and fix bugs regularly.  
-  *Example:* Maintaining high code quality helps the team work more efficiently.
+  _Example:_ I maintain the existing codebase and fix bugs regularly.  
+  _Example:_ Maintaining high code quality helps the team work more efficiently.
 
 - **optimize** (v) – to make something work better, faster, or more efficiently  
-  *Example:* We optimize loading speed to improve user experience.  
-  *Example:* My team works hard to optimize performance for large datasets.
+  _Example:_ We optimize loading speed to improve user experience.  
+  _Example:_ My team works hard to optimize performance for large datasets.
 
 - **user experience (UX)** (n) – how easy, pleasant, and efficient it is for users to interact with the product  
-  *Example:* Good frontend development focuses heavily on user experience.  
-  *Example:* Poor UX can cause users to abandon the application.
+  _Example:_ Good frontend development focuses heavily on user experience.  
+  _Example:_ Poor UX can cause users to abandon the application.
 
 - **user interface (UI)** (n) – the visual part of the application that users see and interact with  
-  *Example:* I am responsible for creating a clean and intuitive user interface.  
-  *Example:* The user interface must be both beautiful and functional.
+  _Example:_ I am responsible for creating a clean and intuitive user interface.  
+  _Example:_ The user interface must be both beautiful and functional.
 
 - **cross-functional team** (n) – a team that includes people with different job roles and expertise  
-  *Example:* I work in a cross-functional team with developers, designers, and testers.  
-  *Example:* Cross-functional teams help us solve problems from multiple perspectives.
+  _Example:_ I work in a cross-functional team with developers, designers, and testers.  
+  _Example:_ Cross-functional teams help us solve problems from multiple perspectives.
 
 - **stakeholder** (n) – anyone who has an interest in the project (managers, clients, users, etc.)  
-  *Example:* I often communicate with stakeholders to understand their requirements.  
-  *Example:* Managing stakeholder expectations is an important part of my role.
+  _Example:_ I often communicate with stakeholders to understand their requirements.  
+  _Example:_ Managing stakeholder expectations is an important part of my role.
 
 - **deliver** (v) – to complete and provide something (features, products, results)  
-  *Example:* My team delivers new features every two weeks.  
-  *Example:* We aim to deliver high-quality user interfaces on time.
+  _Example:_ My team delivers new features every two weeks.  
+  _Example:_ We aim to deliver high-quality user interfaces on time.
 
 - **impact** (n) – the effect or influence something has  
-  *Example:* My work has a direct impact on how users feel when using the product.
+  _Example:_ My work has a direct impact on how users feel when using the product.
 
 ## 2) Collocations, Chunking & Phrasal Verbs
 
 ### Strong Collocations
+
 - take responsibility for
 - work closely with
 - deliver high-quality features
@@ -68,6 +69,7 @@ description: Introduce your role, responsibilities, daily tasks, and collaborati
 - maintain code quality
 
 ### Useful Chunking & Sentence Starters
+
 - My main role is to…
 - On a daily basis, I…
 - A big part of my job involves…
@@ -78,6 +80,7 @@ description: Introduce your role, responsibilities, daily tasks, and collaborati
 - My work contributes to…
 
 ### Useful Phrasal Verbs
+
 - **work on** → I work on new features and bug fixes every sprint.
 - **deal with** → I often deal with browser compatibility issues.
 - **look after** → I look after the frontend part of the project.
@@ -115,12 +118,14 @@ As a frontend developer, my main responsibility is to create the part of the app
 ## 5) List of Questions + Ideas
 
 ### Basic Questions
+
 1. What is your current job title?
 2. What are your main responsibilities?
 3. Who do you work with most often?
 4. What does a typical day look like for you?
 
 ### Deeper & Follow-up Questions
+
 5. How does your work affect the end users?
 6. What is the most challenging part of your job?
 7. How important is collaboration in your role?
@@ -129,6 +134,7 @@ As a frontend developer, my main responsibility is to create the part of the app
 10. In what ways does frontend development contribute to business success?
 
 ### Objection & Discussion Questions
+
 11. Some people think frontend is easier than backend. What do you think?
 12. Why is a good user interface important for any software product?
 13. How would you explain your job to a non-technical person?
