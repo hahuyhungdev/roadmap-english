@@ -4,6 +4,7 @@ import {
   useState,
   useRef,
   useEffect,
+  useCallback,
   useEffectEvent,
   type FormEvent,
 } from "react";
@@ -38,6 +39,10 @@ export function useScriptShadowing(opts?: SessionOpts) {
   // ── Playback options ──────────────────────────────────────────────────────
   const [autoPronounceSentence, setAutoPronounceSentence] = useState(true);
   const [loopSentence, setLoopSentence] = useState(true);
+
+  // ── Sentence splitting controls ───────────────────────────────────────────
+  const [minSentenceLength, setMinSentenceLength] = useState(50);
+  const [maxSentenceLength, setMaxSentenceLength] = useState(120);
   const loopCountRef = useRef(0);
   const loopTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const hearingSentenceIdx = useRef(-1);
@@ -57,6 +62,14 @@ export function useScriptShadowing(opts?: SessionOpts) {
   const stopRef = useRef(stopSoniox);
   startRef.current = startSoniox;
   stopRef.current = stopSoniox;
+
+  // Refs for keyboard handler — avoids stale closures without re-registering listener
+  const activeSentenceIdxRef = useRef(activeSentenceIdx);
+  activeSentenceIdxRef.current = activeSentenceIdx;
+  const sentencesRef = useRef(sentences);
+  sentencesRef.current = sentences;
+  const isRecordingRef = useRef(isRecording);
+  isRecordingRef.current = isRecording;
 
   // FIX #1 — keep latest transcript/partial in refs so onToggleRecording
   //          always reads the finalised value, not a stale closure snapshot.
@@ -265,13 +278,26 @@ export function useScriptShadowing(opts?: SessionOpts) {
       .catch(() => {});
   });
 
-  // ── Keyboard shortcuts (FIX #11 — useEffectEvent always has latest activeSentenceIdx) ────────
-  const handleKey = useEffectEvent((e: KeyboardEvent) => {
+  // ── Keyboard shortcuts ────────────────────────────────────────────────────────────────
+  // Stable ref to tts methods so the keyboard handler below never needs
+  // tts in its deps (tts object changes on every status update).
+  const ttsRef = useRef(tts);
+  ttsRef.current = tts;
+
+  // Empty deps → listener registered exactly ONCE. All mutable values read
+  // via refs so they are always up-to-date without causing re-registration.
+  const handleKey = useCallback((e: KeyboardEvent) => {
     const tag = (document.activeElement as HTMLElement)?.tagName?.toLowerCase();
     if (tag === "input" || tag === "textarea" || tag === "select") return;
 
+    const curIdx = activeSentenceIdxRef.current;
+    const sents = sentencesRef.current;
+
     const goTo = (idx: number) => {
-      if (idx >= 0 && idx < sentences.length) setActiveSentenceIdx(idx);
+      if (idx >= 0 && idx < sents.length) {
+        ttsRef.current.stop();
+        setActiveSentenceIdx(idx);
+      }
     };
 
     switch (e.key) {
@@ -279,51 +305,49 @@ export function useScriptShadowing(opts?: SessionOpts) {
       case "s":
       case "S":
         e.preventDefault();
-        if (activeSentenceIdx >= 0 && sentences[activeSentenceIdx]) {
-          hearingSentenceIdx.current = activeSentenceIdx;
-          void tts.speak(sentences[activeSentenceIdx].text);
+        if (curIdx >= 0 && sents[curIdx]) {
+          hearingSentenceIdx.current = curIdx;
+          void ttsRef.current.speak(sents[curIdx].text);
         }
         break;
       case "ArrowLeft":
       case "a":
       case "A":
         e.preventDefault();
-        goTo(activeSentenceIdx - 1);
+        goTo(curIdx - 1);
         break;
       case "ArrowRight":
       case "d":
       case "D":
         e.preventDefault();
-        goTo(activeSentenceIdx + 1);
+        goTo(curIdx + 1);
         break;
       case "ArrowUp":
         e.preventDefault();
-        // Record
-        if (isRecording) stopRef.current();
+        if (isRecordingRef.current) stopRef.current();
         else startRecordingAction();
         break;
       case "ArrowDown":
         e.preventDefault();
-        // Listen again
-        if (activeSentenceIdx >= 0 && sentences[activeSentenceIdx]) {
-          hearingSentenceIdx.current = activeSentenceIdx;
-          void tts.speak(sentences[activeSentenceIdx].text);
+        if (curIdx >= 0 && sents[curIdx]) {
+          hearingSentenceIdx.current = curIdx;
+          void ttsRef.current.speak(sents[curIdx].text);
         }
         break;
       case "r":
       case "R":
         e.preventDefault();
-        if (isRecording) stopRef.current();
+        if (isRecordingRef.current) stopRef.current();
         else startRecordingAction();
         break;
     }
-  });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // intentionally empty — all values accessed via refs
 
-  // Register keyboard listener (stable because handleKey is useEffectEvent)
+  // Register keyboard listener exactly once
   useEffect(() => {
-    const handler = (e: KeyboardEvent) => handleKey(e);
-    window.addEventListener("keydown", handler);
-    return () => window.removeEventListener("keydown", handler);
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
   }, [handleKey]);
 
   // FIX #9 — loading a new script clears the previous session completely
@@ -403,15 +427,27 @@ export function useScriptShadowing(opts?: SessionOpts) {
         const allText = speakerNames
           .map((k) => speakers[k].join("\n\n"))
           .join("\n\n");
-        result = splitScriptIntoSentences(allText);
+        result = splitScriptIntoSentences(
+          allText,
+          minSentenceLength,
+          maxSentenceLength,
+        );
       } else {
         speakerNames.sort((a, b) => speakers[b].length - speakers[a].length);
         const main = speakerNames[0];
         const mainText = speakers[main].join("\n\n");
-        result = splitScriptIntoSentences(mainText);
+        result = splitScriptIntoSentences(
+          mainText,
+          minSentenceLength,
+          maxSentenceLength,
+        );
       }
     } else {
-      result = splitScriptIntoSentences(trimmed);
+      result = splitScriptIntoSentences(
+        trimmed,
+        minSentenceLength,
+        maxSentenceLength,
+      );
     }
 
     if (result.length === 0) {
@@ -438,6 +474,18 @@ export function useScriptShadowing(opts?: SessionOpts) {
 
   const activeSentenceText = sentences[activeSentenceIdx]?.text ?? "";
 
+  // Estimated remaining practice time based on character count.
+  // Shadowing practice rate: ~120 wpm * 5 chars/word = 600 chars/min per listen.
+  // With 3 loops + recording pause, multiply by 4 → effective ~150 chars/min.
+  const estimatedRemainingMs = (() => {
+    if (activeSentenceIdx < 0 || sentences.length === 0) return 0;
+    const remainingChars = sentences
+      .slice(activeSentenceIdx)
+      .reduce((sum, s) => sum + s.text.length, 0);
+    // 150 chars/min → 2.5 chars/sec → 400ms/char
+    return Math.round(remainingChars * 400);
+  })();
+
   const lastAudioUrl = (() => {
     for (let i = turns.length - 1; i >= 0; i--) {
       const t = turns[i];
@@ -463,6 +511,11 @@ export function useScriptShadowing(opts?: SessionOpts) {
     setAutoPronounceSentence,
     loopSentence,
     setLoopSentence,
+    // Sentence splitting
+    minSentenceLength,
+    setMinSentenceLength,
+    maxSentenceLength,
+    setMaxSentenceLength,
     // Recording
     isRecording,
     sonioxError,
@@ -485,6 +538,7 @@ export function useScriptShadowing(opts?: SessionOpts) {
     },
     // Derived
     activeSentenceText,
+    estimatedRemainingMs,
     lastAudioUrl,
     onListenSentence: () => {
       if (activeSentenceIdx >= 0 && sentences[activeSentenceIdx]) {
@@ -493,11 +547,16 @@ export function useScriptShadowing(opts?: SessionOpts) {
       }
     },
     onPrev: () => {
-      if (activeSentenceIdx > 0) setActiveSentenceIdx((i) => i - 1);
+      if (activeSentenceIdx > 0) {
+        tts.stop();
+        setActiveSentenceIdx((i) => i - 1);
+      }
     },
     onNext: () => {
-      if (activeSentenceIdx < sentences.length - 1)
+      if (activeSentenceIdx < sentences.length - 1) {
+        tts.stop();
         setActiveSentenceIdx((i) => i + 1);
+      }
     },
   };
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Settings2 } from "lucide-react";
 import clsx from "clsx";
 import type { TTSProvider } from "../shared/types";
@@ -18,6 +18,11 @@ interface Props {
   onAutoPronounceSentenceChange?: (v: boolean) => void;
   loopSentence?: boolean;
   onLoopSentenceChange?: (v: boolean) => void;
+  /** Sentence splitting (Script mode only) */
+  minSentenceLength?: number;
+  onMinSentenceLengthChange?: (v: number) => void;
+  maxSentenceLength?: number;
+  onMaxSentenceLengthChange?: (v: number) => void;
 }
 
 /**
@@ -35,13 +40,30 @@ export function TTSSettingsPanel({
   onAutoPronounceSentenceChange,
   loopSentence,
   onLoopSentenceChange,
+  minSentenceLength,
+  onMinSentenceLengthChange,
+  maxSentenceLength,
+  onMaxSentenceLengthChange,
 }: Props) {
   const [open, setOpen] = useState(false);
+  const panelRef = useRef<HTMLDivElement>(null);
+
+  // Close when clicking outside the panel
+  useEffect(() => {
+    if (!open) return;
+    function handleClickOutside(e: MouseEvent) {
+      if (panelRef.current && !panelRef.current.contains(e.target as Node)) {
+        setOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [open]);
 
   const accents = provider === "google" ? GOOGLE_ACCENTS : EDGE_ACCENTS;
 
   return (
-    <>
+    <div ref={panelRef} className="relative">
       <button
         onClick={() => setOpen((v) => !v)}
         title="Voice settings"
@@ -56,7 +78,7 @@ export function TTSSettingsPanel({
       </button>
 
       {open && (
-        <div className="bg-white absolute right-4 top-12 z-20 w-72  border border-gray-200 rounded-xl shadow-lg p-4">
+        <div className="bg-white absolute right-0 top-9 z-20 w-72 border border-gray-200 rounded-xl shadow-lg p-4">
           <p className="text-[10px] font-semibold text-gray-500 uppercase tracking-wider mb-3">
             Voice Settings
           </p>
@@ -169,8 +191,58 @@ export function TTSSettingsPanel({
               </div>
             </>
           )}
+
+          {/* Sentence length (Script mode only) */}
+          {onMinSentenceLengthChange !== undefined && (
+            <>
+              <p className="text-[10px] font-semibold text-gray-500 uppercase tracking-wider mt-3 mb-2">
+                Sentence Length
+              </p>
+              <div className="flex gap-2">
+                <div className="flex-1">
+                  <label className="text-[10px] text-gray-500 block mb-1">
+                    Min chars
+                  </label>
+                  <input
+                    type="number"
+                    min={0}
+                    max={maxSentenceLength ?? 120}
+                    value={minSentenceLength ?? 20}
+                    onChange={(e) =>
+                      onMinSentenceLengthChange(
+                        Math.max(0, Number(e.target.value)),
+                      )
+                    }
+                    className="w-full px-2 py-1 text-xs border border-gray-200 rounded-lg outline-none focus:border-indigo-400"
+                  />
+                </div>
+                {onMaxSentenceLengthChange !== undefined && (
+                  <div className="flex-1">
+                    <label className="text-[10px] text-gray-500 block mb-1">
+                      Max chars
+                    </label>
+                    <input
+                      type="number"
+                      min={minSentenceLength ?? 20}
+                      max={500}
+                      value={maxSentenceLength ?? 120}
+                      onChange={(e) =>
+                        onMaxSentenceLengthChange(
+                          Math.max(1, Number(e.target.value)),
+                        )
+                      }
+                      className="w-full px-2 py-1 text-xs border border-gray-200 rounded-lg outline-none focus:border-indigo-400"
+                    />
+                  </div>
+                )}
+              </div>
+              <p className="text-[9px] text-gray-400 mt-1">
+                Applied on next script load
+              </p>
+            </>
+          )}
         </div>
       )}
-    </>
+    </div>
   );
 }

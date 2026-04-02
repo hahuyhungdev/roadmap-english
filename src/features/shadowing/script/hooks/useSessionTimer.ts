@@ -5,6 +5,7 @@ const MILESTONES = [
   { seconds: 600, label: "10 min session", emoji: "💪" },
   { seconds: 1200, label: "20 min deep work", emoji: "🌟" },
   { seconds: 1800, label: "30 min streak", emoji: "🏆" },
+  { seconds: 3600, label: "1 hour grind", emoji: "🚀" },
 ] as const;
 
 export interface TimerMilestone {

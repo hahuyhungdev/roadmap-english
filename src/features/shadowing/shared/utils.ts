@@ -25,7 +25,11 @@ export function fmtTime(ms: number): string {
 let _tid = 0;
 export const newId = () => `t-${++_tid}-${Date.now()}`;
 
-export function splitScriptIntoSentences(script: string): Sentence[] {
+export function splitScriptIntoSentences(
+  script: string,
+  minLength = 20,
+  maxLength = 120,
+): Sentence[] {
   const cleaned = script.trim().replace(/\s+/g, " ");
   if (!cleaned) return [];
 
@@ -33,32 +37,44 @@ export function splitScriptIntoSentences(script: string): Sentence[] {
   let currentTimeMs = 0;
   const result: Sentence[] = [];
 
+  // Collect raw split pieces, chunking anything over maxLength
+  const rawSentences: string[] = [];
   for (const match of sentenceMatches) {
     const sentence = match.trim();
     if (!sentence) continue;
-
-    if (sentence.length > 120) {
-      const chunks = splitLongSentence(sentence);
-      for (const chunk of chunks) {
-        const chunkText = chunk.trim();
-        if (!chunkText) continue;
-        const duration = estimateDuration(chunkText);
-        result.push({
-          text: chunkText,
-          startMs: currentTimeMs,
-          endMs: currentTimeMs + duration,
-        });
-        currentTimeMs += duration;
-      }
+    if (sentence.length > maxLength) {
+      rawSentences.push(...splitLongSentence(sentence));
     } else {
-      const duration = estimateDuration(sentence);
-      result.push({
-        text: sentence,
-        startMs: currentTimeMs,
-        endMs: currentTimeMs + duration,
-      });
-      currentTimeMs += duration;
+      rawSentences.push(sentence);
     }
+  }
+
+  // Merge consecutive sentences that are shorter than minLength
+  const merged: string[] = [];
+  let buffer = "";
+  for (const s of rawSentences) {
+    if (buffer) {
+      buffer = buffer + " " + s;
+      if (buffer.length >= minLength) {
+        merged.push(buffer);
+        buffer = "";
+      }
+    } else if (s.length < minLength) {
+      buffer = s;
+    } else {
+      merged.push(s);
+    }
+  }
+  if (buffer) merged.push(buffer);
+
+  for (const sentence of merged) {
+    const duration = estimateDuration(sentence);
+    result.push({
+      text: sentence,
+      startMs: currentTimeMs,
+      endMs: currentTimeMs + duration,
+    });
+    currentTimeMs += duration;
   }
 
   return result;

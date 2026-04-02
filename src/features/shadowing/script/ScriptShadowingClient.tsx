@@ -90,6 +90,10 @@ export default function ScriptShadowingClient(props: Props) {
                 onAutoPronounceSentenceChange={s.setAutoPronounceSentence}
                 loopSentence={s.loopSentence}
                 onLoopSentenceChange={s.setLoopSentence}
+                minSentenceLength={s.minSentenceLength}
+                onMinSentenceLengthChange={s.setMinSentenceLength}
+                maxSentenceLength={s.maxSentenceLength}
+                onMaxSentenceLengthChange={s.setMaxSentenceLength}
               />
             )}
 
@@ -129,9 +133,16 @@ export default function ScriptShadowingClient(props: Props) {
                 current={s.activeSentenceIdx}
                 onJump={s.setActiveSentenceIdx}
               />
-              <p className="text-[10px] text-gray-400">
-                A/D · ←/→ to navigate · R to record · S/Space to listen
-              </p>
+              <div className="flex items-center justify-between">
+                <p className="text-[10px] text-gray-400">
+                  A/D · ←/→ to navigate · R to record · S/Space to listen
+                </p>
+                {s.estimatedRemainingMs > 0 && (
+                  <p className="text-[10px] text-gray-400 shrink-0">
+                    ~{Math.ceil(s.estimatedRemainingMs / 60000)} min remaining
+                  </p>
+                )}
+              </div>
             </div>
 
             {s.activeSentenceIdx >= 0 && activeSentence ? (
