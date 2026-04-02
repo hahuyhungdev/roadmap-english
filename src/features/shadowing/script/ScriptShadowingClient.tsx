@@ -1,8 +1,7 @@
 "use client";
-
 import { useState, useRef, useEffect } from "react";
-import { ActionIcon, Badge, Group, Tooltip } from "@mantine/core";
-import { Star, Trash2 } from "lucide-react";
+import { ActionIcon, Tooltip } from "@mantine/core";
+import { Trash2 } from "lucide-react";
 import { useScriptShadowing } from "./useScriptShadowing";
 import { TTSSettingsPanel } from "../shared/TTSSettingsPanel";
 import { ScriptInputForm } from "./components/ScriptInputForm";
@@ -72,23 +71,12 @@ export default function ScriptShadowingClient(props: Props) {
               Script Shadowing
             </h1>
             <p className="text-xs text-gray-400 mt-0.5">
-              Paste any text · practice sentence by sentence · get AI feedback
+              Paste any text · practice sentence by sentence
             </p>
           </div>
 
           <div className="flex items-center gap-2 shrink-0">
             <SessionTimer active={hasSentences} />
-
-            {s.overallScore !== null && (
-              <Badge
-                size="sm"
-                variant="light"
-                color="yellow"
-                leftSection={<Star size={10} className="fill-yellow-500" />}
-              >
-                {s.overallScore}/10
-              </Badge>
-            )}
 
             {hasSentences && (
               <TTSSettingsPanel
@@ -153,8 +141,6 @@ export default function ScriptShadowingClient(props: Props) {
                 total={s.sentences.length}
                 tts={s.tts}
                 isRecording={s.isRecording}
-                coachLoading={s.coachLoading}
-                turns={s.turns}
                 lastAudioUrl={s.lastAudioUrl}
                 onListen={s.onListenSentence}
                 onToggleRecording={s.onToggleRecording}

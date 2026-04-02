@@ -6,15 +6,42 @@ import {
   Mic,
   Play,
   Square,
-  Star,
   Volume2,
 } from "lucide-react";
-import { ActionIcon, Badge, Group, Loader, Text, Tooltip } from "@mantine/core";
+import { ActionIcon, Group, Loader, Text, Tooltip } from "@mantine/core";
 import { AudioReplay } from "../../shared/AudioReplay";
-import type { ShadowTurn } from "../../shared/types";
 import type { useTTSSettings } from "../../shared/useTTSSettings";
 
 type TTS = ReturnType<typeof useTTSSettings>;
+
+// ─── Word highlight helper ────────────────────────────────────────────────────
+// Splits `text` around the word at `charIndex` for karaoke-style highlight.
+// Falls back to plain text when not speaking (charIndex < 0).
+function SpeakingText({
+  text,
+  charIndex,
+}: {
+  text: string;
+  charIndex: number;
+}) {
+  if (charIndex < 0 || charIndex >= text.length) {
+    return <span className="text-gray-900">{text}</span>;
+  }
+  // Find end of the current word
+  const after = text.slice(charIndex);
+  const wordEnd = after.search(/\s/);
+  const end = charIndex + (wordEnd === -1 ? after.length : wordEnd);
+
+  return (
+    <>
+      <span className="text-gray-400">{text.slice(0, charIndex)}</span>
+      <span className="bg-indigo-100 text-indigo-900 rounded-sm px-0.5">
+        {text.slice(charIndex, end)}
+      </span>
+      <span className="text-gray-900">{text.slice(end)}</span>
+    </>
+  );
+}
 
 interface Props {
   text: string;
@@ -22,8 +49,6 @@ interface Props {
   total: number;
   tts: TTS;
   isRecording: boolean;
-  coachLoading: boolean;
-  turns: ShadowTurn[];
   lastAudioUrl: string | null;
   onListen: () => void;
   onToggleRecording: () => void;
@@ -37,18 +62,12 @@ export function SentenceCard({
   total,
   tts,
   isRecording,
-  coachLoading,
-  turns,
   lastAudioUrl,
   onListen,
   onToggleRecording,
   onPrev,
   onNext,
 }: Props) {
-  const relevantTurns = turns
-    .filter((t) => t.sentenceIdx === sentenceIdx)
-    .slice(-3);
-
   return (
     <div className="rounded-2xl border border-indigo-100 bg-indigo-50 shadow-sm p-5 space-y-4 transition-all">
       {/* Sentence text */}
@@ -62,8 +81,8 @@ export function SentenceCard({
             Sentence {sentenceIdx + 1} / {total}
           </Text>
         </Group>
-        <p className="text-lg leading-relaxed text-gray-900 font-medium tracking-wide mt-1">
-          {text}
+        <p className="text-lg leading-relaxed font-medium tracking-wide mt-1">
+          <SpeakingText text={text} charIndex={tts.speakingCharIndex} />
         </p>
       </div>
 
@@ -155,42 +174,6 @@ export function SentenceCard({
 
       {/* Audio replay */}
       {lastAudioUrl && <AudioReplay url={lastAudioUrl} />}
-
-      {/* AI Feedback turns */}
-      {relevantTurns.length > 0 && (
-        <div className="space-y-2 pt-1">
-          {relevantTurns.map((turn) => (
-            <div
-              key={turn.id}
-              className="rounded-xl border border-white bg-white p-3 space-y-1.5 shadow-sm"
-            >
-              <p className="text-xs text-gray-400 italic">"{turn.text}"</p>
-              {turn.feedback && (
-                <p className="text-xs text-gray-700 leading-relaxed">
-                  {turn.feedback}
-                </p>
-              )}
-              {turn.review?.score !== undefined && (
-                <Badge
-                  size="xs"
-                  variant="light"
-                  color="yellow"
-                  leftSection={<Star size={8} className="fill-yellow-500" />}
-                >
-                  {turn.review.score}/10
-                </Badge>
-              )}
-            </div>
-          ))}
-        </div>
-      )}
-
-      {coachLoading && (
-        <div className="flex items-center gap-2 text-indigo-500">
-          <Loader size="xs" color="violet" />
-          <span className="text-xs">Getting AI feedback…</span>
-        </div>
-      )}
     </div>
   );
 }

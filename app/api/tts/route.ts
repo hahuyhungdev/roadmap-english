@@ -28,8 +28,8 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ audioContent: cached, source: "cache" });
     }
 
-    // 2. Call Google TTS
-    const audioContent = await callGoogleTTS(apiKey, text, voiceName);
+    // 2. Call Google TTS (speed baked into audio via speakingRate)
+    const audioContent = await callGoogleTTS(apiKey, text, voiceName, speed);
 
     // 3. Cache in DB (fire and forget)
     cacheTTS(text, voiceName, speed, audioContent).catch(() => {});
@@ -82,7 +82,7 @@ export async function PUT(req: NextRequest) {
 
       // Fetch and cache
       try {
-        const audioContent = await callGoogleTTS(apiKey, text, voice);
+        const audioContent = await callGoogleTTS(apiKey, text, voice, speed);
         await cacheTTS(text, voice, speed, audioContent).catch(() => {});
         results.push({ text, source: "google" });
       } catch {

@@ -10,12 +10,11 @@ import {
 import useSoniox from "@/hooks/useSoniox";
 import { useTTSSettings } from "../shared/useTTSSettings";
 import type { ShadowTurn, Sentence, SessionOpts } from "../shared/types";
+import { newId, splitScriptIntoSentences } from "../shared/utils";
 import {
-  extractReview,
-  newId,
-  splitScriptIntoSentences,
-} from "../shared/utils";
-import { DEFAULT_SPEED } from "@/features/shadowing/shared/constants";
+  DEFAULT_SPEED,
+  DEFAULT_VOICE_BY_PROVIDER,
+} from "@/features/shadowing/shared/constants";
 
 export function useScriptShadowing(opts?: SessionOpts) {
   // ── Script / sentences ────────────────────────────────────────────────────
@@ -30,7 +29,11 @@ export function useScriptShadowing(opts?: SessionOpts) {
   const sentenceRefs = useRef<(HTMLButtonElement | null)[]>([]);
 
   // ── TTS ───────────────────────────────────────────────────────────────────
-  const tts = useTTSSettings({ provider: "edge", speed: DEFAULT_SPEED });
+  const tts = useTTSSettings({
+    provider: "google",
+    accent: DEFAULT_VOICE_BY_PROVIDER.google,
+    speed: DEFAULT_SPEED,
+  });
 
   // ── Playback options ──────────────────────────────────────────────────────
   const [autoPronounceSentence, setAutoPronounceSentence] = useState(true);
@@ -79,9 +82,6 @@ export function useScriptShadowing(opts?: SessionOpts) {
 
   // ── Coaching turns ────────────────────────────────────────────────────────
   const [turns, setTurns] = useState<ShadowTurn[]>([]);
-  const [coachLoading, setCoachLoading] = useState(false);
-  const historyRef = useRef<{ role: string; content: string }[]>([]);
-  const isSubmittingRef = useRef(false); // FIX #7 — prevent concurrent submits
 
   // ── Session persistence ───────────────────────────────────────────────────
   const optsRef = useRef(opts);
@@ -100,13 +100,16 @@ export function useScriptShadowing(opts?: SessionOpts) {
         block: "nearest",
         inline: "nearest",
       });
-      // Pre-buffer next 3 sentences for instant playback
+      // Pre-buffer next 3 sentences for instant playback.
+      // Use tts.preBuffer (stable useCallback) NOT tts object — the tts object
+      // changes on every status update which would cause this effect to re-run
+      // and fire duplicate PUT /api/tts calls on every idle→loading→playing→idle cycle.
       const upcoming = sentences
         .slice(activeSentenceIdx + 1, activeSentenceIdx + 4)
         .map((s) => s.text);
       if (upcoming.length > 0) tts.preBuffer(upcoming);
     }
-  }, [activeSentenceIdx, sentences, tts]);
+  }, [activeSentenceIdx, sentences, tts.preBuffer]);
 
   // ── Clear hearingIdx only when loop is completely done ──────────────────
   // (Don't clear on every TTS finish — that breaks the loop effect! Only clear
@@ -179,13 +182,10 @@ export function useScriptShadowing(opts?: SessionOpts) {
 
   // ── Actions ───────────────────────────────────────────────────────────────
 
-  // FIX #7 — guard against concurrent submits; historyRef mutation is now safe
-  // useEffectEvent: stable reference with access to latest state/refs
-  const submitTranscript = useEffectEvent(async (text: string) => {
+  // Create a turn when recording stops — no AI, just tracks text + audio URL.
+  const submitTranscript = useEffectEvent((text: string) => {
     const trimmed = text.trim();
-    if (!trimmed || isSubmittingRef.current) return;
-
-    isSubmittingRef.current = true;
+    if (!trimmed) return;
 
     const id = newId();
     pendingTurnIdRef.current = id;
@@ -207,41 +207,6 @@ export function useScriptShadowing(opts?: SessionOpts) {
         timestamp: Date.now(),
       },
     ]);
-    setCoachLoading(true);
-    historyRef.current.push({ role: "user", content: trimmed });
-
-    try {
-      const res = await fetch("/api/voice", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          transcript: trimmed,
-          history: historyRef.current.slice(-6),
-          topic: "English script practice",
-        }),
-      });
-      const data = (await res.json()) as { reply?: string; error?: string };
-      const reply = data.reply ?? "";
-      const review = extractReview(reply);
-      const feedbackText = reply.replace(/```review[\s\S]*?```/gi, "").trim();
-
-      historyRef.current.push({ role: "assistant", content: reply });
-
-      setTurns((prev) =>
-        prev.map((t) =>
-          t.id === id ? { ...t, feedback: feedbackText, review } : t,
-        ),
-      );
-    } catch {
-      setTurns((prev) =>
-        prev.map((t) =>
-          t.id === id ? { ...t, feedback: "Could not get feedback." } : t,
-        ),
-      );
-    } finally {
-      setCoachLoading(false);
-      isSubmittingRef.current = false; // FIX #7 — always release the lock
-    }
   });
 
   // FIX #2 — useEffectEvent keeps this stable while always having access to latest activeSentenceIdx
@@ -269,12 +234,9 @@ export function useScriptShadowing(opts?: SessionOpts) {
         };
 
         mr.onstop = () => {
-          stream.getTracks().forEach((t) => t.stop());
+          // Don't stop stream tracks here — Soniox may still need them.
+          // Tracks are stopped when Soniox stop() is called.
           const blob = new Blob(audioChunksRef.current, { type: "audio/webm" });
-
-          // FIX #8 — revoke the previous blob for this sentence before creating a new one
-          const prevUrl = blobUrlsRef.current[blobUrlsRef.current.length - 1];
-          if (prevUrl) URL.revokeObjectURL(prevUrl);
 
           const url = URL.createObjectURL(blob);
           blobUrlsRef.current.push(url);
@@ -296,10 +258,11 @@ export function useScriptShadowing(opts?: SessionOpts) {
           console.error("[recording] MediaRecorder.start failed:", err);
           return;
         }
+
+        // Share the same mic stream with Soniox STT (avoids opening a 2nd mic)
+        startRef.current({ source: "mic", stream });
       })
       .catch(() => {});
-
-    startRef.current({ source: "mic" });
   });
 
   // ── Keyboard shortcuts (FIX #11 — useEffectEvent always has latest activeSentenceIdx) ────────
@@ -462,7 +425,6 @@ export function useScriptShadowing(opts?: SessionOpts) {
     sentenceRefs.current = [];
     // Clear previous session
     setTurns([]);
-    historyRef.current = [];
 
     // Cache script in DB (fire and forget)
     fetch("/api/shadowing/script", {
@@ -470,23 +432,9 @@ export function useScriptShadowing(opts?: SessionOpts) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ script: trimmed, sentences: result }),
     }).catch(() => {});
-
-    // Pre-buffer TTS for first few sentences
-    const upcoming = result.slice(0, 5).map((s) => s.text);
-    tts.preBuffer(upcoming);
   }
 
   // ── Derived ───────────────────────────────────────────────────────────────
-  // (practicedSentences is now state, not derived — see above)
-
-  const scores = turns
-    .map((t) => t.review?.score)
-    .filter((s): s is number => typeof s === "number");
-
-  const overallScore =
-    scores.length > 0
-      ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length)
-      : null;
 
   const activeSentenceText = sentences[activeSentenceIdx]?.text ?? "";
 
@@ -523,20 +471,17 @@ export function useScriptShadowing(opts?: SessionOpts) {
     onToggleRecording: () => {
       if (isRecording) {
         stopRef.current();
-        // FIX #1 — read from refs, not stale closure values
+        // Read from refs to avoid stale closure values
         const text = (transcriptRef.current || partialRef.current).trim();
-        if (text) void submitTranscript(text);
+        if (text) submitTranscript(text);
       } else {
         startRecordingAction();
       }
     },
     // Coaching
     turns,
-    coachLoading,
-    overallScore,
     onClearSession: () => {
       setTurns([]);
-      historyRef.current = [];
     },
     // Derived
     activeSentenceText,

@@ -80,31 +80,8 @@ export function ShadowingSessionClient({ sessionId }: Props) {
     (sentences: any[]) => {
       setSession((prev) => (prev ? { ...prev, sentences } : prev));
       saveSession({ sentences });
-
-      // Pre-generate TTS audio for ALL sentences — script mode only.
-      // YouTube sessions use the video's own audio, so TTS is not needed there.
-      if (sentences.length > 0 && session?.mode === "script") {
-        const voice = session?.ttsVoice ?? "en-US-Chirp3-HD-Fenrir";
-        const speed = session?.ttsSpeed ?? 0.85;
-        const chunks: any[][] = [];
-        for (let i = 0; i < sentences.length; i += 50) {
-          chunks.push(sentences.slice(i, i + 50));
-        }
-        chunks.forEach((chunk) => {
-          const items = chunk.map((s: any) => ({
-            text: s.text,
-            voice,
-            speed,
-          }));
-          fetch("/api/tts", {
-            method: "PUT",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ items }),
-          }).catch(() => {});
-        });
-      }
     },
-    [saveSession, session?.ttsVoice, session?.ttsSpeed],
+    [saveSession],
   );
 
   // Called when active sentence changes

@@ -7,9 +7,11 @@ import {
   Mic,
   Sparkles,
   Square,
+  ArrowRight,
 } from "lucide-react";
 import clsx from "clsx";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { useYouTubeShadowing } from "./useYouTubeShadowing";
 import { VideoPanel } from "../shared/VideoPanel";
 import { AudioReplay } from "../shared/AudioReplay";
@@ -27,6 +29,7 @@ interface Props {
 }
 
 export default function YouTubeShadowingClient(props: Props) {
+  const router = useRouter();
   const s = useYouTubeShadowing({
     sessionId: props.sessionId,
     initialVideoId: props.initialVideoId,
@@ -39,7 +42,34 @@ export default function YouTubeShadowingClient(props: Props) {
   });
   const [showPaste, setShowPaste] = useState(false);
   const [pasteText, setPasteText] = useState("");
+  const [openingScript, setOpeningScript] = useState(false);
   const busy = s.importingTranscript || s.improvingTranscript;
+
+  async function handleOpenInScript() {
+    if (!s.sentences.length || openingScript) return;
+    setOpeningScript(true);
+    try {
+      const scriptText = s.sentences.map((sen) => sen.text).join(" ");
+      const res = await fetch("/api/shadowing/sessions", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          mode: "script",
+          title: `Script — ${s.videoId ?? "YouTube"}`,
+          scriptText,
+          sentences: s.sentences,
+        }),
+      });
+      const data = await res.json();
+      if (data.session?.id) {
+        router.push(`/shadowing/${data.session.id}`);
+      }
+    } catch {
+      // ignore
+    } finally {
+      setOpeningScript(false);
+    }
+  }
 
   return (
     <div className="max-w-6xl mx-auto space-y-4">
@@ -108,6 +138,21 @@ export default function YouTubeShadowingClient(props: Props) {
                   </span>
                 )}
               </div>
+              {s.sentences.length > 0 && (
+                <button
+                  onClick={handleOpenInScript}
+                  disabled={openingScript || busy}
+                  className="flex items-center gap-1 px-2.5 py-1 text-[11px] font-semibold text-indigo-600 border border-indigo-200 rounded-lg bg-indigo-50 hover:bg-indigo-100 disabled:opacity-40 transition-colors"
+                  title="Create a new Script Shadowing session with this transcript"
+                >
+                  {openingScript ? (
+                    <Loader2 size={11} className="animate-spin" />
+                  ) : (
+                    <ArrowRight size={11} />
+                  )}
+                  Script Mode
+                </button>
+              )}
               {s.sentences.length > 0 && (
                 <button
                   onClick={s.handleImproveWithAI}

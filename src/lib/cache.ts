@@ -181,10 +181,12 @@ export async function createShadowingSession(data: {
   if (data.ttsVoice != null) values.ttsVoice = data.ttsVoice;
   if (data.ttsSpeed != null) values.ttsSpeed = data.ttsSpeed;
 
-  const rows = await db
-    .insert(shadowingSessions)
-    .values(values as typeof shadowingSessions.$inferInsert)
-    .returning();
+  const rows = await withRetry(() =>
+    db
+      .insert(shadowingSessions)
+      .values(values as typeof shadowingSessions.$inferInsert)
+      .returning(),
+  );
   return rows[0];
 }
 
@@ -210,12 +212,16 @@ export async function updateShadowingSession(
   if (data.videoId !== undefined) updates.videoId = data.videoId;
   if (data.scriptText !== undefined) updates.scriptText = data.scriptText;
 
-  await db
-    .update(shadowingSessions)
-    .set(updates)
-    .where(eq(shadowingSessions.id, id));
+  await withRetry(() =>
+    db
+      .update(shadowingSessions)
+      .set(updates)
+      .where(eq(shadowingSessions.id, id)),
+  );
 }
 
 export async function deleteShadowingSession(id: number): Promise<void> {
-  await db.delete(shadowingSessions).where(eq(shadowingSessions.id, id));
+  await withRetry(() =>
+    db.delete(shadowingSessions).where(eq(shadowingSessions.id, id)),
+  );
 }

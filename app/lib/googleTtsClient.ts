@@ -2,27 +2,26 @@
  * Shared Google TTS Client — Reusable across routes
  *
  * Configuration optimized for shadowing/speech practice:
- * - Chirp3-HD voices (highest quality, no SSML/speakingRate support)
+ * - Chirp3-HD voices (highest quality)
  * - effectsProfileId: headphone-class-device (richer audio)
- * - Speed control: handled via Web Audio API playbackRate, NOT API parameter
+ * - speakingRate: passed to API so speed is baked into audio (no client-side distortion)
  */
 
 export const GOOGLE_TTS_CONFIG = {
   audioEncoding: "MP3" as const,
-  effectsProfileId: ["headphone-class-device"], // richer audio
+  effectsProfileId: ["headphone-class-device"],
 };
 
 /**
  * Call Google TTS API directly (server-side only)
  *
- * Usage: In Next.js route handlers where GOOGLE_TTS_API_KEY is available
- * Note: Chirp3-HD does NOT support speakingRate, pitch, or SSML in audioConfig.
- *       Speed control handled on client-side via Web Audio API playbackRate.
+ * @param speed — speakingRate (0.25–4.0). Baked into the audio by Google.
  */
 export async function callGoogleTTS(
   apiKey: string,
   text: string,
   voiceName: string,
+  speed = 1.0,
 ): Promise<string> {
   const res = await fetch(
     `https://texttospeech.googleapis.com/v1/text:synthesize?key=${encodeURIComponent(apiKey)}`,
@@ -38,6 +37,8 @@ export async function callGoogleTTS(
         audioConfig: {
           audioEncoding: GOOGLE_TTS_CONFIG.audioEncoding,
           effectsProfileId: GOOGLE_TTS_CONFIG.effectsProfileId,
+          speakingRate: speed,
+          pitch: 0,
         },
       }),
     },

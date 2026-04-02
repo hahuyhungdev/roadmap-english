@@ -93,32 +93,70 @@ function speakChunk(
   voice: SpeechSynthesisVoice,
   rate: number,
   lang: string,
-  keepAliveRef: { id: ReturnType<typeof setInterval> | null },
+  signal?: AbortSignal,
+  onBoundary?: (absCharIndex: number) => void,
+  chunkOffset = 0,
 ): Promise<void> {
   return new Promise((resolve, reject) => {
+    if (signal?.aborted) {
+      resolve();
+      return;
+    }
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.voice = voice;
     utterance.lang = lang;
     utterance.rate = rate;
+
+    // Word-boundary tracking for text highlighting
+    utterance.onboundary = (e) => {
+      if (e.name === "word") onBoundary?.(chunkOffset + e.charIndex);
+    };
+
+    // Keep-alive only for long utterances — the pause/resume hack on short
+    // sentences causes micro-stutters and is completely unnecessary.
+    const estimatedMs = (text.split(/\s+/).length * 400) / (rate || 1);
+    let keepAliveId: ReturnType<typeof setInterval> | null = null;
+    if (estimatedMs > 8000) {
+      keepAliveId = setInterval(() => {
+        if (speechSynthesis.speaking && !speechSynthesis.paused) {
+          speechSynthesis.pause();
+          speechSynthesis.resume();
+        }
+      }, 10000);
+    }
+
+    const cleanup = () => {
+      if (keepAliveId) {
+        clearInterval(keepAliveId);
+        keepAliveId = null;
+      }
+      utterance.onboundary = null;
+    };
+
     utterance.onend = () => {
-      if (keepAliveRef.id) clearInterval(keepAliveRef.id);
+      cleanup();
       resolve();
     };
     utterance.onerror = (e) => {
-      if (keepAliveRef.id) clearInterval(keepAliveRef.id);
-      if (e.error === "interrupted") {
+      cleanup();
+      if (e.error === "interrupted" || signal?.aborted) {
         resolve();
         return;
       }
       reject(e);
     };
-    // Keep-alive workaround for Chromium long-speech pause bug
-    keepAliveRef.id = setInterval(() => {
-      if (speechSynthesis.speaking && !speechSynthesis.paused) {
-        speechSynthesis.pause();
-        speechSynthesis.resume();
-      }
-    }, 10000);
+
+    // Abort listener: cancel speech when the speak() session is stopped
+    signal?.addEventListener(
+      "abort",
+      () => {
+        cleanup();
+        window.speechSynthesis?.cancel();
+        resolve();
+      },
+      { once: true },
+    );
+
     speechSynthesis.speak(utterance);
   });
 }
@@ -126,6 +164,8 @@ function speakChunk(
 // ─── Audio pre-buffer cache (in-memory) ───────────────────────────────────
 // Stores pre-fetched audio blobs so TTS playback is instant
 const audioBufferCache = new Map<string, string>(); // key -> base64 audio
+// Tracks keys currently being pre-buffered to avoid duplicate PUT requests
+const preBufferInFlight = new Set<string>();
 
 function makeCacheKey(text: string, voice: string, speed: number) {
   return `${text}|${voice}|${speed}`;
@@ -142,11 +182,17 @@ export function useTTSSettings(defaults?: Partial<TTSSettings>) {
   const [speed, setSpeed] = useState(defaults?.speed ?? DEFAULT_SPEED);
   const [status, setStatus] = useState<TTSStatus>("idle");
   const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([]);
+  // Index of the character currently being spoken (-1 = not speaking).
+  // Populated by SpeechSynthesisUtterance.onboundary for word highlight.
+  const [speakingCharIndex, setSpeakingCharIndex] = useState(-1);
 
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const blobUrlRef = useRef<string | null>(null);
   const abortRef = useRef<AbortController | null>(null);
+  const speakAbortRef = useRef<AbortController | null>(null);
   const lastSpeakRef = useRef<{ text: string; at: number } | null>(null);
+  // Pre-resolved voice — avoids async lookup latency on every speak() call
+  const voiceCacheRef = useRef<SpeechSynthesisVoice | null>(null);
 
   // Keep latest state in refs for stable callbacks
   const providerRef = useRef(provider);
@@ -175,10 +221,22 @@ export function useTTSSettings(defaults?: Partial<TTSSettings>) {
     speechSynthesis.addEventListener("voiceschanged", load);
     return () => speechSynthesis.removeEventListener("voiceschanged", load);
   }, []);
-
+  // ── Pre-resolve voice when accent changes ─────────────────────────────────
+  // Avoids the 0–3 s async voice lookup on the first speak() call.
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const lang = getLangFromVoiceId(accent);
+    voiceCacheRef.current = null; // clear stale cache when accent changes
+    getVoiceForAccent(accent, lang)
+      .then((v) => {
+        voiceCacheRef.current = v;
+      })
+      .catch(() => {});
+  }, [accent]);
   // ── Cleanup on unmount ──────────────────────────────────────────────────
   useEffect(() => {
     return () => {
+      speakAbortRef.current?.abort();
       abortRef.current?.abort();
       if (blobUrlRef.current) URL.revokeObjectURL(blobUrlRef.current);
       audioRef.current?.pause();
@@ -188,10 +246,17 @@ export function useTTSSettings(defaults?: Partial<TTSSettings>) {
 
   // ── stop() ──────────────────────────────────────────────────────────────
   const stop = useCallback(() => {
+    // Abort any in-flight speak() (including Edge chunk loop)
+    speakAbortRef.current?.abort();
+    speakAbortRef.current = null;
     abortRef.current?.abort();
     abortRef.current = null;
     window.speechSynthesis?.cancel();
     if (audioRef.current) {
+      // Detach handlers before clearing src — setting src="" fires onerror
+      // which would otherwise reject the in-flight playBase64Audio Promise.
+      audioRef.current.onended = null;
+      audioRef.current.onerror = null;
       audioRef.current.pause();
       audioRef.current.src = "";
       audioRef.current = null;
@@ -200,6 +265,7 @@ export function useTTSSettings(defaults?: Partial<TTSSettings>) {
       URL.revokeObjectURL(blobUrlRef.current);
       blobUrlRef.current = null;
     }
+    setSpeakingCharIndex(-1);
     setStatus("idle");
   }, []);
 
@@ -219,34 +285,59 @@ export function useTTSSettings(defaults?: Partial<TTSSettings>) {
 
         stop();
 
+        // Create a new abort controller for this speak session
+        const speakAc = new AbortController();
+        speakAbortRef.current = speakAc;
+
         if (providerRef.current === "edge") {
           setStatus("loading");
           const lang = getLangFromVoiceId(accentRef.current);
-          const voice = await getVoiceForAccent(accentRef.current, lang);
-          if (!voice) {
+          // Use pre-cached voice to avoid async lookup lag on every speak();
+          // fall back to async resolution if cache is empty (first call or accent change).
+          const voice =
+            voiceCacheRef.current ??
+            (await getVoiceForAccent(accentRef.current, lang));
+          if (voice) voiceCacheRef.current = voice; // keep cache warm
+
+          if (!voice || speakAc.signal.aborted) {
             setStatus("idle");
-            console.warn(
-              "[useTTSSettings] No voice found for",
-              accentRef.current,
-              lang,
-            );
+            setSpeakingCharIndex(-1);
+            if (!voice)
+              console.warn(
+                "[useTTSSettings] No voice found for",
+                accentRef.current,
+                lang,
+              );
             return;
           }
           setStatus("playing");
           const chunks = chunkText(trimmed, 250);
+          let charOffset = 0;
           for (const chunk of chunks) {
-            const keepAlive = {
-              id: null as ReturnType<typeof setInterval> | null,
-            };
-            await speakChunk(chunk, voice, speedRef.current, lang, keepAlive);
+            if (speakAc.signal.aborted) break;
+            await speakChunk(
+              chunk,
+              voice,
+              speedRef.current,
+              lang,
+              speakAc.signal,
+              (idx) => setSpeakingCharIndex(idx),
+              charOffset,
+            );
+            charOffset += chunk.length + 1; // +1 for the space between chunks
           }
-          setStatus("idle");
-          onEnd?.();
+          if (!speakAc.signal.aborted) {
+            setSpeakingCharIndex(-1);
+            setStatus("idle");
+            onEnd?.();
+          }
           return;
         }
 
         // ── Google TTS (with pre-buffer cache) ──────────────────────────
         if (providerRef.current === "google") {
+          if (speakAc.signal.aborted) return;
+
           const cacheKey = makeCacheKey(
             trimmed,
             accentRef.current,
@@ -259,13 +350,17 @@ export function useTTSSettings(defaults?: Partial<TTSSettings>) {
             setStatus("playing");
             await playBase64Audio(
               cachedBase64,
-              speedRef.current,
+              trimmed,
               blobUrlRef,
               audioRef,
               () => {
-                setStatus("idle");
-                onEnd?.();
+                if (!speakAc.signal.aborted) {
+                  setSpeakingCharIndex(-1);
+                  setStatus("idle");
+                  onEnd?.();
+                }
               },
+              (idx) => setSpeakingCharIndex(idx),
             );
             return;
           }
@@ -273,6 +368,12 @@ export function useTTSSettings(defaults?: Partial<TTSSettings>) {
           setStatus("loading");
           const abortController = new AbortController();
           abortRef.current = abortController;
+          // Also abort fetch if speak is cancelled
+          speakAc.signal.addEventListener(
+            "abort",
+            () => abortController.abort(),
+            { once: true },
+          );
 
           const res = await fetch("/api/tts", {
             method: "POST",
@@ -297,13 +398,17 @@ export function useTTSSettings(defaults?: Partial<TTSSettings>) {
           setStatus("playing");
           await playBase64Audio(
             data.audioContent,
-            speedRef.current,
+            trimmed,
             blobUrlRef,
             audioRef,
             () => {
-              setStatus("idle");
-              onEnd?.();
+              if (!speakAc.signal.aborted) {
+                setSpeakingCharIndex(-1);
+                setStatus("idle");
+                onEnd?.();
+              }
             },
+            (idx) => setSpeakingCharIndex(idx),
           );
         }
       } catch (err: any) {
@@ -322,17 +427,26 @@ export function useTTSSettings(defaults?: Partial<TTSSettings>) {
 
     const toFetch = texts
       .map((t) => t.trim())
-      .filter(
-        (t) =>
-          t &&
-          !audioBufferCache.has(
-            makeCacheKey(t, accentRef.current, speedRef.current),
-          ),
-      );
+      .filter((t) => {
+        if (!t) return false;
+        const key = makeCacheKey(t, accentRef.current, speedRef.current);
+        // Skip if already in memory cache or already being fetched
+        if (audioBufferCache.has(key)) return false;
+        if (preBufferInFlight.has(key)) return false;
+        return true;
+      });
 
     if (toFetch.length === 0) return;
 
-    // Use batch endpoint for efficiency
+    // Mark as in-flight before the async fetch to prevent duplicate calls
+    toFetch.forEach((t) =>
+      preBufferInFlight.add(
+        makeCacheKey(t, accentRef.current, speedRef.current),
+      ),
+    );
+
+    // Single batch PUT — warms DB cache. When speak() is called later,
+    // the individual POST will be a fast DB cache hit.
     try {
       await fetch("/api/tts", {
         method: "PUT",
@@ -345,35 +459,14 @@ export function useTTSSettings(defaults?: Partial<TTSSettings>) {
           })),
         }),
       });
-      // The batch endpoint caches in DB; next individual request will be fast
-      // Also pre-fetch into memory cache individually
-      for (const text of toFetch.slice(0, 5)) {
-        const cacheKey = makeCacheKey(
-          text,
-          accentRef.current,
-          speedRef.current,
-        );
-        if (audioBufferCache.has(cacheKey)) continue;
-        try {
-          const res = await fetch("/api/tts", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              text,
-              voice: accentRef.current,
-              speed: speedRef.current,
-            }),
-          });
-          const data = await res.json();
-          if (data.audioContent) {
-            audioBufferCache.set(cacheKey, data.audioContent);
-          }
-        } catch {
-          // Non-critical, just skip
-        }
-      }
     } catch {
       // Batch pre-fetch failed, non-critical
+    } finally {
+      toFetch.forEach((t) =>
+        preBufferInFlight.delete(
+          makeCacheKey(t, accentRef.current, speedRef.current),
+        ),
+      );
     }
   }, []);
 
@@ -385,6 +478,7 @@ export function useTTSSettings(defaults?: Partial<TTSSettings>) {
     status,
     playing: status === "playing",
     loading: status === "loading",
+    speakingCharIndex,
     setProvider,
     setAccent,
     setSpeed,
@@ -395,12 +489,17 @@ export function useTTSSettings(defaults?: Partial<TTSSettings>) {
 }
 
 // ─── Helper: play base64 audio ────────────────────────────────────────────
+// Speed is already baked into Google TTS audio via speakingRate param,
+// so no client-side playbackRate distortion needed.
+// onBoundary(charIndex) fires on each word transition, matching the same
+// interface as Edge TTS `onboundary`, so the UI can use one highlight path.
 function playBase64Audio(
   base64: string,
-  playbackRate: number,
+  text: string,
   blobUrlRef: React.MutableRefObject<string | null>,
   audioRef: React.MutableRefObject<HTMLAudioElement | null>,
   onDone: () => void,
+  onBoundary?: (charIndex: number) => void,
 ): Promise<void> {
   const binaryStr = atob(base64);
   const bytes = new Uint8Array(binaryStr.length);
@@ -415,17 +514,61 @@ function playBase64Audio(
 
   const audio = new Audio(url);
   audioRef.current = audio;
-  audio.playbackRate = playbackRate;
+
+  // Build word map: [{charIndex, word}] for time-based highlight.
+  // We divide audio duration evenly across words — crude but zero-cost
+  // and visually effective for short practice sentences.
+  type WordEntry = { charIndex: number };
+  let wordMap: WordEntry[] = [];
+  let lastWordIdx = -1;
+
+  if (onBoundary && text) {
+    // Extract char offsets of each word
+    const re = /\S+/g;
+    let m: RegExpExecArray | null;
+    while ((m = re.exec(text)) !== null) {
+      wordMap.push({ charIndex: m.index });
+    }
+  }
 
   return new Promise<void>((resolve, reject) => {
+    const cleanup = () => {
+      audio.onended = null;
+      audio.onerror = null;
+      audio.ontimeupdate = null;
+    };
+
+    // Drive word highlight via timeupdate
+    if (onBoundary && wordMap.length > 0) {
+      audio.ontimeupdate = () => {
+        const dur = audio.duration;
+        if (!dur || !isFinite(dur)) return;
+        // Which word should be active at currentTime?
+        const fraction = audio.currentTime / dur;
+        const idx = Math.min(
+          Math.floor(fraction * wordMap.length),
+          wordMap.length - 1,
+        );
+        if (idx !== lastWordIdx) {
+          lastWordIdx = idx;
+          onBoundary(wordMap[idx].charIndex);
+        }
+      };
+    }
+
     audio.onended = () => {
+      cleanup();
       onDone();
       resolve();
     };
     audio.onerror = () => {
+      cleanup();
       onDone();
       reject(new Error("Audio playback failed"));
     };
-    audio.play().catch(reject);
+    audio.play().catch((err) => {
+      cleanup();
+      reject(err);
+    });
   });
 }

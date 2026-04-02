@@ -67,6 +67,11 @@ export const GOOGLE_ACCENTS = TTS_ACCENTS.google;
 
 export const EDGE_ACCENTS = TTS_ACCENTS.edge;
 
+export const DEFAULT_VOICE_BY_PROVIDER: Record<'edge' | 'google', string> = {
+  edge: "microsoft-brian-us",
+  google: "en-US-Chirp3-HD-Charon",
+};
+
 export const DEFAULT_SPEED = 0.85;
 export const TTS_SPEEDS = [
   { value: 0.75, label: "0.75x" },
