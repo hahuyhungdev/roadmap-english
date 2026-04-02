@@ -228,18 +228,35 @@ export function useScriptShadowing(opts?: SessionOpts) {
     recordingForIdxRef.current =
       activeSentenceIdx >= 0 ? activeSentenceIdx : null;
 
-    navigator.mediaDevices
-      .getUserMedia({ audio: true })
-      .then((stream) => {
-        const mimeType = MediaRecorder.isTypeSupported("audio/webm;codecs=opus")
-          ? "audio/webm;codecs=opus"
-          : MediaRecorder.isTypeSupported("audio/webm")
-            ? "audio/webm"
-            : "";
+    // Priority order: opus (best quality) → mp4/aac (iOS Safari) → ogg → browser default
+    const MIME_PRIORITY = [
+      "audio/webm;codecs=opus",
+      "audio/mp4",
+      "audio/ogg;codecs=opus",
+      "audio/webm",
+    ];
+    const mimeType =
+      MIME_PRIORITY.find((t) => MediaRecorder.isTypeSupported(t)) ?? "";
 
+    navigator.mediaDevices
+      .getUserMedia({
+        audio: {
+          // Disable all DSP processing — we want the raw mic signal.
+          // AGC / noise-suppression / echo-cancel change the voice character
+          // and are designed for calls, not shadowing playback.
+          echoCancellation: false,
+          noiseSuppression: false,
+          autoGainControl: false,
+          // 48kHz is Edge/Chrome's native WebRTC rate on Windows — avoids
+          // an extra resampling pass that degrades audio quality.
+          sampleRate: 48000,
+          channelCount: 1,
+        },
+      })
+      .then((stream) => {
         const mr = new MediaRecorder(
           stream,
-          mimeType ? { mimeType } : undefined,
+          mimeType ? { mimeType, audioBitsPerSecond: 128_000 } : undefined,
         );
 
         mr.ondataavailable = (e) => {
@@ -249,7 +266,11 @@ export function useScriptShadowing(opts?: SessionOpts) {
         mr.onstop = () => {
           // Don't stop stream tracks here — Soniox may still need them.
           // Tracks are stopped when Soniox stop() is called.
-          const blob = new Blob(audioChunksRef.current, { type: "audio/webm" });
+
+          // Use the actual recorded mimeType so the blob plays correctly on all
+          // platforms (especially iOS which only supports audio/mp4, not webm).
+          const blobType = mimeType || "audio/webm";
+          const blob = new Blob(audioChunksRef.current, { type: blobType });
 
           const url = URL.createObjectURL(blob);
           blobUrlsRef.current.push(url);
