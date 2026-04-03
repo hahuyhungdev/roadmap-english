@@ -157,6 +157,9 @@ export default function ScriptShadowingClient(props: Props) {
                 onToggleRecording={s.onToggleRecording}
                 onPrev={s.onPrev}
                 onNext={s.onNext}
+                onUpdateText={(nextText) =>
+                  s.onUpdateSentenceText(s.activeSentenceIdx, nextText)
+                }
               />
             ) : (
               <div className="rounded-2xl border border-gray-100 bg-gray-50 p-8 text-center">

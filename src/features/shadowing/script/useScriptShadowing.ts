@@ -222,6 +222,12 @@ export function useScriptShadowing(opts?: SessionOpts) {
     ]);
   });
 
+  const stopRecordingAndSubmitAction = useEffectEvent(() => {
+    stopRef.current();
+    const text = (transcriptRef.current || partialRef.current).trim();
+    if (text) submitTranscript(text);
+  });
+
   // FIX #2 — useEffectEvent keeps this stable while always having access to latest activeSentenceIdx
   const startRecordingAction = useEffectEvent(() => {
     audioChunksRef.current = [];
@@ -335,7 +341,7 @@ export function useScriptShadowing(opts?: SessionOpts) {
 
     if (code === "ArrowUp") {
       e.preventDefault();
-      if (isRecordingRef.current) stopRef.current();
+      if (isRecordingRef.current) stopRecordingAndSubmitAction();
       else startRecordingAction();
       return;
     }
@@ -351,7 +357,7 @@ export function useScriptShadowing(opts?: SessionOpts) {
 
     if (key === "r") {
       e.preventDefault();
-      if (isRecordingRef.current) stopRef.current();
+      if (isRecordingRef.current) stopRecordingAndSubmitAction();
       else startRecordingAction();
       return;
     }
@@ -514,6 +520,21 @@ export function useScriptShadowing(opts?: SessionOpts) {
     }).catch(() => {});
   }
 
+  const onUpdateSentenceText = (idx: number, nextText: string) => {
+    const trimmed = nextText.trim();
+    if (!trimmed) return;
+
+    setSentences((prev) => {
+      if (idx < 0 || idx >= prev.length) return prev;
+
+      const next = [...prev];
+      next[idx] = { ...next[idx], text: trimmed };
+      optsRef.current?.onSentencesChange?.(next);
+      optsRef.current?.onScriptTextChange?.(next.map((s) => s.text).join("\n"));
+      return next;
+    });
+  };
+
   // ── Derived ───────────────────────────────────────────────────────────────
 
   const activeSentenceText = sentences[activeSentenceIdx]?.text ?? "";
@@ -556,6 +577,7 @@ export function useScriptShadowing(opts?: SessionOpts) {
     setActiveSentenceIdx,
     sentenceRefs,
     handleLoadScript,
+    onUpdateSentenceText,
     // TTS (whole object — consumer destructures what it needs)
     tts,
     // Playback options
