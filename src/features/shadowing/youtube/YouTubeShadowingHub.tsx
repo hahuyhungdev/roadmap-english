@@ -27,6 +27,16 @@ type Session = {
   updatedAt: string;
 };
 
+type Usage = {
+  used: number;
+  limit: number;
+  disableAt: number;
+  remaining: number;
+  shouldDisable: boolean;
+  periodStart: string;
+  periodEnd: string;
+};
+
 const STEP_PROGRESS: Record<string, number> = {
   "Creating session": 20,
   "Fetching transcript": 65,
@@ -47,6 +57,7 @@ export default function YouTubeShadowingHub() {
   >("");
   const [createError, setCreateError] = useState("");
   const [deleting, setDeleting] = useState<number | null>(null);
+  const [usage, setUsage] = useState<Usage | null>(null);
 
   const progress = useMemo(() => {
     if (createStep === "Done") return 100;
@@ -55,6 +66,7 @@ export default function YouTubeShadowingHub() {
 
   useEffect(() => {
     void fetchSessions();
+    void fetchUsage();
   }, []);
 
   async function fetchSessions() {
@@ -65,6 +77,20 @@ export default function YouTubeShadowingHub() {
       setSessions(Array.isArray(data.sessions) ? data.sessions : []);
     } finally {
       setLoading(false);
+    }
+  }
+
+  async function fetchUsage() {
+    try {
+      const res = await fetch("/api/shadowing/youtube/usage", {
+        cache: "no-store",
+      });
+      const data = await res.json().catch(() => null);
+      if (res.ok && data?.usage) {
+        setUsage(data.usage as Usage);
+      }
+    } catch {
+      // ignore
     }
   }
 
@@ -127,6 +153,7 @@ export default function YouTubeShadowingHub() {
       });
 
       setCreateStep("Done");
+      await fetchUsage();
       router.push(`/shadowing/youtube/${sessionId}`);
     } catch {
       setCreateError("Failed while preparing YouTube shadowing session");
@@ -170,10 +197,28 @@ export default function YouTubeShadowingHub() {
         <Button
           leftSection={<Plus size={14} />}
           onClick={() => setShowCreate(true)}
+          disabled={usage?.shouldDisable}
         >
           New YouTube Session
         </Button>
       </div>
+
+      {usage && (
+        <div
+          className={clsx(
+            "rounded-xl border px-3 py-2 text-xs",
+            usage.shouldDisable
+              ? "border-red-200 bg-red-50 text-red-600"
+              : "border-amber-200 bg-amber-50 text-amber-700",
+          )}
+        >
+          Supadata monthly usage: {usage.used}/{usage.limit} credits used.
+          Auto-disable at {usage.disableAt} each month.
+          {usage.shouldDisable
+            ? " Transcript fetching is currently disabled."
+            : ` Remaining before disable: ${Math.max(0, usage.disableAt - usage.used)}.`}
+        </div>
+      )}
 
       {loading ? (
         <div className="flex items-center justify-center py-16 text-gray-400">
@@ -294,8 +339,11 @@ export default function YouTubeShadowingHub() {
             fullWidth
             onClick={() => void handleCreate()}
             loading={creating}
+            disabled={usage?.shouldDisable}
           >
-            Create and Prepare
+            {usage?.shouldDisable
+              ? "Disabled: Credit Threshold Reached"
+              : "Create and Prepare"}
           </Button>
         </div>
       </Modal>

@@ -5,7 +5,7 @@ import {
   scriptSessions,
   shadowingSessions,
 } from "./schema";
-import { eq, desc } from "drizzle-orm";
+import { eq, desc, sql } from "drizzle-orm";
 
 function getErrorText(err: unknown): string {
   const e = err as any;
@@ -151,6 +151,69 @@ export async function cacheScript(
 
 // ─── Shadowing Sessions ──────────────────────────────────────────────────────
 export type ShadowingSessionRow = typeof shadowingSessions.$inferSelect;
+
+export type YouTubeTranscriptUsage = {
+  used: number;
+  limit: number;
+  disableAt: number;
+  remaining: number;
+  shouldDisable: boolean;
+  periodStart: string;
+  periodEnd: string;
+};
+
+export async function getYouTubeTranscriptUsage(
+  limit = 100,
+  disableAt = 85,
+): Promise<YouTubeTranscriptUsage> {
+  const now = new Date();
+  const periodStartDate = new Date(
+    Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), 1, 0, 0, 0, 0),
+  );
+  const periodEndDate = new Date(
+    Date.UTC(now.getUTCFullYear(), now.getUTCMonth() + 1, 1, 0, 0, 0, 0),
+  );
+  const periodStart = periodStartDate.toISOString();
+  const periodEnd = periodEndDate.toISOString();
+
+  try {
+    const rows = await withRetry(() =>
+      db.execute(sql`
+        select count(*)::int as used
+        from shadowing_sessions
+        where mode = 'youtube'
+          and sentences is not null
+          and created_at >= ${periodStartDate}
+          and created_at < ${periodEndDate}
+      `),
+    );
+
+    const used = Number((rows as any)?.rows?.[0]?.used ?? 0);
+    const remaining = Math.max(0, limit - used);
+    return {
+      used,
+      limit,
+      disableAt,
+      remaining,
+      shouldDisable: used >= disableAt,
+      periodStart,
+      periodEnd,
+    };
+  } catch (err) {
+    if (isMissingShadowingSessionsTableError(err)) {
+      return {
+        used: 0,
+        limit,
+        disableAt,
+        remaining: limit,
+        shouldDisable: false,
+        periodStart,
+        periodEnd,
+      };
+    }
+    throw err;
+  }
+}
 
 export async function listShadowingSessions(
   mode?: "youtube" | "script",

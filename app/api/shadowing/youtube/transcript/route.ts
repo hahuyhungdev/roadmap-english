@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { getYouTubeTranscriptUsage } from "@/lib/cache";
 
 type SupadataChunk = {
   text?: string;
@@ -70,6 +71,17 @@ async function pollTranscriptJob(jobId: string, apiKey: string) {
 // POST: Fetch transcript for YouTube (and other supported URLs) via Supadata.
 export async function POST(req: Request) {
   try {
+    const usage = await getYouTubeTranscriptUsage(100, 85);
+    if (usage.shouldDisable) {
+      return NextResponse.json(
+        {
+          error: `Supadata transcript disabled at ${usage.disableAt}/${usage.limit} usage to protect free credits`,
+          usage,
+        },
+        { status: 429 },
+      );
+    }
+
     const apiKey = process.env.SUPADATA_API_KEY;
     if (!apiKey) {
       return NextResponse.json(
