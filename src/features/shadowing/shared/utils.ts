@@ -27,8 +27,8 @@ export const newId = () => `t-${++_tid}-${Date.now()}`;
 
 export function splitScriptIntoSentences(
   script: string,
-  minLength = 20,
-  maxLength = 120,
+  minLength = 50,
+  maxLength = 100,
 ): Sentence[] {
   const cleaned = script.trim().replace(/\s+/g, " ");
   if (!cleaned) return [];

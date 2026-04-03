@@ -234,10 +234,18 @@ export default function YouTubeShadowingHub() {
       ) : (
         <div className="space-y-2">
           {sessions.map((s) => (
-            <button
+            <div
               key={s.id}
+              role="button"
+              tabIndex={0}
               onClick={() => router.push(`/shadowing/youtube/${s.id}`)}
-              className="w-full text-left rounded-xl border border-gray-200 bg-white/90 hover:border-red-200 hover:bg-red-50/40 px-4 py-3 transition-colors"
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  router.push(`/shadowing/youtube/${s.id}`);
+                }
+              }}
+              className="w-full text-left rounded-xl border border-gray-200 bg-white/90 hover:border-red-200 hover:bg-red-50/40 px-4 py-3 transition-colors cursor-pointer"
             >
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 shrink-0 rounded-lg bg-red-50 text-red-500 flex items-center justify-center">
@@ -278,7 +286,7 @@ export default function YouTubeShadowingHub() {
                 </button>
                 <ChevronRight size={15} className="text-gray-300" />
               </div>
-            </button>
+            </div>
           ))}
         </div>
       )}

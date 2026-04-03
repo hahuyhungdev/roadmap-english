@@ -310,9 +310,12 @@ export function useScriptShadowing(opts?: SessionOpts) {
   const handleKey = useCallback((e: KeyboardEvent) => {
     const tag = (document.activeElement as HTMLElement)?.tagName?.toLowerCase();
     if (tag === "input" || tag === "textarea" || tag === "select") return;
+    if (e.isComposing || e.ctrlKey || e.metaKey || e.altKey) return;
 
     const curIdx = activeSentenceIdxRef.current;
     const sents = sentencesRef.current;
+    const code = e.code;
+    const key = e.key.toLowerCase();
 
     const goTo = (idx: number) => {
       if (idx >= 0 && idx < sents.length) {
@@ -321,46 +324,64 @@ export function useScriptShadowing(opts?: SessionOpts) {
       }
     };
 
-    switch (e.key) {
-      case " ":
-      case "s":
-      case "S":
-        e.preventDefault();
-        if (curIdx >= 0 && sents[curIdx]) {
-          hearingSentenceIdx.current = curIdx;
-          void ttsRef.current.speak(sents[curIdx].text);
-        }
-        break;
-      case "ArrowLeft":
-      case "a":
-      case "A":
-        e.preventDefault();
-        goTo(curIdx - 1);
-        break;
-      case "ArrowRight":
-      case "d":
-      case "D":
-        e.preventDefault();
+    if (code === "Space" || key === "s") {
+      e.preventDefault();
+      if (curIdx >= 0 && sents[curIdx]) {
+        hearingSentenceIdx.current = curIdx;
+        void ttsRef.current.speak(sents[curIdx].text);
+      }
+      return;
+    }
+
+    if (code === "ArrowUp") {
+      e.preventDefault();
+      if (isRecordingRef.current) stopRef.current();
+      else startRecordingAction();
+      return;
+    }
+
+    if (code === "ArrowDown") {
+      e.preventDefault();
+      if (curIdx >= 0 && sents[curIdx]) {
+        hearingSentenceIdx.current = curIdx;
+        void ttsRef.current.speak(sents[curIdx].text);
+      }
+      return;
+    }
+
+    if (key === "r") {
+      e.preventDefault();
+      if (isRecordingRef.current) stopRef.current();
+      else startRecordingAction();
+      return;
+    }
+
+    if (e.repeat) return;
+
+    const wantsNext = code === "ArrowRight" || key === "d" || code === "KeyD";
+    const wantsPrev = code === "ArrowLeft" || key === "a" || code === "KeyA";
+
+    if (wantsNext && !wantsPrev) {
+      e.preventDefault();
+      goTo(curIdx + 1);
+      return;
+    }
+
+    if (wantsPrev && !wantsNext) {
+      e.preventDefault();
+      goTo(curIdx - 1);
+      return;
+    }
+
+    if (wantsNext && wantsPrev) {
+      e.preventDefault();
+      // Resolve ambiguous key/code combinations by favoring semantic key first.
+      if (key === "d" || code === "ArrowRight") {
         goTo(curIdx + 1);
-        break;
-      case "ArrowUp":
-        e.preventDefault();
-        if (isRecordingRef.current) stopRef.current();
-        else startRecordingAction();
-        break;
-      case "ArrowDown":
-        e.preventDefault();
-        if (curIdx >= 0 && sents[curIdx]) {
-          hearingSentenceIdx.current = curIdx;
-          void ttsRef.current.speak(sents[curIdx].text);
-        }
-        break;
-      case "r":
-      case "R":
-        e.preventDefault();
-        if (isRecordingRef.current) stopRef.current();
-        else startRecordingAction();
-        break;
+      } else {
+        goTo(curIdx - 1);
+      }
+      return;
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []); // intentionally empty — all values accessed via refs
@@ -495,16 +516,24 @@ export function useScriptShadowing(opts?: SessionOpts) {
 
   const activeSentenceText = sentences[activeSentenceIdx]?.text ?? "";
 
-  // Estimated remaining practice time based on character count.
-  // Shadowing practice rate: ~120 wpm * 5 chars/word = 600 chars/min per listen.
-  // With 3 loops + recording pause, multiply by 4 → effective ~150 chars/min.
+  // Estimate remaining time from sentence-based progress (same UX style as YouTube).
+  // Build a per-sentence duration model from text length, then multiply by remaining count.
   const estimatedRemainingMs = (() => {
     if (activeSentenceIdx < 0 || sentences.length === 0) return 0;
-    const remainingChars = sentences
-      .slice(activeSentenceIdx)
-      .reduce((sum, s) => sum + s.text.length, 0);
-    // 150 chars/min → 2.5 chars/sec → 400ms/char
-    return Math.round(remainingChars * 400);
+
+    const remainingCount = Math.max(
+      0,
+      sentences.length - (activeSentenceIdx + 1),
+    );
+    if (remainingCount === 0) return 0;
+
+    const totalEstimatedMs = sentences.reduce((sum, sentence) => {
+      const perSentenceMs = sentence.text.length * 220;
+      return sum + Math.min(30000, Math.max(6000, perSentenceMs));
+    }, 0);
+
+    const avgSentenceMs = totalEstimatedMs / sentences.length;
+    return Math.round(avgSentenceMs * remainingCount);
   })();
 
   const lastAudioUrl = (() => {

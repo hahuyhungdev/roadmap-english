@@ -10,6 +10,7 @@ interface Particle {
   duration: number;
   delay: number;
   rotation: number;
+  round: boolean;
 }
 
 const COLORS = [
@@ -31,6 +32,7 @@ function makeParticles(count: number): Particle[] {
     duration: 1.5 + Math.random() * 1.5,
     delay: Math.random() * 0.8,
     rotation: Math.random() * 720 - 360,
+    round: Math.random() > 0.5,
   }));
 }
 
@@ -85,7 +87,7 @@ export function CelebrationOverlay({
             width: p.size,
             height: p.size,
             backgroundColor: p.color,
-            borderRadius: Math.random() > 0.5 ? "50%" : "2px",
+            borderRadius: p.round ? "50%" : "2px",
             animation: `confettiFall ${p.duration}s ease-in ${p.delay}s forwards`,
             transform: `rotate(0deg)`,
           }}

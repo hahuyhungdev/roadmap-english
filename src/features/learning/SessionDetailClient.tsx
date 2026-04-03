@@ -28,11 +28,7 @@ export default function SessionDetailClient({
   const next = idx >= 0 ? phase.sessions[idx + 1] : undefined;
 
   return (
-    <div
-      className="max-w-6xl mx-auto
-      overflow-x-scroll h-[calc(100vh-10rem)]
-    "
-    >
+    <div className="max-w-6xl mx-auto overflow-x-scroll h-[calc(100vh-10rem)]">
       <div className="flex items-center justify-between mb-6">
         <Link
           href={`/phase/${phase.id}`}
@@ -86,58 +82,27 @@ export default function SessionDetailClient({
       </div>
 
       <article
-        className=" border border-gray-200 rounded-2xl p-6 md:p-8 prose prose-gray max-w-none
-        prose-p:text-gray-700 prose-p:leading-7 prose-p:my-4
-        prose-headings:text-gray-900 prose-headings:font-semibold
-        prose-h1:text-2xl prose-h1:mb-4 prose-h1:mt-0
-        prose-h2:text-xl prose-h2:mt-8 prose-h2:mb-3 prose-h2:pb-2 prose-h2:border-b prose-h2:border-gray-100
-        prose-h3:text-lg prose-h3:mt-6 prose-h3:mb-2
-        prose-li:text-gray-700 prose-li:my-1
-        prose-a:text-indigo-600 hover:prose-a:text-indigo-500 prose-a:font-medium
-        prose-strong:text-gray-900
-        prose-code:text-indigo-700 prose-code:bg-indigo-50 prose-code:px-1 prose-code:py-0.5 prose-code:rounded
-        prose-pre:bg-gray-900 prose-pre:text-gray-100 prose-pre:rounded-xl
-        prose-blockquote:border-l-4 prose-blockquote:border-indigo-400 prose-blockquote:bg-indigo-50/70
-        prose-blockquote:rounded-r-lg prose-blockquote:px-4 prose-blockquote:py-2 prose-blockquote:not-italic prose-blockquote:text-gray-700
-        prose-table:text-sm prose-th:text-gray-700 prose-td:text-gray-700"
+        className={[
+          "border border-gray-200 rounded-2xl p-6 md:p-8 prose prose-gray max-w-none",
+          "prose-p:text-gray-700 prose-p:leading-7 prose-p:my-4",
+          "prose-headings:text-gray-900 prose-headings:font-semibold",
+          "prose-h1:text-2xl prose-h1:mb-4 prose-h1:mt-0",
+          "prose-h2:text-xl prose-h2:mt-8 prose-h2:mb-3 prose-h2:pb-2 prose-h2:border-b prose-h2:border-gray-100",
+          "prose-h3:text-lg prose-h3:mt-6 prose-h3:mb-2",
+          "prose-li:text-gray-700 prose-li:my-1",
+          "prose-a:text-indigo-600 hover:prose-a:text-indigo-500 prose-a:font-medium",
+          "prose-strong:text-gray-900",
+          "prose-code:text-indigo-700 prose-code:bg-indigo-50 prose-code:px-1 prose-code:py-0.5 prose-code:rounded",
+          "prose-pre:bg-gray-900 prose-pre:text-gray-100 prose-pre:rounded-xl",
+          "prose-blockquote:border-l-4 prose-blockquote:border-indigo-400 prose-blockquote:bg-indigo-50/70",
+          "prose-blockquote:rounded-r-lg prose-blockquote:px-4 prose-blockquote:py-2 prose-blockquote:not-italic prose-blockquote:text-gray-700",
+          "prose-table:text-sm prose-th:text-gray-700 prose-td:text-gray-700",
+        ].join(" ")}
       >
         <ReactMarkdown remarkPlugins={[remarkGfm]}>
           {session.content}
         </ReactMarkdown>
       </article>
-
-      <LessonAssistant
-        lessonTitle={session.meta.title}
-        lessonContent={session.content}
-      />
-
-      <PracticeCoach
-        lessonTitle={session.meta.title}
-        lessonContent={session.content}
-      />
-
-      <div className="mt-8 flex items-center justify-between gap-4 pb-6">
-        {prev ? (
-          <button
-            onClick={() => router.push(`/phase/${phase.id}/session/${prev.id}`)}
-            className="flex items-center gap-2 text-sm text-gray-500 hover:text-indigo-600 px-3 py-2 rounded-lg border border-gray-200 hover:border-indigo-200  transition-colors"
-          >
-            <ChevronLeft size={15} /> {prev.meta.title}
-          </button>
-        ) : (
-          <div />
-        )}
-        {next ? (
-          <button
-            onClick={() => router.push(`/phase/${phase.id}/session/${next.id}`)}
-            className="flex items-center gap-2 text-sm text-gray-500 hover:text-indigo-600 px-3 py-2 rounded-lg border border-gray-200 hover:border-indigo-200  transition-colors"
-          >
-            {next.meta.title} <ChevronRight size={15} />
-          </button>
-        ) : (
-          <div />
-        )}
-      </div>
     </div>
   );
 }
