@@ -7,13 +7,10 @@ import {
   FileText,
   Loader2,
   Mic,
-  Sparkles,
   Square,
-  ArrowRight,
 } from "lucide-react";
 import clsx from "clsx";
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 import { useYouTubeShadowing } from "./useYouTubeShadowing";
 import { VideoPanel } from "../shared/VideoPanel";
 import { AudioReplay } from "../shared/AudioReplay";
@@ -36,7 +33,6 @@ interface Props {
 }
 
 export default function YouTubeShadowingClient(props: Props) {
-  const router = useRouter();
   const s = useYouTubeShadowing({
     sessionId: props.sessionId,
     initialVideoId: props.initialVideoId,
@@ -47,7 +43,6 @@ export default function YouTubeShadowingClient(props: Props) {
     onVideoChange: props.onVideoChange,
     onScriptTextChange: props.onScriptTextChange,
   });
-  const [openingScript, setOpeningScript] = useState(false);
   const [retimePace, setRetimePace] = useState<SentencePacePreset>("balanced");
   const [retiming, setRetiming] = useState(false);
   const busy = s.improvingTranscript;
@@ -55,32 +50,6 @@ export default function YouTubeShadowingClient(props: Props) {
     s.sentences.length > 0 && s.activeSentenceIdx >= 0
       ? Math.round(((s.activeSentenceIdx + 1) / s.sentences.length) * 100)
       : 0;
-
-  async function handleOpenInScript() {
-    if (!s.sentences.length || openingScript) return;
-    setOpeningScript(true);
-    try {
-      const scriptText = s.sentences.map((sen) => sen.text).join(" ");
-      const res = await fetch("/api/shadowing/sessions", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          mode: "script",
-          title: `Script — ${s.videoId ?? "YouTube"}`,
-          scriptText,
-          sentences: s.sentences,
-        }),
-      });
-      const data = await res.json();
-      if (data.session?.id) {
-        router.push(`/shadowing/script/${data.session.id}`);
-      }
-    } catch {
-      // ignore
-    } finally {
-      setOpeningScript(false);
-    }
-  }
 
   function handleRetiming() {
     if (!s.sentences.length || retiming) return;
@@ -188,18 +157,6 @@ export default function YouTubeShadowingClient(props: Props) {
                     )}
                     Re-timing
                   </button>
-                  <button
-                    onClick={s.handleImproveWithAI}
-                    disabled={busy}
-                    className="flex items-center gap-1 px-2.5 py-1 text-[11px] font-semibold text-violet-600 border border-violet-200 rounded-lg bg-violet-50 hover:bg-violet-100 disabled:opacity-40 transition-colors"
-                  >
-                    {s.improvingTranscript ? (
-                      <Loader2 size={11} className="animate-spin" />
-                    ) : (
-                      <Sparkles size={11} />
-                    )}
-                    Improve with AI
-                  </button>
                 </div>
               )}
             </div>
@@ -280,19 +237,6 @@ export default function YouTubeShadowingClient(props: Props) {
                 </button>
 
                 {s.lastAudioUrl && <AudioReplay url={s.lastAudioUrl} />}
-
-                <button
-                  onClick={handleOpenInScript}
-                  disabled={openingScript || busy || !s.sentences.length}
-                  className="w-full flex items-center justify-center gap-2 py-2.5 text-sm font-semibold text-indigo-700 border border-indigo-200 rounded-xl bg-white hover:bg-indigo-100 disabled:opacity-40 transition-colors"
-                >
-                  {openingScript ? (
-                    <Loader2 size={13} className="animate-spin" />
-                  ) : (
-                    <ArrowRight size={13} />
-                  )}
-                  Open as Script Session
-                </button>
               </>
             ) : (
               <div className="h-full flex items-center justify-center text-center px-3">

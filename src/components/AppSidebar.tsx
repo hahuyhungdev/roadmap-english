@@ -3,7 +3,13 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ActionIcon, NavLink, Stack, Text, Tooltip } from "@mantine/core";
-import { BookOpen, Video, FileText, PanelLeftClose, PanelLeftOpen } from "lucide-react";
+import {
+  BookOpen,
+  Video,
+  FileText,
+  PanelLeftClose,
+  PanelLeftOpen,
+} from "lucide-react";
 import { useEffect, useState } from "react";
 import clsx from "clsx";
 
@@ -25,6 +31,9 @@ export default function AppSidebar() {
       const next = !prev;
       try {
         window.localStorage.setItem("sidebar-collapsed", next ? "1" : "0");
+        window.dispatchEvent(
+          new CustomEvent("sidebar:collapsed-changed", { detail: next }),
+        );
       } catch {
         // ignore
       }
@@ -35,7 +44,7 @@ export default function AppSidebar() {
   return (
     <aside
       className={clsx(
-        "h-screen sticky top-0 border-r border-gray-200/70 bg-white/80 backdrop-blur-sm py-5 transition-all",
+        "h-screen fixed left-0 top-0 z-40 border-r border-gray-200/70 bg-white/90 backdrop-blur-sm py-5 transition-all shadow-xs",
         collapsed ? "w-20 px-2" : "w-64 px-3",
       )}
     >
@@ -50,7 +59,10 @@ export default function AppSidebar() {
             </Text>
           </div>
         )}
-        <Tooltip label={collapsed ? "Expand sidebar" : "Collapse sidebar"} withArrow>
+        <Tooltip
+          label={collapsed ? "Expand sidebar" : "Collapse sidebar"}
+          withArrow
+        >
           <ActionIcon
             variant="subtle"
             color="gray"
@@ -59,7 +71,11 @@ export default function AppSidebar() {
             className="mt-0.5"
             aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"}
           >
-            {collapsed ? <PanelLeftOpen size={16} /> : <PanelLeftClose size={16} />}
+            {collapsed ? (
+              <PanelLeftOpen size={16} />
+            ) : (
+              <PanelLeftClose size={16} />
+            )}
           </ActionIcon>
         </Tooltip>
       </div>

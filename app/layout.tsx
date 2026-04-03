@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import LayoutNav from "@/components/LayoutNav";
-import AppSidebar from "@/components/AppSidebar";
+import AppChrome from "@/components/AppChrome";
 import { MantineProviderClient } from "@/components/MantineProviderClient";
 import "@mantine/core/styles.css";
 import "./globals.css";
@@ -33,20 +32,7 @@ export default function RootLayout({
                 backgroundSize: "100% 100%",
               }}
             />
-            <div className="relative z-10 lg:flex">
-              <div className="hidden lg:block">
-                <AppSidebar />
-              </div>
-
-              <div className="min-h-screen flex flex-col flex-1 min-w-0">
-                <div className="lg:hidden">
-                  <LayoutNav />
-                </div>
-                <main className="flex-1 w-full px-4 sm:px-6 py-8 max-w-6xl mx-auto">
-                  {children}
-                </main>
-              </div>
-            </div>
+            <AppChrome>{children}</AppChrome>
           </div>
         </MantineProviderClient>
       </body>
