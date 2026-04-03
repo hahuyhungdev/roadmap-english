@@ -151,6 +151,18 @@ export function SentenceCard({
           </ActionIcon>
         </Tooltip>
 
+        {lastAudioUrl && (
+          <Tooltip label="Replay your voice" position="top" withArrow>
+            <div className="shrink-0">
+              <AudioReplay
+                url={lastAudioUrl}
+                autoReplayDelayMs={1000}
+                autoReplayCount={2}
+              />
+            </div>
+          </Tooltip>
+        )}
+
         <Tooltip label="Next (D / →)" position="top" withArrow>
           <ActionIcon
             variant="default"
@@ -171,9 +183,6 @@ export function SentenceCard({
           <span className="text-xs font-medium">Recording…</span>
         </div>
       )}
-
-      {/* Audio replay */}
-      {lastAudioUrl && <AudioReplay url={lastAudioUrl} />}
     </div>
   );
 }

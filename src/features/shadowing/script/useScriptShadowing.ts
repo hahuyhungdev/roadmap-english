@@ -358,8 +358,10 @@ export function useScriptShadowing(opts?: SessionOpts) {
 
     if (e.repeat) return;
 
-    const wantsNext = code === "ArrowRight" || key === "d" || code === "KeyD";
-    const wantsPrev = code === "ArrowLeft" || key === "a" || code === "KeyA";
+    const wantsNext =
+      code === "ArrowRight" || code === "KeyD" || key === "d" || e.keyCode === 68;
+    const wantsPrev =
+      code === "ArrowLeft" || code === "KeyA" || key === "a" || e.keyCode === 65;
 
     if (wantsNext && !wantsPrev) {
       e.preventDefault();
