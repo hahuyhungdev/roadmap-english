@@ -1,59 +1,11 @@
 "use client";
 
-import {
-  useState,
-  useRef,
-  useCallback,
-  useEffect,
-  type FormEvent,
-} from "react";
+import { useState, useRef, useCallback, useEffect } from "react";
 import type { YouTubeEvent } from "react-youtube";
 import type { YTPlayer, Sentence, SessionOpts } from "../shared/types";
-import { extractVideoId } from "../shared/utils";
-
-// ─── Tactiq transcript parser ─────────────────────────────────────────────
-function parseTimestampToMs(ts: string): number {
-  const m = ts.match(/(\d+):(\d{2}):(\d{2})\.(\d{1,3})/);
-  if (!m) return 0;
-  const h = parseInt(m[1], 10);
-  const min = parseInt(m[2], 10);
-  const sec = parseInt(m[3], 10);
-  const ms = parseInt(m[4].padEnd(3, "0"), 10);
-  return ((h * 60 + min) * 60 + sec) * 1000 + ms;
-}
-
-function parseTactiqTranscript(raw: string): Sentence[] | null {
-  const lines = raw
-    .split(/\r?\n/)
-    .map((l) => l.trim())
-    .filter(Boolean);
-  const items: { startMs: number; text: string }[] = [];
-  const tsRe = /^(\d{1,2}:\d{2}:\d{2}\.\d{1,3})\s+(.*)$/;
-
-  for (const line of lines) {
-    if (line.startsWith("#")) continue;
-    const m = line.match(tsRe);
-    if (m) {
-      items.push({ startMs: parseTimestampToMs(m[1]), text: m[2].trim() });
-    } else if (items.length > 0) {
-      items[items.length - 1].text += " " + line;
-    }
-  }
-
-  if (!items.length) return null;
-
-  return items.map((it, i) => ({
-    text: it.text.trim(),
-    startMs: it.startMs,
-    endMs: i < items.length - 1 ? items[i + 1].startMs : it.startMs + 3000,
-  }));
-}
 
 // ─── Hook ─────────────────────────────────────────────────────────────────
 export function useYouTubeShadowing(opts?: SessionOpts) {
-  // ── Video ──────────────────────────────────────────────────────────────
-  const [urlInput, setUrlInput] = useState("");
-  const [urlError, setUrlError] = useState("");
   const [videoId, setVideoId] = useState<string | null>(
     opts?.initialVideoId ?? null,
   );
@@ -64,7 +16,6 @@ export function useYouTubeShadowing(opts?: SessionOpts) {
     opts?.initialSentences ?? [],
   );
   const [scriptError, setScriptError] = useState("");
-  const [importingTranscript, setImportingTranscript] = useState(false);
   const [improvingTranscript, setImprovingTranscript] = useState(false);
 
   // ── Active sentence ─────────────────────────────────────────────────────
@@ -148,6 +99,10 @@ export function useYouTubeShadowing(opts?: SessionOpts) {
             ? player?.pauseVideo()
             : player?.playVideo();
           break;
+        case "ArrowDown":
+          e.preventDefault();
+          player?.pauseVideo();
+          break;
         case "ArrowLeft":
           e.preventDefault();
           if (e.shiftKey) goTo(activeSentenceIdxRef.current - 1);
@@ -164,142 +119,8 @@ export function useYouTubeShadowing(opts?: SessionOpts) {
     return () => window.removeEventListener("keydown", handleKey);
   }, [sentences]);
 
-  // ── Actions ────────────────────────────────────────────────────────────
-  function handleLoadVideo(e?: FormEvent) {
-    e?.preventDefault();
-    setUrlError("");
-    const id = extractVideoId(urlInput.trim());
-    if (!id) {
-      setUrlError("Invalid YouTube URL");
-      return;
-    }
-    setVideoId(id);
-    optsRef.current?.onVideoChange?.(id);
-    setSentences([]);
-    setScriptError("");
-    setActiveSentenceIdx(-1);
-    activeSentenceIdxRef.current = -1;
-    sentenceRefs.current = [];
-    setAudioByIdx({});
-  }
-
   function handlePlayerReady(event: YouTubeEvent) {
     playerRef.current = event.target as unknown as YTPlayer;
-  }
-
-  async function handleImportFromYouTube() {
-    if (!videoId || importingTranscript) return;
-    setImportingTranscript(true);
-    setScriptError("");
-    try {
-      const res = await fetch("/api/shadowing/youtube/transcript", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          url: `https://www.youtube.com/watch?v=${videoId}`,
-          mode: "auto",
-        }),
-      });
-      const json = await res.json().catch(() => null);
-      if (!res.ok || !Array.isArray(json?.segments)) {
-        setScriptError(
-          json?.error ?? "Could not fetch transcript from Supadata",
-        );
-        return;
-      }
-
-      const segs = json.segments as any[];
-      const starts = segs.map((s) => Number(s.start ?? s.timestamp ?? 0));
-      const data: Sentence[] = segs
-        .map((s, i) => {
-          const startMs = Math.round(
-            Number(s.start ?? s.timestamp ?? 0) * 1000,
-          );
-          const fallbackEndMs =
-            startMs + Math.round(Number(s.duration ?? 3) * 1000);
-          const endMs =
-            i < starts.length - 1
-              ? Math.round((starts[i + 1] ?? 0) * 1000)
-              : fallbackEndMs;
-          return {
-            text: String(s.text ?? s.caption ?? "").trim(),
-            startMs,
-            endMs: endMs > startMs ? endMs : fallbackEndMs,
-          };
-        })
-        .filter((s) => s.text.length > 0);
-
-      if (!data.length) {
-        setScriptError("Supadata returned an empty transcript");
-        return;
-      }
-
-      notifySentences(data);
-      sentenceRefs.current = [];
-      setActiveSentenceIdx(-1);
-      activeSentenceIdxRef.current = -1;
-    } catch (e: any) {
-      setScriptError(String(e?.message ?? e));
-    } finally {
-      setImportingTranscript(false);
-    }
-  }
-
-  async function handleImportTranscript(
-    raw: string,
-    importOpts?: { useAI?: boolean },
-  ) {
-    if (!raw.trim()) return;
-    setScriptError("");
-
-    if (importOpts?.useAI) {
-      setImportingTranscript(true);
-      try {
-        const res = await fetch("/api/transcript", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ raw }),
-        });
-        const json = await res.json().catch(() => null);
-        if (res.ok && Array.isArray(json?.segments)) {
-          const segs = json.segments as any[];
-          const starts = segs.map((s) => Number(s.start ?? s.timestamp ?? 0));
-          const data: Sentence[] = segs.map((s, i) => {
-            const startMs = Math.round(
-              Number(s.start ?? s.timestamp ?? 0) * 1000,
-            );
-            const endMs =
-              i < starts.length - 1
-                ? Math.round((starts[i + 1] ?? 0) * 1000)
-                : startMs + 3000;
-            return {
-              text: String(s.text ?? s.caption ?? "").trim(),
-              startMs,
-              endMs,
-            };
-          });
-          if (data.length > 0) {
-            notifySentences(data);
-            sentenceRefs.current = [];
-            return;
-          }
-        }
-        setScriptError(json?.error ?? "AI import failed");
-      } catch (e: any) {
-        setScriptError(String(e?.message ?? e));
-      } finally {
-        setImportingTranscript(false);
-      }
-      return;
-    }
-
-    const parsed = parseTactiqTranscript(raw);
-    if (parsed?.length) {
-      notifySentences(parsed);
-      sentenceRefs.current = [];
-    } else {
-      setScriptError("Could not parse pasted transcript");
-    }
   }
 
   async function handleImproveWithAI() {
@@ -353,6 +174,13 @@ export function useYouTubeShadowing(opts?: SessionOpts) {
     setActiveSentenceIdx(idx);
   }
 
+  function replaceSentences(nextSentences: Sentence[]) {
+    notifySentences(nextSentences);
+    sentenceRefs.current = [];
+    setActiveSentenceIdx(-1);
+    activeSentenceIdxRef.current = -1;
+  }
+
   function onToggleRecording() {
     if (isRecording) {
       mediaRecorderRef.current?.stop();
@@ -395,26 +223,20 @@ export function useYouTubeShadowing(opts?: SessionOpts) {
   }
 
   return {
-    urlInput,
-    setUrlInput,
-    urlError,
     videoId,
     playerRef,
     sentences,
     scriptError,
-    importingTranscript,
     improvingTranscript,
     activeSentenceIdx,
     sentenceRefs,
     isRecording,
     lastAudioUrl:
       activeSentenceIdx >= 0 ? (audioByIdx[activeSentenceIdx] ?? null) : null,
-    handleLoadVideo,
     handlePlayerReady,
-    handleImportFromYouTube,
-    handleImportTranscript,
     handleImproveWithAI,
     goToSentence,
+    replaceSentences,
     onToggleRecording,
   };
 }

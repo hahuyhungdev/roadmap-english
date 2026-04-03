@@ -5,9 +5,12 @@ import {
 } from "../../../../src/lib/cache";
 
 // GET /api/shadowing/sessions — list all sessions
-export async function GET() {
+export async function GET(req: NextRequest) {
   try {
-    const sessions = await listShadowingSessions();
+    const modeParam = req.nextUrl.searchParams.get("mode");
+    const mode =
+      modeParam === "youtube" || modeParam === "script" ? modeParam : undefined;
+    const sessions = await listShadowingSessions(mode);
     return NextResponse.json({ sessions });
   } catch (err: any) {
     return NextResponse.json(

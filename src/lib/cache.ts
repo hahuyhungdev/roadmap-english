@@ -152,14 +152,23 @@ export async function cacheScript(
 // ─── Shadowing Sessions ──────────────────────────────────────────────────────
 export type ShadowingSessionRow = typeof shadowingSessions.$inferSelect;
 
-export async function listShadowingSessions(): Promise<ShadowingSessionRow[]> {
+export async function listShadowingSessions(
+  mode?: "youtube" | "script",
+): Promise<ShadowingSessionRow[]> {
   try {
     return await withRetry(() =>
-      db
-        .select()
-        .from(shadowingSessions)
-        .orderBy(desc(shadowingSessions.updatedAt))
-        .limit(50),
+      mode
+        ? db
+            .select()
+            .from(shadowingSessions)
+            .where(eq(shadowingSessions.mode, mode))
+            .orderBy(desc(shadowingSessions.updatedAt))
+            .limit(50)
+        : db
+            .select()
+            .from(shadowingSessions)
+            .orderBy(desc(shadowingSessions.updatedAt))
+            .limit(50),
     );
   } catch (err) {
     // First-run safety: let UI load even when shadowing table was not migrated yet.

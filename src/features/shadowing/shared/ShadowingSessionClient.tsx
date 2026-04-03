@@ -23,9 +23,10 @@ type SessionData = {
 
 interface Props {
   sessionId: number;
+  modePath?: "youtube" | "script";
 }
 
-export function ShadowingSessionClient({ sessionId }: Props) {
+export function ShadowingSessionClient({ sessionId, modePath }: Props) {
   const router = useRouter();
   const [session, setSession] = useState<SessionData | null>(null);
   const [loading, setLoading] = useState(true);
@@ -134,7 +135,9 @@ export function ShadowingSessionClient({ sessionId }: Props) {
       <div className="flex flex-col items-center justify-center min-h-[60vh] gap-4">
         <p className="text-gray-500">{error || "Session not found"}</p>
         <button
-          onClick={() => router.push("/shadowing")}
+          onClick={() =>
+            router.push(`/shadowing/${modePath ?? ""}`.replace(/\/$/, ""))
+          }
           className="text-sm text-indigo-600 hover:underline"
         >
           Back to sessions
@@ -148,7 +151,9 @@ export function ShadowingSessionClient({ sessionId }: Props) {
       {/* Session header */}
       <div className="flex items-center gap-3 px-4 py-3 mb-2">
         <button
-          onClick={() => router.push("/shadowing")}
+          onClick={() =>
+            router.push(`/shadowing/${modePath ?? ""}`.replace(/\/$/, ""))
+          }
           className="shrink-0 w-8 h-8 flex items-center justify-center rounded-lg text-gray-400 hover:text-gray-600 hover:bg-gray-100 transition-colors"
           title="Back to sessions"
         >

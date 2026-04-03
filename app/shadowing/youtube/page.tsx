@@ -1,5 +1,5 @@
-import YouTubeShadowingClient from "@/features/shadowing/youtube/YouTubeShadowingClient";
+import YouTubeShadowingHub from "@/features/shadowing/youtube/YouTubeShadowingHub";
 
 export default function YouTubeShadowingPage() {
-  return <YouTubeShadowingClient />;
+  return <YouTubeShadowingHub />;
 }
