@@ -86,6 +86,29 @@ export function useScriptShadowing(opts?: SessionOpts) {
   const blobUrlsRef = useRef<string[]>([]);
   const pendingTurnIdRef = useRef<string | null>(null);
   const recordingForIdxRef = useRef<number | null>(null);
+  const prevActiveSentenceIdxRef = useRef(activeSentenceIdx);
+
+  const clearRecordedVoiceForSentence = useEffectEvent((sentenceIdx: number) => {
+    if (sentenceIdx < 0) return;
+
+    const revoked = new Set<string>();
+
+    setTurns((prev) => {
+      let changed = false;
+      const next = prev.map((t) => {
+        if (t.sentenceIdx !== sentenceIdx || !t.audioUrl) return t;
+        changed = true;
+        revoked.add(t.audioUrl);
+        return { ...t, audioUrl: undefined };
+      });
+      return changed ? next : prev;
+    });
+
+    if (revoked.size > 0) {
+      revoked.forEach((url) => URL.revokeObjectURL(url));
+      blobUrlsRef.current = blobUrlsRef.current.filter((u) => !revoked.has(u));
+    }
+  });
 
   // Revoke all blob URLs on unmount
   useEffect(
@@ -139,6 +162,16 @@ export function useScriptShadowing(opts?: SessionOpts) {
       hearingSentenceIdx.current = -1;
     }
   }, [activeSentenceIdx]);
+
+  // Clear recording for the sentence being left so old user voice does not
+  // overlap with sentence TTS when navigating back later.
+  useEffect(() => {
+    const prevIdx = prevActiveSentenceIdxRef.current;
+    if (prevIdx >= 0 && prevIdx !== activeSentenceIdx) {
+      clearRecordedVoiceForSentence(prevIdx);
+    }
+    prevActiveSentenceIdxRef.current = activeSentenceIdx;
+  }, [activeSentenceIdx, clearRecordedVoiceForSentence]);
 
   // ── Reset loop count when loopSentence toggles (FIX #6) ──────────────────
   useEffect(() => {
@@ -511,6 +544,9 @@ export function useScriptShadowing(opts?: SessionOpts) {
     sentenceRefs.current = [];
     // Clear previous session
     setTurns([]);
+    blobUrlsRef.current.forEach((u) => URL.revokeObjectURL(u));
+    blobUrlsRef.current = [];
+    pendingTurnIdRef.current = null;
 
     // Cache script in DB (fire and forget)
     fetch("/api/shadowing/script", {

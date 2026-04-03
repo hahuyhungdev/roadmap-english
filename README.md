@@ -1,73 +1,105 @@
-# React + TypeScript + Vite
+# Roadmap English AI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+AI-powered English practice app focused on speaking, shadowing, and sentence-by-sentence training.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Next.js (App Router) + React + TypeScript
+- Mantine UI + Tailwind CSS
+- Drizzle ORM + Neon Postgres
+- Soniox (speech-to-text) integration via client hook
+- Google TTS + AI feedback endpoints
 
-## React Compiler
+## Main Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Script shadowing practice (paste text, split into sentences, practice step by step)
+- YouTube shadowing flow with transcript/translation support
+- Voice recording per sentence with instant replay
+- AI coaching endpoints for speaking feedback
+- Caching for TTS, transcripts, and parsed script sessions
 
-## Expanding the ESLint configuration
+## Quick Start
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Open http://localhost:3000
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Environment Variables
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Create `.env.local`:
+
+```bash
+DATABASE_URL=postgresql://...
+
+DEEPSEEK_API_KEY=...
+DEEPSEEK_MODEL=deepseek-chat
+
+GOOGLE_TTS_API_KEY=...
+SUPADATA_API_KEY=...
 ```
+
+## Database
+
+```bash
+npm run db:generate
+npm run db:push
+```
+
+Optional migration runner:
+
+```bash
+npm run db:migrate
+```
+
+## Script Shadowing Controls
+
+Current keyboard controls in script mode:
+
+- `A` or `ArrowLeft`: previous sentence
+- `D` or `ArrowRight`: next sentence
+- `S` or `Space`: listen current sentence
+- `ArrowDown`: listen current sentence
+- `R` or `ArrowUp`: toggle recording
+
+Recording behavior:
+
+- Press once: start recording
+- Press again: stop + submit transcript/audio turn
+- After each completed recording, your voice auto replays after 1 second (1 time)
+
+Sentence editing behavior:
+
+- Edit the active sentence directly from the sentence card (pencil icon)
+- `Ctrl/Cmd + Enter`: save edit
+- `Esc`: cancel edit
+
+## Useful Scripts
+
+- `npm run dev`: start development server
+- `npm run build`: production build
+- `npm run start`: run production build
+- `npm run lint`: run lint checks
+- `npm run clean:transcript`: clean transcript text via script
+- `npm run db:generate`: generate Drizzle files
+- `npm run db:push`: push schema to DB
+- `npm run db:migrate`: run custom migration script
+
+## API Routes (High Level)
+
+- `/api/tts`: TTS generation/caching
+- `/api/coach`: speaking coach flow
+- `/api/voice`: speaking/voice assistant endpoint
+- `/api/ai`: general AI helper endpoint
+- `/api/shadowing/script`: script sentence cache endpoint
+- `/api/shadowing/youtube/*`: YouTube transcript/translate/usage endpoints
+
+## Project Structure (High Level)
+
+- `app/`: routes, pages, API handlers
+- `src/features/learning`: lesson and speaking coach UI
+- `src/features/shadowing`: script/youtube shadowing flows
+- `src/lib`: DB, cache, schema, server utilities
+- `content/`: session markdown content
