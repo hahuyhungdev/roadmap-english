@@ -187,12 +187,62 @@ export function useYouTubeShadowing(opts?: SessionOpts) {
     playerRef.current = event.target as unknown as YTPlayer;
   }
 
-  function openTactiq() {
-    if (!videoId) return;
-    window.open(
-      `https://tactiq.io/tools/run/youtube_transcript?yt=https://www.youtube.com/watch?v=${videoId}`,
-      "_blank",
-    );
+  async function handleImportFromYouTube() {
+    if (!videoId || importingTranscript) return;
+    setImportingTranscript(true);
+    setScriptError("");
+    try {
+      const res = await fetch("/api/shadowing/youtube/transcript", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          url: `https://www.youtube.com/watch?v=${videoId}`,
+          mode: "auto",
+        }),
+      });
+      const json = await res.json().catch(() => null);
+      if (!res.ok || !Array.isArray(json?.segments)) {
+        setScriptError(
+          json?.error ?? "Could not fetch transcript from Supadata",
+        );
+        return;
+      }
+
+      const segs = json.segments as any[];
+      const starts = segs.map((s) => Number(s.start ?? s.timestamp ?? 0));
+      const data: Sentence[] = segs
+        .map((s, i) => {
+          const startMs = Math.round(
+            Number(s.start ?? s.timestamp ?? 0) * 1000,
+          );
+          const fallbackEndMs =
+            startMs + Math.round(Number(s.duration ?? 3) * 1000);
+          const endMs =
+            i < starts.length - 1
+              ? Math.round((starts[i + 1] ?? 0) * 1000)
+              : fallbackEndMs;
+          return {
+            text: String(s.text ?? s.caption ?? "").trim(),
+            startMs,
+            endMs: endMs > startMs ? endMs : fallbackEndMs,
+          };
+        })
+        .filter((s) => s.text.length > 0);
+
+      if (!data.length) {
+        setScriptError("Supadata returned an empty transcript");
+        return;
+      }
+
+      notifySentences(data);
+      sentenceRefs.current = [];
+      setActiveSentenceIdx(-1);
+      activeSentenceIdxRef.current = -1;
+    } catch (e: any) {
+      setScriptError(String(e?.message ?? e));
+    } finally {
+      setImportingTranscript(false);
+    }
   }
 
   async function handleImportTranscript(
@@ -361,9 +411,9 @@ export function useYouTubeShadowing(opts?: SessionOpts) {
       activeSentenceIdx >= 0 ? (audioByIdx[activeSentenceIdx] ?? null) : null,
     handleLoadVideo,
     handlePlayerReady,
+    handleImportFromYouTube,
     handleImportTranscript,
     handleImproveWithAI,
-    openTactiq,
     goToSentence,
     onToggleRecording,
   };

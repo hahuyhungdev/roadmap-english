@@ -1,7 +1,6 @@
 "use client";
 
 import {
-  ExternalLink,
   FileText,
   Loader2,
   Mic,
@@ -172,12 +171,16 @@ export default function YouTubeShadowingClient(props: Props) {
             {/* Actions */}
             <div className="px-4 pt-3 pb-2 space-y-2">
               <button
-                onClick={s.openTactiq}
+                onClick={s.handleImportFromYouTube}
                 disabled={!s.videoId || busy}
                 className="w-full py-2 rounded-xl text-sm font-semibold flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white transition-all disabled:opacity-40"
               >
-                <ExternalLink size={13} />
-                Get Script from Tactiq
+                {s.importingTranscript ? (
+                  <Loader2 size={13} className="animate-spin" />
+                ) : (
+                  <ArrowRight size={13} />
+                )}
+                Get Transcript (Supadata)
               </button>
               <button
                 onClick={() => setShowPaste((v) => !v)}
@@ -185,7 +188,7 @@ export default function YouTubeShadowingClient(props: Props) {
               >
                 {showPaste
                   ? "▲ Hide paste area"
-                  : "▼ Paste transcript manually"}
+                  : "▼ Paste transcript manually (fallback)"}
               </button>
             </div>
 
@@ -195,7 +198,7 @@ export default function YouTubeShadowingClient(props: Props) {
                 <textarea
                   value={pasteText}
                   onChange={(e) => setPasteText(e.target.value)}
-                  placeholder="Paste Tactiq transcript here…"
+                  placeholder="Paste transcript here (from any source)…"
                   className="w-full h-28 p-2.5 text-sm border border-gray-200 rounded-xl resize-none outline-none focus:border-indigo-400"
                 />
                 <div className="flex gap-2">
@@ -246,7 +249,7 @@ export default function YouTubeShadowingClient(props: Props) {
               <div className="flex items-center justify-center h-14 pb-4">
                 <p className="text-xs text-gray-400 text-center">
                   {s.videoId
-                    ? "Get the script from Tactiq, then paste it here."
+                    ? "Fetch transcript with Supadata, or paste manually below."
                     : "Load a video URL above to get started."}
                 </p>
               </div>

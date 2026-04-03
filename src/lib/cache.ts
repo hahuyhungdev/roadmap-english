@@ -7,6 +7,21 @@ import {
 } from "./schema";
 import { eq, desc } from "drizzle-orm";
 
+function getErrorText(err: unknown): string {
+  const e = err as any;
+  const message = String(e?.message ?? "");
+  const causeMessage = String(e?.cause?.message ?? "");
+  return `${message} ${causeMessage}`.trim();
+}
+
+function isMissingShadowingSessionsTableError(err: unknown): boolean {
+  const text = getErrorText(err).toLowerCase();
+  return (
+    text.includes('relation "shadowing_sessions" does not exist') ||
+    (text.includes("shadowing_sessions") && text.includes("does not exist"))
+  );
+}
+
 // ─── Hash utility ────────────────────────────────────────────────────────────
 async function sha256(input: string): Promise<string> {
   const encoder = new TextEncoder();
@@ -138,13 +153,19 @@ export async function cacheScript(
 export type ShadowingSessionRow = typeof shadowingSessions.$inferSelect;
 
 export async function listShadowingSessions(): Promise<ShadowingSessionRow[]> {
-  return withRetry(() =>
-    db
-      .select()
-      .from(shadowingSessions)
-      .orderBy(desc(shadowingSessions.updatedAt))
-      .limit(50),
-  );
+  try {
+    return await withRetry(() =>
+      db
+        .select()
+        .from(shadowingSessions)
+        .orderBy(desc(shadowingSessions.updatedAt))
+        .limit(50),
+    );
+  } catch (err) {
+    // First-run safety: let UI load even when shadowing table was not migrated yet.
+    if (isMissingShadowingSessionsTableError(err)) return [];
+    throw err;
+  }
 }
 
 export async function getShadowingSession(
@@ -181,12 +202,22 @@ export async function createShadowingSession(data: {
   if (data.ttsVoice != null) values.ttsVoice = data.ttsVoice;
   if (data.ttsSpeed != null) values.ttsSpeed = data.ttsSpeed;
 
-  const rows = await withRetry(() =>
-    db
-      .insert(shadowingSessions)
-      .values(values as typeof shadowingSessions.$inferInsert)
-      .returning(),
-  );
+  let rows: ShadowingSessionRow[];
+  try {
+    rows = await withRetry(() =>
+      db
+        .insert(shadowingSessions)
+        .values(values as typeof shadowingSessions.$inferInsert)
+        .returning(),
+    );
+  } catch (err) {
+    if (isMissingShadowingSessionsTableError(err)) {
+      throw new Error(
+        "Missing database table shadowing_sessions. Run `npm run db:migrate` against the same DATABASE_URL used by the app.",
+      );
+    }
+    throw err;
+  }
   return rows[0];
 }
 

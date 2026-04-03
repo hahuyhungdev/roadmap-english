@@ -45,6 +45,7 @@ if (migrationFiles.length === 0) {
 }
 
 async function migrate() {
+  let failed = 0;
   for (const file of migrationFiles) {
     console.log(`\n── ${file} ──`);
     const content = readFileSync(resolve(drizzleDir, file), "utf-8");
@@ -62,11 +63,19 @@ async function migrate() {
         if (err.message?.includes("already exists")) {
           console.log("    ⊘ Already exists, skipping");
         } else {
+          failed += 1;
           console.error("    ✗ Error:", err.message);
         }
       }
     }
   }
+
+  if (failed > 0) {
+    console.error(`\n❌ Migration finished with ${failed} error(s).`);
+    process.exitCode = 1;
+    return;
+  }
+
   console.log("\n✅ Migration complete!");
 }
 
