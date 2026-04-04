@@ -9,7 +9,7 @@ export const db = drizzle(sql, { schema });
  * Handles Neon serverless cold-start failures gracefully. */
 export async function withRetry<T>(
   fn: () => Promise<T>,
-  retries = 3,
+  retries = 4,
   delayMs = 1000,
 ): Promise<T> {
   let lastErr: unknown;
