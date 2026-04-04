@@ -22,6 +22,7 @@ export function useYouTubeShadowing(opts?: SessionOpts) {
   const [activeSentenceIdx, setActiveSentenceIdx] = useState(-1);
   const activeSentenceIdxRef = useRef(-1);
   const sentenceRefs = useRef<(HTMLButtonElement | null)[]>([]);
+  const sentenceListRef = useRef<HTMLDivElement | null>(null);
 
   // ── Recording ──────────────────────────────────────────────────────────
   const [isRecording, setIsRecording] = useState(false);
@@ -34,6 +35,23 @@ export function useYouTubeShadowing(opts?: SessionOpts) {
     () => () => blobUrlsRef.current.forEach((u) => URL.revokeObjectURL(u)),
     [],
   );
+
+  // ── Playback settings ──────────────────────────────────────────────────
+  const [playbackSpeed, _setPlaybackSpeed] = useState(1);
+  const playbackSpeedRef = useRef(1);
+  const [pauseEachSentence, _setPauseEachSentence] = useState(false);
+  const pauseEachSentenceRef = useRef(false);
+
+  function setPlaybackSpeed(speed: number) {
+    playbackSpeedRef.current = speed;
+    _setPlaybackSpeed(speed);
+    playerRef.current?.setPlaybackRate(speed);
+  }
+
+  function setPauseEachSentence(val: boolean) {
+    pauseEachSentenceRef.current = val;
+    _setPauseEachSentence(val);
+  }
 
   // ── Session callbacks ──────────────────────────────────────────────────
   const optsRef = useRef(opts);
@@ -58,6 +76,13 @@ export function useYouTubeShadowing(opts?: SessionOpts) {
         else break;
       }
       if (idx !== activeSentenceIdxRef.current) {
+        if (
+          pauseEachSentenceRef.current &&
+          idx > activeSentenceIdxRef.current &&
+          activeSentenceIdxRef.current >= 0
+        ) {
+          playerRef.current?.pauseVideo();
+        }
         activeSentenceIdxRef.current = idx;
         setActiveSentenceIdx(idx);
       }
@@ -65,14 +90,14 @@ export function useYouTubeShadowing(opts?: SessionOpts) {
     return () => clearInterval(timer);
   }, [sentences]);
 
-  // ── Auto-scroll sentence pills ──────────────────────────────────────────
+  // ── Auto-scroll sentence pills (always pin active to top of container) ──
   useEffect(() => {
     if (activeSentenceIdx < 0) return;
-    sentenceRefs.current[activeSentenceIdx]?.scrollIntoView({
-      behavior: "smooth",
-      block: "nearest",
-      inline: "nearest",
-    });
+    const container = sentenceListRef.current;
+    const el = sentenceRefs.current[activeSentenceIdx];
+    if (!container || !el) return;
+    const elTop = el.offsetTop - container.offsetTop;
+    container.scrollTo({ top: elTop - 8, behavior: "smooth" });
   }, [activeSentenceIdx]);
 
   // ── Keyboard shortcuts ─────────────────────────────────────────────────
@@ -101,7 +126,9 @@ export function useYouTubeShadowing(opts?: SessionOpts) {
           break;
         case "ArrowDown":
           e.preventDefault();
-          player?.pauseVideo();
+          player?.getPlayerState() === 1
+            ? player?.pauseVideo()
+            : player?.playVideo();
           break;
         case "ArrowLeft":
           e.preventDefault();
@@ -121,6 +148,7 @@ export function useYouTubeShadowing(opts?: SessionOpts) {
 
   function handlePlayerReady(event: YouTubeEvent) {
     playerRef.current = event.target as unknown as YTPlayer;
+    playerRef.current?.setPlaybackRate(playbackSpeedRef.current);
   }
 
   async function handleImproveWithAI() {
@@ -248,7 +276,12 @@ export function useYouTubeShadowing(opts?: SessionOpts) {
     improvingTranscript,
     activeSentenceIdx,
     sentenceRefs,
+    sentenceListRef,
     isRecording,
+    playbackSpeed,
+    pauseEachSentence,
+    setPlaybackSpeed,
+    setPauseEachSentence,
     lastAudioUrl:
       activeSentenceIdx >= 0 ? (audioByIdx[activeSentenceIdx] ?? null) : null,
     handlePlayerReady,

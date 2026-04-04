@@ -57,7 +57,7 @@ export default function AppChrome({ children }: { children: React.ReactNode }) {
         <div className="lg:hidden">
           <LayoutNav />
         </div>
-        <main className="flex-1 w-full px-4 sm:px-6 py-8 max-w-6xl mx-auto">
+        <main className="flex-1 w-full px-2 sm:px-6 py-2 max-w-6xl mx-auto">
           {children}
         </main>
       </div>

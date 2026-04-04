@@ -9,9 +9,11 @@ import {
   Loader2,
   Mic,
   Square,
+  Settings2,
 } from "lucide-react";
 import clsx from "clsx";
 import { useEffect, useState } from "react";
+import { Panel, Group as PanelGroup, Separator as PanelResizeHandle } from "react-resizable-panels";
 import { useYouTubeShadowing } from "./useYouTubeShadowing";
 import { VideoPanel } from "../shared/VideoPanel";
 import { AudioReplay } from "../shared/AudioReplay";
@@ -55,6 +57,7 @@ export default function YouTubeShadowingClient(props: Props) {
   });
   const [retimePace, setRetimePace] = useState<SentencePacePreset>("balanced");
   const [retiming, setRetiming] = useState(false);
+  const [showSettings, setShowSettings] = useState(false);
   const [translatingVi, setTranslatingVi] = useState(false);
   const [showVietnamese, setShowVietnamese] = useState(false);
   const [viByIdx, setViByIdx] = useState<Record<number, string>>(() =>
@@ -204,10 +207,11 @@ export default function YouTubeShadowingClient(props: Props) {
         </div>
       )}
 
-      {/* Main grid */}
-      <div className="grid gap-4 grid-cols-1 lg:grid-cols-12">
+      {/* Main resizable split */}
+      <PanelGroup orientation="horizontal" className="gap-0">
         {/* Left: preview + sentence list */}
-        <div className="lg:col-span-7 space-y-4">
+        <Panel defaultSize="58%" minSize="25%">
+          <div className="pr-2 space-y-4">
           <VideoPanel
             videoId={s.videoId}
             playerRef={s.playerRef}
@@ -278,16 +282,74 @@ export default function YouTubeShadowingClient(props: Props) {
                       {showVietnamese ? "Hide VI" : "Show VI"}
                     </button>
                   )}
+                  <button
+                    onClick={() => setShowSettings((v) => !v)}
+                    className={clsx(
+                      "p-1.5 rounded-lg border transition-colors",
+                      showSettings
+                        ? "bg-indigo-50 border-indigo-200 text-indigo-600"
+                        : "bg-white border-gray-200 text-gray-500 hover:text-gray-700",
+                    )}
+                    title="Playback settings"
+                  >
+                    <Settings2 size={13} />
+                  </button>
                 </div>
               )}
             </div>
+
+            {/* Settings panel */}
+            {showSettings && s.sentences.length > 0 && (
+              <div className="flex flex-wrap items-center gap-4 px-4 py-2.5 bg-indigo-50/60 border-b border-indigo-100 text-xs">
+                {/* Speed */}
+                <div className="flex items-center gap-2">
+                  <span className="text-gray-500 font-medium">Speed</span>
+                  <div className="flex gap-1">
+                    {[0.5, 0.75, 1, 1.25, 1.5].map((sp) => (
+                      <button
+                        key={sp}
+                        onClick={() => s.setPlaybackSpeed(sp)}
+                        className={clsx(
+                          "px-2 py-0.5 rounded-md font-semibold transition-colors",
+                          s.playbackSpeed === sp
+                            ? "bg-indigo-600 text-white"
+                            : "bg-white border border-gray-200 text-gray-600 hover:border-indigo-300",
+                        )}
+                      >
+                        {sp}x
+                      </button>
+                    ))}
+                  </div>
+                </div>
+                {/* Pause each sentence */}
+                <label className="flex items-center gap-2 cursor-pointer select-none">
+                  <div
+                    onClick={() => s.setPauseEachSentence(!s.pauseEachSentence)}
+                    className={clsx(
+                      "relative w-8 h-4 rounded-full transition-colors",
+                      s.pauseEachSentence ? "bg-indigo-600" : "bg-gray-300",
+                    )}
+                  >
+                    <span
+                      className={clsx(
+                        "absolute top-0.5 w-3 h-3 bg-white rounded-full shadow transition-all",
+                        s.pauseEachSentence ? "left-4" : "left-0.5",
+                      )}
+                    />
+                  </div>
+                  <span className="text-gray-600 font-medium">
+                    Pause after each sentence
+                  </span>
+                </label>
+              </div>
+            )}
 
             {s.sentences.length === 0 ? (
               <div className="flex items-center justify-center h-24 px-4 text-xs text-gray-400 text-center">
                 Transcript is being prepared when creating the session.
               </div>
             ) : (
-              <div className="max-h-80 overflow-y-auto px-3 py-3 space-y-2">
+              <div ref={s.sentenceListRef} className="max-h-80 overflow-y-auto px-3 py-3 space-y-2">
                 {s.sentences.map((sentence, i) => (
                   <button
                     key={i}
@@ -331,10 +393,17 @@ export default function YouTubeShadowingClient(props: Props) {
               {translateError}
             </div>
           )}
-        </div>
+          </div>
+        </Panel>
+
+        {/* Drag handle */}
+        <PanelResizeHandle className="group w-2 flex items-center justify-center cursor-col-resize">
+          <div className="w-0.5 h-16 rounded-full bg-gray-200 group-hover:bg-indigo-400 group-active:bg-indigo-500 transition-colors" />
+        </PanelResizeHandle>
 
         {/* Right: current sentence + actions */}
-        <div className="lg:col-span-5 space-y-4">
+        <Panel defaultSize="42%" minSize="20%">
+          <div className="pl-2 space-y-4">
           <div className="rounded-2xl border border-indigo-100 bg-indigo-50 shadow-sm p-4 space-y-3 min-h-60">
             {s.activeSentenceIdx >= 0 &&
             s.activeSentenceIdx < s.sentences.length ? (
@@ -390,8 +459,9 @@ export default function YouTubeShadowingClient(props: Props) {
               {s.scriptError}
             </div>
           )}
-        </div>
-      </div>
+          </div>
+        </Panel>
+      </PanelGroup>
     </div>
   );
 }

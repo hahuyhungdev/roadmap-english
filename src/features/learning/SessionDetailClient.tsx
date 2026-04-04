@@ -30,7 +30,7 @@ export default function SessionDetailClient({
   const completed = mounted && completedSessions.includes(session.id);
 
   return (
-    <div className="max-w-6xl mx-auto overflow-x-scroll h-[calc(100vh-10rem)]">
+    <div className="max-w-6xl mx-auto overflow-x-scroll h-[calc(100vh-4rem)]">
       <div className="flex items-center justify-between mb-6">
         <Link
           href={`/phase/${phase.id}`}
