@@ -16,12 +16,12 @@ function getErrorText(err: unknown): string {
 
 function isMissingShadowingSessionsTableError(err: unknown): boolean {
   const text = getErrorText(err).toLowerCase();
-  const isWrappedShadowingQueryError =
-    text.includes("failed query:") && text.includes("shadowing_sessions");
   return (
-    isWrappedShadowingQueryError ||
     text.includes('relation "shadowing_sessions" does not exist') ||
-    (text.includes("shadowing_sessions") && text.includes("does not exist"))
+    (text.includes("shadowing_sessions") &&
+      text.includes("does not exist") &&
+      !text.includes("fetch failed") &&
+      !text.includes("connect"))
   );
 }
 
@@ -74,48 +74,48 @@ export async function cacheTTS(
 }
 
 // ─── YouTube Transcript Cache ────────────────────────────────────────────────
+export type RawSegment = { text: string; start: number; duration: number };
 export type CachedSentence = { text: string; startMs: number; endMs: number };
 
-export async function getCachedTranscript(
+export async function getCachedRawSegments(
   videoId: string,
-): Promise<CachedSentence[] | null> {
-  const rows = await db
-    .select({ sentences: youtubeTranscripts.sentences })
-    .from(youtubeTranscripts)
-    .where(eq(youtubeTranscripts.videoId, videoId))
-    .limit(1);
-  if (!rows[0]) return null;
-  return rows[0].sentences as CachedSentence[];
+): Promise<RawSegment[] | null> {
+  const rows = await withRetry(() =>
+    db
+      .select({ rawSegments: youtubeTranscripts.rawSegments })
+      .from(youtubeTranscripts)
+      .where(eq(youtubeTranscripts.videoId, videoId))
+      .limit(1),
+  );
+  if (!rows[0]?.rawSegments) return null;
+  return rows[0].rawSegments as RawSegment[];
 }
 
-export async function cacheTranscript(
+export async function cacheRawSegments(
   videoId: string,
-  sentences: CachedSentence[],
+  rawSegments: RawSegment[],
   videoTitle?: string,
-  source = "youtube-transcript",
 ): Promise<void> {
   try {
-    await db.insert(youtubeTranscripts).values({
-      videoId,
-      videoTitle,
-      sentences: sentences as any,
-      source,
-    });
+    await withRetry(() =>
+      db.insert(youtubeTranscripts).values({
+        videoId,
+        videoTitle,
+        rawSegments: rawSegments as any,
+        source: "supadata",
+      }),
+    );
   } catch (err: any) {
-    // If already exists, update
     if (
       err?.message?.includes("duplicate") ||
       err?.message?.includes("unique")
     ) {
-      await db
-        .update(youtubeTranscripts)
-        .set({
-          sentences: sentences as any,
-          videoTitle,
-          source,
-          updatedAt: new Date(),
-        })
-        .where(eq(youtubeTranscripts.videoId, videoId));
+      await withRetry(() =>
+        db
+          .update(youtubeTranscripts)
+          .set({ rawSegments: rawSegments as any, videoTitle, updatedAt: new Date() })
+          .where(eq(youtubeTranscripts.videoId, videoId)),
+      );
     } else {
       throw err;
     }
@@ -236,10 +236,9 @@ export async function listShadowingSessions(
             .orderBy(desc(shadowingSessions.updatedAt))
             .limit(50),
     );
-  } catch (err) {
-    // First-run safety: let UI load even when shadowing table was not migrated yet.
-    if (isMissingShadowingSessionsTableError(err)) return [];
-    throw err;
+  } catch {
+    // Always return [] on any error — list page should never show a 500.
+    return [];
   }
 }
 

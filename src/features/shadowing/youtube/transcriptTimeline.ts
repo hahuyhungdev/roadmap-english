@@ -16,10 +16,10 @@ const TIMELINE_CONFIG_BY_PACE: Record<SentencePacePreset, TimelineConfig> = {
   short: {
     minChunkDurationMs: 900,
     maxMergeGapMs: 850,
-    mergeWordThreshold: 7,
-    targetSentenceDurationMs: 2400,
-    minSentenceDurationMs: 2000,
-    maxSentenceDurationMs: 3200,
+    mergeWordThreshold: 10,
+    targetSentenceDurationMs: 3500,
+    minSentenceDurationMs: 2500,
+    maxSentenceDurationMs: 4000,
     nextSentenceSafetyGapMs: 180,
   },
   balanced: {

@@ -64,8 +64,9 @@ export const youtubeTranscripts = pgTable(
     id: serial("id").primaryKey(),
     videoId: varchar("video_id", { length: 20 }).notNull().unique(),
     videoTitle: varchar("video_title", { length: 500 }),
-    sentences: jsonb("sentences").notNull(), // Sentence[] JSON
-    source: varchar("source", { length: 50 }).default("youtube-transcript"), // how it was fetched
+    sentences: jsonb("sentences"), // nullable; legacy merged sentences (unused)
+    rawSegments: jsonb("raw_segments"), // raw Supadata chunks { text, start, duration }[]
+    source: varchar("source", { length: 50 }).default("supadata"),
     createdAt: timestamp("created_at").defaultNow().notNull(),
     updatedAt: timestamp("updated_at").defaultNow().notNull(),
   },

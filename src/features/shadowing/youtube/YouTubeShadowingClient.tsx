@@ -3,7 +3,6 @@
 import {
   BarChart3,
   Clock3,
-  Gauge,
   Languages,
   FileText,
   Loader2,
@@ -19,10 +18,6 @@ import { VideoPanel } from "../shared/VideoPanel";
 import { AudioReplay } from "../shared/AudioReplay";
 import type { Sentence } from "../shared/types";
 import { fmtTime } from "../shared/utils";
-import {
-  buildSentencesFromTranscriptChunks,
-  type SentencePacePreset,
-} from "./transcriptTimeline";
 
 interface Props {
   sessionId?: number;
@@ -55,8 +50,6 @@ export default function YouTubeShadowingClient(props: Props) {
     onVideoChange: props.onVideoChange,
     onScriptTextChange: props.onScriptTextChange,
   });
-  const [retimePace, setRetimePace] = useState<SentencePacePreset>("balanced");
-  const [retiming, setRetiming] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
   const [translatingVi, setTranslatingVi] = useState(false);
   const [showVietnamese, setShowVietnamese] = useState(false);
@@ -78,26 +71,6 @@ export default function YouTubeShadowingClient(props: Props) {
     if (!Object.keys(persistedMap).length) return;
     setViByIdx((prev) => ({ ...persistedMap, ...prev }));
   }, [s.sentences]);
-
-  function handleRetiming() {
-    if (!s.sentences.length || retiming) return;
-    setRetiming(true);
-    try {
-      const chunks = s.sentences.map((sentence) => ({
-        text: sentence.text,
-        start: sentence.startMs / 1000,
-        duration: Math.max(0.1, (sentence.endMs - sentence.startMs) / 1000),
-      }));
-      const retimed = buildSentencesFromTranscriptChunks(chunks, {
-        pace: retimePace,
-      });
-      if (retimed.length > 0) {
-        s.replaceSentences(retimed);
-      }
-    } finally {
-      setRetiming(false);
-    }
-  }
 
   async function handleTranslateToVietnamese() {
     if (!s.sentences.length || translatingVi) return;
@@ -233,31 +206,6 @@ export default function YouTubeShadowingClient(props: Props) {
               </div>
               {s.sentences.length > 0 && (
                 <div className="flex items-center gap-1.5">
-                  <select
-                    value={retimePace}
-                    onChange={(e) =>
-                      setRetimePace(e.target.value as SentencePacePreset)
-                    }
-                    className="h-7 rounded-lg border border-gray-200 bg-white px-2 text-[11px] font-medium text-gray-600 outline-none"
-                    title="Sentence pace"
-                  >
-                    <option value="short">Short</option>
-                    <option value="balanced">Balanced</option>
-                    <option value="long">Long</option>
-                  </select>
-                  <button
-                    onClick={handleRetiming}
-                    disabled={busy || retiming}
-                    className="flex items-center gap-1 px-2.5 py-1 text-[11px] font-semibold text-indigo-600 border border-indigo-200 rounded-lg bg-indigo-50 hover:bg-indigo-100 disabled:opacity-40 transition-colors"
-                    title="Rebuild sentence timing"
-                  >
-                    {retiming ? (
-                      <Loader2 size={11} className="animate-spin" />
-                    ) : (
-                      <Gauge size={11} />
-                    )}
-                    Re-timing
-                  </button>
                   {!hasFullTranslation && (
                     <button
                       onClick={handleTranslateToVietnamese}
@@ -345,8 +293,14 @@ export default function YouTubeShadowingClient(props: Props) {
             )}
 
             {s.sentences.length === 0 ? (
-              <div className="flex items-center justify-center h-24 px-4 text-xs text-gray-400 text-center">
-                Transcript is being prepared when creating the session.
+              <div className="flex flex-col items-center justify-center h-24 px-4 text-xs text-gray-400 text-center gap-2">
+                <span>No sentences loaded for this session.</span>
+                <button
+                  onClick={() => window.location.reload()}
+                  className="px-3 py-1 text-[11px] font-semibold text-indigo-600 border border-indigo-200 rounded-lg bg-indigo-50 hover:bg-indigo-100 transition-colors"
+                >
+                  Reload
+                </button>
               </div>
             ) : (
               <div ref={s.sentenceListRef} className="max-h-80 overflow-y-auto px-3 py-3 space-y-2">

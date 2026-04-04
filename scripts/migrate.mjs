@@ -9,29 +9,49 @@ import { fileURLToPath } from "url";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, "..");
 
-// ── Load DATABASE_URL from .env.local if not in env ─────────────────────────
+// ── Load DATABASE_URL from .env.local or .env if not in env ─────────────────
 let DATABASE_URL = process.env.DATABASE_URL;
 if (!DATABASE_URL) {
-  const envPath = resolve(root, ".env.local");
-  if (existsSync(envPath)) {
-    const lines = readFileSync(envPath, "utf-8").split("\n");
-    for (const line of lines) {
-      const m = line.match(/^DATABASE_URL\s*=\s*(.+)/);
-      if (m) {
-        DATABASE_URL = m[1].trim().replace(/^["']|["']$/g, "");
-        break;
+  for (const envFile of [".env.local", ".env"]) {
+    const envPath = resolve(root, envFile);
+    if (existsSync(envPath)) {
+      const lines = readFileSync(envPath, "utf-8").split("\n");
+      for (const line of lines) {
+        const m = line.match(/^DATABASE_URL\s*=\s*(.+)/);
+        if (m) {
+          DATABASE_URL = m[1].trim().replace(/^["']|["']$/g, "");
+          break;
+        }
       }
+      if (DATABASE_URL) break;
     }
   }
 }
 if (!DATABASE_URL) {
   console.error(
-    "DATABASE_URL not set. Add it to .env.local or set it in your environment.",
+    "DATABASE_URL not set. Add it to .env.local, .env, or set it in your environment.",
   );
   process.exit(1);
 }
 
 const sql = neon(DATABASE_URL);
+
+async function runWithRetry(stmt, retries = 3, delayMs = 1000) {
+  for (let i = 0; i <= retries; i++) {
+    try {
+      await sql.query(stmt);
+      return;
+    } catch (err) {
+      if (err.message?.includes("already exists")) throw err;
+      if (i < retries) {
+        console.log(`    ⟳ Retry ${i + 1}/${retries} after ${delayMs}ms...`);
+        await new Promise((r) => setTimeout(r, delayMs * (i + 1)));
+      } else {
+        throw err;
+      }
+    }
+  }
+}
 
 // ── Find all migration files ────────────────────────────────────────────────
 const drizzleDir = resolve(root, "drizzle");
@@ -57,7 +77,7 @@ async function migrate() {
     for (const stmt of statements) {
       console.log("  Executing:", stmt.slice(0, 70) + "...");
       try {
-        await sql.query(stmt);
+        await runWithRetry(stmt);
         console.log("    ✓ OK");
       } catch (err) {
         if (err.message?.includes("already exists")) {

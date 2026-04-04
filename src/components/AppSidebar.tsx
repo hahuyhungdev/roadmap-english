@@ -27,18 +27,16 @@ export default function AppSidebar() {
   }, []);
 
   function toggleCollapsed() {
-    setCollapsed((prev) => {
-      const next = !prev;
-      try {
-        window.localStorage.setItem("sidebar-collapsed", next ? "1" : "0");
-        window.dispatchEvent(
-          new CustomEvent("sidebar:collapsed-changed", { detail: next }),
-        );
-      } catch {
-        // ignore
-      }
-      return next;
-    });
+    const next = !collapsed;
+    setCollapsed(next);
+    try {
+      window.localStorage.setItem("sidebar-collapsed", next ? "1" : "0");
+      window.dispatchEvent(
+        new CustomEvent("sidebar:collapsed-changed", { detail: next }),
+      );
+    } catch {
+      // ignore
+    }
   }
 
   return (

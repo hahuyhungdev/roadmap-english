@@ -7,16 +7,11 @@ import {
   Loader,
   Modal,
   Progress,
-  Select,
   TextInput,
 } from "@mantine/core";
 import { Plus, Trash2, Video, Clock3, ChevronRight } from "lucide-react";
 import clsx from "clsx";
 import { extractVideoId } from "../shared/utils";
-import {
-  buildSentencesFromTranscriptChunks,
-  type SentencePacePreset,
-} from "./transcriptTimeline";
 
 type Session = {
   id: number;
@@ -50,8 +45,6 @@ export default function YouTubeShadowingHub() {
   const [creating, setCreating] = useState(false);
   const [showCreate, setShowCreate] = useState(false);
   const [youtubeUrl, setYoutubeUrl] = useState("");
-  const [sentencePace, setSentencePace] =
-    useState<SentencePacePreset>("balanced");
   const [createStep, setCreateStep] = useState<
     keyof typeof STEP_PROGRESS | "Done" | ""
   >("");
@@ -132,25 +125,19 @@ export default function YouTubeShadowingHub() {
         return;
       }
 
-      const sentences = buildSentencesFromTranscriptChunks(
-        transcriptData.segments,
-        { pace: sentencePace },
-      );
-      if (!sentences.length) {
-        setCreateError("Transcript is empty for this video");
-        return;
-      }
-
       setCreateStep("Preparing practice");
-      await fetch(`/api/shadowing/sessions/${sessionId}`, {
+      const patchRes = await fetch(`/api/shadowing/sessions/${sessionId}`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          videoId,
-          scriptText: sentences.map((s) => s.text).join("\n"),
-          sentences,
-        }),
+        body: JSON.stringify({ prepareTranscript: true }),
       });
+      if (!patchRes.ok) {
+        const patchErr = await patchRes.json().catch(() => null);
+        setCreateError(
+          patchErr?.error ?? "Failed to save transcript to session",
+        );
+        return;
+      }
 
       setCreateStep("Done");
       await fetchUsage();
@@ -297,7 +284,6 @@ export default function YouTubeShadowingHub() {
           if (creating) return;
           setShowCreate(false);
           setYoutubeUrl("");
-          setSentencePace("balanced");
           setCreateError("");
           setCreateStep("");
         }}
@@ -311,22 +297,6 @@ export default function YouTubeShadowingHub() {
             value={youtubeUrl}
             onChange={(e) => setYoutubeUrl(e.currentTarget.value)}
             disabled={creating}
-          />
-
-          <Select
-            label="Sentence Pace"
-            description="Choose how long each sentence should feel in practice."
-            data={[
-              { value: "short", label: "Short (2-3s)" },
-              { value: "balanced", label: "Balanced (3-7s)" },
-              { value: "long", label: "Long (7-12s)" },
-            ]}
-            value={sentencePace}
-            onChange={(value) =>
-              setSentencePace((value as SentencePacePreset) || "balanced")
-            }
-            disabled={creating}
-            allowDeselect={false}
           />
 
           {(createStep || createError) && (

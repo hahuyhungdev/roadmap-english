@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
-import { getYouTubeTranscriptUsage } from "@/lib/cache";
+import { getYouTubeTranscriptUsage, getCachedRawSegments, cacheRawSegments } from "@/lib/cache";
+import { extractVideoId } from "@/features/shadowing/shared/utils";
 
 type SupadataChunk = {
   text?: string;
@@ -71,6 +72,31 @@ async function pollTranscriptJob(jobId: string, apiKey: string) {
 // POST: Fetch transcript for YouTube (and other supported URLs) via Supadata.
 export async function POST(req: Request) {
   try {
+    let body: any = null;
+    try {
+      body = await req.json();
+    } catch {
+      // ignore
+    }
+
+    const url = String(body?.url ?? "").trim();
+    if (!url) {
+      return NextResponse.json(
+        { error: "Missing `url` in request body" },
+        { status: 400 },
+      );
+    }
+
+    // ── Cache-first: return stored segments without hitting Supadata ──────────
+    const videoId = extractVideoId(url);
+    if (videoId) {
+      const cached = await getCachedRawSegments(videoId).catch(() => null);
+      if (cached?.length) {
+        return NextResponse.json({ segments: cached, fromCache: true });
+      }
+    }
+
+    // ── Live fetch from Supadata ──────────────────────────────────────────────
     const usage = await getYouTubeTranscriptUsage(100, 85);
     if (usage.shouldDisable) {
       return NextResponse.json(
@@ -87,21 +113,6 @@ export async function POST(req: Request) {
       return NextResponse.json(
         { error: "Missing SUPADATA_API_KEY" },
         { status: 500 },
-      );
-    }
-
-    let body: any = null;
-    try {
-      body = await req.json();
-    } catch {
-      // ignore
-    }
-
-    const url = String(body?.url ?? "").trim();
-    if (!url) {
-      return NextResponse.json(
-        { error: "Missing `url` in request body" },
-        { status: 400 },
       );
     }
 
@@ -145,14 +156,17 @@ export async function POST(req: Request) {
       );
     }
 
+    let segments: ReturnType<typeof toSegment>[];
     if (upstreamJson?.jobId) {
-      const segments = await pollTranscriptJob(upstreamJson.jobId, apiKey);
-      return NextResponse.json({ segments });
+      segments = await pollTranscriptJob(upstreamJson.jobId, apiKey);
+    } else {
+      segments = (upstreamJson?.content ?? []).map(toSegment).filter((s) => s.text);
     }
 
-    const segments = (upstreamJson?.content ?? [])
-      .map(toSegment)
-      .filter((s) => s.text);
+    // ── Save to DB cache so the next request skips Supadata ──────────────────
+    if (videoId && segments.length) {
+      await cacheRawSegments(videoId, segments).catch(() => null);
+    }
 
     return NextResponse.json({ segments });
   } catch (err: any) {
