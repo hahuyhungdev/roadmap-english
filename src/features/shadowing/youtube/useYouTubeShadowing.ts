@@ -42,6 +42,8 @@ export function useYouTubeShadowing(opts?: SessionOpts) {
   const [pauseEachSentence, _setPauseEachSentence] = useState(false);
   const pauseEachSentenceRef = useRef(false);
   const pausedAtBoundaryRef = useRef(false);
+  // Blocks polling from snapping back to old position while seek propagates
+  const seekingUntilRef = useRef<number>(0);
 
   function setPlaybackSpeed(speed: number) {
     playbackSpeedRef.current = speed;
@@ -72,6 +74,8 @@ export function useYouTubeShadowing(opts?: SessionOpts) {
     const timer = setInterval(() => {
       // Frozen while paused at boundary — only user action (keys / click) can unfreeze.
       if (pausedAtBoundaryRef.current) return;
+      // Frozen briefly after a manual seek so the player time can propagate.
+      if (Date.now() < seekingUntilRef.current) return;
 
       const ms = (playerRef.current?.getCurrentTime() ?? 0) * 1000;
       let idx = -1;
@@ -120,6 +124,7 @@ export function useYouTubeShadowing(opts?: SessionOpts) {
       const goTo = (idx: number) => {
         if (idx < 0 || idx >= sentences.length) return;
         pausedAtBoundaryRef.current = false;
+        seekingUntilRef.current = Date.now() + 700;
         player?.seekTo(sentences[idx].startMs / 1000, true);
         player?.playVideo();
         activeSentenceIdxRef.current = idx;
@@ -213,6 +218,7 @@ export function useYouTubeShadowing(opts?: SessionOpts) {
   function goToSentence(idx: number) {
     if (idx < 0 || idx >= sentences.length) return;
     pausedAtBoundaryRef.current = false;
+    seekingUntilRef.current = Date.now() + 700;
     playerRef.current?.seekTo(sentences[idx].startMs / 1000, true);
     playerRef.current?.playVideo();
     activeSentenceIdxRef.current = idx;
@@ -221,6 +227,14 @@ export function useYouTubeShadowing(opts?: SessionOpts) {
 
   function replaceSentences(nextSentences: Sentence[]) {
     notifySentences(nextSentences);
+    sentenceRefs.current = [];
+    setActiveSentenceIdx(-1);
+    activeSentenceIdxRef.current = -1;
+  }
+
+  // Preview-only re-segment — updates state locally without persisting to DB.
+  function previewSentences(nextSentences: Sentence[]) {
+    setSentences(nextSentences);
     sentenceRefs.current = [];
     setActiveSentenceIdx(-1);
     activeSentenceIdxRef.current = -1;
@@ -305,6 +319,7 @@ export function useYouTubeShadowing(opts?: SessionOpts) {
     handleImproveWithAI,
     goToSentence,
     replaceSentences,
+    previewSentences,
     applyVietnameseTranslations,
     onToggleRecording,
   };

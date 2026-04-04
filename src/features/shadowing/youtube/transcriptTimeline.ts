@@ -13,31 +13,34 @@ type TimelineConfig = {
 };
 
 const TIMELINE_CONFIG_BY_PACE: Record<SentencePacePreset, TimelineConfig> = {
+  // ~4s per sentence: tight merge, small gaps only
   short: {
-    minChunkDurationMs: 900,
-    maxMergeGapMs: 850,
-    mergeWordThreshold: 10,
-    targetSentenceDurationMs: 3500,
+    minChunkDurationMs: 800,
+    maxMergeGapMs: 500,
+    mergeWordThreshold: 14,
+    targetSentenceDurationMs: 4000,
     minSentenceDurationMs: 2500,
-    maxSentenceDurationMs: 4000,
-    nextSentenceSafetyGapMs: 180,
+    maxSentenceDurationMs: 5500,
+    nextSentenceSafetyGapMs: 150,
   },
+  // ~7s per sentence: moderate merge, bridges natural pauses
   balanced: {
-    minChunkDurationMs: 1300,
-    maxMergeGapMs: 2500,
-    mergeWordThreshold: 8,
+    minChunkDurationMs: 1200,
+    maxMergeGapMs: 1500,
+    mergeWordThreshold: 9,
     targetSentenceDurationMs: 7000,
-    minSentenceDurationMs: 4000,
-    maxSentenceDurationMs: 11000,
+    minSentenceDurationMs: 4500,
+    maxSentenceDurationMs: 9000,
     nextSentenceSafetyGapMs: 120,
   },
+  // ~10s per sentence: aggressive merge, long flowing chunks
   long: {
-    minChunkDurationMs: 1700,
-    maxMergeGapMs: 2100,
-    mergeWordThreshold: 16,
-    targetSentenceDurationMs: 8800,
+    minChunkDurationMs: 1500,
+    maxMergeGapMs: 2500,
+    mergeWordThreshold: 6,
+    targetSentenceDurationMs: 10000,
     minSentenceDurationMs: 7000,
-    maxSentenceDurationMs: 12000,
+    maxSentenceDurationMs: 13000,
     nextSentenceSafetyGapMs: 80,
   },
 };

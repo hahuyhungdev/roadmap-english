@@ -7,6 +7,7 @@ import {
   FileText,
   Loader2,
   Mic,
+  RefreshCw,
   Square,
   Settings2,
 } from "lucide-react";
@@ -14,6 +15,7 @@ import clsx from "clsx";
 import { useEffect, useState } from "react";
 import { Panel, Group as PanelGroup, Separator as PanelResizeHandle } from "react-resizable-panels";
 import { useYouTubeShadowing } from "./useYouTubeShadowing";
+import { buildSentencesFromTranscriptChunks, type SentencePacePreset } from "./transcriptTimeline";
 import { VideoPanel } from "../shared/VideoPanel";
 import { AudioReplay } from "../shared/AudioReplay";
 import type { Sentence } from "../shared/types";
@@ -51,6 +53,8 @@ export default function YouTubeShadowingClient(props: Props) {
     onScriptTextChange: props.onScriptTextChange,
   });
   const [showSettings, setShowSettings] = useState(false);
+  const [isRebuilding, setIsRebuilding] = useState(false);
+  const [resegmentPace, setResegmentPace] = useState<SentencePacePreset>("balanced");
   const [translatingVi, setTranslatingVi] = useState(false);
   const [showVietnamese, setShowVietnamese] = useState(false);
   const [viByIdx, setViByIdx] = useState<Record<number, string>>(() =>
@@ -71,6 +75,28 @@ export default function YouTubeShadowingClient(props: Props) {
     if (!Object.keys(persistedMap).length) return;
     setViByIdx((prev) => ({ ...persistedMap, ...prev }));
   }, [s.sentences]);
+
+  async function handleRebuildSentences() {
+    if (!s.videoId || isRebuilding) return;
+    setIsRebuilding(true);
+    try {
+      const res = await fetch(
+        `/api/shadowing/youtube/raw-segments?videoId=${encodeURIComponent(s.videoId)}`,
+      );
+      if (!res.ok) {
+        const json = await res.json().catch(() => null);
+        alert(json?.error ?? "Failed to fetch raw segments");
+        return;
+      }
+      const { segments } = await res.json();
+      const rebuilt = buildSentencesFromTranscriptChunks(segments, { pace: resegmentPace });
+      s.previewSentences(rebuilt);
+    } catch (e: any) {
+      alert(String(e?.message ?? e));
+    } finally {
+      setIsRebuilding(false);
+    }
+  }
 
   async function handleTranslateToVietnamese() {
     if (!s.sentences.length || translatingVi) return;
@@ -253,7 +279,7 @@ export default function YouTubeShadowingClient(props: Props) {
                 <div className="flex items-center gap-2">
                   <span className="text-gray-500 font-medium">Speed</span>
                   <div className="flex gap-1">
-                    {[0.5, 0.75, 1, 1.25, 1.5].map((sp) => (
+                    {[0.5, 0.75,0.85, 1].map((sp) => (
                       <button
                         key={sp}
                         onClick={() => s.setPlaybackSpeed(sp)}
@@ -289,6 +315,40 @@ export default function YouTubeShadowingClient(props: Props) {
                     Pause after each sentence
                   </span>
                 </label>
+                {/* Re-segment (preview, no DB save) */}
+                {s.videoId && (
+                  <div className="flex items-center gap-1">
+                    <div className="flex gap-0.5">
+                      {(["short", "balanced", "long"] as SentencePacePreset[]).map((p) => (
+                        <button
+                          key={p}
+                          onClick={() => setResegmentPace(p)}
+                          className={clsx(
+                            "px-2 py-0.5 rounded-md text-[11px] font-semibold transition-colors",
+                            resegmentPace === p
+                              ? "bg-indigo-600 text-white"
+                              : "bg-white border border-gray-200 text-gray-500 hover:border-indigo-300",
+                          )}
+                        >
+                          {p}
+                        </button>
+                      ))}
+                    </div>
+                    <button
+                      onClick={handleRebuildSentences}
+                      disabled={isRebuilding}
+                      className="flex items-center gap-1 px-2.5 py-0.5 text-[11px] font-semibold text-gray-600 border border-gray-200 rounded-md bg-white hover:bg-gray-50 disabled:opacity-40 transition-colors"
+                      title="Preview re-segmented sentences locally (not saved to DB)"
+                    >
+                      {isRebuilding ? (
+                        <Loader2 size={11} className="animate-spin" />
+                      ) : (
+                        <RefreshCw size={11} />
+                      )}
+                      Re-segment
+                    </button>
+                  </div>
+                )}
               </div>
             )}
 
