@@ -263,6 +263,23 @@ export function useYouTubeShadowing(opts?: SessionOpts) {
       mediaRecorderRef.current?.stop();
       return;
     }
+
+    const targetIdx =
+      activeSentenceIdxRef.current >= 0 ? activeSentenceIdxRef.current : null;
+    if (targetIdx !== null) {
+      setAudioByIdx((prev) => {
+        const existing = prev[targetIdx];
+        if (!existing) return prev;
+
+        URL.revokeObjectURL(existing);
+        blobUrlsRef.current = blobUrlsRef.current.filter((u) => u !== existing);
+
+        const next = { ...prev };
+        delete next[targetIdx];
+        return next;
+      });
+    }
+
     audioChunksRef.current = [];
     recordingForIdxRef.current =
       activeSentenceIdxRef.current >= 0 ? activeSentenceIdxRef.current : null;

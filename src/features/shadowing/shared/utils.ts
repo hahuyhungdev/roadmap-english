@@ -30,7 +30,8 @@ function sanitizeScriptQuotes(text: string): string {
   return text
     .replace(/[’`]/g, "'")
     .replace(/[“”]/g, '"')
-    .replace(/\b([A-Za-z]+)'(ll|ve)\b/gi, `$1${marker}$2`)
+    .replace(/\b([A-Za-z]+)n't\b/gi, `$1${marker}nt`)
+    .replace(/\b([A-Za-z]+)'(ll|ve|re|m|d)\b/gi, `$1${marker}$2`)
     .replace(/["']/g, "")
     .replace(new RegExp(marker, "g"), "'");
 }

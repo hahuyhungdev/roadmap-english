@@ -263,6 +263,11 @@ export function useScriptShadowing(opts?: SessionOpts) {
 
   // FIX #2 — useEffectEvent keeps this stable while always having access to latest activeSentenceIdx
   const startRecordingAction = useEffectEvent(() => {
+    if (activeSentenceIdx >= 0) {
+      // Starting a new take should immediately discard the previous take.
+      clearRecordedVoiceForSentence(activeSentenceIdx);
+    }
+
     audioChunksRef.current = [];
     recordingForIdxRef.current =
       activeSentenceIdx >= 0 ? activeSentenceIdx : null;
