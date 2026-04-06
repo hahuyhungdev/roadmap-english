@@ -2,7 +2,7 @@
 sessionNumber: 13
 title: Work, Compensation & Career Progression
 topic: Compensation, Job Evaluation & Career Growth
-phase: PHASE 3 — Discussion & Impact Mastery
+phase: PHASE 3 — Discussion & Impact
 level: B1+ / B2
 description: Talk confidently about your current job, salary structure, how you evaluate job offers, and your short-term career progression using natural and professional B2 English.
 ---
@@ -14,39 +14,40 @@ description: Talk confidently about your current job, salary structure, how you 
 
 ## 1) Vocabulary (Expanded & Sophisticated for B2)
 
-- **compensation package** (n) – total salary and benefits  
+- **compensation package** (n) – total salary and benefits
   - The compensation package includes base salary, bonus, and health insurance.
 
-- **career progression** (n) – advancement in your professional path  
+- **career progression** (n) – advancement in your professional path
   - I’m looking for clear career progression opportunities.
 
-- **job offer evaluation** (n) – the process of assessing a new job opportunity  
+- **job offer evaluation** (n) – the process of assessing a new job opportunity
   - My job offer evaluation is based on salary, growth potential, and work culture.
 
-- **base salary** (n) – fixed monthly or yearly pay  
+- **base salary** (n) – fixed monthly or yearly pay
   - The base salary is competitive but the bonus structure is more important to me.
 
-- **performance bonus** (n) – extra pay based on individual or company performance  
+- **performance bonus** (n) – extra pay based on individual or company performance
   - We receive a performance bonus twice a year.
 
-- **long-term incentive** (n) – rewards given over several years (stocks, RSUs)  
+- **long-term incentive** (n) – rewards given over several years (stocks, RSUs)
   - Some companies offer long-term incentives through company stock.
 
-- **work-life integration** (n) – balancing work with personal life  
+- **work-life integration** (n) – balancing work with personal life
   - I value companies that support healthy work-life integration.
 
-- **upward mobility** (n) – ability to move to higher positions  
+- **upward mobility** (n) – ability to move to higher positions
   - I’m looking for a role with good upward mobility.
 
-- **market rate** (n) – average salary for similar positions in the industry  
+- **market rate** (n) – average salary for similar positions in the industry
   - I researched the market rate before negotiating my salary.
 
-- **professional development** (n) – continuous improvement of skills  
+- **professional development** (n) – continuous improvement of skills
   - The company supports professional development through training budgets.
 
 ## 2) Collocations, Chunking & Advanced Phrases
 
 ### Strong Collocations
+
 - negotiate compensation
 - evaluate job offers
 - consider long-term growth
@@ -57,6 +58,7 @@ description: Talk confidently about your current job, salary structure, how you 
 - invest in professional development
 
 ### Useful Chunking & Sentence Starters (B2 level)
+
 - In terms of compensation, …
 - When evaluating a job offer, I consider…
 - My current role offers…
@@ -67,6 +69,7 @@ description: Talk confidently about your current job, salary structure, how you 
 - Career progression is important to me because…
 
 ### Advanced Phrasal Verbs
+
 - **look into** → I always look into the company’s growth prospects.
 - **weigh up** → I weigh up salary against career growth opportunities.
 - **trade off** → Sometimes you have to trade off higher salary for better work-life balance.
@@ -99,12 +102,14 @@ Evaluating job offers is more complex than simply comparing salaries. Profession
 ## 5) List of Questions + Ideas
 
 ### Basic to Intermediate
+
 1. Can you describe your current compensation package?
 2. What do you like and dislike about your current job?
 3. How do you evaluate a new job offer?
 4. What is most important to you in a job?
 
 ### B2-Level Expanded Questions
+
 5. How do you compare base salary versus total compensation?
 6. What role does career progression play in your job decisions?
 7. Have you ever negotiated salary? How did it go?
@@ -113,6 +118,7 @@ Evaluating job offers is more complex than simply comparing salaries. Profession
 10. Where do you see your career in the next 2–3 years?
 
 ### Discussion & Critical Thinking
+
 11. Is a high salary more important than career growth? Why or why not?
 12. How has the shift from remote to office work affected your view on compensation?
 13. Should companies offer more benefits instead of higher salaries?

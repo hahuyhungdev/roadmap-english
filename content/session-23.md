@@ -2,7 +2,7 @@
 sessionNumber: 23
 title: Failure, Mistakes & Lessons Learned
 topic: Resilience & Learning from Failure
-phase: PHASE 4 — Behavioral & Culture Fit Mastery
+phase: PHASE 4 — Behavioral & Culture Fit
 level: B1+ / B2
 description: Talk about a failure or mistake you made, what you learned, and how you improved afterward.
 ---
@@ -15,25 +15,25 @@ description: Talk about a failure or mistake you made, what you learned, and how
 ## 1) Vocabulary & Collocations
 
 - **setback** (n) – a problem that delays or stops progress  
-  *Example:* That bug was a major setback, but we learned from it.
+  _Example:_ That bug was a major setback, but we learned from it.
 
 - **mistake** (n) – an error or wrong action  
-  *Example:* I made a mistake by not testing thoroughly before release.
+  _Example:_ I made a mistake by not testing thoroughly before release.
 
 - **lesson learned** (n) – useful knowledge gained from an experience  
-  *Example:* The most important lesson learned was the value of automated testing.
+  _Example:_ The most important lesson learned was the value of automated testing.
 
 - **accountability** (n) – willingness to accept responsibility  
-  *Example:* I took full accountability for the issue.
+  _Example:_ I took full accountability for the issue.
 
 - **resilience** (n) – the ability to recover quickly from difficulties  
-  *Example:* This experience strengthened my resilience.
+  _Example:_ This experience strengthened my resilience.
 
 - **root cause** (n) – the fundamental reason for a problem  
-  *Example:* We spent time identifying the root cause of the failure.
+  _Example:_ We spent time identifying the root cause of the failure.
 
 - **prevent recurrence** (v) – to stop something from happening again  
-  *Example:* We implemented new processes to prevent recurrence.
+  _Example:_ We implemented new processes to prevent recurrence.
 
 ## 2) Useful Phrases & Patterns
 
@@ -66,12 +66,14 @@ Interviewers ask about failure to evaluate your honesty, accountability, and gro
 ## 5) List of Questions + Ideas
 
 ### Common Questions
+
 1. Tell me about a time you failed.
 2. What is the biggest mistake you’ve made at work?
 3. How do you handle failure?
 4. Describe a difficult situation and how you overcame it.
 
 ### B2-Level Expanded
+
 5. What did you learn from that failure?
 6. How did the mistake affect the team or company?
 7. Have you made the same mistake again?
@@ -80,6 +82,7 @@ Interviewers ask about failure to evaluate your honesty, accountability, and gro
 10. How has your attitude toward failure changed over time?
 
 ### Discussion & Best Practices
+
 11. Why is it important to talk about failure in interviews?
 12. How much detail should you give about the mistake?
 13. What makes a failure answer strong?

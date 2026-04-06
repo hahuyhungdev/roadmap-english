@@ -2,7 +2,7 @@
 sessionNumber: 22
 title: Working Under Pressure & Tight Deadlines
 topic: Handling Pressure & Prioritization
-phase: PHASE 4 — Behavioral & Culture Fit Mastery
+phase: PHASE 4 — Behavioral & Culture Fit
 level: B1+ / B2
 description: Discuss how you handle tight deadlines, high pressure situations, and manage priorities effectively.
 ---
@@ -15,25 +15,25 @@ description: Discuss how you handle tight deadlines, high pressure situations, a
 ## 1) Vocabulary & Collocations
 
 - **tight deadline** (n) – a very short or strict time limit  
-  *Example:* We had to deliver the feature under a tight deadline of only two weeks.
+  _Example:_ We had to deliver the feature under a tight deadline of only two weeks.
 
 - **high-pressure situation** (n) – a stressful and demanding circumstance  
-  *Example:* I stay calm even in high-pressure situations.
+  _Example:_ I stay calm even in high-pressure situations.
 
 - **prioritization** (n) – the act of deciding what is most important  
-  *Example:* Good prioritization helped us meet the deadline successfully.
+  _Example:_ Good prioritization helped us meet the deadline successfully.
 
 - **time management** (n) – the ability to use time effectively  
-  *Example:* Strong time management skills are essential when working under pressure.
+  _Example:_ Strong time management skills are essential when working under pressure.
 
 - **stress management** (n) – techniques to handle and reduce stress  
-  *Example:* I practice simple stress management techniques like short breaks.
+  _Example:_ I practice simple stress management techniques like short breaks.
 
 - **deliver under pressure** (v) – to successfully complete work despite difficulties  
-  *Example:* I can deliver high-quality work even under pressure.
+  _Example:_ I can deliver high-quality work even under pressure.
 
 - **scope creep** (n) – when project requirements keep increasing unexpectedly  
-  *Example:* We had to manage scope creep carefully to meet the deadline.
+  _Example:_ We had to manage scope creep carefully to meet the deadline.
 
 ## 2) Useful Phrases & Patterns
 
@@ -55,7 +55,7 @@ description: Discuss how you handle tight deadlines, high pressure situations, a
 **You:**  
 Last year, our team had to deliver a major dashboard redesign for an important client in only three weeks instead of the planned six weeks. The situation was very challenging because we also had other ongoing sprint tasks.
 
-My task was to lead the frontend implementation. To handle this, I first broke down the project into smaller milestones and reprioritized tasks based on business impact. I worked closely with the backend team to identify what could be delivered in the first version and what could be added later. 
+My task was to lead the frontend implementation. To handle this, I first broke down the project into smaller milestones and reprioritized tasks based on business impact. I worked closely with the backend team to identify what could be delivered in the first version and what could be added later.
 
 I stayed focused by using daily stand-ups to track progress and blocked time for deep work. When I felt stressed, I made sure to take short breaks and maintain clear communication with my manager about realistic expectations.
 
@@ -68,12 +68,14 @@ Working under pressure is common in the tech industry. Interviewers want to know
 ## 5) List of Questions + Ideas
 
 ### Common Questions
+
 1. Tell me about a time you worked under a tight deadline.
 2. How do you handle pressure?
 3. Describe a stressful situation at work.
 4. How do you prioritize tasks when everything is urgent?
 
 ### B2-Level Expanded
+
 5. What do you do when you have multiple deadlines at the same time?
 6. How do you communicate with your manager when you’re under pressure?
 7. Have you ever missed a deadline? What happened?
@@ -82,6 +84,7 @@ Working under pressure is common in the tech industry. Interviewers want to know
 10. How has your ability to handle pressure improved over time?
 
 ### Discussion & Best Practices
+
 11. Why do companies ask about working under pressure?
 12. What is the difference between good stress and bad stress?
 13. How honest should you be about feeling overwhelmed?

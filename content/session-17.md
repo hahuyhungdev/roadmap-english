@@ -2,7 +2,7 @@
 sessionNumber: 17
 title: Work Culture, Performance Pressure & Mental Health in Tech
 topic: Sustainable Work Culture & Mental Fitness
-phase: PHASE 3 — Discussion & Impact Mastery
+phase: PHASE 3 — Discussion & Impact
 level: B1+ / B2
 description: Discuss the high-pressure work culture in tech, performance expectations, burnout risks, and how both companies and individuals can promote mental fitness and sustainable careers.
 ---

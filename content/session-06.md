@@ -2,7 +2,7 @@
 sessionNumber: 6
 title: Full Combined Explanation of Your Work
 topic: Integrated Speaking Practice
-phase: PHASE 1 — TECH EXPLAIN MASTERY
+phase: PHASE 1 — TECH EXPLAIN
 level: B1+ / B2
 description: Deliver a fluent, well-structured 3–5 minute explanation that integrates your role, system, daily work, tools, features, and challenges while expanding into new aspects such as business context, user impact, team dynamics, and future improvements.
 ---
@@ -15,48 +15,49 @@ description: Deliver a fluent, well-structured 3–5 minute explanation that int
 ## 1) Vocabulary & Collocations
 
 - **stakeholder alignment** (n) – making sure all involved parties agree on goals and priorities  
-  *Example:* Regular stakeholder alignment helps avoid misunderstandings and keeps the project on track.  
-  *Example:* Good stakeholder alignment is crucial when priorities change during a sprint.
+  _Example:_ Regular stakeholder alignment helps avoid misunderstandings and keeps the project on track.  
+  _Example:_ Good stakeholder alignment is crucial when priorities change during a sprint.
 
 - **user adoption** (n) – how willingly and effectively users start using the system  
-  *Example:* High user adoption shows that the interface is intuitive and useful.  
-  *Example:* We measure user adoption through login frequency and feature usage data.
+  _Example:_ High user adoption shows that the interface is intuitive and useful.  
+  _Example:_ We measure user adoption through login frequency and feature usage data.
 
 - **operational excellence** (n) – achieving superior performance in day-to-day business activities  
-  *Example:* Our system contributes directly to operational excellence by reducing manual work.  
-  *Example:* The team aims for operational excellence through continuous process improvement.
+  _Example:_ Our system contributes directly to operational excellence by reducing manual work.  
+  _Example:_ The team aims for operational excellence through continuous process improvement.
 
 - **technical debt** (n) – the future cost created by choosing quick solutions now  
-  *Example:* We try to minimize technical debt by writing clean and maintainable code.  
-  *Example:* Accumulating too much technical debt can slow down future development.
+  _Example:_ We try to minimize technical debt by writing clean and maintainable code.  
+  _Example:_ Accumulating too much technical debt can slow down future development.
 
 - **knowledge sharing** (n) – the practice of exchanging skills and information within the team  
-  *Example:* Knowledge sharing sessions help junior developers grow faster.  
-  *Example:* We encourage knowledge sharing through code reviews and internal seminars.
+  _Example:_ Knowledge sharing sessions help junior developers grow faster.  
+  _Example:_ We encourage knowledge sharing through code reviews and internal seminars.
 
 - **measurable outcome** (n) – a result that can be clearly measured with numbers  
-  *Example:* We always track measurable outcomes such as reduced loading time or increased user satisfaction.  
-  *Example:* The project delivered measurable outcomes in both performance and user productivity.
+  _Example:_ We always track measurable outcomes such as reduced loading time or increased user satisfaction.  
+  _Example:_ The project delivered measurable outcomes in both performance and user productivity.
 
 - **adaptability** (n) – the ability to adjust quickly to new situations or requirements  
-  *Example:* Frontend work requires high adaptability because business needs change often.  
-  *Example:* Adaptability is one of the most important skills in a fast-moving tech environment.
+  _Example:_ Frontend work requires high adaptability because business needs change often.  
+  _Example:_ Adaptability is one of the most important skills in a fast-moving tech environment.
 
 - **holistic view** (n) – understanding the whole system instead of focusing on just one part  
-  *Example:* Taking a holistic view helps me make better long-term decisions.  
-  *Example:* A holistic view prevents small fixes from creating bigger problems later.
+  _Example:_ Taking a holistic view helps me make better long-term decisions.  
+  _Example:_ A holistic view prevents small fixes from creating bigger problems later.
 
 - **continuous improvement** (n) – the ongoing effort to make things better  
-  *Example:* Continuous improvement is part of our Agile process through regular retrospectives.  
-  *Example:* We believe in continuous improvement both in code and in team processes.
+  _Example:_ Continuous improvement is part of our Agile process through regular retrospectives.  
+  _Example:_ We believe in continuous improvement both in code and in team processes.
 
 - **value proposition** (n) – the promise of value that the product or system offers to users  
-  *Example:* A strong value proposition is what makes users choose and continue using our platform.  
-  *Example:* We constantly work to strengthen the value proposition through better user experience.
+  _Example:_ A strong value proposition is what makes users choose and continue using our platform.  
+  _Example:_ We constantly work to strengthen the value proposition through better user experience.
 
 ## 2) Collocations, Chunking & Advanced Phrases
 
 ### Strong Collocations
+
 - achieve stakeholder alignment
 - drive user adoption
 - reduce technical debt
@@ -70,6 +71,7 @@ description: Deliver a fluent, well-structured 3–5 minute explanation that int
 - bridge technical and business needs
 
 ### Powerful Transition Phrases (for fluent long speaking)
+
 - Building on that…
 - Looking at the bigger picture…
 - What ties everything together is…
@@ -80,6 +82,7 @@ description: Deliver a fluent, well-structured 3–5 minute explanation that int
 - Ultimately, the goal is to…
 
 ### Advanced Phrasal Verbs & Expressions
+
 - **bring together** → My role helps bring together design, technology, and business needs.
 - **account for** → We must account for different user skill levels when designing features.
 - **feed into** → User feedback feeds directly into our next sprint planning.
@@ -124,11 +127,13 @@ Taking a holistic view helps me make better decisions that benefit both users an
 ## 5) List of Questions + Ideas
 
 ### Core Combined Questions
+
 1. Give a full overview of your role and how it connects to the system and business goals.
 2. Explain your work by combining your responsibilities, tools, features, challenges, and future plans.
 3. Describe your contribution from both technical and business perspectives.
 
 ### Expanded & Deeper Questions (B2 level)
+
 4. How does your work influence user adoption and operational excellence?
 5. How do you balance short-term delivery with long-term maintainability?
 6. What role does knowledge sharing and continuous improvement play in your team?
@@ -136,6 +141,7 @@ Taking a holistic view helps me make better decisions that benefit both users an
 8. Looking at the bigger picture, how does your work strengthen the overall value proposition?
 
 ### Discussion & Extension Questions
+
 9. Which aspects of your work have the greatest impact on measurable business outcomes?
 10. How important is adaptability when business requirements keep changing?
 11. If you could improve one thing about the current system or process, what would it be?

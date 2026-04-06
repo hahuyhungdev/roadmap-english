@@ -2,7 +2,7 @@
 sessionNumber: 3
 title: A Typical Day & Daily Tasks
 topic: Daily Work & Responsibilities
-phase: PHASE 1 — TECH EXPLAIN MASTERY
+phase: PHASE 1 — TECH EXPLAIN
 level: B1+
 description: Describe your typical workday, common tasks, tools you use, and how you collaborate with the team.
 ---
@@ -15,40 +15,41 @@ description: Describe your typical workday, common tasks, tools you use, and how
 ## 1) Vocabulary & Collocations
 
 - **task** (n) – a piece of work that needs to be done  
-  *Example:* One of my daily tasks is implementing new UI components.  
-  *Example:* I prioritize my tasks at the beginning of each day.
+  _Example:_ One of my daily tasks is implementing new UI components.  
+  _Example:_ I prioritize my tasks at the beginning of each day.
 
 - **meeting** (n) – a planned discussion with colleagues  
-  *Example:* We have a short daily stand-up meeting every morning.  
-  *Example:* I attend sprint planning meetings to discuss the next tasks.
+  _Example:_ We have a short daily stand-up meeting every morning.  
+  _Example:_ I attend sprint planning meetings to discuss the next tasks.
 
 - **code review** (n) – the process of checking other people’s code  
-  *Example:* I participate in code reviews to maintain high quality.  
-  *Example:* Code reviews help the whole team learn from each other.
+  _Example:_ I participate in code reviews to maintain high quality.  
+  _Example:_ Code reviews help the whole team learn from each other.
 
 - **bug** (n) – an error or problem in the application  
-  *Example:* I spend time fixing bugs reported by users.  
-  *Example:* Some bugs are related to how the page looks on mobile devices.
+  _Example:_ I spend time fixing bugs reported by users.  
+  _Example:_ Some bugs are related to how the page looks on mobile devices.
 
 - **sprint** (n) – a short period of work (usually 1–2 weeks) in Agile  
-  *Example:* We work in two-week sprints.  
-  *Example:* At the end of each sprint, we deliver completed features.
+  _Example:_ We work in two-week sprints.  
+  _Example:_ At the end of each sprint, we deliver completed features.
 
 - **tool** (n) – software or program used to do a job  
-  *Example:* VS Code is my main coding tool.  
-  *Example:* We use Jira to track tasks and manage the project.
+  _Example:_ VS Code is my main coding tool.  
+  _Example:_ We use Jira to track tasks and manage the project.
 
 - **collaboration** (n) – working together with others  
-  *Example:* Good collaboration is essential for successful projects.  
-  *Example:* Collaboration with the design team helps create better interfaces.
+  _Example:_ Good collaboration is essential for successful projects.  
+  _Example:_ Collaboration with the design team helps create better interfaces.
 
 - **productivity** (n) – how efficiently and effectively you work  
-  *Example:* I try to maintain high productivity throughout the day.  
-  *Example:* Good tools help increase team productivity.
+  _Example:_ I try to maintain high productivity throughout the day.  
+  _Example:_ Good tools help increase team productivity.
 
 ## 2) Collocations, Chunking & Phrasal Verbs
 
 ### Strong Collocations
+
 - attend meetings
 - implement new features
 - fix bugs
@@ -61,6 +62,7 @@ description: Describe your typical workday, common tasks, tools you use, and how
 - meet deadlines
 
 ### Useful Chunking & Sentence Starters
+
 - A typical day for me starts with…
 - Most of my time is spent on…
 - One of my main daily tasks is…
@@ -70,6 +72,7 @@ description: Describe your typical workday, common tasks, tools you use, and how
 - At the end of the day, I…
 
 ### Useful Phrasal Verbs
+
 - **work on** → I work on new features in the morning.
 - **deal with** → I often deal with unexpected bugs or issues.
 - **look into** → When a problem appears, I look into it right away.
@@ -102,12 +105,14 @@ A frontend developer’s typical day includes a mix of coding, meetings, code re
 ## 5) List of Questions + Ideas
 
 ### Basic Questions
+
 1. What does a typical workday look like for you?
 2. How do you usually start your day?
 3. What are your main daily tasks?
 4. What tools do you use every day?
 
 ### Deeper & Follow-up Questions
+
 5. How much time do you spend coding versus in meetings?
 6. How do you collaborate with other team members?
 7. What do you do when you face a difficult task?
@@ -116,6 +121,7 @@ A frontend developer’s typical day includes a mix of coding, meetings, code re
 10. How has your daily routine changed as you gained more experience?
 
 ### Objection & Discussion Questions
+
 11. Some people think developers only write code all day. What do you think?
 12. How important is communication in your daily work?
 13. What is the most challenging part of your typical day?

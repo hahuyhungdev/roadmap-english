@@ -2,7 +2,7 @@
 sessionNumber: 11
 title: Handling Production Issues & Incident Response
 topic: Production Incident & Post-Mortem
-phase: PHASE 2 — Problem-Solving Mastery
+phase: PHASE 2 — Problem-Solving
 level: B1+ / B2
 description: Describe a production issue you faced, explain how you handled it under pressure, describe your contribution, communication with stakeholders, and key lessons learned — using clear and professional B2-level language.
 ---

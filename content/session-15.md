@@ -2,7 +2,7 @@
 sessionNumber: 15
 title: Learning & Continuous Skill Development
 topic: Lifelong Learning in Tech
-phase: PHASE 3 — Discussion & Impact Mastery
+phase: PHASE 3 — Discussion & Impact
 level: B1+ / B2
 description: Discuss your learning habits, challenges in keeping up with technology, and your plans for professional development.
 ---
@@ -14,20 +14,21 @@ description: Discuss your learning habits, challenges in keeping up with technol
 
 ## 1) Vocabulary (Expanded & Sophisticated for B2)
 
-- **continuous learning** (n) – ongoing process of acquiring new knowledge  
-- **self-directed learning** (n) – learning by yourself without formal guidance  
-- **upskilling** (n) – improving current skills  
-- **reskilling** (n) – learning completely new skills  
-- **knowledge gap** (n) – area where you lack understanding  
-- **learning curve** (n) – time and effort needed to learn something new  
-- **mentorship** (n) – guidance from a more experienced person  
-- **hands-on practice** (n) – learning by doing real projects  
-- **online resources** (n) – learning materials available on the internet  
+- **continuous learning** (n) – ongoing process of acquiring new knowledge
+- **self-directed learning** (n) – learning by yourself without formal guidance
+- **upskilling** (n) – improving current skills
+- **reskilling** (n) – learning completely new skills
+- **knowledge gap** (n) – area where you lack understanding
+- **learning curve** (n) – time and effort needed to learn something new
+- **mentorship** (n) – guidance from a more experienced person
+- **hands-on practice** (n) – learning by doing real projects
+- **online resources** (n) – learning materials available on the internet
 - **professional growth** (n) – development of your career abilities
 
 ## 2) Collocations, Chunking & Advanced Phrases
 
 ### Strong Collocations
+
 - keep up with technology
 - invest in learning
 - bridge the knowledge gap
@@ -39,6 +40,7 @@ description: Discuss your learning habits, challenges in keeping up with technol
 - dedicate time to learning
 
 ### Useful Chunking & Sentence Starters
+
 - One of my biggest challenges is…
 - I usually learn new technologies by…
 - In my opinion, the best way to learn is…
@@ -67,12 +69,14 @@ In the technology industry, skills can become outdated very quickly. Successful 
 ## 5) List of Questions + Ideas
 
 ### Basic to Intermediate
+
 1. How do you usually learn new technologies?
 2. What skills are you learning right now?
 3. Do you prefer learning alone or with others?
 4. How many hours do you spend learning per week?
 
 ### B2-Level Expanded Questions
+
 5. What is the biggest challenge in continuous learning for you?
 6. How do you balance learning new skills with your daily work?
 7. What role does mentorship play in your learning journey?
@@ -81,6 +85,7 @@ In the technology industry, skills can become outdated very quickly. Successful 
 10. What is your learning plan for the next 12 months?
 
 ### Discussion & Critical Thinking
+
 11. Is self-learning more effective than formal education in tech?
 12. Should companies give employees dedicated time for learning?
 13. How can developers avoid feeling overwhelmed by too many new technologies?

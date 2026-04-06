@@ -2,7 +2,7 @@
 sessionNumber: 20
 title: Strengths, Weaknesses & Self-Awareness
 topic: Self-Reflection & Honesty
-phase: PHASE 4 — Behavioral & Culture Fit Mastery
+phase: PHASE 4 — Behavioral & Culture Fit
 level: B1+ / B2
 description: Discuss your professional strengths and weaknesses honestly with concrete examples and show how you are improving.
 ---
@@ -15,35 +15,37 @@ description: Discuss your professional strengths and weaknesses honestly with co
 ## 1) Vocabulary & Collocations
 
 - **self-awareness** (n) – understanding your own strengths and weaknesses  
-  *Example:* Self-awareness is one of the most important qualities I look for in myself and others.
+  _Example:_ Self-awareness is one of the most important qualities I look for in myself and others.
 
 - **core strength** (n) – a major or fundamental strength  
-  *Example:* One of my core strengths is my attention to detail in UI implementation.
+  _Example:_ One of my core strengths is my attention to detail in UI implementation.
 
 - **area for improvement** (n) – an aspect that needs to be developed further  
-  *Example:* Delegation is currently one of my areas for improvement.
+  _Example:_ Delegation is currently one of my areas for improvement.
 
 - **constructive feedback** (n) – helpful criticism intended to improve performance  
-  *Example:* I actively seek constructive feedback from senior developers.
+  _Example:_ I actively seek constructive feedback from senior developers.
 
 - **personal development** (n) – the process of improving yourself  
-  *Example:* Continuous personal development is essential in the fast-changing tech industry.
+  _Example:_ Continuous personal development is essential in the fast-changing tech industry.
 
 - **accountability** (n) – taking responsibility for your actions and results  
-  *Example:* I always take accountability when something goes wrong.
+  _Example:_ I always take accountability when something goes wrong.
 
 - **growth mindset** (n) – the belief that abilities can be developed through dedication  
-  *Example:* I have a growth mindset and view challenges as opportunities to learn.
+  _Example:_ I have a growth mindset and view challenges as opportunities to learn.
 - continuous self-improvement
 
 ## 2) Useful Phrases & Patterns
 
 ### Best Practices for Weaknesses:
+
 - Choose a real but non-critical weakness
 - Show self-awareness + action + progress
 - Never say “I’m a perfectionist” (too cliché)
 
 **Useful Patterns:**
+
 - "One of my key strengths is..."
 - "A weakness I’ve been working on is..."
 - "In the past, I struggled with..., but now I..."
@@ -68,12 +70,14 @@ Interviewers ask about strengths and weaknesses to assess your self-awareness an
 ## 5) List of Questions + Ideas
 
 ### Common Questions
+
 1. What are your strengths?
 2. What is your greatest weakness?
 3. How do you handle constructive criticism?
 4. What do your colleagues say about you?
 
 ### B2-Level Expanded
+
 5. Can you give an example of how you used your strength in a project?
 6. How has your weakness affected your work in the past?
 7. What steps have you taken to overcome your weakness?
@@ -82,6 +86,7 @@ Interviewers ask about strengths and weaknesses to assess your self-awareness an
 10. How do you measure your own progress?
 
 ### Discussion
+
 11. Why do interviewers ask about weaknesses?
 12. What makes a weakness answer convincing?
 13. How honest should you be?

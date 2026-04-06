@@ -2,7 +2,7 @@
 sessionNumber: 18
 title: Technology’s Impact on Society & Ethics
 topic: Tech, Society and Ethical Issues
-phase: PHASE 3 — Discussion & Impact Mastery
+phase: PHASE 3 — Discussion & Impact
 level: B1+ / B2
 description: Discuss the broader impact of technology and AI on society, including jobs, privacy, ethics, and the environment with balanced opinions.
 ---
@@ -14,20 +14,21 @@ description: Discuss the broader impact of technology and AI on society, includi
 
 ## 1) Vocabulary (Expanded & Sophisticated for B2)
 
-- **societal impact** (n) – effect on society as a whole  
-- **job displacement** (n) – loss of jobs due to technology  
-- **digital divide** (n) – gap between those who have access to technology and those who don’t  
-- **data privacy** (n) – protection of personal information  
-- **algorithmic bias** (n) – unfair results caused by AI systems  
-- **ethical dilemma** (n) – difficult moral choice  
-- **social media influence** (n) – power of platforms to shape opinions  
-- **environmental footprint** (n) – impact on the natural environment  
-- **responsible innovation** (n) – developing technology in an ethical way  
+- **societal impact** (n) – effect on society as a whole
+- **job displacement** (n) – loss of jobs due to technology
+- **digital divide** (n) – gap between those who have access to technology and those who don’t
+- **data privacy** (n) – protection of personal information
+- **algorithmic bias** (n) – unfair results caused by AI systems
+- **ethical dilemma** (n) – difficult moral choice
+- **social media influence** (n) – power of platforms to shape opinions
+- **environmental footprint** (n) – impact on the natural environment
+- **responsible innovation** (n) – developing technology in an ethical way
 - **digital well-being** (n) – healthy relationship with technology
 
 ## 2) Collocations, Chunking & Advanced Phrases
 
 ### Strong Collocations
+
 - create job displacement
 - raise ethical concerns
 - protect data privacy
@@ -38,6 +39,7 @@ description: Discuss the broader impact of technology and AI on society, includi
 - balance innovation and ethics
 
 ### Useful Chunking & Sentence Starters
+
 - On the positive side, technology has…
 - However, one major concern is…
 - In my opinion, we need to…
@@ -47,6 +49,7 @@ description: Discuss the broader impact of technology and AI on society, includi
 - I believe companies should take responsibility for…
 
 ### Advanced Phrasal Verbs
+
 - **bring about** → AI has brought about significant changes in the job market.
 - **deal with** → We must deal with issues of data privacy more seriously.
 - **call for** → Many experts are calling for stronger regulations on AI.
@@ -73,12 +76,14 @@ Modern technology, especially artificial intelligence, is reshaping society in p
 ## 5) List of Questions + Ideas
 
 ### Basic to Intermediate
+
 1. What are some positive impacts of technology on society?
 2. What are some negative impacts?
 3. How does AI affect jobs?
 4. Why is data privacy important?
 
 ### B2-Level Expanded Questions
+
 5. What is algorithmic bias and why does it matter?
 6. How can we reduce the digital divide?
 7. Should governments regulate AI more strictly?
@@ -87,9 +92,9 @@ Modern technology, especially artificial intelligence, is reshaping society in p
 10. Do you think technology overall makes society better or worse?
 
 ### Discussion & Critical Thinking
+
 11. Is it possible to have technological progress without ethical problems?
 12. Who should be responsible for the negative effects of technology — companies, governments, or users?
 13. How can we prepare the workforce for AI-driven job changes?
 14. Should there be limits on how much data companies can collect?
 15. What kind of future do you hope technology will create for society?
-

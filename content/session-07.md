@@ -2,7 +2,7 @@
 sessionNumber: 7
 title: Describe a Problem + Root Cause
 topic: Problem Identification & Root Cause Analysis
-phase: PHASE 2 — Problem-Solving Mastery
+phase: PHASE 2 — Problem-Solving
 level: B1+ / B2
 description: Describe a real technical or user-related problem in detail, analyze its root causes, and explain its impact on users and the business — using structured, professional B2-level language.
 ---

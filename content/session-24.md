@@ -2,7 +2,7 @@
 sessionNumber: 24
 title: Teamwork, Conflict, Initiative & Cultural Fit
 topic: Collaboration, Leadership & Company Values
-phase: PHASE 4 — Behavioral & Culture Fit Mastery
+phase: PHASE 4 — Behavioral & Culture Fit
 level: B1+ / B2
 description: Discuss teamwork, conflict resolution, initiative, and how you fit into a company’s culture.
 ---
@@ -15,25 +15,25 @@ description: Discuss teamwork, conflict resolution, initiative, and how you fit 
 ## 1) Vocabulary & Collocations
 
 - **team collaboration** (n) – working together effectively as a team  
-  *Example:* Successful projects require strong team collaboration.
+  _Example:_ Successful projects require strong team collaboration.
 
 - **conflict resolution** (n) – the process of solving disagreements  
-  *Example:* I prefer open discussion for conflict resolution.
+  _Example:_ I prefer open discussion for conflict resolution.
 
 - **take initiative** (v) – to act without being told what to do  
-  *Example:* I like to take initiative when I see opportunities for improvement.
+  _Example:_ I like to take initiative when I see opportunities for improvement.
 
 - **informal leadership** (n) – leading others without an official title  
-  *Example:* I have experience showing informal leadership in cross-functional projects.
+  _Example:_ I have experience showing informal leadership in cross-functional projects.
 
 - **cultural fit** (n) – how well a person matches a company’s values and culture  
-  *Example:* Cultural fit is very important to me when choosing a company.
+  _Example:_ Cultural fit is very important to me when choosing a company.
 
 - **constructive disagreement** (n) – healthy discussion with different opinions  
-  *Example:* I believe constructive disagreement leads to better decisions.
+  _Example:_ I believe constructive disagreement leads to better decisions.
 
 - **stakeholder management** (n) – handling relationships with people who have interest in a project  
-  *Example:* Good stakeholder management helped us align expectations.
+  _Example:_ Good stakeholder management helped us align expectations.
 
 ## 2) Useful Phrases & Patterns
 
@@ -66,12 +66,14 @@ Companies look for candidates who can work well in teams, handle disagreements p
 ## 5) List of Questions + Ideas
 
 ### Common Questions
+
 1. Tell me about a time you worked successfully in a team.
 2. Describe a conflict you had with a colleague and how you resolved it.
 3. Give an example of when you took initiative.
 4. How would your teammates describe you?
 
 ### B2-Level Expanded
+
 5. How do you handle different working styles in a team?
 6. What do you do when you disagree with your manager?
 7. How do you contribute to a positive team culture?
@@ -80,7 +82,7 @@ Companies look for candidates who can work well in teams, handle disagreements p
 10. How important is cultural fit for you?
 
 ### Discussion & Best Practices
+
 11. How to show leadership without a formal title?
 12. What makes a good team player?
 13. How to answer “How do you handle conflict?” positively?
-

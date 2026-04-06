@@ -2,7 +2,7 @@
 sessionNumber: 8
 title: Explain a Solution + Decision
 topic: Solution Design & Decision Making
-phase: PHASE 2 — Problem-Solving Mastery
+phase: PHASE 2 — Problem-Solving
 level: B1+ / B2
 description: Explain the solution you implemented, the reasoning behind key decisions, trade-offs considered, and the final results — using professional B2-level language.
 ---

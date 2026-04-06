@@ -2,7 +2,7 @@
 sessionNumber: 9
 title: Trade-offs & Evaluation
 topic: Decision Making & Critical Thinking
-phase: PHASE 2 — Problem-Solving Mastery
+phase: PHASE 2 — Problem-Solving
 level: B1+ / B2
 description: Discuss real trade-offs in frontend development, explain the reasoning behind choices, evaluate different options, and reflect on outcomes using professional B2-level language.
 ---

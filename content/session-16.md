@@ -2,7 +2,7 @@
 sessionNumber: 16
 title: The Future of Software Engineering Jobs in the AI Era
 topic: AI Impact on Developer Roles & Career
-phase: PHASE 3 — Discussion & Impact Mastery
+phase: PHASE 3 — Discussion & Impact
 level: B1+ / B2
 description: Discuss how AI is transforming software engineering jobs, especially frontend development, the skills needed in the future, opportunities vs risks, and your personal preparation strategy — with balanced, thoughtful B2-level opinions.
 ---

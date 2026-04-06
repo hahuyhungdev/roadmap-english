@@ -2,7 +2,7 @@
 sessionNumber: 10
 title: Performance / Cost Scenario
 topic: Performance Optimization & Cost Awareness
-phase: PHASE 2 — Problem-Solving Mastery
+phase: PHASE 2 — Problem-Solving
 level: B1+ / B2
 description: Discuss performance issues and cost implications in a real enterprise scenario, explain optimization strategies, and show awareness of business impact (speed vs cost, scale vs budget).
 ---

@@ -2,7 +2,7 @@
 sessionNumber: 12
 title: Defend Your Decision
 topic: Justification & Handling Objections
-phase: PHASE 2 — Problem-Solving Mastery
+phase: PHASE 2 — Problem-Solving
 level: B1+ / B2
 description: Explain and strongly defend a technical decision you made, anticipate and respond to objections from stakeholders, and justify your choice with clear reasoning and business impact — at B2 level.
 ---

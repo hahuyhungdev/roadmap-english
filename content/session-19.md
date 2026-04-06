@@ -2,7 +2,7 @@
 sessionNumber: 19
 title: Tell Me About Yourself & Professional Journey
 topic: Professional Introduction & Storytelling
-phase: PHASE 4 — Behavioral & Culture Fit Mastery
+phase: PHASE 4 — Behavioral & Culture Fit
 level: B1+ / B2
 description: Master the most common opening interview question with a clear, structured, and engaging self-introduction at B2 level.
 ---
@@ -15,37 +15,39 @@ description: Master the most common opening interview question with a clear, str
 ## 1) Vocabulary & Collocations
 
 - **professional journey** (n) – the path and development of your career over time  
-  *Example:* My professional journey has taken me from a junior frontend developer to handling end-to-end feature development.
+  _Example:_ My professional journey has taken me from a junior frontend developer to handling end-to-end feature development.
 
 - **relevant experience** (n) – work experience that relates directly to the current role  
-  *Example:* I have relevant experience in building scalable user interfaces for enterprise applications.
+  _Example:_ I have relevant experience in building scalable user interfaces for enterprise applications.
 
 - **key achievement** (n) – an important success or accomplishment in your work  
-  *Example:* One of my key achievements was reducing page load time by 65%.
+  _Example:_ One of my key achievements was reducing page load time by 65%.
 
 - **career transition** (n) – a change from one job or role to another  
-  *Example:* My career transition from remote work to a full-office environment taught me a lot about collaboration.
+  _Example:_ My career transition from remote work to a full-office environment taught me a lot about collaboration.
 
 - **cross-functional collaboration** (n) – working effectively with different teams (backend, design, product, etc.)  
-  *Example:* I enjoy cross-functional collaboration because it helps deliver better products.
+  _Example:_ I enjoy cross-functional collaboration because it helps deliver better products.
 
 - **hands-on experience** (n) – practical, direct experience doing the work  
-  *Example:* I gained hands-on experience with AWS deployment and CI/CD pipelines.
+  _Example:_ I gained hands-on experience with AWS deployment and CI/CD pipelines.
 
 - **upward mobility** (n) – the possibility to advance to higher positions  
-  *Example:* I’m looking for a company that offers clear upward mobility.
+  _Example:_ I’m looking for a company that offers clear upward mobility.
 
 - **professional background** (n) – your overall work history and qualifications  
-  *Example:* Let me briefly summarize my professional background.
+  _Example:_ Let me briefly summarize my professional background.
 
 ## 2) Useful Phrases & Patterns
 
 ### Best Structure (Present-Past-Future)
+
 - **Present**: Current role + what you do
 - **Past**: Relevant experience & achievements
 - **Future**: Why this role/company + enthusiasm
 
 **Key Phrases:**
+
 - "Currently, I work as a Frontend Engineer at..."
 - "In my previous role, I was responsible for..."
 - "One of my key achievements was..."
@@ -54,6 +56,7 @@ description: Master the most common opening interview question with a clear, str
 - "I'm excited about the opportunity to contribute to..."
 
 ### Advanced Sentence Starters
+
 - Over the past X years, I have...
 - What drives me in my career is...
 - Moving forward, I’m looking for an opportunity where...
@@ -65,7 +68,7 @@ description: Master the most common opening interview question with a clear, str
 **Interviewer:** Tell me about yourself.
 
 **You:**  
-Thank you for the opportunity. Currently, I’m a Frontend Engineer at [Company], where I focus on building responsive and high-performance user interfaces using React. 
+Thank you for the opportunity. Currently, I’m a Frontend Engineer at [Company], where I focus on building responsive and high-performance user interfaces using React.
 
 In the past three years, I’ve worked on several end-to-end features, including payment flows and dashboard systems. One of my key achievements was optimizing a slow checkout process, which reduced loading time by over 60% and improved user conversion. Before that, I worked remotely for a Singapore-based company, where I gained valuable experience collaborating with international teams across different time zones.
 
@@ -78,12 +81,14 @@ A strong “Tell me about yourself” answer should be structured, concise, and 
 ## 5) List of Questions + Ideas
 
 ### Common Variations
+
 1. Walk me through your resume.
 2. Tell me about your professional background.
 3. How would you describe your career so far?
 4. What should I know about you that’s not on your CV?
 
 ### B2-Level Follow-ups
+
 5. Why did you move from your previous company?
 6. What are you most proud of in your career?
 7. How does your experience align with this role?
@@ -92,6 +97,7 @@ A strong “Tell me about yourself” answer should be structured, concise, and 
 10. Why are you interested in our company?
 
 ### Discussion & Practice
+
 11. What makes a good self-introduction?
 12. How long should the answer be? (Best practice: 1.5 – 2.5 minutes)
 13. How do you avoid sounding like you’re reading from a script?

@@ -2,7 +2,7 @@
 sessionNumber: 5
 title: Main Features & Functionalities
 topic: System Features
-phase: PHASE 1 — TECH EXPLAIN MASTERY
+phase: PHASE 1 — TECH EXPLAIN
 level: B1+
 description: Explain the key features of the system you work on, focusing on what they do, who benefits, and why they matter (high-level, user & business focused).
 ---
@@ -15,40 +15,41 @@ description: Explain the key features of the system you work on, focusing on wha
 ## 1) Vocabulary & Collocations
 
 - **feature** (n) – a specific function or capability of the system  
-  *Example:* One of the most useful features is the real-time dashboard.  
-  *Example:* We recently added a new search feature based on user feedback.
+  _Example:_ One of the most useful features is the real-time dashboard.  
+  _Example:_ We recently added a new search feature based on user feedback.
 
 - **functionality** (n) – the set of functions that the system can perform  
-  *Example:* The core functionality allows users to manage orders easily.  
-  *Example:* This functionality saves a lot of manual work for the team.
+  _Example:_ The core functionality allows users to manage orders easily.  
+  _Example:_ This functionality saves a lot of manual work for the team.
 
 - **dashboard** (n) – a visual screen that shows important information  
-  *Example:* The main dashboard displays key metrics at a glance.  
-  *Example:* Users can customize their own dashboard according to their needs.
+  _Example:_ The main dashboard displays key metrics at a glance.  
+  _Example:_ Users can customize their own dashboard according to their needs.
 
 - **real-time** (adj) – happening immediately without delay  
-  *Example:* The system provides real-time updates on order status.  
-  *Example:* Real-time notifications help users stay informed.
+  _Example:_ The system provides real-time updates on order status.  
+  _Example:_ Real-time notifications help users stay informed.
 
 - **search functionality** (n) – the ability to find information quickly  
-  *Example:* The advanced search functionality supports multiple filters.  
-  *Example:* Good search functionality greatly improves user productivity.
+  _Example:_ The advanced search functionality supports multiple filters.  
+  _Example:_ Good search functionality greatly improves user productivity.
 
 - **notification** (n) – an alert or message that informs the user  
-  *Example:* The system sends automatic notifications when tasks need attention.  
-  *Example:* We reduced unnecessary notifications to avoid disturbing users.
+  _Example:_ The system sends automatic notifications when tasks need attention.  
+  _Example:_ We reduced unnecessary notifications to avoid disturbing users.
 
 - **workflow** (n) – the sequence of steps needed to complete a task  
-  *Example:* The new approval workflow makes the process much faster.  
-  *Example:* We simplified the workflow to reduce errors and save time.
+  _Example:_ The new approval workflow makes the process much faster.  
+  _Example:_ We simplified the workflow to reduce errors and save time.
 
 - **user benefit** (n) – the advantage that users gain from a feature  
-  *Example:* This feature provides clear user benefits by saving time.  
-  *Example:* We always consider user benefits when designing new functionality.
+  _Example:_ This feature provides clear user benefits by saving time.  
+  _Example:_ We always consider user benefits when designing new functionality.
 
 ## 2) Collocations, Chunking & Phrasal Verbs
 
 ### Strong Collocations
+
 - key features
 - core functionality
 - real-time updates
@@ -61,6 +62,7 @@ description: Explain the key features of the system you work on, focusing on wha
 - deliver business value
 
 ### Useful Chunking & Sentence Starters
+
 - One of the main features is…
 - This feature allows users to…
 - The most important functionality is…
@@ -71,6 +73,7 @@ description: Explain the key features of the system you work on, focusing on wha
 - In practice, users can…
 
 ### Useful Phrasal Verbs
+
 - **log in** → Users log in to access their personalized dashboard.
 - **look up** → Employees can quickly look up information.
 - **keep up with** → The system helps teams keep up with changes in real time.
@@ -103,12 +106,14 @@ The system includes many useful features designed to make daily work easier. The
 ## 5) List of Questions + Ideas
 
 ### Basic Questions
+
 1. What are the main features of the system?
 2. Can you describe the dashboard?
 3. What is the most useful feature?
 4. Does the system have real-time functions?
 
 ### Deeper & Follow-up Questions
+
 5. How does the search feature work?
 6. Who benefits most from these features?
 7. How do these features improve productivity?
@@ -117,6 +122,7 @@ The system includes many useful features designed to make daily work easier. The
 10. How do features contribute to business goals?
 
 ### Objection & Discussion Questions
+
 11. Some people say too many features make a system complicated. What do you think?
 12. How would you explain the main features to a new user?
 13. Why is real-time functionality important?

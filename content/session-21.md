@@ -2,7 +2,7 @@
 sessionNumber: 21
 title: Career Goals, Ambition & Why This Company
 topic: Future Plans & Company Fit
-phase: PHASE 4 — Behavioral & Culture Fit Mastery
+phase: PHASE 4 — Behavioral & Culture Fit
 level: B1+ / B2
 description: Discuss your career goals, ambition, reasons for choosing the company, and what kind of environment you thrive in.
 ---
@@ -15,25 +15,25 @@ description: Discuss your career goals, ambition, reasons for choosing the compa
 ## 1) Vocabulary & Collocations
 
 - **short-term goal** (n) – an objective you want to achieve soon (1–2 years)  
-  *Example:* My short-term goal is to become a Senior Frontend Engineer.
+  _Example:_ My short-term goal is to become a Senior Frontend Engineer.
 
 - **long-term aspiration** (n) – a big goal or dream for the future  
-  *Example:* My long-term aspiration is to move into a technical leadership role.
+  _Example:_ My long-term aspiration is to move into a technical leadership role.
 
 - **career advancement** (n) – progress and promotion in your career  
-  *Example:* I’m looking for a role that offers clear career advancement opportunities.
+  _Example:_ I’m looking for a role that offers clear career advancement opportunities.
 
 - **company culture** (n) – the values, behaviors, and environment of a company  
-  *Example:* I thrive in a company culture that values collaboration and innovation.
+  _Example:_ I thrive in a company culture that values collaboration and innovation.
 
 - **growth opportunity** (n) – chance to develop and learn new skills  
-  *Example:* This position offers excellent growth opportunities in AI integration.
+  _Example:_ This position offers excellent growth opportunities in AI integration.
 
 - **meaningful contribution** (n) – a valuable and significant impact on the company  
-  *Example:* I want to make a meaningful contribution to product development.
+  _Example:_ I want to make a meaningful contribution to product development.
 
 - **work environment** (n) – the conditions and atmosphere in which you work  
-  *Example:* I perform best in a supportive and fast-paced work environment.
+  _Example:_ I perform best in a supportive and fast-paced work environment.
 
 ## 2) Useful Phrases & Patterns
 
@@ -51,11 +51,11 @@ description: Discuss your career goals, ambition, reasons for choosing the compa
 **Interviewer:** Where do you see yourself in 3–5 years? Why do you want to join our company?
 
 **You:**  
-In the short term, within the next 2 years, I want to grow into a Senior Frontend Engineer role, where I can take more ownership of system architecture and mentor junior developers. 
+In the short term, within the next 2 years, I want to grow into a Senior Frontend Engineer role, where I can take more ownership of system architecture and mentor junior developers.
 
 In the long term, I aspire to move into a Tech Lead or Frontend Architect position, where I can influence technical decisions at a higher level while still staying close to hands-on development.
 
-I’m interested in your company because of its strong reputation for building scalable, user-focused products and its commitment to innovation. I’ve been impressed by how your team uses modern technologies and encourages cross-functional collaboration. 
+I’m interested in your company because of its strong reputation for building scalable, user-focused products and its commitment to innovation. I’ve been impressed by how your team uses modern technologies and encourages cross-functional collaboration.
 
 Additionally, I value the hybrid working model your company offers, as it aligns with my preference for both focused individual work and regular team interaction. I believe my frontend experience combined with my collaborative mindset would allow me to contribute meaningfully to your upcoming projects while growing together with the team.
 
@@ -66,12 +66,14 @@ When answering career goals and “Why this company?”, interviewers want to se
 ## 5) List of Questions + Ideas
 
 ### Common Questions
+
 1. Where do you see yourself in 3–5 years?
 2. Why do you want to work for us?
 3. What are your career goals?
 4. Why are you leaving your current job?
 
 ### B2-Level Expanded
+
 5. What kind of work environment do you thrive in?
 6. How does this role fit into your long-term plans?
 7. What are your salary expectations?
@@ -80,6 +82,7 @@ When answering career goals and “Why this company?”, interviewers want to se
 10. What questions do you have for us?
 
 ### Discussion & Best Practices
+
 11. How specific should your goals be?
 12. How to answer salary expectations professionally?
 13. How to show enthusiasm without sounding desperate?

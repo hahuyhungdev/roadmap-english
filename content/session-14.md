@@ -2,7 +2,7 @@
 sessionNumber: 14
 title: Impact of AI & New Technologies on Frontend Development
 topic: AI’s Influence on Frontend Work
-phase: PHASE 3 — Discussion & Impact Mastery
+phase: PHASE 3 — Discussion & Impact
 level: B1+ / B2
 description: Discuss how AI is changing frontend development, productivity, required skills, and the future of the profession with balanced opinions.
 ---
@@ -14,20 +14,21 @@ description: Discuss how AI is changing frontend development, productivity, requ
 
 ## 1) Vocabulary (Expanded & Sophisticated for B2)
 
-- **AI-assisted development** (n) – using AI tools to help write code  
-- **productivity boost** (n) – significant increase in work efficiency  
-- **code generation** (n) – AI creating code automatically  
-- **prompt engineering** (n) – skill of writing good instructions for AI  
-- **human oversight** (n) – human checking and improving AI output  
-- **skill shift** (n) – change in the skills that are needed  
-- **automation** (n) – replacing manual work with machines or AI  
-- **creative problem-solving** (n) – using imagination to solve complex issues  
-- **system architecture** (n) – high-level design of software systems  
+- **AI-assisted development** (n) – using AI tools to help write code
+- **productivity boost** (n) – significant increase in work efficiency
+- **code generation** (n) – AI creating code automatically
+- **prompt engineering** (n) – skill of writing good instructions for AI
+- **human oversight** (n) – human checking and improving AI output
+- **skill shift** (n) – change in the skills that are needed
+- **automation** (n) – replacing manual work with machines or AI
+- **creative problem-solving** (n) – using imagination to solve complex issues
+- **system architecture** (n) – high-level design of software systems
 - **future-proof skills** (n) – skills that will remain valuable in the future
 
 ## 2) Collocations, Chunking & Advanced Phrases
 
 ### Strong Collocations
+
 - boost productivity
 - accelerate development
 - require human oversight
@@ -39,6 +40,7 @@ description: Discuss how AI is changing frontend development, productivity, requ
 - balance speed and quality
 
 ### Useful Chunking & Sentence Starters
+
 - On one hand, AI has…
 - On the other hand, …
 - AI is transforming the way we…
@@ -48,6 +50,7 @@ description: Discuss how AI is changing frontend development, productivity, requ
 - In my opinion, developers should…
 
 ### Advanced Phrasal Verbs
+
 - **keep up with** → It’s important to keep up with rapid AI advancements.
 - **rely on** → We should not rely too much on AI-generated code.
 - **adapt to** → Frontend developers need to adapt to AI-assisted workflows.
@@ -72,12 +75,14 @@ Artificial Intelligence is rapidly changing the software development landscape. 
 ## 5) List of Questions + Ideas
 
 ### Basic to Intermediate
+
 1. How has AI changed your daily work?
 2. What AI tools have you used?
 3. What are the advantages of using AI in frontend development?
 4. What are the disadvantages?
 
 ### B2-Level Expanded Questions
+
 5. Will AI replace frontend developers in the future?
 6. What new skills should frontend developers learn because of AI?
 7. How do you balance speed and code quality when using AI?
@@ -86,6 +91,7 @@ Artificial Intelligence is rapidly changing the software development landscape. 
 10. Do you think AI will make developers more or less valuable?
 
 ### Discussion & Critical Thinking
+
 11. Should companies encourage or limit the use of AI coding tools?
 12. What is more important in the AI era: technical skills or soft skills?
 13. How can developers stay competitive in an AI-driven world?

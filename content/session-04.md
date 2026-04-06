@@ -2,7 +2,7 @@
 sessionNumber: 4
 title: Tools, Technologies & Tech Stack
 topic: Tools & Technologies
-phase: PHASE 1 — TECH EXPLAIN MASTERY
+phase: PHASE 1 — TECH EXPLAIN
 level: B1+
 description: Explain the tools and technologies you use, why you use them, and how they help you in your work (keep it high-level and easy to understand).
 ---
@@ -15,40 +15,41 @@ description: Explain the tools and technologies you use, why you use them, and h
 ## 1) Vocabulary & Collocations
 
 - **technology stack** (n) – the combination of technologies used to build an application  
-  *Example:* Our technology stack includes React, TypeScript, and Tailwind CSS.  
-  *Example:* A modern technology stack helps the team develop faster and more reliably.
+  _Example:_ Our technology stack includes React, TypeScript, and Tailwind CSS.  
+  _Example:_ A modern technology stack helps the team develop faster and more reliably.
 
 - **framework** (n) – a structured set of tools that makes development easier and more consistent  
-  *Example:* React is the main framework we use for building user interfaces.  
-  *Example:* A good framework saves development time and improves code quality.
+  _Example:_ React is the main framework we use for building user interfaces.  
+  _Example:_ A good framework saves development time and improves code quality.
 
 - **library** (n) – a collection of reusable code that solves specific problems  
-  *Example:* We use several UI libraries to create consistent components.  
-  *Example:* Popular libraries help us avoid writing the same code repeatedly.
+  _Example:_ We use several UI libraries to create consistent components.  
+  _Example:_ Popular libraries help us avoid writing the same code repeatedly.
 
 - **version control** (n) – a system that tracks changes in code over time  
-  *Example:* We use Git for version control to work safely as a team.  
-  *Example:* Version control allows us to go back to previous versions if needed.
+  _Example:_ We use Git for version control to work safely as a team.  
+  _Example:_ Version control allows us to go back to previous versions if needed.
 
 - **performance** (n) – how fast and efficient the application is  
-  *Example:* We constantly work on improving application performance.  
-  *Example:* Better performance leads to a smoother user experience.
+  _Example:_ We constantly work on improving application performance.  
+  _Example:_ Better performance leads to a smoother user experience.
 
 - **responsive design** (n) – design that works well on different screen sizes (mobile, tablet, desktop)  
-  *Example:* Responsive design is essential because many users access the app on phones.  
-  *Example:* We test every feature to ensure responsive design.
+  _Example:_ Responsive design is essential because many users access the app on phones.  
+  _Example:_ We test every feature to ensure responsive design.
 
 - **tool** (n) – software or application used to help with development  
-  *Example:* VS Code is my main coding tool.  
-  *Example:* We use several tools to make development more efficient.
+  _Example:_ VS Code is my main coding tool.  
+  _Example:_ We use several tools to make development more efficient.
 
 - **integration** (n) – the process of connecting different tools or systems  
-  *Example:* Good integration between tools helps the team work smoothly.  
-  *Example:* We focus on seamless integration with the backend.
+  _Example:_ Good integration between tools helps the team work smoothly.  
+  _Example:_ We focus on seamless integration with the backend.
 
 ## 2) Collocations, Chunking & Phrasal Verbs
 
 ### Strong Collocations
+
 - modern technology stack
 - frontend framework
 - UI library
@@ -61,6 +62,7 @@ description: Explain the tools and technologies you use, why you use them, and h
 - integrate with backend
 
 ### Useful Chunking & Sentence Starters
+
 - The main technology we use is…
 - We work with…
 - One of the most useful tools is…
@@ -71,6 +73,7 @@ description: Explain the tools and technologies you use, why you use them, and h
 - From a development perspective…
 
 ### Useful Phrasal Verbs
+
 - **work with** → I work with React and TypeScript every day.
 - **build with** → Most of our interfaces are built with React.
 - **speed up** → UI libraries help speed up development.
@@ -110,12 +113,14 @@ Frontend developers use a combination of frameworks, libraries, and tools called
 ## 5) List of Questions + Ideas
 
 ### Basic Questions
+
 1. What is your main frontend framework?
 2. What tools do you use every day?
 3. Do you use any design or collaboration tools?
 4. What version control system does your team use?
 
 ### Deeper & Follow-up Questions
+
 5. Why does your team choose these technologies?
 6. How do these tools help improve performance or user experience?
 7. What is the benefit of using TypeScript?

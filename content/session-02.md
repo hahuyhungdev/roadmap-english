@@ -2,7 +2,7 @@
 sessionNumber: 2
 title: Explain Your System (High-level)
 topic: System Overview & User Impact
-phase: PHASE 1 — TECH EXPLAIN MASTERY
+phase: PHASE 1 — TECH EXPLAIN
 level: B1+
 description: Explain your system clearly at a high level, describe its purpose, main users, and business value without going too technical.
 ---
@@ -15,44 +15,45 @@ description: Explain your system clearly at a high level, describe its purpose, 
 ## 1) Vocabulary & Collocations
 
 - **system** (n) – a set of connected parts that work together to achieve a goal  
-  *Example:* Our system is a web platform that supports the company’s daily operations.  
-  *Example:* A well-designed system can handle thousands of users at the same time.
+  _Example:_ Our system is a web platform that supports the company’s daily operations.  
+  _Example:_ A well-designed system can handle thousands of users at the same time.
 
 - **high-level overview** (n) – a general summary without too many technical details  
-  *Example:* Let me give you a high-level overview of how the system works.  
-  *Example:* In the overview, I focus on the main purpose and benefits.
+  _Example:_ Let me give you a high-level overview of how the system works.  
+  _Example:_ In the overview, I focus on the main purpose and benefits.
 
 - **purpose** (n) – the reason why something exists or is done  
-  *Example:* The main purpose of the system is to improve operational efficiency.  
-  *Example:* Understanding the purpose helps the team make better decisions.
+  _Example:_ The main purpose of the system is to improve operational efficiency.  
+  _Example:_ Understanding the purpose helps the team make better decisions.
 
 - **user** (n) – a person who uses the system  
-  *Example:* The primary users are employees from sales and operations departments.  
-  *Example:* We always design the system with real user needs in mind.
+  _Example:_ The primary users are employees from sales and operations departments.  
+  _Example:_ We always design the system with real user needs in mind.
 
 - **feature** (n) – a specific function or capability of the system  
-  *Example:* One key feature is real-time data tracking and reporting.  
-  *Example:* We regularly add new features based on user feedback.
+  _Example:_ One key feature is real-time data tracking and reporting.  
+  _Example:_ We regularly add new features based on user feedback.
 
 - **business value** (n) – the benefit the system brings to the company  
-  *Example:* This system delivers clear business value by reducing processing time.  
-  *Example:* We measure success by the business value it creates for users.
+  _Example:_ This system delivers clear business value by reducing processing time.  
+  _Example:_ We measure success by the business value it creates for users.
 
 - **integration** (n) – the process of connecting different systems or parts together  
-  *Example:* The system has good integration with payment and inventory tools.  
-  *Example:* Seamless integration helps reduce manual work and errors.
+  _Example:_ The system has good integration with payment and inventory tools.  
+  _Example:_ Seamless integration helps reduce manual work and errors.
 
 - **efficiency** (n) – the ability to do something well without wasting time or resources  
-  *Example:* The system significantly improves operational efficiency.  
-  *Example:* Our goal is to increase efficiency for all departments.
+  _Example:_ The system significantly improves operational efficiency.  
+  _Example:_ Our goal is to increase efficiency for all departments.
 
 - **scalability** (n) – the ability of a system to grow and handle more work  
-  *Example:* We designed the system with scalability in mind.  
-  *Example:* Good scalability allows the system to support more users in the future.
+  _Example:_ We designed the system with scalability in mind.  
+  _Example:_ Good scalability allows the system to support more users in the future.
 
 ## 2) Collocations, Chunking & Phrasal Verbs
 
 ### Strong Collocations
+
 - give a high-level overview
 - serve thousands of users
 - improve operational efficiency
@@ -65,6 +66,7 @@ description: Explain your system clearly at a high level, describe its purpose, 
 - create measurable impact
 
 ### Useful Chunking & Sentence Starters
+
 - The main purpose of the system is to…
 - At a high level, the system…
 - From the user’s perspective…
@@ -75,6 +77,7 @@ description: Explain your system clearly at a high level, describe its purpose, 
 - The system creates value by…
 
 ### Useful Phrasal Verbs
+
 - **work with** → The system works with several external tools and services.
 - **deal with** → It deals with large volumes of data every day.
 - **look after** → My team looks after the user-facing part of the system.
@@ -108,12 +111,14 @@ Modern companies rely on complex systems to support their daily operations. A go
 ## 5) List of Questions + Ideas
 
 ### Basic Questions
+
 1. What does your system do?
 2. Can you give a high-level overview of the system?
 3. Who are the main users?
 4. What is the purpose of the system?
 
 ### Deeper & Follow-up Questions
+
 5. How does the system help users in their daily work?
 6. What are the most important features?
 7. How does the system create business value?
@@ -122,6 +127,7 @@ Modern companies rely on complex systems to support their daily operations. A go
 10. How do you measure the success of the system?
 
 ### Objection & Discussion Questions
+
 11. Why do companies need such complex systems?
 12. How would you explain this system to a non-technical person?
 13. What would happen if the system stopped working?
