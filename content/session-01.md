@@ -2,7 +2,7 @@
 sessionNumber: 1
 title: Your Role & Work
 topic: Work & Career
-phase: PHASE 1 — TECH EXPLAIN MASTERY
+phase: PHASE 1 — TECH EXPLAIN
 level: B1+
 description: Introduce your role, responsibilities, daily tasks, and collaboration at work in a clear and confident way.
 ---
