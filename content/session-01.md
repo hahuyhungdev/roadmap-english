@@ -137,8 +137,7 @@ As a frontend developer, my main responsibility is to create the part of the app
 
 11. Some people think frontend is easier than backend. What do you think?
 12. Why is a good user interface important for any software product?
-13. How would you explain your job to a non-technical person?
-14. What would happen if the frontend team did poor work?
-15. How do you balance beautiful design with good performance?
+13. What would happen if the frontend team did poor work?
+14. How do you balance beautiful design with good performance?
 
 ---
