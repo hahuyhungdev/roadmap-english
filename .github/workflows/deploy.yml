@@ -19,16 +19,29 @@ jobs:
 
       - name: Deploy to VPS via SSH
         uses: appleboy/ssh-action@v1.0.3
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          SUPADATA_API_KEY: ${{ secrets.SUPADATA_API_KEY }}
+          SONIOX_API_KEY: ${{ secrets.SONIOX_API_KEY }}
+          GOOGLE_TTS_API_KEY: ${{ secrets.GOOGLE_TTS_API_KEY }}
         with:
           host: ${{ secrets.HOST }}
           username: root
           key: ${{ secrets.SSH_KEY }}
           command_timeout: 30m
+          envs: DEEPSEEK_API_KEY,SUPADATA_API_KEY,SONIOX_API_KEY,GOOGLE_TTS_API_KEY
           script: |
             export APP_DIR=/var/www/marcus-app/roadmap-english-ai
             export BRANCH=main
             export PM2_APP_NAME=roadmap-ai
             export APP_URL=http://127.0.0.1:3000/
+
+            for required_var in DEEPSEEK_API_KEY SUPADATA_API_KEY SONIOX_API_KEY GOOGLE_TTS_API_KEY; do
+              if [ -z "$(printenv "$required_var")" ]; then
+                echo "Missing required secret: $required_var"
+                exit 1
+              fi
+            done
 
             # Bootstrap the server on first run so deploy_vps.sh exists locally.
             if [ ! -f "$APP_DIR/scripts/deploy_vps.sh" ]; then
