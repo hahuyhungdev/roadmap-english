@@ -2,8 +2,7 @@ name: Deploy Next.js to DigitalOcean
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
   workflow_dispatch:
 
 concurrency:
@@ -14,40 +13,102 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Deploy to VPS via SSH
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Package standalone build
+        run: |
+          cp -r .next/static .next/standalone/.next/static
+          cp -r public .next/standalone/public
+          cp -r content .next/standalone/content
+          tar -czf deploy.tar.gz -C .next/standalone .
+
+      - name: Upload build to VPS
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.HOST }}
+          username: root
+          key: ${{ secrets.SSH_KEY }}
+          source: deploy.tar.gz
+          target: /tmp
+
+      - name: Deploy on VPS
         uses: appleboy/ssh-action@v1.0.3
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           SUPADATA_API_KEY: ${{ secrets.SUPADATA_API_KEY }}
           SONIOX_API_KEY: ${{ secrets.SONIOX_API_KEY }}
           GOOGLE_TTS_API_KEY: ${{ secrets.GOOGLE_TTS_API_KEY }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
         with:
           host: ${{ secrets.HOST }}
           username: root
           key: ${{ secrets.SSH_KEY }}
-          command_timeout: 30m
-          envs: DEEPSEEK_API_KEY,SUPADATA_API_KEY,SONIOX_API_KEY,GOOGLE_TTS_API_KEY
+          command_timeout: 10m
+          envs: DEEPSEEK_API_KEY,SUPADATA_API_KEY,SONIOX_API_KEY,GOOGLE_TTS_API_KEY,DATABASE_URL
           script: |
-            export APP_DIR=/var/www/marcus-app/roadmap-english-ai
-            export BRANCH=main
-            export PM2_APP_NAME=roadmap-ai
-            export APP_URL=http://127.0.0.1:3000/
+            set -e
+            APP_DIR=/var/www/marcus-app/roadmap-english
+            PM2_APP_NAME=roadmap-english
 
-            for required_var in DEEPSEEK_API_KEY SUPADATA_API_KEY SONIOX_API_KEY GOOGLE_TTS_API_KEY; do
-              if [ -z "$(printenv "$required_var")" ]; then
-                echo "Missing required secret: $required_var"
+            for var in DEEPSEEK_API_KEY SUPADATA_API_KEY SONIOX_API_KEY GOOGLE_TTS_API_KEY DATABASE_URL; do
+              if [ -z "$(printenv "$var")" ]; then
+                echo "Missing required secret: $var"
                 exit 1
               fi
             done
 
-            # Bootstrap the server on first run so deploy_vps.sh exists locally.
-            if [ ! -f "$APP_DIR/scripts/deploy_vps.sh" ]; then
-              cd "$APP_DIR"
-              git fetch origin
-              git reset --hard "origin/$BRANCH"
+            # Clean previous build and extract new one
+            rm -rf "$APP_DIR"
+            mkdir -p "$APP_DIR"
+            tar -xzf /tmp/deploy.tar.gz -C "$APP_DIR"
+            rm -f /tmp/deploy.tar.gz
+
+            # Write .env.local from secrets
+            printf '%s\n' \
+              "DEEPSEEK_API_KEY=$DEEPSEEK_API_KEY" \
+              "SUPADATA_API_KEY=$SUPADATA_API_KEY" \
+              "SONIOX_API_KEY=$SONIOX_API_KEY" \
+              "GOOGLE_TTS_API_KEY=$GOOGLE_TTS_API_KEY" \
+              "DATABASE_URL=$DATABASE_URL" \
+              > "$APP_DIR/.env.local"
+
+            # Stop any old process names that may hold port 3000
+            pm2 delete roadmap-english-ai 2>/dev/null || true
+            pm2 delete roadmap-ai 2>/dev/null || true
+
+            # Zero-downtime rolling reload (cluster mode):
+            # if already running → reload workers one-by-one (no downtime)
+            # if first deploy   → start fresh with 2 cluster workers
+            cd "$APP_DIR"
+            if pm2 describe "$PM2_APP_NAME" > /dev/null 2>&1; then
+              pm2 reload "$PM2_APP_NAME"
+            else
+              pm2 start server.js --name "$PM2_APP_NAME" -i 2
+            fi
+            pm2 save
+
+            sleep 2
+
+            # Smoke test
+            status_code=$(curl -sS -o /tmp/roadmap-health.out -w "%{http_code}" "http://127.0.0.1:3000/")
+            if [ "$status_code" != "200" ]; then
+              echo "Health check failed: HTTP $status_code"
+              head -c 500 /tmp/roadmap-health.out || true
+              exit 1
             fi
 
-            bash "$APP_DIR/scripts/deploy_vps.sh"
+            echo "Deploy complete"
+            pm2 status "$PM2_APP_NAME"

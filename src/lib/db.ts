@@ -2,12 +2,6 @@ import { drizzle as drizzleNode } from "drizzle-orm/node-postgres";
 import { Pool } from "pg";
 import * as schema from "./schema";
 
-const rawDatabaseUrl = process.env.DATABASE_URL;
-
-if (!rawDatabaseUrl) {
-  throw new Error("DATABASE_URL is not set");
-}
-
 function stripSchemaQueryParam(url: string): string {
   const parsed = new URL(url);
   if (parsed.searchParams.has("schema")) {
@@ -16,10 +10,20 @@ function stripSchemaQueryParam(url: string): string {
   return parsed.toString();
 }
 
-const databaseUrl = stripSchemaQueryParam(rawDatabaseUrl);
+let _db: ReturnType<typeof drizzleNode<typeof schema>> | undefined;
 
-export const db = drizzleNode(new Pool({ connectionString: databaseUrl }), {
-  schema,
+export const db = new Proxy({} as ReturnType<typeof drizzleNode<typeof schema>>, {
+  get(_target, prop, receiver) {
+    if (!_db) {
+      const rawDatabaseUrl = process.env.DATABASE_URL;
+      if (!rawDatabaseUrl) {
+        throw new Error("DATABASE_URL is not set");
+      }
+      const databaseUrl = stripSchemaQueryParam(rawDatabaseUrl);
+      _db = drizzleNode(new Pool({ connectionString: databaseUrl }), { schema });
+    }
+    return Reflect.get(_db, prop, receiver);
+  },
 });
 
 /** Retry a db call up to `retries` times with exponential backoff.
