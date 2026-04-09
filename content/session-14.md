@@ -1,129 +1,161 @@
 ---
 sessionNumber: 14
-title: Impact of AI on Software Engineering & The Future of Our Roles
-topic: AI in Software Development & Future Skills
+title: AI, Human Judgment & Responsible Adoption
+topic: AI Impact, Skill Shift, and Responsible Adoption
 phase: PHASE 3 — DISCUSSION & IMPACT
-level: B2
-description: Discuss how AI is changing software engineering in general, its impact on daily work, required skills, opportunities and challenges, with balanced opinions.
+level: B2+
+description: Discuss AI impact with a balanced, persuasive perspective, productivity gains, role changes, risks, and adaptation strategy.
 ---
 
-# Session 14: Impact of AI on Software Engineering & The Future of Our Roles
+# Session 14: AI, Human Judgment & Responsible Adoption
 
-**Level:** B2  
-**Focus:** Giving balanced opinions about how AI is transforming software engineering and what it means for developers in the future.
+**Level:** B2+  
+**Focus:** Speaking in a B2+/C1 interview style about AI impact with clear reasoning, practical examples, and balanced judgment.
 
 ## 1) Vocabulary & Collocations
 
-- **artificial intelligence (AI)** (n) – technology that allows machines to perform intelligent tasks  
-  _Example:_ AI is becoming more common in software development.
+- **AI adoption** (n) – process of integrating AI tools into workflows  
+  _Example:_ AI adoption should be intentional, not purely trend-driven.
 
-- **automation** (n) – using machines or software to do work automatically  
-  _Example:_ AI can automate many repetitive tasks.
+- **automation leverage** (n) – productivity gain from automating repeated tasks  
+  _Example:_ We use automation leverage to reduce repetitive engineering work.
 
-- **productivity** (n) – how much work someone can do in a certain time  
-  _Example:_ AI tools can greatly improve developer productivity.
+- **human judgment** (n) – critical thinking and context-aware decision-making  
+  _Example:_ Human judgment is essential for architectural and ethical decisions.
 
-- **routine task** (n) – simple, repeated work  
-  _Example:_ Writing basic code and tests are routine tasks.
+- **skill shift** (n) – change in the skill set required for future roles  
+  _Example:_ The current skill shift favors system thinking and communication.
 
-- **creative problem-solving** (n) – using imagination to solve difficult problems  
-  _Example:_ Creative problem-solving is still very important for engineers.
+- **augmentation** (n) – AI support that enhances human capability  
+  _Example:_ I see AI as augmentation, not replacement.
 
-- **skill shift** (n) – change in the types of skills that are needed  
-  _Example:_ There is a clear skill shift happening in our industry.
+- **over-reliance** (n) – depending too heavily on tools  
+  _Example:_ Over-reliance on AI can weaken debugging fundamentals.
 
-- **opportunity** (n) – a good chance for development or success  
-  _Example:_ AI creates many new opportunities for developers.
+- **quality guardrail** (n) – process that protects output quality  
+  _Example:_ Code review and testing are our quality guardrails.
 
-- **challenge** (n) – a difficult situation that needs effort to deal with  
-  _Example:_ One challenge is learning how to work effectively with AI.
+- **bias risk** (n) – risk of unfair or inaccurate output due to data/model behavior  
+  _Example:_ Bias risk should be considered in AI-assisted decisions.
 
-- **adapt** (v) – to change your behavior to deal with new situations  
-  _Example:_ Developers need to adapt quickly to new technologies.
+- **productivity ceiling** (n) – limit of speed gains without process quality  
+  _Example:_ Teams hit a productivity ceiling if process quality is poor.
 
-## 2) Grammar & Useful Patterns (B2)
+- **reskilling** (n) – learning new capabilities for changing role demands  
+  _Example:_ Reskilling is now part of long-term career planning.
 
-- **Future forms**  
-  AI **will change** / **is going to change** the way we work.
+**Additional useful terms:**
+- **prompt quality** (n) – clarity/effectiveness of AI instruction
+- **verification loop** (n) – cycle of generating and validating output
+- **model hallucination** (n) – confident but incorrect AI output
+- **governance policy** (n) – rules for safe and responsible AI usage
+- **explainability** (n) – ability to explain how output was produced
 
-- **Balanced opinions**  
-  On one hand, … On the other hand, …
+## 2) Grammar & Useful Patterns (B2+ / C1-lite)
 
-- **Cause and effect**  
-  Because of AI tools, developers **can focus** more on complex problems.
+- **Balanced viewpoint framing**  
+  On one hand, AI increases speed. On the other hand, it introduces verification risk.
 
-- **Contrast**  
-  **While** AI can help with many tasks, human judgment is still essential.
+- **Prediction with conditions**  
+  AI will reshape roles, especially if teams combine tooling with strong fundamentals.
 
-- **Prediction + reason**  
-  In the future, I think developers **will need to** combine technical skills with business understanding.
+- **Concession + strategic response**  
+  Although AI can generate code quickly, engineers still need architectural judgment.
+
+- **Cause-effect for role evolution**  
+  Because routine tasks are automated, developers can focus on higher-value decisions.
+
+- **Recommendation language**  
+  If I had to recommend one strategy, it would be "adopt fast, validate rigorously."
 
 ### Useful Sentence Patterns
-- AI is changing the way we…
-- On the positive side, AI can help us…
-- However, there are also some challenges…
-- This means that software engineers need to…
-- The most important thing in the future will be…
+- AI has changed my workflow by...
+- The biggest opportunity is..., while the biggest risk is...
+- I use AI for ..., but I never outsource ...
+- The role is shifting from ... to ...
+- To stay relevant, engineers need to...
+- A practical example from my team is...
 
 ## 3) Collocations, Chunking & Phrasal Verbs
 
 ### Strong Collocations
-- boost productivity
-- automate routine tasks
-- improve efficiency
-- face new challenges
-- adapt to changes
-- develop new skills
-- create opportunities
-- shift in required skills
+- adopt AI responsibly
+- automate low-value tasks
+- strengthen human judgment
+- reduce cognitive load
+- enforce quality guardrails
+- validate AI output
+- improve decision quality
+- reskill continuously
+- balance speed and reliability
 
 ### Useful Chunking & Sentence Starters
-- In my opinion, AI will…
-- On one hand, AI helps developers…
-- On the other hand, it also means that…
-- This change will require us to…
-- The key to success in the future is…
+- In practical terms, AI helps us...
+- The most useful part of AI for me is...
+- One risk we actively manage is...
+- The role of engineers is moving toward...
+- To keep quality high, we...
 
 ### Useful Phrasal Verbs
-- **keep up with** → It’s important to keep up with AI developments.
-- **take over** → AI may take over some routine coding tasks.
-- **focus on** → We can focus on more interesting and complex work.
-- **rely on** → Many developers now rely on AI tools to write code.
+- **speed up** → AI speeds up drafting and exploration.
+- **double-check** → We always double-check AI-generated output.
+- **fall back on** → In complex cases, we fall back on first-principles reasoning.
+- **keep up with** → Engineers need to keep up with both tools and fundamentals.
 
 ## 4) Typical Dialogues
 
-**Teacher:** How is AI affecting software engineering?
+### Dialogue 1 – Balanced Interview Answer
+
+**Teacher:** Is AI an opportunity or a threat for software engineers?
 
 **You:**  
-AI is having a big impact on software engineering in general. On one hand, it helps a lot with routine tasks such as writing simple code, generating tests, and even reviewing code. This can save developers a lot of time and increase productivity. On the other hand, it also creates new challenges because some traditional skills may become less important.
+I see AI primarily as an opportunity, but only with discipline. It increases speed in drafting, testing, and documentation. However, it can also create hidden errors if teams skip validation.
 
-I believe the future role of software engineers will change. Instead of focusing only on writing code, we will need to spend more time on understanding business needs, designing good solutions, and making sure AI tools are used correctly. While there are risks that some jobs might become easier or even change completely, I see it as a good opportunity if we are willing to learn and adapt.
+For me, the right mindset is augmentation: let AI handle low-value repetition while engineers focus on architecture, risk judgment, and communication.
+
+### Dialogue 2 – Practical Team Usage
+
+**Teacher:** How has AI changed your day-to-day work?
+
+**You:**  
+I use AI to brainstorm implementation options, generate first drafts, and speed up debugging hypotheses. But I still verify edge cases, performance behavior, and security implications manually. This balance helps us move faster without lowering standards.
+
+### Dialogue 3 – General Future Outlook
+
+**Teacher:** What do you think the engineering role will look like in 5-10 years?
+
+**You:**  
+I think pure coding volume will matter less. Engineers will be valued more for problem framing, system judgment, and stakeholder communication. So future success will combine technical depth with broader decision-making ability.
 
 ## 5) Reading Text
 
-Artificial Intelligence is transforming the software engineering industry. While it can make development faster and reduce repetitive work, it also requires engineers to develop new skills and think differently about their roles. The most successful developers in the future will be those who can work effectively with AI while keeping strong problem-solving and communication skills.
+AI is changing software engineering, but not in a simple "replace or keep" way. It shifts where value is created. Routine implementation becomes faster, while high-value decisions become more important.
+
+Teams that succeed with AI do three things well: they adopt tools pragmatically, keep strong quality controls, and invest in continuous reskilling.
+
+In interviews, strong candidates avoid extreme statements. They show balanced thinking: opportunity, risk, and execution strategy.
 
 ## 6) List of Questions + Ideas
 
-### Basic Questions
-1. How is AI changing software engineering?
-2. What tasks can AI help with?
-3. What new skills will be important in the future?
-4. Do you see AI as an opportunity or a threat?
+### Core Questions (must-practice)
+1. How has AI changed your development workflow in practice?
+2. Which tasks should be automated, and which should stay human-led?
+3. What quality guardrails are necessary for AI-assisted development?
+4. What skills will matter most for engineers in the next 5 years?
 
-### Deeper & Follow-up Questions
-5. Which parts of a developer’s job do you think AI cannot replace?
-6. How should developers prepare for these changes?
-7. Will AI reduce the number of software engineering jobs?
-8. What is the biggest challenge AI brings to our profession?
-9. How has AI already changed your daily work?
-10. What will the role of a software engineer look like in 5–10 years?
+### High-Value Case Questions
+5. Share a case where AI significantly improved your productivity.
+6. Tell me about a case where AI output was wrong and how you handled it.
+7. Describe how your team introduced AI without reducing quality.
 
-### Objection & Discussion Questions
-11. Some people say AI will replace many developers. What do you think?
-12. Is it necessary for every developer to learn how to use AI tools?
-13. Should companies focus more on AI or on training people?
-14. Will AI make software development easier or more difficult?
-15. What is more important in the future: coding skills or thinking skills?
+### Critical Discussion Questions
+8. Will AI reduce engineering jobs or mostly reshape them?
+9. Is coding skill becoming less important than decision-making skill?
+10. Should companies force fast AI adoption, or move gradually?
+
+**Tips for speaking practice:**
+- Give a balanced answer: benefit + risk + strategy.
+- Use one real team example instead of abstract claims.
+- Keep explanations simple enough for non-technical listeners.
 
 ---

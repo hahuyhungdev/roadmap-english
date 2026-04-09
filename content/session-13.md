@@ -1,122 +1,161 @@
 ---
 sessionNumber: 13
-title: Work, Compensation & Career Progression
-topic: Job, Salary & Career Growth
+title: Career Growth, Compensation & Professional Priorities
+topic: Career Strategy, Compensation, and Long-Term Direction
 phase: PHASE 3 — DISCUSSION & IMPACT
-level: B2
-description: Talk confidently about your current job, compensation, how you evaluate job offers, and your career progression plans.
+level: B2+
+description: Discuss compensation, career progression, and job selection criteria in a mature, balanced, and persuasive way.
 ---
 
-# Session 13: Work, Compensation & Career Progression
+# Session 13: Career Growth, Compensation & Professional Priorities
 
-**Level:** B2  
-**Focus:** Speaking naturally about your job, salary expectations, and future career goals.
+**Level:** B2+  
+**Focus:** Speaking in a B2+/C1 interview style about career choices, compensation expectations, and long-term professional direction.
 
 ## 1) Vocabulary & Collocations
 
-- **compensation** (n) – the total money and benefits you receive for your work  
-  _Example:_ Compensation includes salary, bonuses, and health insurance.
+- **compensation package** (n) – full set of salary and benefits  
+  _Example:_ I evaluate the full compensation package, not just base salary.
 
-- **salary structure** (n) – how salary is organized in a company  
-  _Example:_ The company has a clear salary structure based on experience and performance.
+- **total compensation** (n) – salary + bonus + stock + benefits  
+  _Example:_ Total compensation should reflect impact and responsibility.
 
-- **career progression** (n) – the development and advancement in your career  
-  _Example:_ I’m thinking carefully about my career progression for the next few years.
+- **career progression** (n) – long-term development path  
+  _Example:_ I look for roles with clear career progression.
 
-- **job offer** (n) – a proposal to join a company with specific conditions  
-  _Example:_ When I receive a job offer, I consider many factors.
+- **growth trajectory** (n) – expected direction of professional growth  
+  _Example:_ The role offered a strong growth trajectory in architecture ownership.
 
-- **work-life balance** (n) – the balance between work and personal life  
-  _Example:_ Good work-life balance is very important to me.
+- **market rate** (n) – common pay level in the job market  
+  _Example:_ I benchmark offers against market rate and scope.
 
-- **growth opportunity** (n) – chance to develop and advance  
-  _Example:_ I look for positions that offer clear growth opportunities.
+- **scope of responsibility** (n) – size and complexity of expected work  
+  _Example:_ Compensation should align with scope of responsibility.
 
-- **long-term goal** (n) – what you want to achieve in the future  
-  _Example:_ My long-term goal is to become a technical leader.
+- **work-life sustainability** (n) – ability to maintain performance without burnout  
+  _Example:_ Long-term work-life sustainability is a non-negotiable for me.
 
-## 2) Grammar & Useful Patterns (B2)
+- **career leverage** (n) – opportunity that unlocks stronger future roles  
+  _Example:_ Sometimes I prioritize career leverage over short-term salary gain.
 
-- **Present Perfect for experience**  
-  I **have worked** as a Senior Frontend Engineer for over five years.
+- **role fit** (n) – how well a role matches your strengths and goals  
+  _Example:_ Role fit matters as much as compensation in my decision.
 
-- **Conditionals for future plans**  
-  If I receive a good offer, I **will consider** it carefully.
+- **value proposition** (n) – clear reason why you are worth hiring/paying more  
+  _Example:_ I present my value proposition with impact metrics.
 
-- **Comparison**  
-  This position offers **better compensation** and **more growth opportunities** than my current job.
+**Additional useful terms:**
+- **equity** (n) – ownership-based compensation
+- **performance bonus** (n) – variable pay tied to outcomes
+- **promotion path** (n) – expected timeline to next level
+- **mentorship exposure** (n) – chance to learn from strong leaders
+- **mobility options** (n) – opportunities to switch teams or domains
 
-- **Reason clauses**  
-  I evaluate job offers **because** I want to find the best balance between salary, growth, and work-life balance.
+## 2) Grammar & Useful Patterns (B2+ / C1-lite)
+
+- **Priority language**  
+  If I had to prioritize, I would choose long-term growth over short-term comfort.
+
+- **Balanced evaluation structures**  
+  While compensation matters, role scope and learning environment matter just as much.
+
+- **Conditional career reasoning**  
+  If a role offers strong mentorship and ownership, I can accept slower short-term gains.
+
+- **Evidence-based self-positioning**  
+  In my previous role, I improved delivery speed, so I now target roles with broader scope.
+
+- **Concession + decision**  
+  Although one offer was higher financially, I chose the role with better growth trajectory.
 
 ### Useful Sentence Patterns
-- In my current role, I…
-- When evaluating a job offer, I consider…
-- My short-term goal is to…
-- In the long term, I hope to…
-- The most important thing for me is…
+- In my current role, I create value by...
+- When evaluating offers, I use three criteria: ...
+- For me, compensation is important, but...
+- A role becomes attractive when it offers...
+- In the long term, I aim to...
+- A real example from my career is...
 
 ## 3) Collocations, Chunking & Phrasal Verbs
 
 ### Strong Collocations
-- competitive compensation
-- career progression
-- growth opportunity
-- work-life balance
-- evaluate a job offer
-- long-term goal
-- short-term plan
-- professional development
+- evaluate an offer holistically
+- align compensation with impact
+- prioritize long-term growth
+- expand ownership scope
+- build a sustainable career
+- compare risk and upside
+- negotiate professionally
+- define career milestones
+- balance ambition and well-being
 
 ### Useful Chunking & Sentence Starters
-- Currently, I work as…
-- When I look at a job offer, I pay attention to…
-- My main goal for the next two years is…
-- I believe that good compensation should include…
-- In the future, I would like to…
+- At this stage of my career,...
+- The three factors I care about most are...
+- What I optimize for is...
+- From a long-term perspective,...
+- One lesson I learned is...
 
 ### Useful Phrasal Verbs
-- **look for** → I am looking for better growth opportunities.
-- **think about** → I often think about my career progression.
-- **aim for** → I aim for a position with more technical leadership.
-- **weigh up** → I weigh up the pros and cons of each offer.
+- **look for** → I look for roles with clear ownership and growth.
+- **weigh up** → I weigh up financial upside and learning upside.
+- **move into** → I want to move into broader technical leadership.
+- **turn down** → I turned down a higher offer because role fit was weak.
 
 ## 4) Typical Dialogues
 
-**Teacher:** Can you tell me about your current job and career plans?
+### Dialogue 1 – Career Decision Narrative
+
+**Teacher:** What do you consider when choosing your next role?
 
 **You:**  
-I’m currently working as a Senior Frontend Engineer with more than five years of experience. I enjoy the technical challenges and the opportunity to mentor junior developers. 
+I usually evaluate three things: role scope, growth trajectory, and total compensation. Salary matters, but I do not optimize for salary alone.
 
-When I evaluate a new job offer, I consider several factors: compensation, work-life balance, growth opportunities, and the company’s technology direction. Good compensation is important, but I also look for roles where I can continue learning and take on more responsibility.
+At my experience level, I care more about impact ownership and long-term leverage. If a role allows me to work on architecture, cross-team collaboration, and mentoring, it is usually a stronger long-term choice.
 
-In the short term, I want to deepen my expertise in system design and AI-assisted development. In the long term, my goal is to move into a technical leadership position where I can guide teams and make bigger architectural decisions.
+### Dialogue 2 – Compensation Discussion
+
+**Teacher:** How do you discuss compensation professionally?
+
+**You:**  
+I keep the discussion transparent and evidence-based. I refer to market benchmarks, role scope, and measurable outcomes from my previous work. I also clarify that I value total package quality, not only base salary.
+
+### Dialogue 3 – General Perspective Beyond Work
+
+**Teacher:** Is career growth only about title and money?
+
+**You:**  
+Not really. For me, growth also means better judgment, stronger communication, and healthier work habits. A successful career should improve both professional impact and personal sustainability.
 
 ## 5) Reading Text
 
-Career progression in the tech industry depends on many factors, including skills, experience, and personal goals. While compensation is important, many developers also look for opportunities to learn new things, work on interesting projects, and maintain a healthy work-life balance. Planning your career carefully helps you make better decisions about future job offers.
+Career decisions become more strategic as experience increases. Early in a career, learning speed is often the top priority. Later, professionals usually balance compensation, ownership, team quality, and long-term direction.
+
+Mature candidates do not present career choices as random moves. They explain clear criteria and show how each decision supports a coherent trajectory.
+
+In interviews, this clarity builds trust. It signals that you can make thoughtful decisions for both your own career and the business.
 
 ## 6) List of Questions + Ideas
 
-### Basic Questions
-1. What is your current job and how long have you been in this role?
-2. What do you like most about your job?
-3. How do you evaluate a new job offer?
-4. What is important to you in terms of compensation?
+### Core Questions (must-practice)
+1. What are your top priorities when evaluating a new role?
+2. How do you balance compensation, learning, and work-life sustainability?
+3. What kind of responsibility scope are you targeting next?
+4. How does this role fit your 3-5 year direction?
 
-### Deeper & Follow-up Questions
-5. How important is salary compared to other factors?
-6. What are your short-term career goals?
-7. What are your long-term career ambitions?
-8. How do you plan to achieve your career goals?
-9. Would you consider moving to a different company? Why?
-10. What kind of company culture do you prefer?
+### High-Value Case Questions
+5. Describe a time you chose growth over a higher salary.
+6. Tell me about an offer you turned down and why.
+7. Share a career decision that changed your trajectory positively.
 
-### Objection & Discussion Questions
-11. Some people say money is the most important factor in a job. Do you agree?
-12. Is it better to stay in one company for a long time or change jobs frequently?
-13. Should developers focus more on salary or on learning opportunities?
-14. How important is work-life balance compared to career growth?
-15. What advice would you give to someone who wants to progress in their tech career?
+### Critical Discussion Questions
+8. Is salary the best indicator of career success?
+9. Is job-hopping better than long tenure for career growth?
+10. Should professionals optimize for stability or upside at your stage?
+
+**Tips for speaking practice:**
+- Use explicit criteria instead of vague preferences.
+- Add one real example with measurable impact.
+- Keep tone confident but practical, not defensive.
 
 ---

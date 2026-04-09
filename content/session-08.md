@@ -1,13 +1,13 @@
 ---
 sessionNumber: 8
-title: Solution Design & Execution Narrative
+title: Solution Design & Execution Under Constraints
 topic: Solution Strategy, Constraints & Outcomes
 phase: PHASE 2 — PROBLEM-SOLVING
 level: B2+
 description: Explain how you designed, implemented, and validated a solution under real constraints.
 ---
 
-# Session 8: Solution Design & Execution Narrative
+# Session 8: Solution Design & Execution Under Constraints
 
 **Level:** B2+  
 **Focus:** Speaking in a B2+/C1 interview style about how you chose a solution, handled constraints, and delivered measurable results.

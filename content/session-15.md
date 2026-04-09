@@ -1,120 +1,161 @@
 ---
 sessionNumber: 15
-title: Learning & Continuous Skill Development
-topic: Lifelong Learning in Tech
+title: Decision-Making Under Uncertainty (Work and Daily Life)
+topic: Uncertainty, Risk Thinking, and Practical Judgment
 phase: PHASE 3 — DISCUSSION & IMPACT
-level: B2
-description: Talk about your learning habits, challenges in keeping up with technology, and your plans for professional development.
+level: B2+
+description: Discuss how you make decisions when information is incomplete, in both professional and everyday situations.
 ---
 
-# Session 15: Learning & Continuous Skill Development
+# Session 15: Decision-Making Under Uncertainty (Work and Daily Life)
 
-**Level:** B2  
-**Focus:** Speaking about how you learn new skills, the challenges you face, and your approach to continuous development.
+**Level:** B2+  
+**Focus:** Speaking in a B2+/C1 interview style about making clear, practical decisions when data is incomplete or ambiguous.
 
 ## 1) Vocabulary & Collocations
 
-- **continuous learning** (n) – the process of always learning new things  
-  _Example:_ Continuous learning is essential in the fast-changing tech industry.
+- **uncertainty** (n) – situation where outcomes are unclear  
+  _Example:_ In product work, we often make decisions under uncertainty.
 
-- **skill development** (n) – the process of improving your abilities  
-  _Example:_ I spend time every week on skill development.
+- **ambiguity** (n) – lack of clear meaning or direction  
+  _Example:_ Ambiguity in requirements can delay decision-making.
 
-- **keep up with** (phr v) – to stay at the same level as something that is changing  
-  _Example:_ It can be difficult to keep up with new technologies.
+- **risk appetite** (n) – level of risk a person or team accepts  
+  _Example:_ Our risk appetite is lower for customer-facing payment flows.
 
-- **challenge** (n) – something difficult that you need to deal with  
-  _Example:_ One of the biggest challenges is finding enough time to learn.
+- **confidence level** (n) – how sure you are about assumptions  
+  _Example:_ We had medium confidence level, so we staged the rollout.
 
-- **professional development** (n) – activities that help improve your career skills  
-  _Example:_ The company supports professional development through courses and conferences.
+- **reversible decision** (n) – decision that can be changed with low cost  
+  _Example:_ Under uncertainty, reversible decisions are often safer.
 
-- **self-study** (n) – learning by yourself without a teacher  
-  _Example:_ I do a lot of self-study in my free time.
+- **opportunity cost** (n) – what you lose when choosing one option over another  
+  _Example:_ The opportunity cost of waiting was slower market response.
 
-- **hands-on practice** (n) – learning by actually doing something  
-  _Example:_ Hands-on practice is the most effective way for me to learn.
+- **contingency plan** (n) – backup plan if things go wrong  
+  _Example:_ We prepared a contingency plan before launch.
 
-## 2) Grammar & Useful Patterns (B2)
+- **assumption** (n) – belief used before full evidence is available  
+  _Example:_ We documented key assumptions before execution.
 
-- **Present Perfect Continuous**  
-  I **have been learning** TypeScript for the past six months.
+- **trade-off** (n) – compromise between two competing priorities  
+  _Example:_ The trade-off was speed versus confidence.
 
-- **Expressing difficulty**  
-  It **can be challenging** to keep up with new frameworks.
+- **judgment call** (n) – decision based on experience when data is incomplete  
+  _Example:_ In the end, it was a judgment call supported by limited evidence.
 
-- **Purpose**  
-  I read technical blogs **in order to** stay updated with industry trends.
+**Additional useful terms:**
+- **scenario planning** (n) – preparing options for multiple possible outcomes
+- **decision threshold** (n) – minimum evidence needed to proceed
+- **downside risk** (n) – worst potential negative impact
+- **decision fatigue** (n) – reduced quality after too many decisions
+- **mitigation strategy** (n) – action that reduces risk severity
 
-- **Future plans**  
-  Next year, I **am planning to** take an advanced course in system design.
+## 2) Grammar & Useful Patterns (B2+ / C1-lite)
+
+- **Hedging language for uncertainty**  
+  It seems likely that adoption will improve, but we need more evidence.
+
+- **Conditional reasoning**  
+  If downside risk is high, I choose a safer, reversible option.
+
+- **Concession + decision**  
+  Although data was incomplete, delaying action would have created bigger cost.
+
+- **Priority framing**  
+  If I had to prioritize one factor, I would prioritize reversibility.
+
+- **Balanced viewpoint language**  
+  On balance, this was not the perfect option, but it was the most practical one.
 
 ### Useful Sentence Patterns
-- I believe continuous learning is important because…
-- One of the biggest challenges I face is…
-- To keep up with new technologies, I…
-- In my free time, I usually…
-- My plan for the next year is to…
+- Given the uncertainty, we decided to...
+- Our confidence level was..., so we...
+- The biggest downside risk was...
+- To reduce risk, we prepared...
+- In hindsight, I would...
+- A similar principle also applies in daily life when...
 
 ## 3) Collocations, Chunking & Phrasal Verbs
 
 ### Strong Collocations
-- continuous learning
-- skill development
-- stay updated
-- keep up with technology
-- professional growth
-- hands-on experience
-- lifelong learning
-- invest time in learning
+- make decisions under uncertainty
+- estimate downside risk
+- define decision threshold
+- test key assumptions
+- choose reversible options
+- reduce decision regret
+- balance speed and confidence
+- prepare contingency plans
+- adjust based on feedback
 
 ### Useful Chunking & Sentence Starters
-- I try to learn something new…
-- One challenge I often face is…
-- To improve my skills, I…
-- I believe it’s important to…
-- My current learning goal is…
+- In uncertain situations, I usually...
+- The first thing I clarify is...
+- A practical way to reduce risk is...
+- If evidence is weak, I...
+- The lesson I learned is...
 
 ### Useful Phrasal Verbs
-- **keep up with** → It’s hard to keep up with all the new tools.
-- **pick up** → I can pick up new concepts quite quickly.
-- **catch up on** → I use weekends to catch up on new technologies.
-- **work on** → I work on small personal projects to practice new skills.
+- **weigh up** → I weigh up risk, cost, and reversibility before deciding.
+- **rule out** → We ruled out high-impact options with low confidence.
+- **back out of** → We defined clear criteria to back out of the plan if needed.
+- **stick with** → We stuck with a conservative option until data improved.
 
 ## 4) Typical Dialogues
 
-**Teacher:** How do you continue developing your skills?
+### Dialogue 1 – Professional Decision
+
+**Teacher:** Tell me about a decision you made with incomplete information.
 
 **You:**  
-I believe continuous learning is very important in tech because everything changes so quickly. In my daily routine, I try to spend at least 30–60 minutes learning something new. I usually read technical articles, watch tutorials, and work on small side projects to practice what I learn.
+We had to choose whether to launch a feature with limited usage data. Confidence was moderate, and timeline pressure was real.
 
-One of the biggest challenges for me is finding enough time while working full-time. However, I try to stay disciplined and set clear learning goals. Right now, I am focusing on improving my system design skills and learning more about AI tools. I think investing time in learning is the best way to grow my career in the long term.
+I proposed a reversible rollout with strict monitoring and a rollback condition. This allowed us to learn quickly while protecting users.
+
+### Dialogue 2 – General Life Decision
+
+**Teacher:** How do you make important decisions in your personal life when outcomes are uncertain?
+
+**You:**  
+I use a similar method: define priorities, estimate downside, and keep options reversible when possible. For example, when considering relocation, I first tested the idea with a short trial period before making a permanent move.
+
+### Dialogue 3 – Communicating Uncertainty
+
+**Teacher:** How do you communicate uncertainty without sounding indecisive?
+
+**You:**  
+I separate facts, assumptions, and risks clearly. Then I propose a decision with safeguards and checkpoints. This shows confidence in process, even when certainty is not possible.
 
 ## 5) Reading Text
 
-In the technology industry, skills can become outdated very quickly. Successful developers understand that learning is a lifelong process. They make time to study new technologies, practice regularly, and reflect on their progress. Continuous skill development helps them stay competitive and opens up better career opportunities.
+Most real decisions are made before full certainty exists. Strong professionals do not wait for perfect information; they use structured judgment.
+
+A practical decision process includes: clarify objectives, identify assumptions, estimate downside risk, and define exit criteria. This process applies not only in engineering but also in personal life choices.
+
+In speaking practice, uncertainty topics are useful because they train nuance, persuasion, and clarity at the same time.
 
 ## 6) List of Questions + Ideas
 
-### Basic Questions
-1. How do you learn new skills?
-2. How much time do you spend learning every week?
-3. What are you currently learning?
-4. What learning methods work best for you?
+### Core Questions (must-practice)
+1. How do you make decisions when important information is missing?
+2. Which factors matter most in uncertain situations?
+3. How do you reduce downside risk before committing?
+4. How do you communicate uncertainty to stakeholders clearly?
 
-### Deeper & Follow-up Questions
-5. What is the biggest challenge in continuous learning?
-6. How do you balance work and learning?
-7. Have you ever taken any courses or certifications?
-8. How important is self-study compared to formal training?
-9. What skills do you want to develop in the next year?
-10. How has your learning style changed over the years?
+### High-Value Case Questions
+5. Describe a project decision made with limited data.
+6. Tell me about a personal decision where you used a structured approach.
+7. Share a decision you changed later when new evidence appeared.
 
-### Objection & Discussion Questions
-11. Some people say developers don’t need to learn after university. What do you think?
-12. Is it better to learn deeply in one area or have knowledge in many areas?
-13. Should companies give employees time for learning during work hours?
-14. Can someone be successful in tech without continuous learning?
-15. What is the best way to stay motivated to learn new technologies?
+### Critical Discussion Questions
+8. Is fast decision-making better than cautious decision-making under uncertainty?
+9. Should leaders hide uncertainty to keep teams confident?
+10. Is it possible to make high-quality decisions without strong data?
+
+**Tips for speaking practice:**
+- Distinguish facts, assumptions, and risks.
+- Show your process, not only your final answer.
+- Use one professional case and one general-life case to sound flexible.
 
 ---

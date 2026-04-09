@@ -1,116 +1,161 @@
 ---
 sessionNumber: 17
-title: Work Culture, Pressure & Mental Health in Tech
-topic: Work Culture and Well-being
+title: Boundaries, Stress Management & Sustainable Performance
+topic: Boundaries, Stress Management, and Sustainable Performance
 phase: PHASE 3 — DISCUSSION & IMPACT
-level: B2
-description: Discuss the high-pressure work culture in tech, performance expectations, burnout risks, and how to maintain mental health.
+level: B2+
+description: Discuss pressure, burnout risk, and mental well-being in a practical, balanced, and professional way.
 ---
 
-# Session 17: Work Culture, Pressure & Mental Health in Tech
+# Session 17: Boundaries, Stress Management & Sustainable Performance
 
-**Level:** B2  
-**Focus:** Speaking about the realities of work culture in tech and how to maintain a healthy balance.
+**Level:** B2+  
+**Focus:** Speaking in a B2+/C1 interview style about handling pressure, setting boundaries, and maintaining long-term professional effectiveness.
 
 ## 1) Vocabulary & Collocations
 
-- **work culture** (n) – the environment and atmosphere in a company  
-  _Example:_ A good work culture helps people stay motivated.
+- **sustainable performance** (n) – high-quality output maintained over time  
+  _Example:_ I focus on sustainable performance rather than short bursts of overwork.
 
-- **pressure** (n) – stress caused by high expectations  
-  _Example:_ Many developers face high pressure to deliver quickly.
+- **workload volatility** (n) – fluctuation in task pressure over time  
+  _Example:_ Workload volatility is common in product teams near release dates.
 
-- **burnout** (n) – extreme tiredness and loss of motivation from overwork  
-  _Example:_ Burnout is a serious problem in the tech industry.
+- **burnout risk** (n) – likelihood of long-term physical and mental exhaustion  
+  _Example:_ Ignoring boundaries increases burnout risk significantly.
 
-- **mental health** (n) – a person’s emotional and psychological well-being  
-  _Example:_ Companies should care more about employees’ mental health.
+- **psychological safety** (n) – environment where people can speak up safely  
+  _Example:_ Psychological safety improves team quality and decision-making.
 
-- **work-life balance** (n) – dividing time fairly between work and personal life  
-  _Example:_ Good work-life balance reduces stress.
+- **boundary setting** (n) – defining limits to protect focus and health  
+  _Example:_ Boundary setting helps me maintain consistent performance.
 
-- **sustainable career** (n) – a career that can continue healthily for a long time  
-  _Example:_ I want to build a sustainable career in tech.
+- **recovery routine** (n) – regular habits for restoring energy  
+  _Example:_ Sleep, breaks, and exercise are part of my recovery routine.
 
-## 2) Grammar & Useful Patterns (B2)
+- **priority clarity** (n) – clear agreement on what matters most now  
+  _Example:_ Priority clarity reduces stress during high-pressure periods.
 
-- **Cause and effect**  
-  High pressure **can lead to** burnout if we are not careful.
+- **support system** (n) – people/processes that help under pressure  
+  _Example:_ A strong support system prevents incidents from becoming personal overload.
 
-- **Advice / Suggestion**  
-  Companies **should** create a healthier work environment.
+- **emotional resilience** (n) – ability to remain stable during stress  
+  _Example:_ Emotional resilience can be trained through good habits.
 
-- **Contrast**  
-  **Although** the salary is good, the pressure can be very high.
+- **healthy culture** (n) – environment balancing delivery and well-being  
+  _Example:_ Healthy culture improves retention and product quality.
 
-- **Conditionals**  
-  If we ignore mental health, **we will face** more problems in the long term.
+**Additional useful terms:**
+- **early warning signal** (n) – first indicator of stress overload
+- **capacity planning** (n) – matching scope with realistic team bandwidth
+- **unsustainable pace** (n) – speed that cannot be maintained safely
+- **decompression time** (n) – time intentionally reserved after intense periods
+- **managerial support** (n) – leadership action that protects team health
+
+## 2) Grammar & Useful Patterns (B2+ / C1-lite)
+
+- **Cause-effect with nuance**  
+  High pressure can improve focus short-term, but sustained pressure reduces quality.
+
+- **Concession + boundary statement**  
+  Although peak periods are normal, chronic overtime should not be normalized.
+
+- **Personal strategy language**  
+  Under pressure, I focus on priority clarity, communication, and realistic scope.
+
+- **Recommendation framing**  
+  If I had to recommend one change, it would be better capacity planning.
+
+- **Long-term perspective**  
+  In the long run, healthy teams deliver better and make fewer critical mistakes.
 
 ### Useful Sentence Patterns
-- In many tech companies,…
-- One of the biggest problems is…
-- To maintain good mental health, I…
-- It is important for companies to…
-- I believe we should…
+- In high-pressure periods, I usually...
+- What helps me stay effective is...
+- The biggest risk of this culture is...
+- A practical boundary I use is...
+- Teams perform better when...
+- One lesson I learned is...
 
 ## 3) Collocations, Chunking & Phrasal Verbs
 
 ### Strong Collocations
-- high-pressure environment
-- face pressure
-- suffer from burnout
-- maintain work-life balance
-- promote mental health
-- create a healthy culture
-- sustainable career
+- manage pressure effectively
+- maintain sustainable performance
+- prevent burnout risk
+- set clear boundaries
+- improve psychological safety
+- align priorities early
+- create realistic timelines
+- support team resilience
+- protect long-term productivity
 
 ### Useful Chunking & Sentence Starters
-- In the tech industry,…
-- One major issue is…
-- To avoid burnout, I…
-- Companies should focus on…
-- In my opinion, it’s important to…
+- In my experience, pressure becomes harmful when...
+- To stay effective, I focus on...
+- One practical habit that helps is...
+- Team leaders should...
+- The long-term impact is...
 
 ### Useful Phrasal Verbs
-- **burn out** → Many people burn out if they work too hard for too long.
-- **deal with** → It’s important to learn how to deal with pressure.
-- **look after** → We need to look after our mental health.
-- **cut down on** → I try to cut down on overtime when possible.
+- **burn out** → People burn out when pressure becomes constant.
+- **slow down** → Sometimes we need to slow down to avoid costly mistakes.
+- **speak up** → I speak up early when scope and timeline do not match.
+- **switch off** → Recovery improves when we can switch off after work.
 
 ## 4) Typical Dialogues
 
-**Teacher:** What do you think about work culture in tech?
+### Dialogue 1 – Pressure Management
+
+**Teacher:** How do you perform well under pressure without burning out?
 
 **You:**  
-Work culture in tech can be very demanding. There is often high pressure to deliver features quickly and work long hours. While this can lead to fast career growth, it also increases the risk of burnout.
+I separate urgent tasks from important tasks and align priorities with stakeholders quickly. I also communicate realistic estimates early instead of accepting hidden overload.
 
-I think companies should do more to support mental health, such as encouraging reasonable working hours and providing time for rest. Personally, I try to maintain a good work-life balance by setting boundaries and taking regular breaks. A healthy work culture not only makes people happier but also helps them perform better in the long term.
+This helps me stay reliable under pressure while protecting long-term performance.
+
+### Dialogue 2 – Team Culture Perspective
+
+**Teacher:** What kind of work culture helps teams stay healthy and productive?
+
+**You:**  
+A healthy culture has clear priorities, respectful communication, and realistic planning. It allows people to raise risks early without fear. In my experience, this improves both delivery speed and quality over time.
+
+### Dialogue 3 – General Life Balance Angle
+
+**Teacher:** Is work-life balance realistic in tech?
+
+**You:**  
+Yes, but it requires active design, not wishful thinking. There are intense periods, but teams need recovery periods too. For me, balance means maintaining performance consistently, not being available all the time.
 
 ## 5) Reading Text
 
-The tech industry is known for its fast pace and high expectations. While this environment can be exciting, it can also create stress and lead to burnout. Creating a healthy work culture that values mental health and work-life balance is becoming more important for both employees and companies.
+High performance and well-being are not opposites. In modern teams, they depend on each other. Teams that ignore well-being often suffer from quality decline, avoidable incidents, and high turnover.
+
+Sustainable delivery requires healthy habits at both individual and organizational levels: realistic planning, clear communication, and recovery routines.
+
+In interviews, thoughtful candidates show that they can manage pressure while protecting quality and team stability.
 
 ## 6) List of Questions + Ideas
 
-### Basic Questions
-1. What is the work culture like in tech companies?
-2. What kind of pressure do developers usually face?
-3. Have you ever experienced burnout?
-4. How important is mental health in your opinion?
+### Core Questions (must-practice)
+1. How do you stay effective during high-pressure periods?
+2. What boundaries help you maintain long-term performance?
+3. How can teams reduce burnout risk without lowering standards?
+4. What does a healthy, high-performing engineering culture look like to you?
 
-### Deeper & Follow-up Questions
-5. How can companies improve their work culture?
-6. What do you do to maintain good mental health?
-7. Is high pressure necessary to achieve good results?
-8. How does work culture affect productivity?
-9. What is a healthy work-life balance for you?
-10. How has your view on work pressure changed over time?
+### High-Value Case Questions
+5. Describe a period of intense pressure and how you managed it.
+6. Tell me about a boundary you set that improved your effectiveness.
+7. Share a case where better communication reduced stress and rework.
 
-### Objection & Discussion Questions
-11. Some people say high pressure is normal in tech. Do you agree?
-12. Should companies prioritize productivity or employee well-being?
-13. Is it the company’s responsibility or the individual’s to prevent burnout?
-14. Can a relaxed work culture still produce excellent results?
-15. What changes would you like to see in tech work culture?
+### Critical Discussion Questions
+8. Is high pressure necessary for strong results in tech teams?
+9. Should companies prioritize delivery speed or team well-being when trade-offs appear?
+10. Is burnout mainly an individual issue or a system design issue?
+
+**Tips for speaking practice:**
+- Avoid extreme statements; use balanced reasoning.
+- Explain one personal strategy and one team-level strategy.
+- Link well-being discussion to quality and business outcomes.
 
 ---

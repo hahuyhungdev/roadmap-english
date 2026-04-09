@@ -1,116 +1,163 @@
 ---
 sessionNumber: 18
-title: Technology’s Impact on Society & Ethics
-topic: Technology, Society and Ethical Issues
+title: Technology, Trust, Privacy & Accountability
+topic: Technology Trust, Privacy, Bias, and Accountability
 phase: PHASE 3 — DISCUSSION & IMPACT
-level: B2
-description: Discuss the broader impact of technology and AI on society, including jobs, privacy, ethics, and the environment.
+level: B2+
+description: Discuss technology's social impact with balanced reasoning, benefits, risks, ethical trade-offs, and responsibilities.
 ---
 
-# Session 18: Technology’s Impact on Society & Ethics
+# Session 18: Technology, Trust, Privacy & Accountability
 
-**Level:** B2  
-**Focus:** Giving balanced opinions about how technology affects society and ethical considerations.
+**Level:** B2+  
+**Focus:** Speaking in a B2+/C1 interview style about social impact and ethical trade-offs in technology, with clear and accessible language.
 
 ## 1) Vocabulary & Collocations
 
-- **impact** (n) – the effect of something  
-  _Example:_ Technology has both positive and negative impacts on society.
+- **social impact** (n) – effect of technology on people and communities  
+  _Example:_ Social impact should be evaluated alongside technical feasibility.
 
-- **society** (n) – people in general  
-  _Example:_ We need to think about how technology affects society.
+- **ethical trade-off** (n) – difficult choice between competing values  
+  _Example:_ Data personalization often creates an ethical trade-off with privacy.
 
-- **privacy** (n) – the right to keep personal information private  
-  _Example:_ Data collection raises serious privacy concerns.
+- **data privacy** (n) – protection of personal information  
+  _Example:_ Data privacy is a core trust issue for users.
 
-- **ethics** (n) – moral principles that guide behavior  
-  _Example:_ Ethical issues are becoming more important in AI development.
+- **algorithmic bias** (n) – unfair outcomes produced by model behavior  
+  _Example:_ Teams must test for algorithmic bias before deployment.
 
-- **job displacement** (n) – when people lose jobs because of technology  
-  _Example:_ AI may cause job displacement in some industries.
+- **digital divide** (n) – unequal access to technology and opportunity  
+  _Example:_ The digital divide limits who benefits from innovation.
 
-- **responsibility** (n) – the duty to do something correctly  
-  _Example:_ Developers have a responsibility to consider ethical implications.
+- **accountability** (n) – clear responsibility for outcomes and harms  
+  _Example:_ Accountability is essential when systems affect real lives.
 
-## 2) Grammar & Useful Patterns (B2)
+- **transparency** (n) – ability to explain decisions and behavior clearly  
+  _Example:_ Transparency increases public trust in AI systems.
 
-- **Balanced view**  
-  Technology has **both advantages and disadvantages**.
+- **informed consent** (n) – permission based on clear understanding  
+  _Example:_ Users should give informed consent for sensitive data usage.
 
-- **Passive voice**  
-  Many jobs **are being replaced** by automation.
+- **unintended consequence** (n) – negative effect not planned in design  
+  _Example:_ Automation can create unintended consequences in labor markets.
 
-- **Should / Need to** for recommendations  
-  We **need to** think carefully about the ethical side of technology.
+- **responsible innovation** (n) – building useful technology with ethical safeguards  
+  _Example:_ Responsible innovation balances progress and protection.
 
-- **Contrast**  
-  **While** technology brings many benefits, it also creates new problems.
+**Additional useful terms:**
+- **data governance** (n) – policies for safe data handling
+- **public trust** (n) – confidence society has in technology providers
+- **regulatory compliance** (n) – meeting legal and policy requirements
+- **harm mitigation** (n) – actions to reduce negative outcomes
+- **human oversight** (n) – human review over automated decisions
+
+## 2) Grammar & Useful Patterns (B2+ / C1-lite)
+
+- **Balanced argument structure**  
+  Technology creates major benefits, but it also introduces serious ethical risks.
+
+- **Concession + responsibility**  
+  Although innovation should move fast, safeguards should not be optional.
+
+- **Recommendation language**  
+  If I had to choose one principle, I would prioritize accountability.
+
+- **Cause-effect for societal outcomes**  
+  When data practices are opaque, public trust declines quickly.
+
+- **Conditional ethics framing**  
+  If harm is likely and mitigation is weak, deployment should be delayed.
 
 ### Useful Sentence Patterns
-- Technology has changed society in many ways…
-- On the positive side,…
-- However, we also have to consider…
-- I believe developers should…
-- In my opinion, the most important issue is…
+- On the positive side, technology helps...
+- The main ethical concern is...
+- A responsible approach should include...
+- In practice, teams can reduce risk by...
+- The long-term consequence might be...
+- In my opinion, trust depends on...
 
 ## 3) Collocations, Chunking & Phrasal Verbs
 
 ### Strong Collocations
-- positive impact
-- negative effect
-- raise concerns
-- ethical issues
-- protect privacy
-- create opportunities
-- cause job displacement
-- take responsibility
+- create social value
+- raise ethical concerns
+- protect user privacy
+- reduce algorithmic bias
+- ensure accountability
+- build public trust
+- balance innovation and safety
+- improve transparency standards
+- mitigate unintended harm
 
 ### Useful Chunking & Sentence Starters
-- In today’s world,…
-- One of the biggest impacts is…
-- On the one hand,…
-- On the other hand,…
-- We should be careful about…
+- In today's society, technology can...
+- A major ethical challenge is...
+- From a public-interest perspective,...
+- The right balance is...
+- To reduce harm, organizations should...
 
 ### Useful Phrasal Verbs
-- **bring about** → Technology has brought about many changes in society.
-- **deal with** → Society needs to deal with new ethical challenges.
-- **keep up with** → It’s hard to keep up with how fast technology is developing.
+- **bring about** → Technology has brought about major social change.
+- **think through** → Teams should think through second-order consequences.
+- **push back on** → Engineers should push back on unsafe launch pressure.
+- **phase in** → High-risk technologies should be phased in gradually.
 
 ## 4) Typical Dialogues
 
-**Teacher:** What do you think about the impact of technology on society?
+### Dialogue 1 – Balanced Social View
+
+**Teacher:** Is technology making society better or worse?
 
 **You:**  
-Technology has brought many positive changes to society, such as making communication easier and improving access to information. However, it also creates challenges. For example, AI and automation may cause job displacement for some people. Privacy is another big concern because companies collect a lot of personal data.
+Overall, I think technology improves many aspects of life, such as access to information, healthcare support, and productivity. However, it also creates new risks, especially around privacy, bias, and dependency.
 
-I believe developers and companies have a responsibility to think about ethics when building new technologies. We should aim to create technology that benefits society while minimizing negative effects. Finding the right balance is one of the most important issues today.
+So for me, the real question is not "good or bad" but "how responsibly we design and govern it."
+
+### Dialogue 2 – Ethics in Daily Engineering
+
+**Teacher:** How can developers apply ethics in real projects?
+
+**You:**  
+At project level, ethics means practical choices: collecting only necessary data, testing for bias, documenting limitations, and keeping human oversight in high-risk decisions.
+
+These steps are not abstract philosophy; they are part of product quality.
+
+### Dialogue 3 – General Public Communication
+
+**Teacher:** How would you explain tech ethics to a non-technical audience?
+
+**You:**  
+I would keep it simple: people should understand what data is collected, how decisions are made, and who is responsible when something goes wrong. If people cannot understand those three points, trust will be weak.
 
 ## 5) Reading Text
 
-Technology has a powerful influence on society. While it brings convenience, efficiency, and new opportunities, it also raises important questions about privacy, ethics, employment, and fairness. Responsible development of technology requires careful thought about its long-term effects on people and the environment.
+Technology can solve real problems at scale, but scale also increases responsibility. A design decision that seems small in development can affect millions of people after deployment.
+
+Responsible innovation requires more than legal compliance. It requires clear accountability, transparent communication, and proactive harm mitigation.
+
+In interviews, strong candidates show they can think beyond code and consider long-term societal impact.
 
 ## 6) List of Questions + Ideas
 
-### Basic Questions
-1. How does technology affect society?
-2. What are some positive impacts of technology?
-3. What are some negative impacts?
-4. Why is ethics important in technology?
+### Core Questions (must-practice)
+1. What are the biggest positive and negative impacts of technology on society today?
+2. Which ethical risks in AI or software concern you most?
+3. What responsibilities should developers and companies have?
+4. How can teams balance innovation speed with public trust?
 
-### Deeper & Follow-up Questions
-5. How is AI affecting jobs and employment?
-6. What privacy concerns do you have about new technologies?
-7. Should developers think about ethics when building products?
-8. How can technology be made more environmentally friendly?
-9. What responsibility do tech companies have to society?
-10. How do you think technology will change society in the next 10 years?
+### High-Value Case Questions
+5. Describe a product decision where ethics and business goals conflicted.
+6. Tell me about a time you raised a risk or concern in a project discussion.
+7. Share a case where better transparency improved user trust.
 
-### Objection & Discussion Questions
-11. Is technology making our lives better or worse overall?
-12. Should governments control how technology companies use data?
-13. Is it possible for technology to be completely ethical?
-14. Who should be responsible for the negative effects of technology?
-15. Can technology solve social problems or does it create more?
+### Critical Discussion Questions
+8. Should governments regulate AI more aggressively?
+9. Is it possible to build powerful technology without causing social harm?
+10. Who should be accountable when automated systems make harmful decisions?
+
+**Tips for speaking practice:**
+- Use balanced arguments, not one-sided opinions.
+- Explain ethical ideas in plain, everyday language.
+- Connect ethics to concrete product decisions and outcomes.
 
 ---
