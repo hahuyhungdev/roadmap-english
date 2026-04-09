@@ -10,118 +10,171 @@ description: Explain your system clearly at a high level, describe its purpose, 
 # Session 2: Your System & Business Value
 
 **Level:** B2  
-**Focus:** Speaking confidently about the overall system you work on, its purpose, main users, and the value it brings to both end-users and the company.
+**Focus:** Speaking confidently about your system at a high level: what it does, who uses it, why it matters, and how it creates measurable value.
 
 ## 1) Vocabulary & Collocations
 
-- **system** (n) – a platform or application made of connected parts  
-  _Example:_ Our system is a comprehensive web platform that supports daily operations.
+- **system** (n) – a platform made of connected modules and services  
+  _Example:_ Our system connects user requests, internal workflows, and reporting in one place.
 
-- **high-level overview** (n) – a general explanation without deep technical details  
-  _Example:_ Let me give you a high-level overview of what the system does.
+- **high-level overview** (n) – a simple explanation without low-level implementation details  
+  _Example:_ I usually start with a high-level overview before discussing technical parts.
 
-- **purpose** (n) – the main goal or reason for the system  
-  _Example:_ The main purpose is to make complex tasks simpler for users.
+- **core workflow** (n) – the main sequence of actions users follow  
+  _Example:_ The core workflow starts with data input and ends with approval and tracking.
 
-- **end-user** (n) – the person who directly uses the application  
-  _Example:_ The primary end-users are employees from sales, operations, and management teams.
+- **target user** (n) – the primary audience a feature is designed for  
+  _Example:_ Our target users are operations teams and customer support staff.
 
-- **user experience** (n) – how easy and pleasant it is for people to use the system  
-  _Example:_ We focus heavily on improving user experience.
+- **pain point** (n) – a recurring user problem or frustration  
+  _Example:_ One pain point was that users had to switch tools too often.
 
-- **business value** (n) – the benefit the system brings to the company  
-  _Example:_ The system creates real business value by increasing efficiency.
+- **business value** (n) – measurable benefit for the organization  
+  _Example:_ The new flow created business value by reducing manual processing time.
 
-- **productivity** (n) – the ability to get more work done effectively  
-  _Example:_ It significantly boosts user productivity.
+- **adoption rate** (n) – how many users actively use the system  
+  _Example:_ We track adoption rate to see whether the feature is actually useful.
 
-- **streamline** (v) – to make a process simpler and more efficient  
-  _Example:_ The system helps streamline daily workflows.
+- **operational efficiency** (n) – doing business tasks faster and with fewer errors  
+  _Example:_ The platform improved operational efficiency across multiple teams.
 
-- **integration** (n) – the connection between different systems or tools  
-  _Example:_ It has smooth integration with other internal tools.
+- **integration** (n) – connection with other systems or data sources  
+  _Example:_ Integration with CRM tools helped users avoid duplicate work.
 
-## 2) Collocations, Chunking & Phrasal Verbs
+**Additional useful terms:**
+- **user journey** (n) – step-by-step user experience from start to finish
+- **KPI** (n) – key performance indicator
+- **retention** (n) – percentage of users who keep using the system
+- **throughput** (n) – amount of work completed in a period
+- **time-to-value** (n) – time before users experience clear benefits
+
+## 2) Grammar & Useful Patterns (B2)
+
+- **Defining purpose (to / so that)**  
+  The system was designed to centralize workflow management so that teams can make faster decisions.
+
+- **Explaining impact (because / therefore / as a result)**  
+  Users had fewer manual steps; as a result, completion time decreased.
+
+- **Relative clauses for precision**  
+  We prioritize features that reduce repetitive work for operations teams.
+
+- **Contrast (while / whereas / however)**  
+  The old process was flexible but inconsistent, whereas the new system is standardized and traceable.
+
+- **Passive voice in product communication**  
+  New feature requests are reviewed monthly and prioritized by impact.
+
+### Useful Sentence Patterns
+- At a high level, our system helps...
+- The main users are..., who need to...
+- One key pain point we solved was...
+- This feature creates value by...
+- From a business perspective, the biggest gain is...
+- A real example is when...
+
+## 3) Collocations, Chunking & Phrasal Verbs
 
 ### Strong Collocations
 
 - give a high-level overview
-- primary end-users
+- define target users
+- map the user journey
+- solve user pain points
 - improve user experience
-- boost productivity
+- increase adoption rate
 - streamline workflows
 - deliver business value
 - support daily operations
-- meet user needs
-- create measurable impact
-- handle complex tasks
+- reduce manual errors
+- improve decision-making speed
+- track measurable outcomes
+- align product and business goals
 
 ### Useful Chunking & Sentence Starters
 
 - At a high level, the system…
-- The main purpose of the system is to…
+- The core purpose of the system is to…
+- The main users are…
 - From the user’s perspective…
-- The system helps users to…
-- One of the key benefits is…
-- This system is valuable because…
-- As a frontend developer, I contribute by…
+- One major pain point was…
+- The business benefit is that…
+- We validate this value by tracking…
+- A concrete case from our project was…
 
 ### Useful Phrasal Verbs
 
 - **work with** → The system works with several other internal platforms.
 - **deal with** → It deals with large amounts of data every day.
-- **look after** → My team looks after the user interface part.
-- **come up with** → We come up with new features based on user needs.
-- **break down** → I usually break down the system into simple parts when explaining it.
+- **look after** → My team looks after the web interface and interaction quality.
+- **come up with** → We come up with improvements after interviewing users.
+- **break down** → I break down the workflow into simple steps for non-technical audiences.
+- **roll out** → We roll out major changes gradually to reduce risk.
+- **follow up on** → We follow up on usage metrics after every release.
 
-## 3) Typical Dialogues
+## 4) Typical Dialogues
 
 ### Dialogue 1 – High-Level Explanation
 
 **Teacher:** Can you explain what your system does?
 
 **You:**  
-At a high level, our system is a web-based platform designed to support the company’s core daily operations. Its main purpose is to help employees handle complex tasks more easily and efficiently.
+At a high level, our system is a web platform that manages a full business workflow, from request creation to completion tracking. The main users are operations teams, team leads, and managers.
 
-The primary users are staff from sales, operations, and management departments. From the user’s perspective, the system allows them to access important information quickly, track progress, and complete their work in one place. It also has good integration with other internal tools.
+Before this system, teams handled many steps manually across different tools. Now they can complete the process in one place with better visibility and fewer handover errors. As a frontend engineer, I focus on making the workflow clear, fast, and easy to learn.
 
-As a Senior Frontend Engineer, I focus on making the interface intuitive, fast, and responsive so that users can work comfortably on any device. Overall, the system improves both user productivity and operational efficiency.
+The business value is measurable: we reduced task completion time and improved cross-team coordination.
 
 ### Dialogue 2 – Value for Users and Business
 
 **Teacher:** What value does this system bring?
 
 **You:**  
-The system creates value for both users and the business. For users, it simplifies complicated processes and saves them a lot of time. For the company, it reduces manual work, minimizes errors, and helps teams make faster decisions. In short, it improves daily productivity while supporting long-term business goals.
+For users, the system reduces repetitive work and gives them one consistent process to follow. This lowers confusion and helps new members become productive faster.
 
-## 4) Reading Text
+For the business, it improves data quality, shortens cycle time, and supports faster decisions with clearer reporting. In one release, after simplifying a key flow, we saw fewer support tickets and higher completion rates.
 
-Modern organizations depend on well-designed systems to support their daily activities. A good system should not only solve business problems but also serve real user needs by making work easier, faster, and less stressful. When explaining a system, it is important to describe its purpose, who uses it, and the value it creates for both people and the organization.
+So the value is both user-level and business-level.
 
-## 5) List of Questions + Ideas
+### Dialogue 3 – Handling a Skeptical Stakeholder
 
-### Basic Questions
+**Teacher:** A manager says, "The old process still works. Why change?" How would you respond?
 
-1. What does your system do?
-2. Can you give a high-level overview of the system?
-3. Who are the main users of the system?
-4. What is the main purpose of the system?
+**You:**  
+I would agree that the old process works at a basic level, but it does not scale well. It depends on manual coordination, which increases delays and errors as volume grows. The new system standardizes steps, improves traceability, and provides measurable outcomes. So we are not changing for novelty; we are changing for consistency, speed, and long-term efficiency.
 
-### Deeper & Follow-up Questions
+## 5) Reading Text
 
-5. How does the system help users in their daily work?
-6. What are some of the key features?
-7. How does the system create value for users?
-8. In what ways does it benefit the company?
-9. How does the system integrate with other tools?
-10. How do you measure the success of the system?
+A strong system explanation should be simple, structured, and audience-aware. Instead of starting with technical details, begin with three core points: what problem the system solves, who the users are, and how value is measured.
 
-### Objection & Discussion Questions
+In many organizations, systems fail not because of technology, but because workflows are unclear or user needs are ignored. Teams that map real user journeys and prioritize practical improvements usually achieve better adoption and stronger business outcomes.
 
-11. Why do companies need complex systems like this?
-12. How would you explain this system to a non-technical person?
-13. What would happen if the system stopped working for a day?
-14. Is user experience more important than business features?
-15. How can a good frontend contribute to the overall success of the system?
+When speaking professionally, connect system features to results. For example: fewer manual steps, faster completion, lower error rates, and better reporting. This makes your explanation more credible and persuasive.
+
+## 6) List of Questions + Ideas
+
+### Core Questions (must-practice)
+
+1. At a high level, what does your system do?
+2. Who are the main users, and what pain points does the system solve?
+3. What is the core workflow from a user perspective?
+4. How do you measure business value and success?
+
+### High-Value Case Questions
+
+5. Describe a release that improved both user experience and business efficiency.
+6. Tell me about a feature with low adoption. What did you change?
+7. Share a case where business priorities conflicted with user needs. How did you balance it?
+
+### Critical Discussion Questions
+
+8. Why use an integrated system instead of many separate tools?
+9. Is improving UX always worth the development cost?
+10. What should come first: adoption rate or feature completeness?
+
+**Tips for speaking practice:**
+- Start with "problem -> users -> value".
+- Add one KPI or metric to strengthen credibility.
+- Explain at least one trade-off in long answers.
 
 ---

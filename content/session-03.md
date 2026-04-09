@@ -10,7 +10,7 @@ description: Explain your tech stack, tools you use, and the reasons behind your
 # Session 3: Tech Stack, Tools & Why You Choose Them
 
 **Level:** B2  
-**Focus:** Speaking confidently about the technologies and tools you use, and explaining why you choose them.
+**Focus:** Speaking confidently about your tech stack, evaluation criteria, trade-offs, and the business reasons behind technical decisions.
 
 ## 1) Vocabulary & Collocations
 
@@ -20,93 +20,152 @@ description: Explain your tech stack, tools you use, and the reasons behind your
 - **framework** (n) – a structured platform for developing applications  
   _Example:_ React is our primary framework for building user interfaces.
 
-- **productivity** (n) – the efficiency of doing work  
-  _Example:_ Modern tools greatly improve developer productivity.
+- **library** (n) – a reusable set of code functions or components  
+  _Example:_ We use several libraries to speed up UI development.
 
-- **maintainability** (n) – how easy it is to maintain the code long-term  
-  _Example:_ We always consider maintainability when selecting tools.
+- **maintainability** (n) – how easy it is to maintain and update over time  
+  _Example:_ Maintainability is critical in long-term enterprise projects.
 
-- **reliability** (n) – the quality of being dependable  
-  _Example:_ Reliability is a key factor in our technology choices.
+- **reliability** (n) – stability and consistency under real usage  
+  _Example:_ Reliability matters more than novelty in core product areas.
 
-- **scalability** (n) – the ability to grow with more users or data  
-  _Example:_ We need technologies that support good scalability.
+- **scalability** (n) – ability to handle growth in users, features, or traffic  
+  _Example:_ We selected tools that support scalability as the product grows.
+
+- **learning curve** (n) – how difficult it is for developers to learn a tool  
+  _Example:_ A steep learning curve can slow down onboarding.
+
+- **ecosystem** (n) – surrounding tools, community, and integrations  
+  _Example:_ We chose this framework because of its mature ecosystem.
+
+- **trade-off** (n) – balancing benefits and drawbacks  
+  _Example:_ Every tool choice involves a trade-off between speed and flexibility.
+
+- **migration** (n) – moving from one technology to another  
+  _Example:_ The migration to TypeScript reduced runtime bugs.
+
+**Additional useful terms:**
+- **technical debt** (n) – future cost caused by quick short-term decisions
+- **proof of concept (PoC)** (n) – a small experiment to validate feasibility
+- **vendor lock-in** (n) – dependence on one platform or provider
+- **DX (developer experience)** (n) – how smooth tools feel for developers
+- **observability** (n) – ability to monitor and diagnose system behavior
 
 ## 2) Grammar & Useful Patterns (B2)
 
-- **Reason clauses**: because / since / as  
-  We use TypeScript **because** it helps catch errors early.
+- **Reason clauses (because / since / as)**  
+  We use TypeScript because strong typing helps catch issues earlier.
 
-- **Purpose clauses**: to / in order to  
-  We chose React **to build** reusable components more efficiently.
+- **Purpose clauses (to / in order to / so that)**  
+  We chose this framework to build reusable components and speed up delivery.
 
-- **Comparative structures**  
-  TypeScript is **more reliable than** plain JavaScript for large projects.
+- **Comparatives and superlatives**  
+  This stack is more maintainable than our previous one for large teams.
 
-- **Passive voice for decisions**  
-  These tools **are selected** based on performance and developer experience.
+- **Conditional language for decision-making**  
+  If the tool increases complexity without clear value, we avoid adopting it.
+
+- **Passive voice for process descriptions**  
+  New tools are evaluated through PoCs before being approved.
 
 ### Useful Sentence Patterns
-- We decided to use … because …
-- One of the main reasons we choose … is …
-- This technology allows us to …
-- Compared to the old stack, the new one is …
+- We chose ... because it improves ...
+- One key criterion in our decision was ...
+- Compared to our previous stack, this solution is ...
+- The main trade-off is ...
+- We validated this choice by ...
+- A practical example from our project is ...
 
 ## 3) Collocations, Chunking & Phrasal Verbs
 
 ### Strong Collocations
 - modern tech stack
 - choose a framework
-- increase productivity
+- evaluate technical options
+- run a proof of concept
+- improve developer productivity
 - improve maintainability
-- reduce bugs
+- reduce bug rates
 - speed up development
-- ensure reliability
+- ensure long-term reliability
+- support team scalability
+- avoid vendor lock-in
 
 ### Useful Chunking & Sentence Starters
 - My current tech stack includes…
-- We use … because…
-- The biggest advantage of this tool is…
-- This helps us to…
+- We selected this stack because…
+- The main criteria were…
+- From a team perspective, this tool helps us…
+- The biggest limitation is…
+- To reduce risk, we…
+- In one migration project, we…
 
 ### Useful Phrasal Verbs
 - **work with** → I work with React and TypeScript daily.
-- **rely on** → We rely on these libraries to speed up development.
-- **build on** → We build on top of modern frameworks.
-- **speed up** → These tools help speed up our workflow.
+- **rely on** → We rely on static typing to prevent common errors.
+- **build on** → We build on proven tools instead of rewriting everything.
+- **phase out** → We gradually phased out legacy libraries with low maintainability.
+- **switch to** → We switched to a faster build tool to improve DX.
+- **scale up** → The architecture can scale up as usage grows.
+- **fall back on** → We fall back on stable patterns when experiments fail.
 
 ## 4) Typical Dialogues
 
-**Teacher:** What tech stack do you use?
+### Dialogue 1 – Explaining Your Stack
+
+**Teacher:** What tech stack do you use, and why?
 
 **You:**  
-I mainly work with a tech stack based on ReactJS and TypeScript. We also use supporting tools for testing and styling. We chose this stack because it offers strong typing, excellent performance, and great reusability. TypeScript helps us reduce errors in large applications, while React makes it easier to create and maintain reusable components. Overall, this combination significantly improves our development speed and code quality.
+I mainly work with a frontend stack based on React and TypeScript, with testing, linting, and CI tools around it. We chose this stack because it balances speed, maintainability, and team onboarding.
+
+TypeScript helps us catch issues earlier, while component-based architecture keeps the code reusable. We also selected tools with strong community support, so troubleshooting and hiring are easier.
+
+Overall, this stack improves delivery speed without sacrificing long-term code quality.
+
+### Dialogue 2 – Discussing Trade-offs
+
+**Teacher:** Why not always use the newest framework?
+
+**You:**  
+Newer tools can be powerful, but they also introduce risk. We usually evaluate them through small PoCs before adopting them in production. If the expected gain is small but migration cost is high, we keep our current stack. Our principle is practical value over hype.
+
+### Dialogue 3 – Migration Case
+
+**Teacher:** Have you ever changed your stack?
+
+**You:**  
+Yes. We migrated part of the codebase from JavaScript to TypeScript. We did it incrementally: first shared components, then critical flows, and finally less-used pages. This approach reduced risk and allowed the team to keep shipping features. After migration, we saw fewer regressions in production.
 
 ## 5) Reading Text
 
-Choosing the right tech stack is crucial for any development team. The best choices are usually based on factors such as performance, maintainability, developer productivity, and long-term scalability. A well-chosen tech stack can make development faster, reduce bugs, and help the team deliver better products.
+Choosing a tech stack is both a technical and business decision. Teams should evaluate tools by maintainability, delivery speed, reliability, and hiring impact. A tool that looks impressive in demos may fail in long-term maintenance if the ecosystem is weak.
+
+Strong teams avoid binary thinking like "old vs new." Instead, they focus on context: product stage, team maturity, architecture constraints, and user expectations. They validate assumptions through experiments, measure outcomes, and adopt changes gradually.
+
+In professional communication, explaining trade-offs clearly is often more important than naming many technologies. Stakeholders trust engineers who can connect technology choices to practical outcomes.
 
 ## 6) List of Questions + Ideas
 
-### Basic Questions
-1. What is your current tech stack?
-2. Which main tools do you use?
-3. Why did you choose these technologies?
-4. What frameworks do you work with?
+### Core Questions (must-practice)
+1. What is your current tech stack, and why this combination?
+2. Which criteria matter most when choosing tools in your team?
+3. What are the biggest strengths and limitations of your current stack?
+4. What is the most important trade-off in your current architecture?
 
-### Deeper & Follow-up Questions
-5. What are the advantages of your current tech stack?
-6. How does your tech stack improve productivity?
-7. Have you ever changed your tech stack? Why?
-8. How do you decide which new tools to adopt?
-9. What problems can a bad tech stack cause?
-10. How important is maintainability when choosing tools?
+### High-Value Case Questions
 
-### Objection & Discussion Questions
-11. Some people say newer technologies are always better. What do you think?
-12. Is it better to use popular frameworks or stable older ones?
-13. How would you explain your tech stack to a non-technical manager?
-14. What happens if the team refuses to learn new tools?
-15. Should companies change their tech stack frequently?
+5. Tell me about a migration project and its measurable results.
+6. Describe how your team evaluated a new tool before adoption.
+7. Share a technical choice your team changed later. What did you learn?
+
+### Critical Discussion Questions
+8. Are newer technologies always better? Why or why not?
+9. Should engineering standards be strict, or should teams have more tool freedom?
+10. How much technical debt is acceptable for faster delivery?
+
+**Tips for speaking practice:**
+- Explain decisions as "criteria -> choice -> result".
+- Include one clear trade-off in your answer.
+- Support your point with one real migration/tooling example.
 
 ---
