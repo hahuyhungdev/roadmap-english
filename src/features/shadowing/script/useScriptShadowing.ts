@@ -88,27 +88,31 @@ export function useScriptShadowing(opts?: SessionOpts) {
   const recordingForIdxRef = useRef<number | null>(null);
   const prevActiveSentenceIdxRef = useRef(activeSentenceIdx);
 
-  const clearRecordedVoiceForSentence = useEffectEvent((sentenceIdx: number) => {
-    if (sentenceIdx < 0) return;
+  const clearRecordedVoiceForSentence = useEffectEvent(
+    (sentenceIdx: number) => {
+      if (sentenceIdx < 0) return;
 
-    const revoked = new Set<string>();
+      const revoked = new Set<string>();
 
-    setTurns((prev) => {
-      let changed = false;
-      const next = prev.map((t) => {
-        if (t.sentenceIdx !== sentenceIdx || !t.audioUrl) return t;
-        changed = true;
-        revoked.add(t.audioUrl);
-        return { ...t, audioUrl: undefined };
+      setTurns((prev) => {
+        let changed = false;
+        const next = prev.map((t) => {
+          if (t.sentenceIdx !== sentenceIdx || !t.audioUrl) return t;
+          changed = true;
+          revoked.add(t.audioUrl);
+          return { ...t, audioUrl: undefined };
+        });
+        return changed ? next : prev;
       });
-      return changed ? next : prev;
-    });
 
-    if (revoked.size > 0) {
-      revoked.forEach((url) => URL.revokeObjectURL(url));
-      blobUrlsRef.current = blobUrlsRef.current.filter((u) => !revoked.has(u));
-    }
-  });
+      if (revoked.size > 0) {
+        revoked.forEach((url) => URL.revokeObjectURL(url));
+        blobUrlsRef.current = blobUrlsRef.current.filter(
+          (u) => !revoked.has(u),
+        );
+      }
+    },
+  );
 
   // Revoke all blob URLs on unmount
   useEffect(
@@ -403,9 +407,15 @@ export function useScriptShadowing(opts?: SessionOpts) {
     if (e.repeat) return;
 
     const wantsNext =
-      code === "ArrowRight" || code === "KeyD" || key === "d" || e.keyCode === 68;
+      code === "ArrowRight" ||
+      code === "KeyD" ||
+      key === "d" ||
+      e.keyCode === 68;
     const wantsPrev =
-      code === "ArrowLeft" || code === "KeyA" || key === "a" || e.keyCode === 65;
+      code === "ArrowLeft" ||
+      code === "KeyA" ||
+      key === "a" ||
+      e.keyCode === 65;
 
     if (wantsNext && !wantsPrev) {
       e.preventDefault();
@@ -470,19 +480,25 @@ export function useScriptShadowing(opts?: SessionOpts) {
     }).catch(() => {});
   }
 
-  function buildScriptPreview(e?: FormEvent, customScript?: string, customMin?: number, customMax?: number) {
+  function buildScriptPreview(
+    e?: FormEvent,
+    customScript?: string,
+    customMin?: number,
+    customMax?: number,
+  ) {
     e?.preventDefault();
     setScriptError("");
-    const textToProcess = customScript !== undefined ? customScript : scriptInput;
+    const textToProcess =
+      customScript !== undefined ? customScript : scriptInput;
     const trimmed = textToProcess.trim();
     if (!trimmed) {
       setScriptError("Please paste a script or text");
       return null;
     }
-    
+
     const minLen = customMin !== undefined ? customMin : minSentenceLength;
     const maxLen = customMax !== undefined ? customMax : maxSentenceLength;
-    
+
     // If the script looks like dialogue/markdown with speaker prefixes
     // (e.g. "John: Hello" or "- John: Hello"), prefer extracting only
     // the main character's lines to practice with. Otherwise fall back to
@@ -571,27 +587,15 @@ export function useScriptShadowing(opts?: SessionOpts) {
         const allText = speakerNames
           .map((k) => speakers[k].join("\n\n"))
           .join("\n\n");
-        result = splitScriptIntoSentences(
-          allText,
-          minLen,
-          maxLen,
-        );
+        result = splitScriptIntoSentences(allText, minLen, maxLen);
       } else {
         speakerNames.sort((a, b) => speakers[b].length - speakers[a].length);
         const main = speakerNames[0];
         const mainText = speakers[main].join("\n\n");
-        result = splitScriptIntoSentences(
-          mainText,
-          minLen,
-          maxLen,
-        );
+        result = splitScriptIntoSentences(mainText, minLen, maxLen);
       }
     } else {
-      result = splitScriptIntoSentences(
-        trimmed,
-        minLen,
-        maxLen,
-      );
+      result = splitScriptIntoSentences(trimmed, minLen, maxLen);
     }
 
     if (result.length === 0) {
@@ -621,7 +625,7 @@ export function useScriptShadowing(opts?: SessionOpts) {
 
     const next = [...prev];
     next[idx] = { ...next[idx], text: trimmed };
-    
+
     setSentences(next);
     optsRef.current?.onSentencesChange?.(next);
     optsRef.current?.onScriptTextChange?.(next.map((s) => s.text).join("\n"));
@@ -631,8 +635,10 @@ export function useScriptShadowing(opts?: SessionOpts) {
 
   const activeSentenceText = sentences[activeSentenceIdx]?.text ?? "";
 
-  // Estimate remaining time from sentence-based progress (same UX style as YouTube).
-  // Build a per-sentence duration model from text length, then multiply by remaining count.
+  // Estimate remaining time by looking at your actual average speed per sentence in this session.
+  // We use your recorded turns array: time difference between first turn and last turn
+  // divided by how many sentences you've worked heavily on.
+  // Fallback defaults to a generous 1.5 minutes (90,000ms) per sentence if no data yet.
   const estimatedRemainingMs = (() => {
     if (activeSentenceIdx < 0 || sentences.length === 0) return 0;
 
@@ -642,13 +648,30 @@ export function useScriptShadowing(opts?: SessionOpts) {
     );
     if (remainingCount === 0) return 0;
 
-    const totalEstimatedMs = sentences.reduce((sum, sentence) => {
-      const perSentenceMs = sentence.text.length * 220;
-      return sum + Math.min(30000, Math.max(6000, perSentenceMs));
-    }, 0);
+    const DEFAULT_MS_PER_SENTENCE = 90000; // 1.5 minutes per sentence
 
-    const avgSentenceMs = totalEstimatedMs / sentences.length;
-    return Math.round(avgSentenceMs * remainingCount);
+    let avgMsPerSentence = DEFAULT_MS_PER_SENTENCE;
+
+    if (turns.length > 1) {
+      const firstTurnMs = turns[0].timestamp;
+      const lastTurnMs = turns[turns.length - 1].timestamp;
+      const elapsedMs = Math.max(0, lastTurnMs - firstTurnMs);
+
+      // Unique sentences practiced so far based on turns
+      const practicedIdxs = new Set(
+        turns.map((t) => t.sentenceIdx).filter((idx) => idx !== undefined),
+      );
+
+      if (practicedIdxs.size > 0 && elapsedMs > 0) {
+        // Average time spent *per practiced sentence*
+        const actualAvg = elapsedMs / practicedIdxs.size;
+
+        // Clamp the actual average to keep estimations sane between 30s and 5m per sentence
+        avgMsPerSentence = Math.min(300000, Math.max(30000, actualAvg));
+      }
+    }
+
+    return Math.round(avgMsPerSentence * remainingCount);
   })();
 
   const lastAudioUrl = (() => {

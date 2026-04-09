@@ -26,7 +26,7 @@ export default function NotePanel() {
 
   const [content, setContent] = useLocalStorage({
     key: "roadmap-english-notes",
-    defaultValue: "Start taking notes...",
+    defaultValue: "",
   });
 
   if (!mounted) return null;
