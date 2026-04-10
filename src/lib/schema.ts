@@ -106,3 +106,11 @@ export const lessonProgress = pgTable("lesson_progress", {
   doneAt: timestamp("done_at"),
   updatedAt: timestamp("updated_at").defaultNow().notNull(),
 });
+
+// ─── Lesson Notes ─────────────────────────────────────────────────────────────
+// Stores one note document per lesson session slug (single-user app).
+export const lessonNotes = pgTable("lesson_notes", {
+  sessionSlug: varchar("session_slug", { length: 100 }).primaryKey(),
+  content: text("content").notNull().default(""),
+  updatedAt: timestamp("updated_at").defaultNow().notNull(),
+});

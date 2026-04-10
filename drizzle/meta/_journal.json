@@ -29,6 +29,13 @@
       "when": 1775317111411,
       "tag": "0003_smiling_quasimodo",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1775779701907,
+      "tag": "0004_lesson_notes",
+      "breakpoints": true
     }
   ]
 }
