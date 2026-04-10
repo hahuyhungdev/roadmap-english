@@ -29,6 +29,14 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Type check
+        run: pnpm exec tsc --noEmit --pretty false
+
+      - name: Sync DB schema (safe)
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: pnpm run db:push
+
       - name: Build
         run: pnpm run build
 
@@ -111,6 +119,13 @@ jobs:
             if [ "$status_code" != "200" ]; then
               echo "Health check failed: HTTP $status_code"
               head -c 500 /tmp/roadmap-health.out || true
+              exit 1
+            fi
+
+            note_status_code=$(curl -sS -o /tmp/roadmap-note-health.out -w "%{http_code}" "http://127.0.0.1:3000/api/lesson-notes?sessionSlug=session-01")
+            if [ "$note_status_code" != "200" ]; then
+              echo "Lesson note API check failed: HTTP $note_status_code"
+              head -c 500 /tmp/roadmap-note-health.out || true
               exit 1
             fi
 

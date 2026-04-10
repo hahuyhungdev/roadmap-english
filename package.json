@@ -11,7 +11,7 @@
     "clean:transcript": "node ./scripts/clean_transcript.mjs",
     "db:generate": "drizzle-kit generate",
     "db:push": "drizzle-kit push",
-    "db:migrate": "node ./scripts/migrate.mjs"
+    "db:migrate": "drizzle-kit push"
   },
   "homepage": "https://huyhung.github.io/roadmap-english-ai",
   "dependencies": {

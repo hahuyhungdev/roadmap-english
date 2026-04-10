@@ -19,6 +19,18 @@ fi
 
 cd "$SRC_DIR"
 
+if [[ -f "$SRC_DIR/.env.local" ]]; then
+  set -a
+  # shellcheck source=/dev/null
+  source "$SRC_DIR/.env.local"
+  set +a
+fi
+
+if [[ -z "${DATABASE_URL:-}" ]]; then
+  echo "Missing DATABASE_URL. Export it or set it in $SRC_DIR/.env.local"
+  exit 1
+fi
+
 echo "== Sync repository to origin/$BRANCH =="
 git fetch origin
 git reset --hard "origin/$BRANCH"
@@ -26,6 +38,8 @@ git clean -fd
 
 echo "== Install dependencies and build =="
 pnpm install --frozen-lockfile
+echo "== Sync database schema =="
+pnpm run db:push
 pnpm run build
 
 echo "== Package standalone build =="
