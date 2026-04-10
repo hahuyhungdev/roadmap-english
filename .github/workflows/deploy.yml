@@ -32,11 +32,6 @@ jobs:
       - name: Type check
         run: pnpm exec tsc --noEmit --pretty false
 
-      - name: Sync DB schema (safe)
-        env:
-          DATABASE_URL: ${{ secrets.DATABASE_URL }}
-        run: pnpm run db:push
-
       - name: Build
         run: pnpm run build
 
@@ -45,6 +40,9 @@ jobs:
           cp -r .next/static .next/standalone/.next/static
           cp -r public .next/standalone/public
           cp -r content .next/standalone/content
+          mkdir -p .next/standalone/src/lib
+          cp drizzle.config.ts .next/standalone/drizzle.config.ts
+          cp src/lib/schema.ts .next/standalone/src/lib/schema.ts
           tar -czf deploy.tar.gz -C .next/standalone .
 
       - name: Upload build to VPS
@@ -97,6 +95,10 @@ jobs:
               "DATABASE_URL=$DATABASE_URL" \
               > "$APP_DIR/.env.local"
 
+            # Sync DB schema on VPS (runner IP may not be allowed to access DB)
+            cd "$APP_DIR"
+            npx --yes drizzle-kit@0.31.10 push --config drizzle.config.ts
+
             # Stop any old process names that may hold port 3000
             pm2 delete roadmap-english-ai 2>/dev/null || true
             pm2 delete roadmap-ai 2>/dev/null || true
@@ -104,7 +106,6 @@ jobs:
             # Zero-downtime rolling reload (cluster mode):
             # if already running → reload workers one-by-one (no downtime)
             # if first deploy   → start fresh with 2 cluster workers
-            cd "$APP_DIR"
             if pm2 describe "$PM2_APP_NAME" > /dev/null 2>&1; then
               pm2 reload "$PM2_APP_NAME"
             else
