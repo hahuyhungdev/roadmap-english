@@ -96,7 +96,11 @@ jobs:
 
             # Sync DB schema on VPS (runner IP may not be allowed to access DB)
             cd "$APP_DIR"
-            npx --yes drizzle-kit@0.31.10 push \
+            npx --yes \
+              -p drizzle-kit@0.31.10 \
+              -p drizzle-orm@0.45.2 \
+              -p pg@8.20.0 \
+              drizzle-kit push \
               --dialect postgresql \
               --schema ./src/lib/schema.ts \
               --url "$DATABASE_URL"
