@@ -38,6 +38,12 @@ git clean -fd
 
 echo "== Install dependencies and build =="
 pnpm install --frozen-lockfile
+
+echo "== DB preflight =="
+node -e "const u=new URL(process.env.DATABASE_URL); const db=u.pathname.replace(/^\//,''); console.log('DB target:', u.hostname + ':' + (u.port || '5432') + '/' + db)"
+node -e "require.resolve('pg'); require.resolve('drizzle-orm/node-postgres'); console.log('DB driver preflight passed')"
+node -e "const {Pool}=require('pg'); const p=new Pool({connectionString: process.env.DATABASE_URL}); p.query('select 1 as ok').then(()=>{console.log('DB connectivity preflight passed')}).catch((e)=>{console.error('DB connectivity preflight failed:', e.message); process.exit(1)}).finally(()=>p.end())"
+
 echo "== Sync database schema =="
 pnpm run db:push
 pnpm run build

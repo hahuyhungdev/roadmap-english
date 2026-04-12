@@ -96,11 +96,28 @@ jobs:
 
             # Sync DB schema on VPS (runner IP may not be allowed to access DB)
             cd "$APP_DIR"
-            npx --yes \
-              -p drizzle-kit@0.31.10 \
-              -p drizzle-orm@0.45.2 \
-              -p pg@8.20.0 \
-              drizzle-kit push \
+
+            echo "DB preflight: checking target and connectivity..."
+            node -e "const u=new URL(process.env.DATABASE_URL); const db=u.pathname.replace(/^\//,''); console.log('DB target:', u.hostname + ':' + (u.port || '5432') + '/' + db)"
+
+            # Ensure DB drivers are available for both schema sync and runtime.
+            # This fixes occasional standalone environments where pg is not traced.
+            # Install runtime deps in an isolated folder to avoid npm resolving Next peer deps.
+            RUNTIME_DEPS_DIR="$APP_DIR/.runtime-deps"
+            mkdir -p "$RUNTIME_DEPS_DIR"
+            if [ ! -f "$RUNTIME_DEPS_DIR/package.json" ]; then
+              printf '{"name":"runtime-deps","private":true}' > "$RUNTIME_DEPS_DIR/package.json"
+            fi
+
+            if ! NODE_PATH="$RUNTIME_DEPS_DIR/node_modules" node -e "require('module').Module._initPaths(); require.resolve('pg'); require.resolve('drizzle-orm/node-postgres'); require.resolve('drizzle-kit/bin.cjs')" >/dev/null 2>&1; then
+              echo "Installing missing DB runtime dependencies (isolated)..."
+              npm --prefix "$RUNTIME_DEPS_DIR" install --omit=dev --no-package-lock --legacy-peer-deps pg@8.20.0 drizzle-orm@0.45.2 drizzle-kit@0.31.10 >/dev/null
+            fi
+
+            export NODE_PATH="$RUNTIME_DEPS_DIR/node_modules${NODE_PATH:+:$NODE_PATH}"
+            node -e "const {Pool}=require('pg'); const p=new Pool({connectionString: process.env.DATABASE_URL}); p.query('select 1 as ok').then(()=>{console.log('DB preflight passed')}).catch((e)=>{console.error('DB preflight failed:', e.message); process.exit(1)}).finally(()=>p.end())"
+
+            "$RUNTIME_DEPS_DIR/node_modules/.bin/drizzle-kit" push \
               --dialect postgresql \
               --schema ./src/lib/schema.ts \
               --url "$DATABASE_URL"
@@ -113,9 +130,9 @@ jobs:
             # if already running → reload workers one-by-one (no downtime)
             # if first deploy   → start fresh with 2 cluster workers
             if pm2 describe "$PM2_APP_NAME" > /dev/null 2>&1; then
-              pm2 reload "$PM2_APP_NAME"
+              pm2 reload "$PM2_APP_NAME" --update-env
             else
-              pm2 start server.js --name "$PM2_APP_NAME" -i 2
+              NODE_PATH="$NODE_PATH" pm2 start server.js --name "$PM2_APP_NAME" -i 2
             fi
             pm2 save
 

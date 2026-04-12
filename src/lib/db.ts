@@ -27,7 +27,7 @@ export const db = new Proxy({} as ReturnType<typeof drizzleNode<typeof schema>>,
 });
 
 /** Retry a db call up to `retries` times with exponential backoff.
- * Handles Neon serverless cold-start failures gracefully. */
+ * Helps absorb transient connection errors in production. */
 export async function withRetry<T>(
   fn: () => Promise<T>,
   retries = 4,
