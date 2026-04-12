@@ -12,7 +12,8 @@ description: Describe a production issue you faced, how you handled it under pre
 **Level:** B2+  
 **Focus:** Speaking in a B2+/C1 interview style about incident response, pressure management, and stakeholder communication.
 
-## 1) Vocabulary & Collocations
+<details open>
+<summary><strong>1) Vocabulary </strong></summary>
 
 - **production issue** (n) – a problem that occurs in the live system  
   _Example:_ We had a critical production issue last week.
@@ -54,7 +55,10 @@ description: Describe a production issue you faced, how you handled it under pre
 - **action item** (n) – concrete post-mortem follow-up task
 - **recovery time objective (RTO)** (n) – target maximum recovery duration
 
-## 2) Grammar & Useful Patterns (B2+ / C1-lite)
+</details>
+
+<details open>
+<summary><strong>2) Grammar & Useful Patterns (B2+ / C1-lite)</strong></summary>
 
 - **Timeline storytelling**  
   First we detected the issue, then we contained impact, and finally we restored service.
@@ -80,7 +84,10 @@ description: Describe a production issue you faced, how you handled it under pre
 - The biggest communication challenge was...
 - To prevent recurrence, we introduced...
 
-## 3) Collocations, Chunking & Phrasal Verbs
+</details>
+
+<details open>
+<summary><strong>3) Collocations, Chunking & Phrasal Verbs</strong></summary>
 
 ### Strong Collocations
 - triage the incident
@@ -106,7 +113,10 @@ description: Describe a production issue you faced, how you handled it under pre
 - **bring down** → We brought down the error rate after rollback.
 - **follow up on** → We followed up on all post-mortem action items.
 
-## 4) Typical Dialogues
+</details>
+
+<details open>
+<summary><strong>4) Typical Dialogues</strong></summary>
 
 ### Dialogue 1 – Incident Timeline
 
@@ -133,7 +143,10 @@ I used short and structured updates: current impact, mitigation status, and next
 **You:**  
 I focus on process discipline: clear priorities, explicit ownership, and short feedback loops. I also separate urgent containment from deeper analysis. That structure helps the team move fast without losing clarity.
 
-## 5) Reading Text
+</details>
+
+<details open>
+<summary><strong>5) Reading Text</strong></summary>
 
 Production incidents test both technical depth and communication maturity. Fast fixes without clear updates can still damage trust. On the other hand, clear communication without containment is not enough.
 
@@ -141,7 +154,10 @@ High-performing teams use a repeatable response flow: detect, triage, contain, r
 
 In interviews, strong answers show leadership behavior: clear priorities, calm communication, and concrete prevention actions.
 
-## 6) List of Questions + Ideas
+</details>
+
+<details open>
+<summary><strong>6) List of Questions + Ideas</strong></summary>
 
 ### Core Questions (must-practice)
 1. Walk me through a production incident from detection to recovery.
@@ -165,3 +181,5 @@ In interviews, strong answers show leadership behavior: clear priorities, calm c
 - End with one concrete change that improved future readiness.
 
 ---
+
+</details>

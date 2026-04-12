@@ -12,7 +12,8 @@ description: Practice a complete mock interview focusing on self-introduction, s
 **Level:** B1+ / B2  
 **Focus:** Simulate a real job interview with common questions. Focus on fluency, structure, confidence, and natural answers.
 
-## 1) Vocabulary & Useful Phrases for Interview
+<details open>
+<summary><strong>1) Vocabulary & Useful Phrases for Interview</strong></summary>
 
 - **Tell me about yourself** – Câu hỏi mở đầu phổ biến nhất
 - **Strengths & weaknesses** – Điểm mạnh & điểm yếu
@@ -30,7 +31,10 @@ description: Practice a complete mock interview focusing on self-introduction, s
 - "Looking ahead, I hope to..."
 - "I'd be happy to elaborate on that..."
 
-## 2) Mock Interview Structure (Teacher reads the questions)
+</details>
+
+<details open>
+<summary><strong>2) Mock Interview Structure (Teacher reads the questions)</strong></summary>
 
 **Teacher’s Role:** Act as a recruiter from a global tech company. Be friendly but professional. Ask follow-up questions naturally.
 
@@ -66,18 +70,27 @@ After each answer, you can ask natural follow-up questions such as:
 - “What would you do differently next time?”
 - “Why was that important?”
 
-## 3) Practice Tips for You (Student)
+</details>
+
+<details open>
+<summary><strong>3) Practice Tips for You (Student)</strong></summary>
 
 - Aim to speak **1.5 – 3 minutes** per answer (especially for “Tell me about yourself”).
 - Use **STAR method** (Situation – Task – Action – Result) for behavioral questions.
 - Speak naturally, not like reading a script.
 - Record yourself if possible and review later.
 
-## 4) Reading Text (Model Mindset)
+</details>
+
+<details open>
+<summary><strong>4) Reading Text (Model Mindset)</strong></summary>
 
 A good mock interview is not about being perfect — it’s about showing confidence, clear thinking, honesty, and professionalism. Even when you don’t know the perfect answer, staying calm and structured makes a strong impression. Remember: interviewers want to see how you think and communicate, not just what you know.
 
-## 5) Post-Interview Reflection Questions (Do this after the mock)
+</details>
+
+<details open>
+<summary><strong>5) Post-Interview Reflection Questions (Do this after the mock)</strong></summary>
 
 1. Which question was the most difficult for you? Why?
 2. Which answer did you feel most confident about?
@@ -86,3 +99,5 @@ A good mock interview is not about being perfect — it’s about showing confid
 5. What do you want to improve before the next mock interview?
 
 ---
+
+</details>

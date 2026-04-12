@@ -12,7 +12,8 @@ description: Discuss performance problems in enterprise applications, optimizati
 **Level:** B2+  
 **Focus:** Speaking in a B2+/C1 interview style about diagnosing performance problems, choosing optimization strategy, and translating improvements into business value.
 
-## 1) Vocabulary & Collocations
+<details open>
+<summary><strong>1) Vocabulary </strong></summary>
 
 - **performance** (n) – how fast or efficient something is  
   _Example:_ Poor performance can frustrate users and affect business results.
@@ -54,7 +55,10 @@ description: Discuss performance problems in enterprise applications, optimizati
 - **cache strategy** (n) – policy for storing and reusing data
 - **performance regression** (n) – degradation after release
 
-## 2) Grammar & Useful Patterns (B2+ / C1-lite)
+</details>
+
+<details open>
+<summary><strong>2) Grammar & Useful Patterns (B2+ / C1-lite)</strong></summary>
 
 - **Before/After impact framing**  
   Before optimization, users waited 8 seconds; after optimization, median load time was 1.8 seconds.
@@ -80,7 +84,10 @@ description: Discuss performance problems in enterprise applications, optimizati
 - From a business perspective, this improved...
 - The highest-ROI improvement was...
 
-## 3) Collocations, Chunking & Phrasal Verbs
+</details>
+
+<details open>
+<summary><strong>3) Collocations, Chunking & Phrasal Verbs</strong></summary>
 
 ### Strong Collocations
 - performance issue
@@ -107,7 +114,10 @@ description: Discuss performance problems in enterprise applications, optimizati
 - **cut down on** → We cut down on unnecessary client-side computation.
 - **bring down** → We brought down page load and error rates together.
 
-## 4) Typical Dialogues
+</details>
+
+<details open>
+<summary><strong>4) Typical Dialogues</strong></summary>
 
 ### Dialogue 1 – Performance Story
 
@@ -134,7 +144,10 @@ I link performance to outcomes they care about: conversion, retention, and suppo
 **You:**  
 No, I optimize by impact. Early in a feature, I set reasonable performance budgets and monitor usage. Then I prioritize bottlenecks that affect key user journeys. This keeps delivery practical while still protecting quality.
 
-## 5) Reading Text
+</details>
+
+<details open>
+<summary><strong>5) Reading Text</strong></summary>
 
 Performance engineering is not about making everything "as fast as possible." It is about improving what users feel most and what business outcomes depend on.
 
@@ -142,7 +155,10 @@ High-performing teams measure first, optimize second, and validate after release
 
 In interviews, strong answers combine technical diagnosis with business translation: what changed, why it mattered, and how success was measured.
 
-## 6) List of Questions + Ideas
+</details>
+
+<details open>
+<summary><strong>6) List of Questions + Ideas</strong></summary>
 
 ### Core Questions (must-practice)
 1. What performance issue had the strongest impact on users?
@@ -166,3 +182,5 @@ In interviews, strong answers combine technical diagnosis with business translat
 - Explain your reasoning in simple language before technical details.
 
 ---
+
+</details>

@@ -12,7 +12,8 @@ description: Practice handling team conflict and influencing outcomes through co
 **Level:** B2+  
 **Focus:** Speaking in a B2+/C1 interview style about teamwork, difficult conversations, and practical influence in cross-functional environments.
 
-## 1) Vocabulary & Collocations
+<details open>
+<summary><strong>1) Vocabulary </strong></summary>
 
 - **collaboration pattern** (n) - recurring way people coordinate and work together  
   _Example:_ Healthy collaboration patterns reduce project friction.
@@ -51,7 +52,10 @@ description: Practice handling team conflict and influencing outcomes through co
 - **negotiation boundary** (n)
 - **influence tactic** (n)
 
-## 2) Grammar & Useful Patterns (B2+ / C1-lite)
+</details>
+
+<details open>
+<summary><strong>2) Grammar & Useful Patterns (B2+ / C1-lite)</strong></summary>
 
 - **Respectful disagreement**  
   I understand your point, but I see a reliability risk if we skip that validation step.
@@ -72,7 +76,10 @@ description: Practice handling team conflict and influencing outcomes through co
 - I influenced the decision by...
 - The trust-building action that helped most was...
 
-## 3) Collocations, Chunking & Phrasal Verbs
+</details>
+
+<details open>
+<summary><strong>3) Collocations, Chunking & Phrasal Verbs</strong></summary>
 
 ### Strong Collocations
 - navigate team conflict
@@ -97,7 +104,10 @@ description: Practice handling team conflict and influencing outcomes through co
 - **bring together** -> I brought together engineering and product priorities.
 - **follow up with** -> I followed up with a clear written summary.
 
-## 4) Typical Dialogues
+</details>
+
+<details open>
+<summary><strong>4) Typical Dialogues</strong></summary>
 
 ### Dialogue 1 - Resolving Team Conflict
 
@@ -122,7 +132,10 @@ I focus on clarity, data, and trust. I present options with expected outcomes, l
 **You:**  
 Yes. In daily life, clear communication and respect help people disagree without damaging relationships. The principle is similar: understand first, then influence.
 
-## 5) Reading Text
+</details>
+
+<details open>
+<summary><strong>5) Reading Text</strong></summary>
 
 Collaboration in modern teams is rarely simple. Different functions have different priorities, timelines, and constraints.
 
@@ -130,7 +143,10 @@ Professionals who can navigate conflict and influence outcomes without authority
 
 In interviews, concrete stories about conflict navigation often reveal real leadership potential.
 
-## 6) List of Questions + Ideas
+</details>
+
+<details open>
+<summary><strong>6) List of Questions + Ideas</strong></summary>
 
 ### Core Questions (must-practice)
 1. How do you handle conflict in cross-functional teams?
@@ -154,3 +170,5 @@ In interviews, concrete stories about conflict navigation often reveal real lead
 - Finish with measurable impact on trust or delivery quality.
 
 ---
+
+</details>

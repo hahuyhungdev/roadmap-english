@@ -12,7 +12,8 @@ description: Do a complete, realistic final mock interview covering behavioral, 
 **Level:** B1+ / B2  
 **Focus:** Simulate a full-length job interview (20–25 minutes) and then review your performance thoroughly.
 
-## 1) Mock Interview Flow (Teacher acts as Interviewer)
+<details open>
+<summary><strong>1) Mock Interview Flow (Teacher acts as Interviewer)</strong></summary>
 
 **Total time:** 20–25 minutes speaking
 
@@ -38,13 +39,19 @@ description: Do a complete, realistic final mock interview covering behavioral, 
 
 10. Is there anything else you’d like us to know about you?
 
-## 2) Teacher Instructions
+</details>
+
+<details open>
+<summary><strong>2) Teacher Instructions</strong></summary>
 
 - Ask the questions naturally.
 - Use some follow-up questions (e.g., “Can you give me an example?”, “What would you do differently?”, “Why was that important?”).
 - Do not help with vocabulary during the mock — only after it finishes.
 
-## 3) Post-Mock Review & Feedback (Important Part)
+</details>
+
+<details open>
+<summary><strong>3) Post-Mock Review & Feedback (Important Part)</strong></summary>
 
 After the mock interview, spend 10–15 minutes reviewing together:
 
@@ -64,11 +71,17 @@ After the mock interview, spend 10–15 minutes reviewing together:
 - Ability to handle follow-up questions
 - Vocabulary range and naturalness
 
-## 4) Reading Text
+</details>
+
+<details open>
+<summary><strong>4) Reading Text</strong></summary>
 
 The final mock interview is your chance to put everything together. Treat it as a real interview. Focus on being clear, calm, and authentic. Remember that interviewers care about how you think, how you communicate, and whether you would be a good fit for the team — not just technical perfection.
 
-## 5) Final Reflection & Action Plan
+</details>
+
+<details open>
+<summary><strong>5) Final Reflection & Action Plan</strong></summary>
 
 1. What are your 3 strongest points from today’s mock?
 2. What are your 2 weakest areas that you need to improve?
@@ -86,3 +99,5 @@ The final mock interview is your chance to put everything together. Treat it as 
 ```
 
 ```
+
+</details>

@@ -12,7 +12,8 @@ description: Introduce your role, responsibilities, daily tasks, and collaborati
 **Level:** B1+  
 **Focus:** Speaking naturally and confidently about your role, responsibilities, collaboration, and impact as a Frontend Developer.
 
-## 1) Vocabulary & Collocations
+<details open>
+<summary><strong>1) Vocabulary </strong></summary>
 
 - **role** (n) – your function or position in a team  
   _Example:_ My role is to build frontend features that are both usable and maintainable.
@@ -51,7 +52,10 @@ description: Introduce your role, responsibilities, daily tasks, and collaborati
 - **incident** (n) – an unexpected issue in production
 - **SLA** (n) – service level agreement for reliability/response expectations
 
-## 2) Grammar & Useful Patterns (B1+ to B2 Bridge)
+</details>
+
+<details open>
+<summary><strong>2) Grammar & Useful Patterns (B1+ to B2 Bridge)</strong></summary>
 
 - **Present Simple for routine work**  
   I usually start my day by checking tickets and sprint priorities.
@@ -79,7 +83,10 @@ description: Introduce your role, responsibilities, daily tasks, and collaborati
 - A recent example was when...
 - As a result, we were able to...
 
-## 3) Collocations, Chunking & Phrasal Verbs
+</details>
+
+<details open>
+<summary><strong>3) Collocations, Chunking & Phrasal Verbs</strong></summary>
 
 ### Strong Collocations
 
@@ -116,7 +123,10 @@ description: Introduce your role, responsibilities, daily tasks, and collaborati
 - **step in** → I step in to support teammates when deadlines are tight.
 - **push back on** → I push back on unclear requirements to avoid rework later.
 
-## 4) Typical Dialogues
+</details>
+
+<details open>
+<summary><strong>4) Typical Dialogues</strong></summary>
 
 ### Dialogue 1 – Role Introduction
 
@@ -146,7 +156,10 @@ In one project, design and backend timelines were misaligned, so frontend implem
 **You:**  
 Frontend is not only about visuals. We handle interaction logic, validation, accessibility, performance, and edge cases. If the frontend is poorly built, users may abandon the product even if backend services are strong. So our work directly affects conversion, retention, and customer trust.
 
-## 5) Reading Text
+</details>
+
+<details open>
+<summary><strong>5) Reading Text</strong></summary>
 
 A frontend developer’s role goes beyond writing UI code. In modern product teams, frontend engineers help translate business goals into practical user flows. They collaborate with multiple stakeholders, manage dependencies, and make trade-offs between speed and quality.
 
@@ -154,7 +167,10 @@ Strong communication is as important as technical skill. Developers who can expl
 
 When developers take ownership, the impact becomes measurable: fewer production issues, better user satisfaction, and faster delivery cycles. That is why understanding your role in a broader business context is essential for career growth.
 
-## 6) List of Questions + Ideas
+</details>
+
+<details open>
+<summary><strong>6) List of Questions + Ideas</strong></summary>
 
 ### Core Questions (must-practice)
 
@@ -181,3 +197,5 @@ When developers take ownership, the impact becomes measurable: fewer production 
 - Mention one measurable outcome whenever possible.
 
 ---
+
+</details>

@@ -12,7 +12,8 @@ description: Discuss how to collaborate effectively in multicultural teams with 
 **Level:** B2+  
 **Focus:** Speaking in a B2+/C1 interview style about communication across cultures, preventing misunderstanding, and building trust in global teams.
 
-## 1) Vocabulary & Collocations
+<details open>
+<summary><strong>1) Vocabulary </strong></summary>
 
 - **cross-cultural communication** (n) – interaction between people from different cultural backgrounds  
   _Example:_ Cross-cultural communication is a core skill in global companies.
@@ -51,7 +52,10 @@ description: Discuss how to collaborate effectively in multicultural teams with 
 - **asynchronous update** (n) – non-live progress communication
 - **communication friction** (n) – delay/conflict caused by unclear communication
 
-## 2) Grammar & Useful Patterns (B2+ / C1-lite)
+</details>
+
+<details open>
+<summary><strong>2) Grammar & Useful Patterns (B2+ / C1-lite)</strong></summary>
 
 - **Clarifying language**  
   To make sure we are aligned, let me restate the decision briefly.
@@ -76,7 +80,10 @@ description: Discuss how to collaborate effectively in multicultural teams with 
 - One communication rule that helps us is...
 - In global teams, trust increases when...
 
-## 3) Collocations, Chunking & Phrasal Verbs
+</details>
+
+<details open>
+<summary><strong>3) Collocations, Chunking & Phrasal Verbs</strong></summary>
 
 ### Strong Collocations
 - bridge cultural differences
@@ -102,7 +109,10 @@ description: Discuss how to collaborate effectively in multicultural teams with 
 - **speak up** → I encourage quieter members to speak up.
 - **follow up on** → I follow up on action items in writing.
 
-## 4) Typical Dialogues
+</details>
+
+<details open>
+<summary><strong>4) Typical Dialogues</strong></summary>
 
 ### Dialogue 1 – Team Misunderstanding
 
@@ -127,7 +137,10 @@ I rely on concise asynchronous updates: context, current status, blockers, and n
 **You:**  
 Definitely. Active listening, clarification, and respectful disagreement are useful in daily life as well. They reduce conflict and improve understanding in any relationship.
 
-## 5) Reading Text
+</details>
+
+<details open>
+<summary><strong>5) Reading Text</strong></summary>
 
 Global teams create strong opportunities but also communication complexity. Differences in style, context, and assumptions can cause friction even when everyone has good intent.
 
@@ -135,7 +148,10 @@ Effective cross-cultural communication is not about avoiding differences. It is 
 
 In interviews, candidates who can explain this clearly usually demonstrate maturity, collaboration skill, and leadership potential.
 
-## 6) List of Questions + Ideas
+</details>
+
+<details open>
+<summary><strong>6) List of Questions + Ideas</strong></summary>
 
 ### Core Questions (must-practice)
 1. What are common communication challenges in global teams?
@@ -159,3 +175,5 @@ In interviews, candidates who can explain this clearly usually demonstrate matur
 - Show one workplace example and one general-life example.
 
 ---
+
+</details>

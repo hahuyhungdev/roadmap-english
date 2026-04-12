@@ -12,7 +12,8 @@ description: Discuss technology's social impact with balanced reasoning, benefit
 **Level:** B2+  
 **Focus:** Speaking in a B2+/C1 interview style about social impact and ethical trade-offs in technology, with clear and accessible language.
 
-## 1) Vocabulary & Collocations
+<details open>
+<summary><strong>1) Vocabulary </strong></summary>
 
 - **social impact** (n) – effect of technology on people and communities  
   _Example:_ Social impact should be evaluated alongside technical feasibility.
@@ -51,7 +52,10 @@ description: Discuss technology's social impact with balanced reasoning, benefit
 - **harm mitigation** (n) – actions to reduce negative outcomes
 - **human oversight** (n) – human review over automated decisions
 
-## 2) Grammar & Useful Patterns (B2+ / C1-lite)
+</details>
+
+<details open>
+<summary><strong>2) Grammar & Useful Patterns (B2+ / C1-lite)</strong></summary>
 
 - **Balanced argument structure**  
   Technology creates major benefits, but it also introduces serious ethical risks.
@@ -76,7 +80,10 @@ description: Discuss technology's social impact with balanced reasoning, benefit
 - The long-term consequence might be...
 - In my opinion, trust depends on...
 
-## 3) Collocations, Chunking & Phrasal Verbs
+</details>
+
+<details open>
+<summary><strong>3) Collocations, Chunking & Phrasal Verbs</strong></summary>
 
 ### Strong Collocations
 - create social value
@@ -102,7 +109,10 @@ description: Discuss technology's social impact with balanced reasoning, benefit
 - **push back on** → Engineers should push back on unsafe launch pressure.
 - **phase in** → High-risk technologies should be phased in gradually.
 
-## 4) Typical Dialogues
+</details>
+
+<details open>
+<summary><strong>4) Typical Dialogues</strong></summary>
 
 ### Dialogue 1 – Balanced Social View
 
@@ -129,7 +139,10 @@ These steps are not abstract philosophy; they are part of product quality.
 **You:**  
 I would keep it simple: people should understand what data is collected, how decisions are made, and who is responsible when something goes wrong. If people cannot understand those three points, trust will be weak.
 
-## 5) Reading Text
+</details>
+
+<details open>
+<summary><strong>5) Reading Text</strong></summary>
 
 Technology can solve real problems at scale, but scale also increases responsibility. A design decision that seems small in development can affect millions of people after deployment.
 
@@ -137,7 +150,10 @@ Responsible innovation requires more than legal compliance. It requires clear ac
 
 In interviews, strong candidates show they can think beyond code and consider long-term societal impact.
 
-## 6) List of Questions + Ideas
+</details>
+
+<details open>
+<summary><strong>6) List of Questions + Ideas</strong></summary>
 
 ### Core Questions (must-practice)
 1. What are the biggest positive and negative impacts of technology on society today?
@@ -161,3 +177,5 @@ In interviews, strong candidates show they can think beyond code and consider lo
 - Connect ethics to concrete product decisions and outcomes.
 
 ---
+
+</details>

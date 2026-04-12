@@ -12,7 +12,8 @@ description: Discuss how you make decisions when information is incomplete, in b
 **Level:** B2+  
 **Focus:** Speaking in a B2+/C1 interview style about making clear, practical decisions when data is incomplete or ambiguous.
 
-## 1) Vocabulary & Collocations
+<details open>
+<summary><strong>1) Vocabulary </strong></summary>
 
 - **uncertainty** (n) – situation where outcomes are unclear  
   _Example:_ In product work, we often make decisions under uncertainty.
@@ -51,7 +52,10 @@ description: Discuss how you make decisions when information is incomplete, in b
 - **decision fatigue** (n) – reduced quality after too many decisions
 - **mitigation strategy** (n) – action that reduces risk severity
 
-## 2) Grammar & Useful Patterns (B2+ / C1-lite)
+</details>
+
+<details open>
+<summary><strong>2) Grammar & Useful Patterns (B2+ / C1-lite)</strong></summary>
 
 - **Hedging language for uncertainty**  
   It seems likely that adoption will improve, but we need more evidence.
@@ -76,7 +80,10 @@ description: Discuss how you make decisions when information is incomplete, in b
 - In hindsight, I would...
 - A similar principle also applies in daily life when...
 
-## 3) Collocations, Chunking & Phrasal Verbs
+</details>
+
+<details open>
+<summary><strong>3) Collocations, Chunking & Phrasal Verbs</strong></summary>
 
 ### Strong Collocations
 - make decisions under uncertainty
@@ -102,7 +109,10 @@ description: Discuss how you make decisions when information is incomplete, in b
 - **back out of** → We defined clear criteria to back out of the plan if needed.
 - **stick with** → We stuck with a conservative option until data improved.
 
-## 4) Typical Dialogues
+</details>
+
+<details open>
+<summary><strong>4) Typical Dialogues</strong></summary>
 
 ### Dialogue 1 – Professional Decision
 
@@ -127,7 +137,10 @@ I use a similar method: define priorities, estimate downside, and keep options r
 **You:**  
 I separate facts, assumptions, and risks clearly. Then I propose a decision with safeguards and checkpoints. This shows confidence in process, even when certainty is not possible.
 
-## 5) Reading Text
+</details>
+
+<details open>
+<summary><strong>5) Reading Text</strong></summary>
 
 Most real decisions are made before full certainty exists. Strong professionals do not wait for perfect information; they use structured judgment.
 
@@ -135,7 +148,10 @@ A practical decision process includes: clarify objectives, identify assumptions,
 
 In speaking practice, uncertainty topics are useful because they train nuance, persuasion, and clarity at the same time.
 
-## 6) List of Questions + Ideas
+</details>
+
+<details open>
+<summary><strong>6) List of Questions + Ideas</strong></summary>
 
 ### Core Questions (must-practice)
 1. How do you make decisions when important information is missing?
@@ -159,3 +175,5 @@ In speaking practice, uncertainty topics are useful because they train nuance, p
 - Use one professional case and one general-life case to sound flexible.
 
 ---
+
+</details>

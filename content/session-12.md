@@ -12,7 +12,8 @@ description: Explain and defend a technical decision you made, anticipate object
 **Level:** B2+  
 **Focus:** Speaking in a B2+/C1 interview style to defend technical decisions with clear reasoning, data, and business alignment.
 
-## 1) Vocabulary & Collocations
+<details open>
+<summary><strong>1) Vocabulary </strong></summary>
 
 - **decision** (n) – a choice made after consideration  
   _Example:_ This was one of the most important technical decisions I made.
@@ -54,7 +55,10 @@ description: Explain and defend a technical decision you made, anticipate object
 - **escalation path** (n) – path for unresolved disagreements
 - **commitment** (n) – supporting final team decision after debate
 
-## 2) Grammar & Useful Patterns (B2+ / C1-lite)
+</details>
+
+<details open>
+<summary><strong>2) Grammar & Useful Patterns (B2+ / C1-lite)</strong></summary>
 
 - **Acknowledge + reframe pattern**  
   I understand the concern about delivery speed; however, the bigger risk was long-term instability.
@@ -80,7 +84,10 @@ description: Explain and defend a technical decision you made, anticipate object
 - I backed this position with ...
 - In the long run, this improves ...
 
-## 3) Collocations, Chunking & Phrasal Verbs
+</details>
+
+<details open>
+<summary><strong>3) Collocations, Chunking & Phrasal Verbs</strong></summary>
 
 ### Strong Collocations
 - defend a decision
@@ -107,7 +114,10 @@ description: Explain and defend a technical decision you made, anticipate object
 - **push back on** → I pushed back on scope expansion without timeline change.
 - **think through** → I thought through both technical and stakeholder consequences.
 
-## 4) Typical Dialogues
+</details>
+
+<details open>
+<summary><strong>4) Typical Dialogues</strong></summary>
 
 ### Dialogue 1 – Defending a Decision
 
@@ -136,7 +146,10 @@ This keeps the conversation collaborative instead of personal.
 **You:**  
 Yes. I shared my concerns with data and alternatives, but the team chose a different option based on broader business constraints. Once the decision was made, I fully committed to execution. I believe professional disagreement should improve decisions, not block progress.
 
-## 5) Reading Text
+</details>
+
+<details open>
+<summary><strong>5) Reading Text</strong></summary>
 
 Defending technical decisions is a core senior skill. It is not about "winning arguments." It is about improving decision quality while keeping team alignment.
 
@@ -144,7 +157,10 @@ Strong engineers combine logic with empathy. They acknowledge valid concerns, ex
 
 In interviews, persuasive answers usually include three elements: transparent criteria, clear business impact, and mature collaboration behavior.
 
-## 6) List of Questions + Ideas
+</details>
+
+<details open>
+<summary><strong>6) List of Questions + Ideas</strong></summary>
 
 ### Core Questions (must-practice)
 1. What technical decision did you have to defend?
@@ -168,3 +184,5 @@ In interviews, persuasive answers usually include three elements: transparent cr
 - Keep your tone calm, collaborative, and outcome-focused.
 
 ---
+
+</details>

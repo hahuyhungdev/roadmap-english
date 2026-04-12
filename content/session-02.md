@@ -12,7 +12,8 @@ description: Explain your system clearly at a high level, describe its purpose, 
 **Level:** B2  
 **Focus:** Speaking confidently about your system at a high level: what it does, who uses it, why it matters, and how it creates measurable value.
 
-## 1) Vocabulary & Collocations
+<details open>
+<summary><strong>1) Vocabulary </strong></summary>
 
 - **system** (n) – a platform made of connected modules and services  
   _Example:_ Our system connects user requests, internal workflows, and reporting in one place.
@@ -48,7 +49,10 @@ description: Explain your system clearly at a high level, describe its purpose, 
 - **throughput** (n) – amount of work completed in a period
 - **time-to-value** (n) – time before users experience clear benefits
 
-## 2) Grammar & Useful Patterns (B2)
+</details>
+
+<details open>
+<summary><strong>2) Grammar & Useful Patterns (B2)</strong></summary>
 
 - **Defining purpose (to / so that)**  
   The system was designed to centralize workflow management so that teams can make faster decisions.
@@ -73,7 +77,10 @@ description: Explain your system clearly at a high level, describe its purpose, 
 - From a business perspective, the biggest gain is...
 - A real example is when...
 
-## 3) Collocations, Chunking & Phrasal Verbs
+</details>
+
+<details open>
+<summary><strong>3) Collocations, Chunking & Phrasal Verbs</strong></summary>
 
 ### Strong Collocations
 
@@ -112,7 +119,10 @@ description: Explain your system clearly at a high level, describe its purpose, 
 - **roll out** → We roll out major changes gradually to reduce risk.
 - **follow up on** → We follow up on usage metrics after every release.
 
-## 4) Typical Dialogues
+</details>
+
+<details open>
+<summary><strong>4) Typical Dialogues</strong></summary>
 
 ### Dialogue 1 – High-Level Explanation
 
@@ -143,7 +153,10 @@ So the value is both user-level and business-level.
 **You:**  
 I would agree that the old process works at a basic level, but it does not scale well. It depends on manual coordination, which increases delays and errors as volume grows. The new system standardizes steps, improves traceability, and provides measurable outcomes. So we are not changing for novelty; we are changing for consistency, speed, and long-term efficiency.
 
-## 5) Reading Text
+</details>
+
+<details open>
+<summary><strong>5) Reading Text</strong></summary>
 
 A strong system explanation should be simple, structured, and audience-aware. Instead of starting with technical details, begin with three core points: what problem the system solves, who the users are, and how value is measured.
 
@@ -151,7 +164,10 @@ In many organizations, systems fail not because of technology, but because workf
 
 When speaking professionally, connect system features to results. For example: fewer manual steps, faster completion, lower error rates, and better reporting. This makes your explanation more credible and persuasive.
 
-## 6) List of Questions + Ideas
+</details>
+
+<details open>
+<summary><strong>6) List of Questions + Ideas</strong></summary>
 
 ### Core Questions (must-practice)
 
@@ -178,3 +194,5 @@ When speaking professionally, connect system features to results. For example: f
 - Explain at least one trade-off in long answers.
 
 ---
+
+</details>

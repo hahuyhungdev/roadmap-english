@@ -12,7 +12,8 @@ description: Discuss trade-offs in frontend development, explain the reasoning b
 **Level:** B2+  
 **Focus:** Speaking in a B2+/C1 interview style about how you compare options, prioritize criteria, and make trade-offs under uncertainty.
 
-## 1) Vocabulary & Collocations
+<details open>
+<summary><strong>1) Vocabulary </strong></summary>
 
 - **trade-off** (n) – accepting a disadvantage to gain an advantage  
   _Example:_ We accepted a short-term trade-off to protect long-term maintainability.
@@ -51,7 +52,10 @@ description: Discuss trade-offs in frontend development, explain the reasoning b
 - **total cost of ownership (TCO)** (n) – full lifecycle cost
 - **decision debt** (n) – future cost from unclear or rushed choices
 
-## 2) Grammar & Useful Patterns (B2+ / C1-lite)
+</details>
+
+<details open>
+<summary><strong>2) Grammar & Useful Patterns (B2+ / C1-lite)</strong></summary>
 
 - **Weighted comparison language**  
   Option A was faster, while Option B was safer for long-term maintenance.
@@ -76,7 +80,10 @@ description: Discuss trade-offs in frontend development, explain the reasoning b
 - On balance, this option gave us ...
 - From a business perspective, this minimized ...
 
-## 3) Collocations, Chunking & Phrasal Verbs
+</details>
+
+<details open>
+<summary><strong>3) Collocations, Chunking & Phrasal Verbs</strong></summary>
 
 ### Strong Collocations
 - make a trade-off
@@ -102,7 +109,10 @@ description: Discuss trade-offs in frontend development, explain the reasoning b
 - **rule out** → We ruled out the high-uncertainty path early.
 - **fall back on** → We had a fallback option if assumptions failed.
 
-## 4) Typical Dialogues
+</details>
+
+<details open>
+<summary><strong>4) Typical Dialogues</strong></summary>
 
 ### Dialogue 1 – Framework-Driven Decision
 
@@ -129,7 +139,10 @@ I avoid technical jargon and frame trade-offs as outcomes: speed, stability, and
 **You:**  
 I choose the most reversible option and set checkpoints. We decide with current evidence, monitor closely, and adjust quickly if assumptions fail. This reduces regret while keeping delivery moving.
 
-## 5) Reading Text
+</details>
+
+<details open>
+<summary><strong>5) Reading Text</strong></summary>
 
 Engineering decisions are rarely binary. Most choices involve trade-offs between delivery speed, quality, cost, and long-term flexibility. Strong teams make these trade-offs explicit instead of pretending a perfect option exists.
 
@@ -137,7 +150,10 @@ Clear frameworks improve decision quality. When teams define criteria first and 
 
 In interviews, the strongest answers show structured thinking: criteria, alternatives, final choice, and impact.
 
-## 6) List of Questions + Ideas
+</details>
+
+<details open>
+<summary><strong>6) List of Questions + Ideas</strong></summary>
 
 ### Core Questions (must-practice)
 1. What framework do you use to evaluate competing technical options?
@@ -161,3 +177,5 @@ In interviews, the strongest answers show structured thinking: criteria, alterna
 - End with why this decision made sense at that specific time.
 
 ---
+
+</details>

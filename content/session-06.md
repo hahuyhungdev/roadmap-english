@@ -12,7 +12,8 @@ description: Explain why documentation and knowledge transfer are important, and
 **Level:** B2  
 **Focus:** Speaking about why documentation matters, how knowledge is transferred in teams, and how these practices improve delivery quality and team resilience.
 
-## 1) Vocabulary & Collocations
+<details open>
+<summary><strong>1) Vocabulary </strong></summary>
 
 - **documentation** (n) – written information about how something works  
   _Example:_ Good documentation helps new team members understand the project faster.
@@ -45,7 +46,10 @@ description: Explain why documentation and knowledge transfer are important, and
 - **knowledge silo** (n) – isolated knowledge not shared with team
 - **maintainability** (n) – how easy it is to update and support a system
 
-## 2) Grammar & Useful Patterns (B2)
+</details>
+
+<details open>
+<summary><strong>2) Grammar & Useful Patterns (B2)</strong></summary>
 
 - **Importance structures**  
   Good documentation **is essential / crucial / very important** because…
@@ -71,7 +75,10 @@ description: Explain why documentation and knowledge transfer are important, and
 - In our team, we usually document…
 - A practical case from my project was when…
 
-## 3) Collocations, Chunking & Phrasal Verbs
+</details>
+
+<details open>
+<summary><strong>3) Collocations, Chunking & Phrasal Verbs</strong></summary>
 
 ### Strong Collocations
 - write clear documentation
@@ -107,7 +114,10 @@ description: Explain why documentation and knowledge transfer are important, and
 - **walk through** → We walk through complex modules in knowledge-sharing sessions.
 - **fill in** → New members fill in missing docs after onboarding.
 
-## 4) Typical Dialogues
+</details>
+
+<details open>
+<summary><strong>4) Typical Dialogues</strong></summary>
 
 ### Dialogue 1 – Why It Matters
 
@@ -134,7 +144,10 @@ During a production issue, our runbook made a big difference. The on-call engine
 **You:**  
 I understand that concern, especially under tight deadlines. However, skipping documentation creates hidden costs later: slower onboarding, repeated mistakes, and more interruptions. I prefer lightweight but high-value documentation focused on decisions, workflows, and common failure cases.
 
-## 5) Reading Text
+</details>
+
+<details open>
+<summary><strong>5) Reading Text</strong></summary>
 
 Documentation is often underestimated because its value appears over time, not immediately. In reality, documentation is a risk-management tool. It helps teams preserve decisions, reduce onboarding friction, and respond faster when problems occur.
 
@@ -142,7 +155,10 @@ Knowledge transfer is equally important. Teams that actively share context throu
 
 The best approach is practical documentation: short, clear, and regularly updated. Teams do not need perfect documents; they need useful documents that support real work.
 
-## 6) List of Questions + Ideas
+</details>
+
+<details open>
+<summary><strong>6) List of Questions + Ideas</strong></summary>
 
 ### Core Questions (must-practice)
 1. Why is documentation important in your team?
@@ -166,3 +182,5 @@ The best approach is practical documentation: short, clear, and regularly update
 - Mention both engineering impact and team impact.
 
 ---
+
+</details>

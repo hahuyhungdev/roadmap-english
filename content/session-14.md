@@ -12,7 +12,8 @@ description: Discuss AI impact with a balanced, persuasive perspective, producti
 **Level:** B2+  
 **Focus:** Speaking in a B2+/C1 interview style about AI impact with clear reasoning, practical examples, and balanced judgment.
 
-## 1) Vocabulary & Collocations
+<details open>
+<summary><strong>1) Vocabulary </strong></summary>
 
 - **AI adoption** (n) – process of integrating AI tools into workflows  
   _Example:_ AI adoption should be intentional, not purely trend-driven.
@@ -51,7 +52,10 @@ description: Discuss AI impact with a balanced, persuasive perspective, producti
 - **governance policy** (n) – rules for safe and responsible AI usage
 - **explainability** (n) – ability to explain how output was produced
 
-## 2) Grammar & Useful Patterns (B2+ / C1-lite)
+</details>
+
+<details open>
+<summary><strong>2) Grammar & Useful Patterns (B2+ / C1-lite)</strong></summary>
 
 - **Balanced viewpoint framing**  
   On one hand, AI increases speed. On the other hand, it introduces verification risk.
@@ -76,7 +80,10 @@ description: Discuss AI impact with a balanced, persuasive perspective, producti
 - To stay relevant, engineers need to...
 - A practical example from my team is...
 
-## 3) Collocations, Chunking & Phrasal Verbs
+</details>
+
+<details open>
+<summary><strong>3) Collocations, Chunking & Phrasal Verbs</strong></summary>
 
 ### Strong Collocations
 - adopt AI responsibly
@@ -102,7 +109,10 @@ description: Discuss AI impact with a balanced, persuasive perspective, producti
 - **fall back on** → In complex cases, we fall back on first-principles reasoning.
 - **keep up with** → Engineers need to keep up with both tools and fundamentals.
 
-## 4) Typical Dialogues
+</details>
+
+<details open>
+<summary><strong>4) Typical Dialogues</strong></summary>
 
 ### Dialogue 1 – Balanced Interview Answer
 
@@ -127,7 +137,10 @@ I use AI to brainstorm implementation options, generate first drafts, and speed 
 **You:**  
 I think pure coding volume will matter less. Engineers will be valued more for problem framing, system judgment, and stakeholder communication. So future success will combine technical depth with broader decision-making ability.
 
-## 5) Reading Text
+</details>
+
+<details open>
+<summary><strong>5) Reading Text</strong></summary>
 
 AI is changing software engineering, but not in a simple "replace or keep" way. It shifts where value is created. Routine implementation becomes faster, while high-value decisions become more important.
 
@@ -135,7 +148,10 @@ Teams that succeed with AI do three things well: they adopt tools pragmatically,
 
 In interviews, strong candidates avoid extreme statements. They show balanced thinking: opportunity, risk, and execution strategy.
 
-## 6) List of Questions + Ideas
+</details>
+
+<details open>
+<summary><strong>6) List of Questions + Ideas</strong></summary>
 
 ### Core Questions (must-practice)
 1. How has AI changed your development workflow in practice?
@@ -159,3 +175,5 @@ In interviews, strong candidates avoid extreme statements. They show balanced th
 - Keep explanations simple enough for non-technical listeners.
 
 ---
+
+</details>

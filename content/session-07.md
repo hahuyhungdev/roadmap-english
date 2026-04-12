@@ -12,7 +12,8 @@ description: Diagnose technical problems with a clear narrative: symptom, invest
 **Level:** B2+  
 **Focus:** Speaking in a B2+/C1 interview style about how you identify problems, validate hypotheses, and explain impact to technical and non-technical audiences.
 
-## 1) Vocabulary & Collocations
+<details open>
+<summary><strong>1) Vocabulary </strong></summary>
 
 - **symptom** (n) – the first visible sign of a deeper issue  
   _Example:_ High timeout rates were the first symptom we noticed.
@@ -51,7 +52,10 @@ description: Diagnose technical problems with a clear narrative: symptom, invest
 - **false positive** (n) – alert that appears critical but is not
 - **preventive action** (n) – change made to avoid recurrence
 
-## 2) Grammar & Useful Patterns (B2+ / C1-lite)
+</details>
+
+<details open>
+<summary><strong>2) Grammar & Useful Patterns (B2+ / C1-lite)</strong></summary>
 
 - **Sequencing for clear storytelling**  
   First, we confirmed the symptom. Then we tested hypotheses. Finally, we isolated the root cause.
@@ -76,7 +80,10 @@ description: Diagnose technical problems with a clear narrative: symptom, invest
 - The blast radius included...
 - To prevent recurrence, we introduced...
 
-## 3) Collocations, Chunking & Phrasal Verbs
+</details>
+
+<details open>
+<summary><strong>3) Collocations, Chunking & Phrasal Verbs</strong></summary>
 
 ### Strong Collocations
 - identify the root cause
@@ -103,7 +110,10 @@ description: Diagnose technical problems with a clear narrative: symptom, invest
 - **rule out** → We ruled out backend latency after trace analysis.
 - **follow up on** → We followed up on prevention actions in the next sprint.
 
-## 4) Typical Dialogues
+</details>
+
+<details open>
+<summary><strong>4) Typical Dialogues</strong></summary>
 
 ### Dialogue 1 – Technical Interview Style
 
@@ -130,7 +140,10 @@ In simple terms, the system was doing the same work many times unnecessarily, so
 **You:**  
 I separate response into two tracks: impact reduction and diagnosis. First, we reduce user impact through rollback or feature flags. In parallel, we continue structured investigation with clear hypotheses and evidence. This keeps service stable while we search for the real cause.
 
-## 5) Reading Text
+</details>
+
+<details open>
+<summary><strong>5) Reading Text</strong></summary>
 
 Strong engineers do not jump directly to fixes. They first frame the problem clearly: what changed, what broke, who is affected, and how severe the impact is. This framing helps teams prioritize response and avoid costly assumptions.
 
@@ -138,7 +151,10 @@ Root-cause analysis is not only technical work; it is communication work. Teams 
 
 The best outcome is not only recovery, but learning. Teams that convert incident lessons into preventive actions improve reliability over time.
 
-## 6) List of Questions + Ideas
+</details>
+
+<details open>
+<summary><strong>6) List of Questions + Ideas</strong></summary>
 
 ### Core Questions (must-practice)
 1. What technical problem did you face, and what was the first visible symptom?
@@ -162,3 +178,5 @@ The best outcome is not only recovery, but learning. Teams that convert incident
 - Add one metric (time, error rate, affected users) for credibility.
 
 ---
+
+</details>

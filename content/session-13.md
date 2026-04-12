@@ -12,7 +12,8 @@ description: Discuss compensation, career progression, and job selection criteri
 **Level:** B2+  
 **Focus:** Speaking in a B2+/C1 interview style about career choices, compensation expectations, and long-term professional direction.
 
-## 1) Vocabulary & Collocations
+<details open>
+<summary><strong>1) Vocabulary </strong></summary>
 
 - **compensation package** (n) – full set of salary and benefits  
   _Example:_ I evaluate the full compensation package, not just base salary.
@@ -51,7 +52,10 @@ description: Discuss compensation, career progression, and job selection criteri
 - **mentorship exposure** (n) – chance to learn from strong leaders
 - **mobility options** (n) – opportunities to switch teams or domains
 
-## 2) Grammar & Useful Patterns (B2+ / C1-lite)
+</details>
+
+<details open>
+<summary><strong>2) Grammar & Useful Patterns (B2+ / C1-lite)</strong></summary>
 
 - **Priority language**  
   If I had to prioritize, I would choose long-term growth over short-term comfort.
@@ -76,7 +80,10 @@ description: Discuss compensation, career progression, and job selection criteri
 - In the long term, I aim to...
 - A real example from my career is...
 
-## 3) Collocations, Chunking & Phrasal Verbs
+</details>
+
+<details open>
+<summary><strong>3) Collocations, Chunking & Phrasal Verbs</strong></summary>
 
 ### Strong Collocations
 - evaluate an offer holistically
@@ -102,7 +109,10 @@ description: Discuss compensation, career progression, and job selection criteri
 - **move into** → I want to move into broader technical leadership.
 - **turn down** → I turned down a higher offer because role fit was weak.
 
-## 4) Typical Dialogues
+</details>
+
+<details open>
+<summary><strong>4) Typical Dialogues</strong></summary>
 
 ### Dialogue 1 – Career Decision Narrative
 
@@ -127,7 +137,10 @@ I keep the discussion transparent and evidence-based. I refer to market benchmar
 **You:**  
 Not really. For me, growth also means better judgment, stronger communication, and healthier work habits. A successful career should improve both professional impact and personal sustainability.
 
-## 5) Reading Text
+</details>
+
+<details open>
+<summary><strong>5) Reading Text</strong></summary>
 
 Career decisions become more strategic as experience increases. Early in a career, learning speed is often the top priority. Later, professionals usually balance compensation, ownership, team quality, and long-term direction.
 
@@ -135,7 +148,10 @@ Mature candidates do not present career choices as random moves. They explain cl
 
 In interviews, this clarity builds trust. It signals that you can make thoughtful decisions for both your own career and the business.
 
-## 6) List of Questions + Ideas
+</details>
+
+<details open>
+<summary><strong>6) List of Questions + Ideas</strong></summary>
 
 ### Core Questions (must-practice)
 1. What are your top priorities when evaluating a new role?
@@ -159,3 +175,5 @@ In interviews, this clarity builds trust. It signals that you can make thoughtfu
 - Keep tone confident but practical, not defensive.
 
 ---
+
+</details>

@@ -12,7 +12,8 @@ description: Explain how you designed, implemented, and validated a solution und
 **Level:** B2+  
 **Focus:** Speaking in a B2+/C1 interview style about how you chose a solution, handled constraints, and delivered measurable results.
 
-## 1) Vocabulary & Collocations
+<details open>
+<summary><strong>1) Vocabulary </strong></summary>
 
 - **solution** (n) – the way to solve a problem  
   _Example:_ We selected a solution that balanced speed, risk, and maintainability.
@@ -51,7 +52,10 @@ description: Explain how you designed, implemented, and validated a solution und
 - **execution risk** (n) – risk during implementation/release
 - **time-to-value** (n) – time before users see real benefit
 
-## 2) Grammar & Useful Patterns (B2+ / C1-lite)
+</details>
+
+<details open>
+<summary><strong>2) Grammar & Useful Patterns (B2+ / C1-lite)</strong></summary>
 
 - **Decision rationale with constraints**  
   Given the deadline and dependency risk, we chose an incremental solution.
@@ -76,7 +80,10 @@ description: Explain how you designed, implemented, and validated a solution und
 - We validated success by measuring...
 - If I had to do it again, I would...
 
-## 3) Collocations, Chunking & Phrasal Verbs
+</details>
+
+<details open>
+<summary><strong>3) Collocations, Chunking & Phrasal Verbs</strong></summary>
 
 ### Strong Collocations
 - implement a solution
@@ -102,7 +109,10 @@ description: Explain how you designed, implemented, and validated a solution und
 - **roll out** → We rolled out the fix gradually by user segment.
 - **follow through on** → We followed through on post-release checks.
 
-## 4) Typical Dialogues
+</details>
+
+<details open>
+<summary><strong>4) Typical Dialogues</strong></summary>
 
 ### Dialogue 1 – Solution Story
 
@@ -129,7 +139,10 @@ I usually separate the decision into two layers: immediate risk and structural r
 **You:**  
 I acknowledge the urgency and explain risk in business terms, not only technical terms. For example, I compare short-term gain versus outage risk and support cost. Then I propose a safer phased alternative. Most stakeholders accept it when trade-offs are explicit and measurable.
 
-## 5) Reading Text
+</details>
+
+<details open>
+<summary><strong>5) Reading Text</strong></summary>
 
 A strong solution narrative is not just "what we built." It is "why this option, under which constraints, with what evidence." Interviewers usually assess this logic more than the tool itself.
 
@@ -137,7 +150,10 @@ Experienced engineers separate urgency from direction. They reduce risk quickly 
 
 The most persuasive answers connect technical choices to outcomes that everyone understands: stability, speed, user trust, and business value.
 
-## 6) List of Questions + Ideas
+</details>
+
+<details open>
+<summary><strong>6) List of Questions + Ideas</strong></summary>
 
 ### Core Questions (must-practice)
 1. What solution did you implement, and what constraint shaped your choice most?
@@ -161,3 +177,5 @@ The most persuasive answers connect technical choices to outcomes that everyone 
 - End with one measurable outcome and one lesson learned.
 
 ---
+
+</details>

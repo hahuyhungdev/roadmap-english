@@ -12,7 +12,8 @@ description: Discuss pressure, burnout risk, and mental well-being in a practica
 **Level:** B2+  
 **Focus:** Speaking in a B2+/C1 interview style about handling pressure, setting boundaries, and maintaining long-term professional effectiveness.
 
-## 1) Vocabulary & Collocations
+<details open>
+<summary><strong>1) Vocabulary </strong></summary>
 
 - **sustainable performance** (n) – high-quality output maintained over time  
   _Example:_ I focus on sustainable performance rather than short bursts of overwork.
@@ -51,7 +52,10 @@ description: Discuss pressure, burnout risk, and mental well-being in a practica
 - **decompression time** (n) – time intentionally reserved after intense periods
 - **managerial support** (n) – leadership action that protects team health
 
-## 2) Grammar & Useful Patterns (B2+ / C1-lite)
+</details>
+
+<details open>
+<summary><strong>2) Grammar & Useful Patterns (B2+ / C1-lite)</strong></summary>
 
 - **Cause-effect with nuance**  
   High pressure can improve focus short-term, but sustained pressure reduces quality.
@@ -76,7 +80,10 @@ description: Discuss pressure, burnout risk, and mental well-being in a practica
 - Teams perform better when...
 - One lesson I learned is...
 
-## 3) Collocations, Chunking & Phrasal Verbs
+</details>
+
+<details open>
+<summary><strong>3) Collocations, Chunking & Phrasal Verbs</strong></summary>
 
 ### Strong Collocations
 - manage pressure effectively
@@ -102,7 +109,10 @@ description: Discuss pressure, burnout risk, and mental well-being in a practica
 - **speak up** → I speak up early when scope and timeline do not match.
 - **switch off** → Recovery improves when we can switch off after work.
 
-## 4) Typical Dialogues
+</details>
+
+<details open>
+<summary><strong>4) Typical Dialogues</strong></summary>
 
 ### Dialogue 1 – Pressure Management
 
@@ -127,7 +137,10 @@ A healthy culture has clear priorities, respectful communication, and realistic 
 **You:**  
 Yes, but it requires active design, not wishful thinking. There are intense periods, but teams need recovery periods too. For me, balance means maintaining performance consistently, not being available all the time.
 
-## 5) Reading Text
+</details>
+
+<details open>
+<summary><strong>5) Reading Text</strong></summary>
 
 High performance and well-being are not opposites. In modern teams, they depend on each other. Teams that ignore well-being often suffer from quality decline, avoidable incidents, and high turnover.
 
@@ -135,7 +148,10 @@ Sustainable delivery requires healthy habits at both individual and organization
 
 In interviews, thoughtful candidates show that they can manage pressure while protecting quality and team stability.
 
-## 6) List of Questions + Ideas
+</details>
+
+<details open>
+<summary><strong>6) List of Questions + Ideas</strong></summary>
 
 ### Core Questions (must-practice)
 1. How do you stay effective during high-pressure periods?
@@ -159,3 +175,5 @@ In interviews, thoughtful candidates show that they can manage pressure while pr
 - Link well-being discussion to quality and business outcomes.
 
 ---
+
+</details>

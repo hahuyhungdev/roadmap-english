@@ -12,7 +12,8 @@ description: Explain how you adapt to changing requirements, collect and use use
 **Level:** B2  
 **Focus:** Speaking confidently about how you handle project changes, incorporate user feedback, and promote ongoing improvements in software development (especially in Agile environments).
 
-## 1) Vocabulary & Collocations
+<details open>
+<summary><strong>1) Vocabulary </strong></summary>
 
 - **adapt (v)** – to change or adjust in response to new conditions  / situations 
   _Example:_ Good developers must **adapt quickly** to evolving business needs.
@@ -43,7 +44,10 @@ description: Explain how you adapt to changing requirements, collect and use use
 - **backlog** (n) – a prioritized list of features and changes
 - **feature flag** (n) – a technique to enable/disable features without redeploying
 
-## 2) Grammar & Useful Patterns (B2)
+</details>
+
+<details open>
+<summary><strong>2) Grammar & Useful Patterns (B2)</strong></summary>
 
 - **When + Present Simple**  
   When requirements change, we perform an **impact analysis** first.
@@ -68,7 +72,10 @@ description: Explain how you adapt to changing requirements, collect and use use
 - The key benefit of this method is…
 - One real example from my project was when…
 
-## 3) Collocations, Chunking & Phrasal Verbs
+</details>
+
+<details open>
+<summary><strong>3) Collocations, Chunking & Phrasal Verbs</strong></summary>
 
 ### Strong Collocations
 - adapt quickly to changes
@@ -101,7 +108,10 @@ description: Explain how you adapt to changing requirements, collect and use use
 - **roll out** → We **roll out** improvements gradually using feature flags.
 - **follow up on** → We always **follow up on** feedback to measure real impact.
 
-## 4) Typical Dialogues
+</details>
+
+<details open>
+<summary><strong>4) Typical Dialogues</strong></summary>
 
 **Teacher / Interviewer:** How do you handle changes in requirements and use user feedback for continuous improvement?
 
@@ -114,7 +124,10 @@ A concrete case from my last project: Users reported that the registration proce
 
 We also hold **sprint retrospectives** at the end of every iteration to reflect on our process using a Kaizen mindset — focusing on small, actionable improvements. This helps us **foster continuous improvement** without big disruptions. Overall, I believe embracing change and keeping users at the center is the best way to deliver high-quality products.
 
-## 5) Reading Text
+</details>
+
+<details open>
+<summary><strong>5) Reading Text</strong></summary>
 
 In modern software development, change is inevitable. Agile methodologies welcome changing requirements even late in the project because they help teams deliver more value to users. Instead of resisting change, successful teams focus on **impact analysis**, clear prioritization, and **incremental implementation**.
 
@@ -122,7 +135,10 @@ User feedback is the most valuable source of truth. Teams collect it through mul
 
 The key to success lies in balancing flexibility with control: responding quickly to feedback while protecting the project from uncontrolled scope creep.
 
-## 6) List of Questions + Ideas
+</details>
+
+<details open>
+<summary><strong>6) List of Questions + Ideas</strong></summary>
 
 ### Core Questions (must-practice)
 1. How do you handle changing requirements in your project?
@@ -146,3 +162,5 @@ The key to success lies in balancing flexibility with control: responding quickl
 - Use Situation -> Action -> Result for longer responses.
 
 ---
+
+</details>

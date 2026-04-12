@@ -5,9 +5,10 @@ import type { PhraseGroup } from "@/lib/sessions.server";
 import { useProgressStore } from "@/store/useProgressStore";
 import type { Session } from "@/types";
 import clsx from "clsx";
-import { CheckCircle2, ChevronLeft, Circle } from "lucide-react";
+import { CheckCircle2, ChevronLeft, ChevronRight, Circle } from "lucide-react";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
 import LessonAssistant from "./LessonAssistant";
 import PracticeCoach from "./PracticeCoach";
@@ -99,9 +100,43 @@ export default function SessionDetailClient({
           "prose-blockquote:border-l-4 prose-blockquote:border-indigo-400 prose-blockquote:bg-indigo-50/70",
           "prose-blockquote:rounded-r-lg prose-blockquote:px-4 prose-blockquote:py-2 prose-blockquote:not-italic prose-blockquote:text-gray-700",
           "prose-table:text-sm prose-th:text-gray-700 prose-td:text-gray-700",
+          "prose-details:my-4 prose-details:border prose-details:border-gray-200 prose-details:rounded-xl prose-details:bg-gray-50/70 prose-details:overflow-hidden",
+          "prose-summary:cursor-pointer prose-summary:list-none prose-summary:font-semibold prose-summary:text-gray-900 prose-summary:px-4 prose-summary:py-3 prose-summary:select-none prose-summary:hover:bg-indigo-50 prose-summary:transition-colors prose-summary:[&::-webkit-details-marker]:hidden",
         ].join(" ")}
       >
-        <ReactMarkdown remarkPlugins={[remarkGfm]}>
+        <ReactMarkdown
+          remarkPlugins={[remarkGfm]}
+          rehypePlugins={[rehypeRaw]}
+          components={{
+            details: ({ children, open: _open, ...props }) => (
+              <details {...props} className="group mb-2">
+                {children}
+              </details>
+            ),
+            summary: ({ children, ...props }) => (
+              <summary
+                {...props}
+                className="flex items-center justify-between gap-3 cursor-pointer [&_*]:cursor-pointer"
+                title="Click to expand or collapse"
+              >
+                <span className="flex items-center gap-2">
+                  <ChevronRight
+                    size={14}
+                    className="shrink-0 text-indigo-500 transition-transform duration-200 group-open:rotate-90"
+                  />
+                  <span>{children}</span>
+                </span>
+                <ChevronRight
+                  size={12}
+                  className="shrink-0 text-gray-400 transition-transform duration-200 group-open:hidden"
+                />
+                <span className="hidden text-xs text-indigo-600 font-medium group-open:inline">
+                  Collapse
+                </span>
+              </summary>
+            ),
+          }}
+        >
           {session.content}
         </ReactMarkdown>
       </article>

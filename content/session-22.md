@@ -12,7 +12,8 @@ description: Explain how you prioritize when information is unclear and stakehol
 **Level:** B2+  
 **Focus:** Speaking in a B2+/C1 interview style about prioritization logic, trade-offs, and stakeholder communication under uncertainty.
 
-## 1) Vocabulary & Collocations
+<details open>
+<summary><strong>1) Vocabulary </strong></summary>
 
 - **ambiguity tolerance** (n) - ability to act despite incomplete information  
   _Example:_ Ambiguity tolerance is essential in fast-moving product teams.
@@ -51,7 +52,10 @@ description: Explain how you prioritize when information is unclear and stakehol
 - **alignment checkpoint** (n)
 - **decision rationale** (n)
 
-## 2) Grammar & Useful Patterns (B2+ / C1-lite)
+</details>
+
+<details open>
+<summary><strong>2) Grammar & Useful Patterns (B2+ / C1-lite)</strong></summary>
 
 - **Uncertainty framing**  
   We do not have full certainty yet, but we have enough evidence to decide responsibly.
@@ -72,7 +76,10 @@ description: Explain how you prioritize when information is unclear and stakehol
 - The trade-off we accepted was...
 - We reviewed this decision when...
 
-## 3) Collocations, Chunking & Phrasal Verbs
+</details>
+
+<details open>
+<summary><strong>3) Collocations, Chunking & Phrasal Verbs</strong></summary>
 
 ### Strong Collocations
 - prioritize under uncertainty
@@ -97,7 +104,10 @@ description: Explain how you prioritize when information is unclear and stakehol
 - **push back on** -> I pushed back on low-impact scope additions.
 - **line up with** -> Our final plan lined up with business goals.
 
-## 4) Typical Dialogues
+</details>
+
+<details open>
+<summary><strong>4) Typical Dialogues</strong></summary>
 
 ### Dialogue 1 - Prioritizing with Incomplete Data
 
@@ -122,7 +132,10 @@ I make trade-offs visible. For example, if we accelerate release, what risk do w
 **You:**  
 Yes. When I have many goals, I rank them by impact and urgency. This reduces stress and improves consistency.
 
-## 5) Reading Text
+</details>
+
+<details open>
+<summary><strong>5) Reading Text</strong></summary>
 
 Ambiguity is normal in real projects. Strong professionals do not wait for perfect information; they make responsible decisions with transparent logic.
 
@@ -130,7 +143,10 @@ Prioritization quality depends on clear criteria, trade-off communication, and f
 
 In interviews, practical examples of prioritization under uncertainty signal maturity and leadership readiness.
 
-## 6) List of Questions + Ideas
+</details>
+
+<details open>
+<summary><strong>6) List of Questions + Ideas</strong></summary>
 
 ### Core Questions (must-practice)
 1. How do you prioritize tasks when information is incomplete?
@@ -154,3 +170,5 @@ In interviews, practical examples of prioritization under uncertainty signal mat
 - Show how you revisited decisions as new data arrived.
 
 ---
+
+</details>

@@ -12,7 +12,8 @@ description: Discuss failures with honesty and maturity, focusing on ownership, 
 **Level:** B2+  
 **Focus:** Speaking in a B2+/C1 interview style about mistakes, accountability, recovery plans, and trust restoration.
 
-## 1) Vocabulary & Collocations
+<details open>
+<summary><strong>1) Vocabulary </strong></summary>
 
 - **ownership mindset** (n) - taking responsibility without excuses  
   _Example:_ An ownership mindset helped me lead recovery effectively.
@@ -51,7 +52,10 @@ description: Discuss failures with honesty and maturity, focusing on ownership, 
 - **corrective action** (n)
 - **reliability habit** (n)
 
-## 2) Grammar & Useful Patterns (B2+ / C1-lite)
+</details>
+
+<details open>
+<summary><strong>2) Grammar & Useful Patterns (B2+ / C1-lite)</strong></summary>
 
 - **Ownership language**  
   I should have escalated the risk earlier, and I take responsibility for that delay.
@@ -72,7 +76,10 @@ description: Discuss failures with honesty and maturity, focusing on ownership, 
 - The most important lesson was...
 - To rebuild trust, we...
 
-## 3) Collocations, Chunking & Phrasal Verbs
+</details>
+
+<details open>
+<summary><strong>3) Collocations, Chunking & Phrasal Verbs</strong></summary>
 
 ### Strong Collocations
 - take full ownership
@@ -97,7 +104,10 @@ description: Discuss failures with honesty and maturity, focusing on ownership, 
 - **follow through on** -> I followed through on every recovery commitment.
 - **bounce back from** -> The team bounced back from the incident with stronger habits.
 
-## 4) Typical Dialogues
+</details>
+
+<details open>
+<summary><strong>4) Typical Dialogues</strong></summary>
 
 ### Dialogue 1 - Taking Ownership in an Interview
 
@@ -122,7 +132,10 @@ I focus on transparency, consistency, and evidence of change. I do not only apol
 **You:**  
 Yes. In any relationship, trust returns through honest accountability and changed behavior, not words alone.
 
-## 5) Reading Text
+</details>
+
+<details open>
+<summary><strong>5) Reading Text</strong></summary>
 
 Failure is unavoidable in complex systems. What differentiates professionals is not the absence of mistakes, but the quality of response.
 
@@ -130,7 +143,10 @@ High-trust teams handle failure with ownership, speed, and learning discipline. 
 
 In interviews, a strong failure story includes responsibility, recovery, and long-term prevention.
 
-## 6) List of Questions + Ideas
+</details>
+
+<details open>
+<summary><strong>6) List of Questions + Ideas</strong></summary>
 
 ### Core Questions (must-practice)
 1. How do you talk about failure without sounding defensive?
@@ -154,3 +170,5 @@ In interviews, a strong failure story includes responsibility, recovery, and lon
 - End with prevention measures and measurable change.
 
 ---
+
+</details>

@@ -12,7 +12,8 @@ description: Discuss how modern technologies are changing the way developers wor
 **Level:** B2  
 **Focus:** Speaking about how modern technologies (including AI) are transforming workflows, collaboration, productivity, and decision-making in software teams.
 
-## 1) Vocabulary & Collocations
+<details open>
+<summary><strong>1) Vocabulary </strong></summary>
 
 - **transform** (v) – to change completely  
   _Example:_ New technologies have transformed the way we develop software.
@@ -51,7 +52,10 @@ description: Discuss how modern technologies are changing the way developers wor
 - **standardization** (n) – using common processes to reduce inconsistency
 - **change fatigue** (n) – stress caused by too many changes in a short time
 
-## 2) Grammar & Useful Patterns (B2)
+</details>
+
+<details open>
+<summary><strong>2) Grammar & Useful Patterns (B2)</strong></summary>
 
 - **Present Perfect for changes**  
   Technology **has changed** the way we work in many ways.
@@ -80,7 +84,10 @@ description: Discuss how modern technologies are changing the way developers wor
 - One downside we should consider is…
 - To adapt effectively, teams need to…
 
-## 3) Collocations, Chunking & Phrasal Verbs
+</details>
+
+<details open>
+<summary><strong>3) Collocations, Chunking & Phrasal Verbs</strong></summary>
 
 ### Strong Collocations
 - transform the way we work
@@ -117,7 +124,10 @@ description: Discuss how modern technologies are changing the way developers wor
 - **fall behind** → Teams that avoid learning may fall behind quickly.
 - **phase in** → We phase in process changes instead of changing everything at once.
 
-## 4) Typical Dialogues
+</details>
+
+<details open>
+<summary><strong>4) Typical Dialogues</strong></summary>
 
 ### Dialogue 1 – General Impact
 
@@ -146,7 +156,10 @@ In short, AI improves productivity, but engineering judgment remains essential.
 **You:**  
 I partly agree. Dependency risk is real if teams stop understanding fundamentals. That is why we combine tool usage with code reviews, architecture discussions, and internal learning sessions. The goal is to use tools as accelerators, not as replacements for core engineering skills.
 
-## 5) Reading Text
+</details>
+
+<details open>
+<summary><strong>5) Reading Text</strong></summary>
 
 Technology has shifted software work from manual execution to high-leverage decision-making. Developers now spend less time on repetitive setup and more time on architecture, product thinking, and user impact. Collaboration has also changed: distributed teams rely on asynchronous updates, shared documentation, and automated quality checks.
 
@@ -154,7 +167,10 @@ However, progress is not only about speed. Teams must also manage adoption risks
 
 In professional speaking, a balanced perspective is important. Highlight both benefits and limitations, and explain how your team adapts in practice.
 
-## 6) List of Questions + Ideas
+</details>
+
+<details open>
+<summary><strong>6) List of Questions + Ideas</strong></summary>
 
 ### Core Questions (must-practice)
 1. What is the biggest technology change in your daily work?
@@ -178,3 +194,5 @@ In professional speaking, a balanced perspective is important. Highlight both be
 - Add one measurable result (time saved, fewer bugs, faster release).
 
 ---
+
+</details>

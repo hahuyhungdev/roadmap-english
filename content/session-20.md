@@ -12,7 +12,8 @@ description: Present strengths and weaknesses with maturity, concrete proof, and
 **Level:** B2+  
 **Focus:** Speaking in a B2+/C1 interview style about self-awareness, professional growth, and evidence-based improvement.
 
-## 1) Vocabulary & Collocations
+<details open>
+<summary><strong>1) Vocabulary </strong></summary>
 
 - **self-awareness** (n) - accurate understanding of your capabilities and limits  
   _Example:_ Self-awareness helps me choose the right development priorities.
@@ -51,7 +52,10 @@ description: Present strengths and weaknesses with maturity, concrete proof, and
 - **confidence calibration** (n)
 - **improvement trajectory** (n)
 
-## 2) Grammar & Useful Patterns (B2+ / C1-lite)
+</details>
+
+<details open>
+<summary><strong>2) Grammar & Useful Patterns (B2+ / C1-lite)</strong></summary>
 
 - **Balanced strength framing**  
   One strength I rely on is execution discipline, especially in ambiguous projects.
@@ -72,7 +76,10 @@ description: Present strengths and weaknesses with maturity, concrete proof, and
 - To improve, I introduced...
 - The evidence of progress is...
 
-## 3) Collocations, Chunking & Phrasal Verbs
+</details>
+
+<details open>
+<summary><strong>3) Collocations, Chunking & Phrasal Verbs</strong></summary>
 
 ### Strong Collocations
 - demonstrate self-awareness
@@ -97,7 +104,10 @@ description: Present strengths and weaknesses with maturity, concrete proof, and
 - **level up** -> I leveled up communication by presenting more often.
 - **cut down on** -> I cut down on perfectionism in low-risk tasks.
 
-## 4) Typical Dialogues
+</details>
+
+<details open>
+<summary><strong>4) Typical Dialogues</strong></summary>
 
 ### Dialogue 1 - Strengths and Weaknesses with Evidence
 
@@ -122,7 +132,10 @@ I use measurable signals. For example, I tracked communication quality through s
 **You:**  
 Yes. In personal goals too, I focus on small habits, feedback, and consistency. Improvement is more reliable when it is measurable.
 
-## 5) Reading Text
+</details>
+
+<details open>
+<summary><strong>5) Reading Text</strong></summary>
 
 Strong candidates do not hide weaknesses. They describe them with maturity and show a clear path of improvement.
 
@@ -130,7 +143,10 @@ At advanced speaking levels, interviewers listen for three signals: self-awarene
 
 A good answer is balanced: acknowledge weakness honestly, explain action clearly, and show measurable progress.
 
-## 6) List of Questions + Ideas
+</details>
+
+<details open>
+<summary><strong>6) List of Questions + Ideas</strong></summary>
 
 ### Core Questions (must-practice)
 1. What are your most valuable strengths in professional contexts?
@@ -154,3 +170,5 @@ A good answer is balanced: acknowledge weakness honestly, explain action clearly
 - Use numbers or concrete outcomes where possible.
 
 ---
+
+</details>

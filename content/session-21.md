@@ -12,7 +12,8 @@ description: Explain your motivations and values clearly, and connect them credi
 **Level:** B2+  
 **Focus:** Speaking in a B2+/C1 interview style about authentic motivation, values-based decisions, and environment fit.
 
-## 1) Vocabulary & Collocations
+<details open>
+<summary><strong>1) Vocabulary </strong></summary>
 
 - **intrinsic motivation** (n) - internal drive from meaning or curiosity  
   _Example:_ Intrinsic motivation helps me stay consistent in difficult projects.
@@ -51,7 +52,10 @@ description: Explain your motivations and values clearly, and connect them credi
 - **professional purpose** (n)
 - **value consistency** (n)
 
-## 2) Grammar & Useful Patterns (B2+ / C1-lite)
+</details>
+
+<details open>
+<summary><strong>2) Grammar & Useful Patterns (B2+ / C1-lite)</strong></summary>
 
 - **Reasoned motivation statement**  
   I am motivated by work where technical quality directly improves user outcomes.
@@ -72,7 +76,10 @@ description: Explain your motivations and values clearly, and connect them credi
 - This environment is a good fit because...
 - In the long term, I want to work where...
 
-## 3) Collocations, Chunking & Phrasal Verbs
+</details>
+
+<details open>
+<summary><strong>3) Collocations, Chunking & Phrasal Verbs</strong></summary>
 
 ### Strong Collocations
 - clarify career motivation
@@ -97,7 +104,10 @@ description: Explain your motivations and values clearly, and connect them credi
 - **grow into** -> I want to grow into broader product ownership.
 - **commit to** -> I commit to environments with clear standards.
 
-## 4) Typical Dialogues
+</details>
+
+<details open>
+<summary><strong>4) Typical Dialogues</strong></summary>
 
 ### Dialogue 1 - Motivation Beyond Salary
 
@@ -122,7 +132,10 @@ I try to protect key values through practical decisions. For example, I will neg
 **You:**  
 Not really. Values influence personal decisions too, especially under pressure. Clear values help us make consistent choices.
 
-## 5) Reading Text
+</details>
+
+<details open>
+<summary><strong>5) Reading Text</strong></summary>
 
 Interviewers ask about motivation to understand whether your engagement is sustainable. Candidates with clear motivation and value alignment usually adapt faster and perform better.
 
@@ -130,7 +143,10 @@ At advanced speaking levels, strong answers are specific and realistic. They con
 
 Good fit is not about perfect similarity. It is about shared principles and compatible working habits.
 
-## 6) List of Questions + Ideas
+</details>
+
+<details open>
+<summary><strong>6) List of Questions + Ideas</strong></summary>
 
 ### Core Questions (must-practice)
 1. What motivates you most in your professional work?
@@ -154,3 +170,5 @@ Good fit is not about perfect similarity. It is about shared principles and comp
 - Show how your fit benefits both you and the company.
 
 ---
+
+</details>

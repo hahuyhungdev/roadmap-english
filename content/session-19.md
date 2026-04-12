@@ -12,7 +12,8 @@ description: Build a clear and persuasive personal pitch that explains who you a
 **Level:** B2+  
 **Focus:** Speaking in a B2+/C1 interview style to deliver a concise, credible, and memorable professional introduction.
 
-## 1) Vocabulary & Collocations
+<details open>
+<summary><strong>1) Vocabulary </strong></summary>
 
 - **value proposition** (n) - clear statement of the value you bring  
   _Example:_ My value proposition is combining product thinking with strong execution.
@@ -51,7 +52,10 @@ description: Build a clear and persuasive personal pitch that explains who you a
 - **personal brand** (n)
 - **fit narrative** (n)
 
-## 2) Grammar & Useful Patterns (B2+ / C1-lite)
+</details>
+
+<details open>
+<summary><strong>2) Grammar & Useful Patterns (B2+ / C1-lite)</strong></summary>
 
 - **Structured self-introduction**  
   I am a frontend engineer with strong product collaboration experience, and I specialize in building reliable user-facing systems.
@@ -72,7 +76,10 @@ description: Build a clear and persuasive personal pitch that explains who you a
 - The value I bring to teams is...
 - Going forward, I want to...
 
-## 3) Collocations, Chunking & Phrasal Verbs
+</details>
+
+<details open>
+<summary><strong>3) Collocations, Chunking & Phrasal Verbs</strong></summary>
 
 ### Strong Collocations
 - craft a personal pitch
@@ -97,7 +104,10 @@ description: Build a clear and persuasive personal pitch that explains who you a
 - **step into** -> I am ready to step into broader ownership.
 - **back up** -> I back up every claim with concrete evidence.
 
-## 4) Typical Dialogues
+</details>
+
+<details open>
+<summary><strong>4) Typical Dialogues</strong></summary>
 
 ### Dialogue 1 - Personal Pitch in an Interview
 
@@ -122,7 +132,10 @@ I focus on measurable outcomes. In one release, we reduced page load time by 35%
 **You:**  
 Yes. In networking or collaboration, people understand you faster when your story is clear. It helps build trust and reduces misunderstanding.
 
-## 5) Reading Text
+</details>
+
+<details open>
+<summary><strong>5) Reading Text</strong></summary>
 
 A strong personal pitch is not a biography. It is a strategic summary of your value. Good candidates explain their profile in clear language, support it with proof, and connect it to the target role.
 
@@ -130,7 +143,10 @@ At advanced levels, interviewers look for clarity, credibility, and relevance. T
 
 When your story is structured and evidence-based, you sound confident without sounding exaggerated.
 
-## 6) List of Questions + Ideas
+</details>
+
+<details open>
+<summary><strong>6) List of Questions + Ideas</strong></summary>
 
 ### Core Questions (must-practice)
 1. How would you introduce yourself in 60 to 90 seconds?
@@ -154,3 +170,5 @@ When your story is structured and evidence-based, you sound confident without so
 - Align your final sentence with the target role.
 
 ---
+
+</details>

@@ -12,7 +12,8 @@ description: Explain your tech stack, tools you use, and the reasons behind your
 **Level:** B2  
 **Focus:** Speaking confidently about your tech stack, evaluation criteria, trade-offs, and the business reasons behind technical decisions.
 
-## 1) Vocabulary & Collocations
+<details open>
+<summary><strong>1) Vocabulary </strong></summary>
 
 - **tech stack** (n) – the combination of technologies used in a project  
   _Example:_ Our tech stack is built around React and TypeScript.
@@ -51,7 +52,10 @@ description: Explain your tech stack, tools you use, and the reasons behind your
 - **DX (developer experience)** (n) – how smooth tools feel for developers
 - **observability** (n) – ability to monitor and diagnose system behavior
 
-## 2) Grammar & Useful Patterns (B2)
+</details>
+
+<details open>
+<summary><strong>2) Grammar & Useful Patterns (B2)</strong></summary>
 
 - **Reason clauses (because / since / as)**  
   We use TypeScript because strong typing helps catch issues earlier.
@@ -76,7 +80,10 @@ description: Explain your tech stack, tools you use, and the reasons behind your
 - We validated this choice by ...
 - A practical example from our project is ...
 
-## 3) Collocations, Chunking & Phrasal Verbs
+</details>
+
+<details open>
+<summary><strong>3) Collocations, Chunking & Phrasal Verbs</strong></summary>
 
 ### Strong Collocations
 - modern tech stack
@@ -109,7 +116,10 @@ description: Explain your tech stack, tools you use, and the reasons behind your
 - **scale up** → The architecture can scale up as usage grows.
 - **fall back on** → We fall back on stable patterns when experiments fail.
 
-## 4) Typical Dialogues
+</details>
+
+<details open>
+<summary><strong>4) Typical Dialogues</strong></summary>
 
 ### Dialogue 1 – Explaining Your Stack
 
@@ -136,7 +146,10 @@ Newer tools can be powerful, but they also introduce risk. We usually evaluate t
 **You:**  
 Yes. We migrated part of the codebase from JavaScript to TypeScript. We did it incrementally: first shared components, then critical flows, and finally less-used pages. This approach reduced risk and allowed the team to keep shipping features. After migration, we saw fewer regressions in production.
 
-## 5) Reading Text
+</details>
+
+<details open>
+<summary><strong>5) Reading Text</strong></summary>
 
 Choosing a tech stack is both a technical and business decision. Teams should evaluate tools by maintainability, delivery speed, reliability, and hiring impact. A tool that looks impressive in demos may fail in long-term maintenance if the ecosystem is weak.
 
@@ -144,7 +157,10 @@ Strong teams avoid binary thinking like "old vs new." Instead, they focus on con
 
 In professional communication, explaining trade-offs clearly is often more important than naming many technologies. Stakeholders trust engineers who can connect technology choices to practical outcomes.
 
-## 6) List of Questions + Ideas
+</details>
+
+<details open>
+<summary><strong>6) List of Questions + Ideas</strong></summary>
 
 ### Core Questions (must-practice)
 1. What is your current tech stack, and why this combination?
@@ -169,3 +185,5 @@ In professional communication, explaining trade-offs clearly is often more impor
 - Support your point with one real migration/tooling example.
 
 ---
+
+</details>
