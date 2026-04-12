@@ -15,8 +15,8 @@ import { NotebookPen, GripHorizontal, Save } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useViewportSize } from "@mantine/hooks";
 import { usePathname } from "next/navigation";
-import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { Rnd } from "react-rnd";
+import { $api } from "@/lib/api/client";
 
 const LESSON_PATH_RE = /^\/phase\/[^/]+\/session\/([^/?#]+)/;
 
@@ -102,35 +102,24 @@ export default function NotePanel() {
   const [sectionNotes, setSectionNotes] = useState<SectionNotes>({ ...EMPTY_NOTES });
   const pathname = usePathname();
   const { width, height } = useViewportSize();
-  const queryClient = useQueryClient();
 
   const sessionSlug = extractSessionSlug(pathname ?? "");
 
-  const noteQuery = useQuery({
-    queryKey: ["lesson-note", sessionSlug],
-    enabled: Boolean(sessionSlug && opened),
-    queryFn: async (): Promise<LessonNote> => {
-      if (!sessionSlug) {
-        return { sessionSlug: "", content: "", updatedAt: null };
-      }
-
-      const res = await fetch(
-        `/api/lesson-notes?sessionSlug=${encodeURIComponent(sessionSlug)}`,
-        { cache: "no-store" },
-      );
-
-      if (!res.ok) {
-        throw new Error(`Request failed with status ${res.status}`);
-      }
-
-      const data = (await res.json()) as Partial<LessonNote>;
-      return {
-        sessionSlug,
-        content: typeof data.content === "string" ? data.content : "",
-        updatedAt: typeof data.updatedAt === "string" ? data.updatedAt : null,
-      };
+  const noteQuery = $api.useQuery(
+    "get",
+    "/api/lesson-notes",
+    {
+      params: {
+        query: {
+          sessionSlug: sessionSlug ?? "",
+        },
+      },
     },
-  });
+    {
+      enabled: Boolean(sessionSlug && opened),
+      staleTime: 0,
+    },
+  );
 
   useEffect(() => {
     if (!sessionSlug) {
@@ -143,32 +132,9 @@ export default function NotePanel() {
     }
   }, [sessionSlug, noteQuery.data]);
 
-  const saveMutation = useMutation({
-    mutationFn: async (payload: {
-      sessionSlug: string;
-      content: string;
-    }): Promise<LessonNote> => {
-      const res = await fetch("/api/lesson-notes", {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(payload),
-      });
-
-      if (!res.ok) {
-        throw new Error(`Request failed with status ${res.status}`);
-      }
-
-      const data = (await res.json()) as Partial<LessonNote>;
-      return {
-        sessionSlug: payload.sessionSlug,
-        content: typeof data.content === "string" ? data.content : payload.content,
-        updatedAt: typeof data.updatedAt === "string" ? data.updatedAt : null,
-      };
-    },
-    onSuccess: (savedNote) => {
-      queryClient.setQueryData(["lesson-note", savedNote.sessionSlug], savedNote);
+  const saveMutation = $api.useMutation("put", "/api/lesson-notes", {
+    onSuccess: async () => {
+      await noteQuery.refetch();
     },
   });
 
@@ -195,8 +161,10 @@ export default function NotePanel() {
     if (!sessionSlug || !isDirty || saveMutation.isPending) return;
     try {
       await saveMutation.mutateAsync({
-        sessionSlug,
-        content: serializedCurrent,
+        body: {
+          sessionSlug,
+          content: serializedCurrent,
+        },
       });
     } catch (err) {
       console.error("[NotePanel] Failed to save lesson note", err);
