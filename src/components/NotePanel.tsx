@@ -99,7 +99,9 @@ function getSectionLineCount(value: string): number {
 
 export default function NotePanel() {
   const [opened, setOpened] = useState(false);
-  const [sectionNotes, setSectionNotes] = useState<SectionNotes>({ ...EMPTY_NOTES });
+  const [sectionNotes, setSectionNotes] = useState<SectionNotes>({
+    ...EMPTY_NOTES,
+  });
   const pathname = usePathname();
   const { width, height } = useViewportSize();
 
@@ -141,7 +143,8 @@ export default function NotePanel() {
   const serverNotes = parseSectionContent(noteQuery.data?.content ?? "");
   const serializedCurrent = serializeSectionContent(sectionNotes);
   const serializedServer = serializeSectionContent(serverNotes);
-  const isDirty = Boolean(sessionSlug) && serializedCurrent !== serializedServer;
+  const isDirty =
+    Boolean(sessionSlug) && serializedCurrent !== serializedServer;
 
   const statusText = !sessionSlug
     ? "Open a lesson page to start notes"
@@ -174,7 +177,9 @@ export default function NotePanel() {
   const panelDefaultWidth = 400;
   const panelPreferredHeight = Math.max(640, Math.floor(height * 0.9));
   const panelDefaultHeight =
-    height > 0 ? Math.max(500, Math.min(panelPreferredHeight, height - 24)) : 640;
+    height > 0
+      ? Math.max(500, Math.min(panelPreferredHeight, height - 24))
+      : 640;
 
   return (
     <>
@@ -205,7 +210,7 @@ export default function NotePanel() {
             width: panelDefaultWidth,
             height: panelDefaultHeight,
           }}
-          minWidth={360}
+          minWidth={250}
           minHeight={420}
           bounds="window"
           dragHandleClassName="drag-handle"
@@ -250,10 +255,16 @@ export default function NotePanel() {
                   </Text>
                   <Text
                     size="xs"
-                    c={noteQuery.isError || saveMutation.isError ? "red" : "dimmed"}
+                    c={
+                      noteQuery.isError || saveMutation.isError
+                        ? "red"
+                        : "dimmed"
+                    }
                     style={{ overflow: "hidden", textOverflow: "ellipsis" }}
                   >
-                    {sessionSlug ? `Lesson: ${sessionSlug} • ${statusText}` : statusText}
+                    {sessionSlug
+                      ? `Lesson: ${sessionSlug} • ${statusText}`
+                      : statusText}
                   </Text>
                 </div>
               </Group>
@@ -281,72 +292,74 @@ export default function NotePanel() {
                 padding: "10px 12px 14px",
               }}
             >
-              {(["vocabulary", "mispronounced", "incorrect"] as SectionKey[]).map(
-                (sectionKey, index) => (
-                  <div
-                    key={sectionKey}
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      flex: index === 2 ? 1 : undefined,
-                      minHeight: index === 2 ? 220 : 170,
-                      marginTop: index === 0 ? 0 : 12,
-                      paddingTop: index === 0 ? 0 : 12,
-                      borderTop:
-                        index === 0
-                          ? "none"
-                          : "1px solid var(--mantine-color-gray-3)",
-                    }}
-                  >
-                    <Group justify="space-between" mb={6}>
-                      <Text size="xs" fw={700} c="dimmed">
-                        {SECTION_LABELS[sectionKey]}
-                      </Text>
-                      <Text size="xs" c="dimmed">
-                        {getSectionLineCount(sectionNotes[sectionKey])} line
-                        {getSectionLineCount(sectionNotes[sectionKey]) === 1 ? "" : "s"}
-                      </Text>
-                    </Group>
+              {(
+                ["vocabulary", "mispronounced", "incorrect"] as SectionKey[]
+              ).map((sectionKey, index) => (
+                <div
+                  key={sectionKey}
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    flex: index === 2 ? 1 : undefined,
+                    minHeight: index === 2 ? 220 : 170,
+                    marginTop: index === 0 ? 0 : 12,
+                    paddingTop: index === 0 ? 0 : 12,
+                    borderTop:
+                      index === 0
+                        ? "none"
+                        : "1px solid var(--mantine-color-gray-3)",
+                  }}
+                >
+                  <Group justify="space-between" mb={6}>
+                    <Text size="xs" fw={700} c="dimmed">
+                      {SECTION_LABELS[sectionKey]}
+                    </Text>
+                    <Text size="xs" c="dimmed">
+                      {getSectionLineCount(sectionNotes[sectionKey])} line
+                      {getSectionLineCount(sectionNotes[sectionKey]) === 1
+                        ? ""
+                        : "s"}
+                    </Text>
+                  </Group>
 
-                    <Textarea
-                      value={sectionNotes[sectionKey]}
-                      onChange={(event) => {
-                        const nextValue = event.currentTarget.value;
-                        setSectionNotes((prev) => ({
-                          ...prev,
-                          [sectionKey]: nextValue,
-                        }));
-                      }}
-                      disabled={!sessionSlug || noteQuery.isPending}
-                      placeholder={
-                        !sessionSlug
-                          ? "Open a lesson page to start taking notes..."
-                          : noteQuery.isPending
-                            ? "Loading notes..."
-                            : `Add notes for ${SECTION_LABELS[sectionKey]}...`
-                      }
-                      styles={{
-                        root: {
-                          flex: 1,
-                          display: "flex",
-                          flexDirection: "column",
-                        },
-                        wrapper: {
-                          flex: 1,
-                          display: "flex",
-                          flexDirection: "column",
-                        },
-                        input: {
-                          flex: 1,
-                          minHeight: index === 2 ? 180 : 120,
-                          resize: "none",
-                          fontSize: "14px",
-                        },
-                      }}
-                    />
-                  </div>
-                ),
-              )}
+                  <Textarea
+                    value={sectionNotes[sectionKey]}
+                    onChange={(event) => {
+                      const nextValue = event.currentTarget.value;
+                      setSectionNotes((prev) => ({
+                        ...prev,
+                        [sectionKey]: nextValue,
+                      }));
+                    }}
+                    disabled={!sessionSlug || noteQuery.isPending}
+                    placeholder={
+                      !sessionSlug
+                        ? "Open a lesson page to start taking notes..."
+                        : noteQuery.isPending
+                          ? "Loading notes..."
+                          : `Add notes for ${SECTION_LABELS[sectionKey]}...`
+                    }
+                    styles={{
+                      root: {
+                        flex: 1,
+                        display: "flex",
+                        flexDirection: "column",
+                      },
+                      wrapper: {
+                        flex: 1,
+                        display: "flex",
+                        flexDirection: "column",
+                      },
+                      input: {
+                        flex: 1,
+                        minHeight: index === 2 ? 180 : 120,
+                        resize: "none",
+                        fontSize: "14px",
+                      },
+                    }}
+                  />
+                </div>
+              ))}
             </div>
           </Paper>
         </Rnd>
