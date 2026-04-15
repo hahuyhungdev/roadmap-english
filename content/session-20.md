@@ -17,56 +17,57 @@ description: Practice handling toxic behavior calmly: de-escalation, boundary se
 <summary><strong>1) Vocabulary </strong></summary>
 
 - **de-escalation** /dˈi ˌɛskəlˈeɪʃən/ (n) - reducing emotional tension in conflict  
-  _Example 1:_ I focused on de-escalation before discussing technical details.  
-  _Example 2:_ This gave structure to my answer in mock interview sessions.  
-  _Example 3:_ It also helped me show both ownership and reflection in my answers.
+  _Example 1:_ I used de-escalation language when a review meeting became personal.  
+  _Example 2:_ We paused blame discussion and returned to release facts and ownership.  
+  _Example 3:_ This prevented a people conflict from becoming a delivery failure.
 
 - **toxic behavior** /tˈɑksɪk bɪhˈeɪvjɚ/ (n) - harmful behavior like disrespect or blame  
-  _Example 1:_ Repeated toxic behavior damaged team morale.  
-  _Example 2:_ This helped me explain one difficult workplace situation more clearly.  
-  _Example 3:_ This made my examples sound more real, not textbook-like.
+  _Example 1:_ Repeated toxic behavior in stand-ups made juniors stop asking questions.  
+  _Example 2:_ We treated it as a delivery risk, not only a personality issue.  
+  _Example 3:_ Team confidence improved after behavior standards were enforced.
 
 - **boundary** /bˈaʊndɚi/ (n) - clear limit on acceptable behavior  
-  _Example 1:_ I set a boundary around disrespectful comments.  
-  _Example 2:_ In interview prep, I used this idea to build stronger behavioral answers.  
-  _Example 3:_ Now I use it to keep answers practical, honest, and easy to follow.
+  _Example 1:_ I set a boundary: challenge ideas, not people.  
+  _Example 2:_ Once the boundary was explicit, meeting tone changed quickly.  
+  _Example 3:_ Clear boundaries reduced repeated conflict in code reviews.
 
 - **passive-aggressive** /pˈæsɪv əɡrˈɛsɪv/ (adj) - indirect hostility  
-  _Example 1:_ Passive-aggressive feedback made collaboration harder.  
-  _Example 2:_ This helped me explain one difficult workplace situation more clearly.  
-  _Example 3:_ This made my examples sound more real, not textbook-like.
+  _Example 1:_ Passive-aggressive comments in pull requests delayed decisions.  
+  _Example 2:_ I replied with neutral questions instead of emotional reactions.  
+  _Example 3:_ That approach surfaced real technical concerns faster.
 
 - **escalation** /ˌɛskəlˈeɪʃən/ (n) - involving manager/HR when needed  
-  _Example 1:_ We used escalation after multiple failed conversations.  
-  _Example 2:_ This helped me explain one difficult workplace situation more clearly.  
-  _Example 3:_ This made my examples sound more real, not textbook-like.
+  _Example 1:_ We used escalation after two documented conversations showed no behavior change.  
+  _Example 2:_ Escalation focused on patterns and project impact, not personal attacks.  
+  _Example 3:_ This kept the process fair and professional.
 
 - **professional tone** /prəfˈɛʃənəl tˈoʊn/ (n) - calm and respectful communication style  
-  _Example 1:_ I kept a professional tone even when the other person was upset.  
-  _Example 2:_ In interview prep, I used this idea to build stronger behavioral answers.  
-  _Example 3:_ Now I use it to keep answers practical, honest, and easy to follow.
+  _Example 1:_ I kept a professional tone even when someone interrupted me repeatedly.  
+  _Example 2:_ Calm wording helped the manager focus on facts.  
+  _Example 3:_ Professional tone protected both credibility and outcomes.
 
 - **conflict trigger** /kˈɑnflɪkt trˈɪɡɚ/ (n) - event that starts conflict  
-  _Example 1:_ Timeline pressure was the main conflict trigger.  
-  _Example 2:_ This helped me explain one difficult workplace situation more clearly.  
-  _Example 3:_ This made my examples sound more real, not textbook-like.
+  _Example 1:_ Unclear ownership was the conflict trigger in our release week.  
+  _Example 2:_ Once we mapped responsibilities, tension dropped.  
+  _Example 3:_ Trigger analysis prevented the same conflict later.
 
 - **working agreement** /wˈɝkɪŋ əɡrˈimənt/ (n) - shared rules for collaboration  
-  _Example 1:_ We created a working agreement for code review behavior.  
-  _Example 2:_ I used this when practicing follow-up questions under pressure.  
-  _Example 3:_ As a result, my interview stories became clearer and more confident.
+  _Example 1:_ We created a working agreement on feedback tone and response time.  
+  _Example 2:_ The agreement reduced repeat arguments between frontend and backend.  
+  _Example 3:_ Team productivity improved after one sprint.
 
 - **psychological safety** /sˌaɪkəlˈɑdʒɪkəl sˈeɪfti/ (n) - feeling safe to speak up  
-  _Example 1:_ Toxic comments reduced psychological safety.  
-  _Example 2:_ This gave structure to my answer in mock interview sessions.  
-  _Example 3:_ It also helped me show both ownership and reflection in my answers.
+  _Example 1:_ Psychological safety dropped when mistakes were mocked publicly.  
+  _Example 2:_ Leaders rebuilt safety by rewarding early risk reporting.  
+  _Example 3:_ Better safety led to fewer last-minute surprises.
 
 - **resolution path** /rˌɛzəlˈuʃən pˈæθ/ (n) - planned way to resolve conflict  
-  _Example 1:_ Our resolution path started with 1:1 discussion.  
-  _Example 2:_ I used this when practicing follow-up questions under pressure.  
-  _Example 3:_ As a result, my interview stories became clearer and more confident.
+  _Example 1:_ Our resolution path was 1:1 feedback, written summary, then manager mediation.  
+  _Example 2:_ This structure prevented emotional escalation.  
+  _Example 3:_ It also gave clear checkpoints for follow-up.
 
 **Additional useful terms:**
+
 - **active listening** /ˈæktɪv lˈɪsənɪŋ/ (n) - showing you understand the other side
 - **neutral language** /nˈutrəl lˈæŋɡwədʒ/ (n) - words that avoid blame
 - **repeat pattern** /rɪpˈit pˈætɚn/ (n) - behavior that happens many times
@@ -97,6 +98,7 @@ description: Practice handling toxic behavior calmly: de-escalation, boundary se
   After setting clear rules, meetings became more focused.
 
 ### Useful Sentence Patterns
+
 - The conflict started when...
 - I tried to de-escalate by...
 - I set a boundary that...
@@ -110,6 +112,7 @@ description: Practice handling toxic behavior calmly: de-escalation, boundary se
 <summary><strong>3) Collocations, Chunking & Phrasal Verbs</strong></summary>
 
 ### Strong Collocations
+
 - handle difficult behavior
 - de-escalate team conflict
 - set clear boundaries
@@ -124,10 +127,12 @@ description: Practice handling toxic behavior calmly: de-escalation, boundary se
 - focus on shared goals
 
 **Examples (real work):**
-- In one release week, we had to handle difficult behavior while still trying to de-escalate team conflict.
-- In retro, we agreed to set clear boundaries earlier so the same issue would not repeat.
+
+- In one sprint, unresolved tension delayed API decisions until release day.
+- After we documented conflict patterns and set working agreements, delivery became predictable again.
 
 ### Useful Chunking & Sentence Starters
+
 - A difficult situation I faced was...
 - The behavior pattern was...
 - I responded by...
@@ -138,10 +143,12 @@ description: Practice handling toxic behavior calmly: de-escalation, boundary se
 - In the end, we...
 
 **Examples (using starters):**
-- "A real issue we faced was repeated timeout errors, so we paused rollout and checked logs first."
-- "To reduce risk, we shipped to 10% of users first, then expanded after QA sign-off."
+
+- "When direct discussion failed, I summarized specific incidents and asked for manager mediation."
+- "The trade-off was short-term discomfort in conversation, but long-term team trust improved."
 
 ### Useful Phrasal Verbs
+
 - **calm down** -> I paused the meeting to calm down the discussion.
 - **call out** -> I called out disrespectful behavior clearly.
 - **step in** -> My manager stepped in after repeated issues.
@@ -197,22 +204,32 @@ In interviews, show emotional control and practical steps. That demonstrates mat
 <summary><strong>6) List of Questions + Ideas</strong></summary>
 
 ### Core Questions (must-practice)
-1. Tell me about a conflict with a difficult person at work.
-2. How do you de-escalate tense conversations?
-3. When do you set boundaries, and how?
-4. When is escalation the right choice?
 
-### High-Value Case Questions
-5. Share a case where conflict affected delivery.
-6. Describe a boundary that improved team behavior.
-7. Tell me about a conflict you handled differently over time.
+1. Tell me about a conflict with a difficult colleague and your first response.
+2. How do you de-escalate a tense discussion without avoiding the real issue?
+3. What boundary phrase works best for you in disrespectful conversations?
+4. When do you decide that escalation is necessary?
 
-### Critical Discussion Questions
-8. Should companies tolerate difficult high performers?
-9. Is direct confrontation always better than escalation?
-10. How can leaders protect team psychological safety?
+### High-Value Discussion Questions
+
+5. What are the benefits and limits of confronting conflict directly?
+6. When should teams tolerate difficult behavior, and when should they act immediately?
+7. How should conflict-handling expectations differ for junior and senior engineers?
+
+### Follow-up Questions (Challenge Assumptions)
+
+8. You said you stayed calm. What did you do internally to avoid emotional reaction?
+9. If escalation protects delivery but damages one relationship, is it still the right call?
+10. If your manager avoids conflict, how would you keep the issue visible professionally?
+
+### Reflection Questions
+
+11. Which conflict behavior is hardest for you to respond to in English?
+12. What did one difficult person teach you about your own communication style?
+13. In the long term, what matters more: team harmony or honest confrontation?
 
 **Tips for speaking practice:**
+
 - Focus on behavior, not personality labels.
 - Show sequence: discuss -> document -> escalate.
 - Mention final business impact.

@@ -17,56 +17,57 @@ description: Practice how to defend choices with cost/risk/timeline language whe
 <summary><strong>1) Vocabulary </strong></summary>
 
 - **influence** /ˈɪnfluəns/ (v/n) - change decisions without formal power  
-  _Example 1:_ I influenced the roadmap by showing risk data.  
-  _Example 2:_ We used this in a production case to decide the next safe step.  
-  _Example 3:_ Using this consistently made handoff and review much smoother.
+  _Example 1:_ I influenced the roadmap by showing incident cost and support impact.  
+  _Example 2:_ I had no title authority, so data quality was my main leverage.  
+  _Example 3:_ Influence works better when the goal is shared, not personal.
 
 - **pushback** /ˈpʊʃˌbæk/ (n) - disagreement or challenge  
-  _Example 1:_ I got pushback from product about timeline.  
-  _Example 2:_ In one release, this became important when priorities changed quickly.  
-  _Example 3:_ After that case, we added it to our normal workflow.
+  _Example 1:_ I got pushback from product on reducing release scope.  
+  _Example 2:_ We handled pushback by comparing risk and timeline options side by side.  
+  _Example 3:_ Good pushback improved the final decision quality.
 
-- **alignment** /əlˈaɪnmənt/ (n) - shared agreement on direction  
-  _Example 1:_ We reached alignment after comparing options.  
-  _Example 2:_ This came up during sprint planning when we balanced speed and quality.  
-  _Example 3:_ This helped us reduce rework in the next sprint.
+- **decision criteria** /dəsˈɪʒən kɹaɪtˈɪɹiə/ (n) - explicit standards used to choose an option  
+  _Example 1:_ Our decision criteria were risk, delivery date, and user impact.  
+  _Example 2:_ Criteria prevented the discussion from becoming opinion-only.  
+  _Example 3:_ I state criteria early to keep meetings focused.
 
 - **risk** /rˈɪsk/ (n) - chance of negative result  
-  _Example 1:_ I explained the risk of shipping without tests.  
-  _Example 2:_ In one release, this became important when priorities changed quickly.  
-  _Example 3:_ After that case, we added it to our normal workflow.
+  _Example 1:_ I explained the risk of shipping without integration tests.  
+  _Example 2:_ We quantified risk using incident history from similar releases.  
+  _Example 3:_ Clear risk language helped non-engineers support safer choices.
 
 - **timeline** /tˈaɪmlaɪn/ (n) - schedule and deadlines  
   _Example 1:_ We adjusted timeline to include one extra QA day.  
-  _Example 2:_ We used this in a production case to decide the next safe step.  
-  _Example 3:_ Using this consistently made handoff and review much smoother.
+  _Example 2:_ That one-day change avoided a risky release on Friday evening.  
+  _Example 3:_ Timeline changes are easier to accept with clear trade-offs.
 
-- **scope** /skˈoʊp/ (n) - what is included in current work  
-  _Example 1:_ We reduced scope to keep release stable.  
-  _Example 2:_ In one release, this became important when priorities changed quickly.  
-  _Example 3:_ After that case, we added it to our normal workflow.
+- **scope cut** /skˈoʊp kˈʌt/ (n) - deliberate removal of lower-priority items  
+  _Example 1:_ We made a scope cut to protect core checkout reliability.  
+  _Example 2:_ Scope cut upset one stakeholder, but prevented larger release risk.  
+  _Example 3:_ I frame scope cuts as quality protection, not feature rejection.
 
 - **compromise** /kˈɑmprəmˌaɪz/ (n/v) - agreement where both sides adjust  
-  _Example 1:_ We made a compromise on feature depth.  
-  _Example 2:_ We discussed this in stand-up to keep the team aligned.  
-  _Example 3:_ Now I mention this early so product and engineering stay on the same page.
+  _Example 1:_ We made a compromise: ship core flow now, advanced filters next sprint.  
+  _Example 2:_ This kept launch date while controlling complexity risk.  
+  _Example 3:_ Good compromise keeps principles while adjusting details.
 
-- **evidence** /ˈɛvədəns/ (n) - data that supports your argument  
-  _Example 1:_ I used incident history as evidence.  
-  _Example 2:_ We used this in a production case to decide the next safe step.  
-  _Example 3:_ Using this consistently made handoff and review much smoother.
+- **option matrix** /ˈɑpʃən mˈeɪtɹɪks/ (n) - table comparing choices by criteria  
+  _Example 1:_ We used an option matrix to compare rewrite vs targeted refactor.  
+  _Example 2:_ The matrix exposed hidden costs that verbal discussion missed.  
+  _Example 3:_ I bring option matrix summaries to decision meetings.
 
-- **stakeholder** /stˈeɪkhˌoʊldɚ/ (n) - person affected by decision  
-  _Example 1:_ Different stakeholders had different priorities.  
-  _Example 2:_ We used this in a production case to decide the next safe step.  
-  _Example 3:_ Using this consistently made handoff and review much smoother.
+- **decision log** /dəsˈɪʒən lˈɔɡ/ (n) - written record of options, choice, and reasons  
+  _Example 1:_ We stored key architecture choices in a decision log.  
+  _Example 2:_ Decision log prevented repeated debate in later sprints.  
+  _Example 3:_ In interviews, I mention decision logs to show ownership clarity.
 
 - **escalation path** /ˌɛskəlˈeɪʃən pˈæθ/ (n) - process for unresolved disagreement  
-  _Example 1:_ We used the escalation path when teams could not agree.  
-  _Example 2:_ This came up during sprint planning when we balanced speed and quality.  
-  _Example 3:_ This helped us reduce rework in the next sprint.
+  _Example 1:_ We used escalation path when engineering and product could not align.  
+  _Example 2:_ Escalation was based on risk threshold, not personal conflict.  
+  _Example 3:_ A clear path keeps disagreement professional.
 
 **Additional useful terms:**
+
 - **decision log** /dɪsˈɪʒən lˈɔɡ/ (n) - written record of choices and reasons
 - **option matrix** /ˈɑpʃən mˈeɪtrɪks/ (n) - side-by-side comparison table
 - **non-negotiable** /nˈɑn nəɡˈoʊʃəbəl/ (n/adj) - requirement that cannot change
@@ -97,6 +98,7 @@ description: Practice how to defend choices with cost/risk/timeline language whe
   Let us compare options and pick the one with lowest business risk.
 
 ### Useful Sentence Patterns
+
 - I understand the concern, and...
 - From a risk perspective,...
 - If we do..., the likely outcome is...
@@ -110,24 +112,27 @@ description: Practice how to defend choices with cost/risk/timeline language whe
 <summary><strong>3) Collocations, Chunking & Phrasal Verbs</strong></summary>
 
 ### Strong Collocations
+
 - defend technical decisions
 - influence without authority
 - handle stakeholder pushback
-- present clear evidence
-- align on priorities
+- define decision criteria
+- compare option matrix
 - negotiate feature scope
 - communicate business risk
 - build cross-team trust
-- hold a clear position
 - stay open to feedback
-- document final decisions
+- document decision rationale
 - protect release quality
+- align on final commitment
 
 **Examples (real work):**
-- In one release week, we had to defend technical decisions while still trying to influence without authority.
-- In retro, we agreed to handle stakeholder pushback earlier so the same issue would not repeat.
+
+- In one planning review, we used an option matrix to defend a safer timeline with one scope cut.
+- That decision slowed delivery slightly, but avoided predictable regression risk.
 
 ### Useful Chunking & Sentence Starters
+
 - I agree on the goal, but...
 - The key risk is...
 - From the timeline side,...
@@ -138,15 +143,17 @@ description: Practice how to defend choices with cost/risk/timeline language whe
 - In the end, we aligned on...
 
 **Examples (using starters):**
-- "A real issue we faced was repeated timeout errors, so we paused rollout and checked logs first."
-- "To reduce risk, we shipped to 10% of users first, then expanded after QA sign-off."
+
+- "A practical compromise is shipping core functionality now and scheduling advanced logic next sprint."
+- "From the timeline side, one extra QA day reduced deployment risk significantly."
 
 ### Useful Phrasal Verbs
+
 - **push back** -> I pushed back on the unsafe timeline.
 - **back up** -> I backed up my point with bug data.
 - **work out** -> We worked out a compromise with product.
 - **line up** -> We lined up QA support before final decision.
-- **stick to** -> I stuck to the quality gate requirements.
+- **stick to** -> I stuck to risk thresholds despite deadline pressure.
 
 </details>
 
@@ -197,25 +204,35 @@ Strong engineers are firm on important risks but flexible on details. That balan
 <summary><strong>6) List of Questions + Ideas</strong></summary>
 
 ### Core Questions (must-practice)
-1. How do you defend a technical decision in front of non-technical stakeholders?
-2. How do you handle pushback on timeline or scope?
-3. What data do you use to persuade people?
-4. How do you disagree with a senior engineer professionally?
 
-### High-Value Case Questions
-5. Share a case where you changed someone else's decision.
-6. Tell me about a compromise that protected quality.
-7. Describe a time when you changed your own view after feedback.
+1. How do you defend one technical decision to non-technical stakeholders?
+2. How do you handle pushback on timeline and scope in the same meeting?
+3. What evidence do you bring before asking for a safer plan?
+4. How do you disagree with a senior engineer without creating conflict?
 
-### Critical Discussion Questions
-8. Is speed more important than quality in early-stage products?
-9. Should technical decisions be owned by engineers only?
-10. How much risk is acceptable when leadership pushes for delivery?
+### High-Value Discussion Questions
+
+5. What are the benefits and limits of using a strict decision framework?
+6. When should quality win over speed, and when is speed the right trade-off?
+7. How should decision defense differ for beginner vs experienced engineers?
+
+### Follow-up Questions (Challenge Assumptions)
+
+8. You said your recommendation was safer. Which cost did you understate?
+9. If leadership rejects your evidence, what is your next professional move?
+10. If compromise protects timeline but increases tech debt, would you still accept it?
+
+### Reflection Questions
+
+11. Which persuasion skill is hardest for you in English?
+12. What changed in your decision style after one failed recommendation?
+13. In long-term career growth, what matters more: technical correctness or influence quality?
 
 **Tips for speaking practice:**
-- Use calm, neutral language.
-- Explain risk in business terms.
-- Include one compromise in your story.
+
+- Use calm, neutral language even when challenged.
+- State one trade-off explicitly in every answer.
+- Separate facts, assumptions, and recommendation clearly.
 
 ---
 

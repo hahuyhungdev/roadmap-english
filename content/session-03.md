@@ -16,56 +16,57 @@ description: Explain your stack choices and the trade-offs behind technical deci
 <summary><strong>1) Vocabulary </strong></summary>
 
 - **tech stack** /tɛk stæk/ (n) - main technologies used in a project  
-  _Example 1:_ Our tech stack is React, Node.js, and PostgreSQL.  
-  _Example 2:_ In retro, we linked tech stack to one real production issue.  
-  _Example 3:_ After QA feedback, tech stack was added to our rollout checklist.
+  _Example 1:_ Our stack is Next.js, Node.js, PostgreSQL, and Redis.  
+  _Example 2:_ We reviewed the stack after one release had high database timeout rates.  
+  _Example 3:_ In interviews, I explain stack choice with business reasons, not trends.
 
 - **scalability** /ˌskeɪləˈbɪləti/ (n) - ability to handle growth  
-  _Example 1:_ We chose this setup for better scalability during peak traffic.  
-  _Example 2:_ For one customer case, scalability changed how we prioritized tasks.  
-  _Example 3:_ We mentioned scalability in stand-up when blockers appeared.
+  _Example 1:_ We needed scalability for flash-sale traffic spikes.  
+  _Example 2:_ We added queue processing to protect API stability at peak hours.  
+  _Example 3:_ Scalability planning helped us avoid emergency hotfixes on weekends.
 
-- **consistency** /kənˈsɪstənsi/ (n) - data staying correct across operations  
-  _Example 1:_ We needed strong consistency for payment records.  
-  _Example 2:_ Our team used consistency to explain the trade-off to product.  
-  _Example 3:_ I used consistency in a stakeholder update so everyone could follow.
+- **consistency** /kənˈsɪstənsi/ (n) - keeping UI behavior and design patterns the same across screens  
+  _Example 1:_ We improved consistency by using one shared button and form pattern.  
+  _Example 2:_ Better consistency reduced UI bugs during cross-page navigation.  
+  _Example 3:_ In interviews, I explain consistency as predictability for users.
 
 - **time-to-market** /ˌtaɪm tə ˈmɑːrkɪt/ (n) - how fast a product can launch  
-  _Example 1:_ We picked a simpler tool to improve time-to-market.  
-  _Example 2:_ Our team used time-to-market to explain the trade-off to product.  
-  _Example 3:_ I used time-to-market in a stakeholder update so everyone could follow.
+  _Example 1:_ We chose a managed auth service to improve time-to-market.  
+  _Example 2:_ It sped up launch, but later we spent time adapting custom role logic.  
+  _Example 3:_ Time-to-market wins only matter if quality stays acceptable.
 
-- **maintenance** /ˈmeɪntənəns/ (n) - ongoing work to keep software healthy  
-  _Example 1:_ This part is hard to maintain, so we planned a refactor.  
-  _Example 2:_ In retro, we linked maintenance to one real production issue.  
-  _Example 3:_ We mentioned maintenance in stand-up when blockers appeared.
+- **maintainability** /meɪnˌteɪnəˈbɪləti/ (n) - how easy code is to update, read, and debug over time  
+  _Example 1:_ We improved maintainability by removing repeated form logic.  
+  _Example 2:_ Better maintainability reduced time spent on small bug fixes.  
+  _Example 3:_ I treat maintainability as a delivery speed multiplier, not optional cleanup.
 
 - **technical debt** /ˈtɛknɪkəl dɛt/ (n) - shortcuts that create future problems  
-  _Example 1:_ We accepted some technical debt to hit the deadline.  
-  _Example 2:_ During release week, technical debt helped us make a safer decision.  
-  _Example 3:_ I used technical debt in a stakeholder update so everyone could follow.
+  _Example 1:_ We accepted technical debt by skipping schema cleanup before launch.  
+  _Example 2:_ We documented that debt so it would not disappear from planning.  
+  _Example 3:_ In interviews, I mention debt together with a payoff plan.
 
 - **refactor** /ˌriːˈfæktər/ (v/n) - improve code structure without changing behavior  
-  _Example 1:_ We did a small refactor before the next release.  
-  _Example 2:_ In a recent sprint, refactor became a key point in our planning discussion.  
-  _Example 3:_ In one incident review, refactor explained why the bug happened.
+  _Example 1:_ We did a targeted refactor in checkout validation before scaling traffic.  
+  _Example 2:_ The refactor reduced duplicate logic in three services.  
+  _Example 3:_ It delayed one feature, but release stability improved.
 
 - **regression** /rɪˈɡrɛʃən/ (n) - old feature breaks after a new change  
-  _Example 1:_ We added tests to avoid regression.  
-  _Example 2:_ During release week, regression helped us make a safer decision.  
-  _Example 3:_ In one incident review, regression explained why the bug happened.
+  _Example 1:_ We added API contract tests to prevent regression in mobile clients.  
+  _Example 2:_ One regression slipped because mock data did not match production payloads.  
+  _Example 3:_ Now we validate against OpenAPI examples before merging.
 
 - **deployment** /dɪˈplɔɪmənt/ (n) - process of releasing software  
-  _Example 1:_ We improved deployment with automatic checks.  
-  _Example 2:_ Our team used deployment to explain the trade-off to product.  
-  _Example 3:_ After QA feedback, deployment was added to our rollout checklist.
+  _Example 1:_ We improved deployment by adding migration checks in CI.  
+  _Example 2:_ Canary deployment helped us catch issues before full rollout.  
+  _Example 3:_ Better deployment flow reduced on-call stress after release.
 
-- **vendor lock-in** /ˈvɛndər lɑːk ɪn/ (n) - hard to leave a tool once adopted  
-  _Example 1:_ We avoided deep vendor lock-in by using open standards.  
-  _Example 2:_ In retro, we linked vendor lock-in to one real production issue.  
-  _Example 3:_ We mentioned vendor lock-in in stand-up when blockers appeared.
+- **bundle size** /ˈbʌndəl saɪz/ (n) - total size of frontend code sent to users  
+  _Example 1:_ We cut bundle size by lazy-loading heavy chart components.  
+  _Example 2:_ Smaller bundle size improved load time on low-end mobile devices.  
+  _Example 3:_ In planning, we compare feature value with bundle size cost.
 
 **Additional useful terms:**
+
 - **boilerplate** /ˈbɔɪlərˌpleɪt/ (n) - repeated setup code
 - **integration** /ˌɪntəˈɡreɪʃən/ (n) - connecting tools or systems
 - **migration** /maɪˈɡreɪʃən/ (n) - moving to a new tool or system
@@ -96,6 +97,7 @@ description: Explain your stack choices and the trade-offs behind technical deci
   We switched libraries after two failed deployments.
 
 ### Useful Sentence Patterns
+
 - We chose... over... because...
 - The main trade-off was... versus...
 - It helped us..., but it also...
@@ -109,13 +111,14 @@ description: Explain your stack choices and the trade-offs behind technical deci
 <summary><strong>3) Collocations, Chunking & Phrasal Verbs</strong></summary>
 
 ### Strong Collocations
+
 - choose the right stack
 - balance speed and quality
+- reduce bundle size
 - reduce deployment risk
 - handle scaling needs
-- improve code maintainability
+- improve maintainability
 - plan a gradual migration
-- avoid vendor lock-in
 - run performance benchmarks
 - reduce regression risk
 - clean up technical debt
@@ -123,10 +126,12 @@ description: Explain your stack choices and the trade-offs behind technical deci
 - match tools to business goals
 
 **Examples (real work):**
-- In one release week, we had to choose the right stack while still trying to balance speed and quality.
-- In retro, we agreed to reduce deployment risk earlier so the same issue would not repeat.
+
+- In one project, we chose managed services to launch faster, then paid down integration debt in the next sprint.
+- After adding API contract checks, deployment failures dropped and cross-team handoff became smoother.
 
 ### Useful Chunking & Sentence Starters
+
 - We picked this tool because...
 - A key reason was...
 - The downside was...
@@ -137,10 +142,12 @@ description: Explain your stack choices and the trade-offs behind technical deci
 - The business impact was...
 
 **Examples (using starters):**
-- "A real issue we faced was repeated timeout errors, so we paused rollout and checked logs first."
-- "To reduce risk, we shipped to 10% of users first, then expanded after QA sign-off."
+
+- "The downside was tighter coupling to one provider, so we documented an exit path from day one."
+- "For this project, good enough meant stable release behavior, not perfect architecture purity."
 
 ### Useful Phrasal Verbs
+
 - **go with** -> We went with a simple caching layer first.
 - **switch to** -> We switched to a managed database service.
 - **break down** -> We broke down the migration into small steps.
@@ -196,25 +203,35 @@ When possible, show one real case from your team. That sounds natural and credib
 <summary><strong>6) List of Questions + Ideas</strong></summary>
 
 ### Core Questions (must-practice)
-1. What is your current tech stack and why?
-2. Which tool choice gave your team the biggest benefit?
-3. What trade-off did you accept in a recent release?
-4. How do you avoid regressions when changing core tools?
 
-### High-Value Case Questions
-5. Describe a refactor decision you made under deadline pressure.
-6. Tell me about a migration that was harder than expected.
-7. Share a case where a simple tool was better than a powerful one.
+1. What is your current stack, and why did your team choose it?
+2. Which stack decision gave the biggest practical benefit in the last 6 months?
+3. How do you explain build vs buy in one real case?
+4. How did API contract decisions affect your integration speed?
 
-### Critical Discussion Questions
-8. Is it better to use proven tools or new tools?
-9. When is technical debt acceptable?
-10. Should every team optimize for speed first?
+### High-Value Discussion Questions
+
+5. What are the benefits and limits of using proven tools over newer tools?
+6. When does standardizing OpenAPI/Swagger improve delivery, and when can it slow teams down?
+7. How do stack decisions influence what juniors and seniors learn over time?
+
+### Follow-up Questions (Challenge Assumptions)
+
+8. You chose the faster tool. What long-term maintenance cost did you accept?
+9. If your API contract looked clear but integration still failed, what assumption was wrong?
+10. If stakeholders ask for speed only, how do you defend reliability work?
+
+### Reflection Questions
+
+11. Which tool choice do you still doubt, and what would you test next?
+12. What trade-off language helps you sound credible in interviews?
+13. In the long term, will engineers be judged more by tool knowledge or decision quality?
 
 **Tips for speaking practice:**
-- Use before/after comparison.
-- Name one risk and how you handled it.
-- Keep technical terms, but explain them simply.
+
+- Use one real migration or integration story in every long answer.
+- State one benefit and one hidden cost for each choice.
+- Explain OpenAPI/Swagger terms in plain language before details.
 
 ---
 

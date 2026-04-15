@@ -17,56 +17,57 @@ description: Full simulation with pressure and follow-up questions; focus on str
 <summary><strong>1) Vocabulary </strong></summary>
 
 - **mock interview** /mɑːk ˈɪntərˌvjuː/ (n) - practice interview before real one  
-  _Example 1:_ This mock interview helped me find weak answers.  
-  _Example 2:_ For a customer-facing bug, mock interview guided what we fixed first.  
-  _Example 3:_ After that case, we added mock interview to our checklist for future releases.
+  _Example 1:_ This mock interview exposed weak story structure in my behavioral answers.  
+  _Example 2:_ Recording the session made filler words and unclear sections obvious.  
+  _Example 3:_ One focused mock gave more value than random speaking practice.
 
 - **follow-up question** /fˈɑloʊ ˈʌp kwˈɛstʃən/ (n) - extra question after your first answer  
-  _Example 1:_ Follow-up questions tested my clarity under pressure.  
-  _Example 2:_ During planning, we used follow-up question to make a safer release decision.  
-  _Example 3:_ I used follow-up question in a stakeholder update so non-technical teams could follow.
+  _Example 1:_ Follow-up questions revealed whether my examples were real or memorized.  
+  _Example 2:_ I learned to keep evidence ready for deeper probing.  
+  _Example 3:_ Better follow-up handling increased confidence quickly.
 
 - **STAR structure** /stˈɑr strˈʌktʃɚ/ (n) - Situation, Task, Action, Result  
-  _Example 1:_ STAR structure made my story easier to follow.  
-  _Example 2:_ For a customer-facing bug, star structure guided what we fixed first.  
-  _Example 3:_ Later, star structure became part of our standard way of reporting issues.
+  _Example 1:_ STAR structure helped me avoid long, unfocused answers.  
+  _Example 2:_ I added one trade-off and one metric in the Result part.  
+  _Example 3:_ Interviewers followed my logic more easily.
 
 - **behavioral answer** /bɪhˈeɪvjɚəl ˈænsɚ/ (n) - answer about past behavior at work  
-  _Example 1:_ I used a real behavioral answer about an outage.  
-  _Example 2:_ In one sprint, behavioral answer came up when we investigated a production issue.  
-  _Example 3:_ Later, behavioral answer became part of our standard way of reporting issues.
+  _Example 1:_ My strongest behavioral answer described one failure and recovery plan.  
+  _Example 2:_ Real ownership details made the answer sound credible.  
+  _Example 3:_ Behavioral quality improved when I stopped using generic claims.
 
 - **fluency** /flˈuənsi/ (n) - speaking smoothly without long pauses  
-  _Example 1:_ My fluency improved when I used simple sentences.  
-  _Example 2:_ In one sprint, fluency came up when we investigated a production issue.  
-  _Example 3:_ After that case, we added fluency to our checklist for future releases.
+  _Example 1:_ My fluency improved after practicing 90-second answer drills daily.  
+  _Example 2:_ Short sentence planning reduced panic during hard questions.  
+  _Example 3:_ Fluency improved without memorizing full scripts.
 
 - **clarity** /klˈɛrəti/ (n) - easy-to-understand speaking  
-  _Example 1:_ Clarity matters more than complex vocabulary.  
-  _Example 2:_ For a customer-facing bug, clarity guided what we fixed first.  
-  _Example 3:_ After that case, we added clarity to our checklist for future releases.
+  _Example 1:_ Clarity improved when I used context -> action -> impact structure.  
+  _Example 2:_ I removed unnecessary technical detail for non-technical interviewers.  
+  _Example 3:_ Clear answers created better follow-up discussion.
 
 - **pushback** /ˈpʊʃˌbæk/ (n) - challenge from interviewer  
-  _Example 1:_ I got pushback and had to defend my decision calmly.  
-  _Example 2:_ On a real project, pushback helped us explain the trade-off to product.  
-  _Example 3:_ Later, pushback became part of our standard way of reporting issues.
+  _Example 1:_ I got pushback on one decision and defended it with risk and timeline logic.  
+  _Example 2:_ Calm response tone was as important as technical content.  
+  _Example 3:_ Pushback handling became stronger after focused practice.
 
 - **self-diagnosis** /sˈɛlf dˌaɪəɡnˈoʊsəs/ (n) - reviewing your own performance  
-  _Example 1:_ Self-diagnosis showed I needed better examples.  
-  _Example 2:_ In one sprint, self-diagnosis came up when we investigated a production issue.  
-  _Example 3:_ Later, self-diagnosis became part of our standard way of reporting issues.
+  _Example 1:_ Self-diagnosis showed my opening answers were too long and vague.  
+  _Example 2:_ I fixed this by scripting shorter first sentences.  
+  _Example 3:_ Weekly diagnosis made progress measurable.
 
 - **time control** /tˈaɪm kəntrˈoʊl/ (n) - managing answer length  
-  _Example 1:_ Good time control kept my answers focused.  
-  _Example 2:_ During planning, we used time control to make a safer release decision.  
-  _Example 3:_ In retro, we connected time control with one clear lesson learned.
+  _Example 1:_ Time control improved when I practiced with a visible timer.  
+  _Example 2:_ I kept core answers between 60 and 90 seconds before follow-ups.  
+  _Example 3:_ Better timing reduced interview stress.
 
 - **confidence signal** /kˈɑnfədəns sˈɪɡnəl/ (n) - behavior that shows confidence  
-  _Example 1:_ Clear structure is a strong confidence signal.  
-  _Example 2:_ In our weekly review, confidence signal was tied to delivery quality and risk.  
-  _Example 3:_ Later, confidence signal became part of our standard way of reporting issues.
+  _Example 1:_ A strong confidence signal is answering directly before adding detail.  
+  _Example 2:_ Another signal is admitting uncertainty clearly instead of pretending.  
+  _Example 3:_ Honest confidence built better interviewer trust.
 
 **Additional useful terms:**
+
 - **anchor example** /ˈæŋkɚ ɪɡzˈæmpəl/ (n) - strong story you can reuse
 - **filler words** /fˈɪlɚ wˈɝdz/ (n) - "um", "ah", and similar pauses
 - **interview pacing** /ˈɪntɚvjˌu pˈeɪsɪŋ/ (n) - rhythm of speaking and pausing
@@ -97,6 +98,7 @@ description: Full simulation with pressure and follow-up questions; focus on str
   A quick follow-up point is that we tracked all actions in backlog.
 
 ### Useful Sentence Patterns
+
 - Let me share a concrete example.
 - The situation was..., and my role was...
 - What I did was...
@@ -110,6 +112,7 @@ description: Full simulation with pressure and follow-up questions; focus on str
 <summary><strong>3) Collocations, Chunking & Phrasal Verbs</strong></summary>
 
 ### Strong Collocations
+
 - run a mock interview
 - answer with STAR structure
 - handle follow-up pressure
@@ -124,10 +127,12 @@ description: Full simulation with pressure and follow-up questions; focus on str
 - review performance gaps
 
 **Examples (real work):**
-- In one release week, we had to run a mock interview while still trying to answer with STAR structure.
-- In retro, we agreed to handle follow-up pressure earlier so the same issue would not repeat.
+
+- My first mock looked fluent but lacked concrete evidence in most answers.
+- After rewriting anchor stories with metrics, the second mock felt far more convincing.
 
 ### Useful Chunking & Sentence Starters
+
 - That is a great question. In my case,...
 - One example from my recent work is...
 - The challenge was...
@@ -137,10 +142,12 @@ description: Full simulation with pressure and follow-up questions; focus on str
 - Looking back,...
 
 **Examples (using starters):**
-- "A real issue we faced was repeated timeout errors, so we paused rollout and checked logs first."
-- "To reduce risk, we shipped to 10% of users first, then expanded after QA sign-off."
+
+- "One example from my recent work is a release incident where I handled both technical fix and communication."
+- "The measurable result was a 30% drop in repeated support tickets after our process change."
 
 ### Useful Phrasal Verbs
+
 - **walk through** -> Let me walk you through a real case.
 - **speak up** -> I spoke up when release risk was too high.
 - **back up** -> I backed up my point with incident data.
@@ -196,22 +203,32 @@ After the mock, do self-diagnosis first. Identify your top two strengths and top
 <summary><strong>6) List of Questions + Ideas</strong></summary>
 
 ### Core Questions (must-practice)
-1. Tell me about yourself and your role impact.
-2. Describe one failure and how you handled it.
-3. Tell me about a trade-off decision you made.
-4. Why do you want to join this company?
 
-### High-Value Case Questions
-5. Share an incident story with clear business impact.
-6. Describe a conflict with a difficult stakeholder and your resolution.
-7. Tell me about a time you influenced a decision without authority.
+1. Tell me about yourself with one concrete business-impact example.
+2. Describe one failure and how your response changed team outcomes.
+3. Explain one trade-off decision you made under pressure.
+4. Why do you want to join this company beyond compensation?
 
-### Critical Discussion Questions
-8. Should engineers prioritize speed or stability in most releases?
-9. Is AI making junior engineers less capable over time?
-10. What matters more in interviews: fluent speaking or strong examples?
+### High-Value Discussion Questions
+
+5. What are the benefits and limits of strict STAR structure in interviews?
+6. When should interview answers prioritize technical depth vs communication clarity?
+7. How should mock interview strategy differ for beginners vs experienced engineers?
+
+### Follow-up Questions (Challenge Assumptions)
+
+8. You said your example is strong. Which weak point might an interviewer still question?
+9. If your answer is fluent but lacks evidence, is it still effective?
+10. If your best story fails in follow-up, how do you recover professionally?
+
+### Reflection Questions
+
+11. Which question type makes you lose structure most often?
+12. What one speaking habit improved your mock performance most?
+13. In real interviews, what matters more: polished fluency or truthful depth?
 
 **Tips for speaking practice:**
+
 - Keep answers around 1.5 to 2.5 minutes.
 - Use STAR for behavioral stories.
 - Include one trade-off and one measurable result.

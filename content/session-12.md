@@ -1,108 +1,110 @@
 ---
 sessionNumber: 12
-title: Energy, Burnout & Sustainability
-topic: Manage Energy and Build a Sustainable Work Pace
+title: Mental Health, Burnout & Recovery
+topic: Early Warning Signals and Sustainable Recovery Habits
 phase: PHASE 3 - PRACTICAL DISCUSSION
 level: B1-B2
-description: Discuss signs of overload, workload control, boundaries, rest habits, and what sustainable performance looks like week to week.
+description: Discuss energy collapse signals, practical recovery routines, boundary scripts, and personal habits for long-term well-being.
 ---
 
-# Session 12: Energy, Burnout & Sustainability
+# Session 12: Mental Health, Burnout & Recovery
 
 **Level:** B1-B2  
-**Focus:** Manage energy, avoid burnout, realistic productivity.
-**Scope:** Discuss signs of overload, workload control, boundaries, rest habits, and what sustainable performance looks like week to week.
+**Focus:** Notice burnout early and recover before performance and health collapse.
+**Scope:** Discuss overload signals, recovery systems, and personal habits that protect sustainable output.
 
 <details open>
 <summary><strong>1) Vocabulary </strong></summary>
 
-- **burnout** /bˈɝnˌaʊt/ (n) - deep mental and physical exhaustion from long stress  
-  _Example 1:_ I noticed early burnout signs during back-to-back releases.  
-  _Example 2:_ I noticed this clearly during a stressful period last year.  
-  _Example 3:_ This helped me make better choices with less stress.
+- **burnout cycle** /ˈbɝnaʊt ˈsaɪkəl/ (n) - repeating pattern of overload, crash, and short recovery  
+  _Example 1:_ My burnout cycle started with late nights and ended with low focus.  
+  _Example 2:_ I broke that cycle by tracking sleep and refusing late-night non-urgent requests.  
+  _Example 3:_ I now treat burnout cycle as a pattern I can interrupt early.
 
-- **crunch time** /krˈʌntʃ tˈaɪm/ (n) - period of intense work pressure  
-  _Example 1:_ Crunch time lasted too long in our last quarter.  
-  _Example 2:_ This topic came up in a real conversation with friends about work pressure.  
-  _Example 3:_ Now I can explain this topic more clearly in discussions and interviews.
+- **emotional exhaustion** /ɪˈmoʊʃənəl ɪɡˈzɔstʃən/ (n) - feeling mentally drained and detached  
+  _Example 1:_ Emotional exhaustion showed up when I could not focus even on small code reviews.  
+  _Example 2:_ A close friend noticed it when my response style became short and defensive.  
+  _Example 3:_ Naming emotional exhaustion early helped me adjust my routine before bigger damage.
 
-- **on-call load** /ˈɑn kˈɔl lˈoʊd/ (n) - stress from support duty and alerts  
-  _Example 1:_ High on-call load affected team energy.  
-  _Example 2:_ I started paying attention to this when my energy dropped for several weeks.  
-  _Example 3:_ Over time, this gave me a healthier and more realistic perspective.
+- **sleep debt** /slip det/ (n) - accumulated lack of sleep over days or weeks  
+  _Example 1:_ Two weeks of late-night screen time created serious sleep debt.  
+  _Example 2:_ I reduced sleep debt by setting a fixed bedtime and muting non-urgent alerts.  
+  _Example 3:_ My recovery started only after I treated sleep debt as a serious health risk.
 
-- **boundary** /bˈaʊndɚi/ (n) - limit to protect time and health  
-  _Example 1:_ I set a boundary and stopped checking chat after work.  
-  _Example 2:_ In my daily life, this became important when my schedule got overloaded.  
-  _Example 3:_ After that, I changed one habit and it made a real difference.
+- **alert fatigue** /əˈlɝt fəˈtiɡ/ (n) - becoming less responsive because alerts are too frequent  
+  _Example 1:_ Alert fatigue made me ignore reminders because my phone never stopped buzzing.  
+  _Example 2:_ I disabled noisy notifications and kept only urgent ones.  
+  _Example 3:_ This changed my evenings from panic mode to calmer focus.
 
-- **recovery** /rɪkˈʌvri/ (n) - process of regaining energy and focus  
-  _Example 1:_ Real recovery needs rest, not just one free weekend.  
-  _Example 2:_ I noticed this clearly during a stressful period last year.  
-  _Example 3:_ This helped me make better choices with less stress.
+- **boundary breach** /ˈbaʊndri britʃ/ (n) - violation of a limit protecting personal time or energy  
+  _Example 1:_ Weekend messages for non-urgent issues became a regular boundary breach.  
+  _Example 2:_ I fixed boundary breach by defining clear response windows for myself.  
+  _Example 3:_ Clear boundaries improved both relationships and mental stability.
 
-- **stress signal** /strˈɛs sˈɪɡnəl/ (n) - sign that pressure is becoming unhealthy  
-  _Example 1:_ Sleep problems were my main stress signal.  
-  _Example 2:_ I noticed this clearly during a stressful period last year.  
-  _Example 3:_ This helped me make better choices with less stress.
+- **recovery routine** /rɪˈkʌvəri ruˈtin/ (n) - repeatable set of actions to restore energy  
+  _Example 1:_ My recovery routine includes one no-screen morning after stressful days.  
+  _Example 2:_ My routine also includes a short walk and journaling before bed.  
+  _Example 3:_ Routine works better than random breaks when pressure is high.
 
-- **always available** /ˈɔlwˌeɪz əvˈeɪləbəl/ (adj phrase) - expectation to respond anytime  
-  _Example 1:_ Being always available is not sustainable.  
-  _Example 2:_ I noticed this clearly during a stressful period last year.  
-  _Example 3:_ This helped me make better choices with less stress.
+- **workload spillover** /ˈwɝkloʊd ˈspɪloʊvɚ/ (n) - work pressure leaking into personal time  
+  _Example 1:_ Workload spillover started when I kept saying yes to every request.  
+  _Example 2:_ I reduced spillover by limiting after-hours messages to urgent cases only.  
+  _Example 3:_ Lower spillover gave me better focus during actual working hours.
 
-- **workload** /wˈɝklˌoʊd/ (n) - amount of work assigned  
-  _Example 1:_ We redistributed workload after two people reported fatigue.  
-  _Example 2:_ I started paying attention to this when my energy dropped for several weeks.  
-  _Example 3:_ Over time, this gave me a healthier and more realistic perspective.
+- **stress baseline** /stres ˈbeɪslaɪn/ (n) - normal level of stress a person can handle sustainably  
+  _Example 1:_ My stress baseline dropped after months of poor sleep and no real breaks.  
+  _Example 2:_ I now check baseline weekly instead of waiting for burnout symptoms.  
+  _Example 3:_ Baseline tracking helps me notice warning signs before a crash.
 
-- **supportive manager** /səpˈɔrtɪv mˈænədʒɚ/ (n) - manager who helps with realistic planning  
-  _Example 1:_ A supportive manager helped us reset priorities.  
-  _Example 2:_ I started paying attention to this when my energy dropped for several weeks.  
-  _Example 3:_ Over time, this gave me a healthier and more realistic perspective.
+- **weekly check-in** /ˈwikli tʃek ɪn/ (n) - short structured review of your workload and well-being  
+  _Example 1:_ My weekly check-in includes sleep, mood, and energy score.  
+  _Example 2:_ That format made it easier to discuss overload without self-judgment.  
+  _Example 3:_ Regular check-ins prevented silent burnout from growing.
 
-- **sustainable pace** /səstˈeɪnəbəl pˈeɪs/ (n) - work speed that can continue long term  
-  _Example 1:_ We moved to a sustainable pace after process changes.  
-  _Example 2:_ In my daily life, this became important when my schedule got overloaded.  
-  _Example 3:_ After that, I changed one habit and it made a real difference.
+- **sustainable pace** /səˈsteɪnəbəl peɪs/ (n) - work rhythm that can be maintained over time  
+  _Example 1:_ Sustainable pace means fewer extreme days and more stable weeks.  
+  _Example 2:_ I accepted slower short-term progress to protect my health and consistency.  
+  _Example 3:_ That trade-off gave me better focus over the long term.
 
 **Additional useful terms:**
-- **mental bandwidth** /mˈɛntəl bˈændwɪdθ/ (n) - available attention and energy
-- **rest day** /rˈɛst dˈeɪ/ (n) - full day without work activity
-- **team health** /tˈim hˈɛlθ/ (n) - overall well-being of team members
-- **escalation** /ˌɛskəlˈeɪʃən/ (n) - asking for help when pressure is too high
-- **priority reset** /praɪˈɔrəti risˈɛt/ (n) - changing priorities to reduce overload
+
+- **decompression window** /ˌdikəmˈpreʃən ˈwɪndoʊ/ (n) - short period to mentally reset after intense work
+- **energy crash** /ˈenɚdʒi kræʃ/ (n) - sudden drop in focus and motivation
+- **recovery day** /rɪˈkʌvəri deɪ/ (n) - day reserved for lower cognitive load after pressure
+- **phone boundary** /foʊn ˈbaʊndri/ (n) - rule for when to stop checking messages
+- **realistic planning** /ˌriəˈlɪstɪk ˈplænɪŋ/ (n) - planning based on actual energy and time limits
 
 </details>
 
 <details open>
 <summary><strong>2) Grammar & Useful Patterns (B2)</strong></summary>
 
-- **Present Perfect for ongoing pressure**  
-  We have been under pressure for several months.
+- **Present Perfect for gradual decline**  
+  I have felt less focused since I started sleeping too late most nights.
 
-- **Past Simple for turning point**  
-  I spoke to my manager when I felt my energy dropping.
+- **Past Simple for intervention point**  
+  I reset my schedule after two weekends of continuous work spillover.
 
-- **Cause and effect language**  
-  Because on-call alerts were constant, focus quality went down.
+- **Cause and consequence language**  
+  Because alert noise was too high, my concentration dropped.
 
-- **Advice and recommendation**  
-  Teams should plan buffer time after major releases.
+- **Boundary scripts**  
+  I can support urgent incidents tonight, but non-urgent items will wait until morning.
 
-- **Contrast language**  
-  High standards are good, but nonstop pressure is harmful.
+- **Concession language**  
+  Fast progress matters, but not at the cost of constant exhaustion.
 
 - **Conditionals for prevention**  
-  If teams ignore early signals, burnout risk grows quickly.
+  If we ignore stress signals early, recovery becomes much slower.
 
 ### Useful Sentence Patterns
-- A stress pattern I noticed was...
-- One boundary that helped me was...
-- We changed our process by...
-- It improved team health, but...
-- In my view, resilience means...
-- A practical step for managers is...
+
+- One warning sign I ignored was...
+- A boundary phrase that worked for me is...
+- We changed the process by...
+- The short-term cost was..., but the long-term gain was...
+- A healthier personal habit is...
+- My practical recovery plan includes...
 
 </details>
 
@@ -110,86 +112,91 @@ description: Discuss signs of overload, workload control, boundaries, rest habit
 <summary><strong>3) Collocations, Chunking & Phrasal Verbs</strong></summary>
 
 ### Strong Collocations
-- recognize burnout signs
-- manage on-call stress
-- set healthy boundaries
-- reduce chronic pressure
-- protect mental bandwidth
-- support team recovery
-- balance workload fairly
-- prevent long-term fatigue
-- build sustainable routines
-- communicate stress early
-- reset team priorities
-- improve work-life balance
+
+- detect burnout signals
+- reduce alert noise
+- protect off-hours boundaries
+- protect sleep schedule
+- run weekly self check-ins
+- plan realistic weekly workload
+- schedule recovery windows
+- prevent workload spillover
+- normalize asking for help
+- align plans with energy
+- protect mental focus
+- rebuild sustainable pace
 
 **Examples (real work):**
-- In one release week, we had to recognize burnout signs while still trying to manage on-call stress.
-- In retro, we agreed to set healthy boundaries earlier so the same issue would not repeat.
+
+- After a stressful month, I reduced alert noise first, then planned a lighter weekly workload.
+- This looked slower at first, but my focus and emotional stability improved in the next month.
 
 ### Useful Chunking & Sentence Starters
-- In my experience, burnout starts when...
-- A hidden pressure in IT is...
-- We used to..., but now...
-- One practical boundary is...
-- This helped in the short term, but...
-- To protect team health,...
-- A manager can support by...
-- The lesson I learned is...
+
+- A signal I noticed too late was...
+- We treated this as a process issue, not...
+- The immediate fix was...
+- The deeper fix was...
+- I said this to myself: ...
+- One personal habit that changed everything was...
+- At first we resisted this because...
+- Looking back, the key lesson was...
 
 **Examples (using starters):**
-- "A real issue we faced was repeated timeout errors, so we paused rollout and checked logs first."
-- "To reduce risk, we shipped to 10% of users first, then expanded after QA sign-off."
+
+- "We treated this as a process issue, not an individual weakness, and people felt safer to speak early."
+- "The deeper fix was reducing scope during high-alert weeks instead of asking people to work harder."
 
 ### Useful Phrasal Verbs
-- **burn out** -> I nearly burned out during a long incident cycle.
-- **slow down** -> We slowed down feature work for one sprint.
-- **speak up** -> Team members were encouraged to speak up early.
-- **switch off** -> I switch off notifications after work hours.
-- **check in** -> We check in weekly on workload and stress.
+
+- **burn out** -> I almost burned out after three weeks of night alerts.
+- **slow down** -> I slowed down my schedule to stabilize my energy.
+- **speak up** -> I spoke up before my focus quality collapsed.
+- **switch off** -> I switch off work notifications after defined support hours.
+- **check in** -> I check in weekly on workload and emotional load.
 
 </details>
 
 <details open>
 <summary><strong>4) Typical Dialogues</strong></summary>
 
-### Dialogue 1 - Recognizing Burnout
+### Dialogue 1 - Early Warning
 
-**Teacher:** Have you ever faced burnout risk?
-
-**Learner:**  
-Yes. During a heavy release period, I was on-call too often and started losing focus. I felt tired even after weekends.
-
-I spoke with my manager and reduced after-hours work for a while. It helped, but we also needed team-level changes.
-
-### Dialogue 2 - Healthy vs Toxic Pressure
-
-**Teacher:** Is high pressure always bad?
+**Teacher:** What was your first burnout warning signal?
 
 **Learner:**  
-Not always. Short pressure before a release can improve focus. But if pressure becomes normal every week, quality and morale drop.
+My first signal was emotional exhaustion, not missed deadlines. I was still delivering tasks, but my code review quality dropped and I felt detached.
 
-So pressure can help in short bursts, but it is harmful without recovery time.
+Once I noticed that pattern, I asked for workload rebalance before it became a crisis.
 
-### Dialogue 3 - Practical Recovery Plan
+### Dialogue 2 - Boundary Script
 
-**Teacher:** What recovery strategy worked for your team?
+**Teacher:** How do you set boundaries without sounding uncooperative?
 
 **Learner:**  
-We added no-meeting blocks, rotated on-call more fairly, and reserved one sprint every two months for bug cleanup.
+I separate urgent and non-urgent work. For urgent incidents, I respond immediately. For non-urgent requests, I set a clear next-day timeline.
 
-Velocity looked slightly lower at first, but incidents and stress both decreased.
+This keeps trust while protecting recovery time.
+
+### Dialogue 3 - Personal Recovery System
+
+**Teacher:** What personal change reduced burnout risk most?
+
+**Learner:**  
+I introduced one fixed sleep schedule and one weekly check-in with myself using a simple energy score. It felt unusual at first, but it made overload visible.
+
+After one month, my stress level dropped and my focus quality improved.
 
 </details>
 
 <details open>
 <summary><strong>5) Reading Text</strong></summary>
 
-Burnout in IT is often quiet at first. People still deliver tasks, but energy, focus, and motivation go down. Teams may ignore these signs until bugs increase and communication gets worse.
+Burnout usually starts before people say they are burned out. Many people still function, but attention quality, patience, and communication slowly decline. If you wait for a visible breakdown, recovery becomes expensive.
 
-Healthy teams treat performance as a long-term goal. They set clear boundaries, share workload fairly, and create space for recovery after high-pressure work. This is not about lowering standards. It is about keeping quality and people stable over time.
+Practical prevention is simple but consistent: reduce alert noise, protect boundaries, create recovery windows, and review your real capacity honestly. These habits are not weak choices. They are long-term stability strategy.
 
-In discussions, balanced language is important: pressure is sometimes necessary, but constant pressure is not sustainable.
+In interviews, strong answers include one warning signal, one intervention, and one measurable outcome.
 
 </details>
 
@@ -197,25 +204,35 @@ In discussions, balanced language is important: pressure is sometimes necessary,
 <summary><strong>6) List of Questions + Ideas</strong></summary>
 
 ### Core Questions (must-practice)
-1. What are early signs of burnout in software teams?
-2. How do you protect your energy during high-pressure periods?
-3. How can managers reduce hidden pressure in IT teams?
-4. What is one boundary that improved your work quality?
 
-### High-Value Case Questions
-5. Share a time when stress affected your work and how you handled it.
-6. Tell me about a team process change that reduced burnout risk.
-7. Describe a situation where saying "no" was necessary for sustainability.
+1. What early burnout signal have you seen in yourself recently?
+2. How do you protect recovery time during high-pressure periods?
+3. What boundary script works when non-urgent requests come late at night?
+4. Which personal habit helped you sustain performance over months, not days?
 
-### Critical Discussion Questions
-8. Debate prompt: Is high-pressure culture a sign of ambition or a system problem?
-9. Should companies pay more for heavy on-call work?
-10. Is resilience more personal or organizational?
+### High-Value Discussion Questions
+
+5. What are the benefits and limits of pushing hard during short crunch periods?
+6. When should people trade short-term productivity for recovery and stability?
+7. How should personal responsibility and environment support mental health together?
+
+### Follow-up Questions (Challenge Assumptions)
+
+8. You said pressure is manageable. Which hidden personal cost did you ignore at first?
+9. If you finish everything on time but feel exhausted, is that still success?
+10. If someone never speaks up about overload, what gentle support could help first?
+
+### Reflection Questions
+
+11. Which burnout signal is hardest for you to admit in English?
+12. What personal habit changed your stress baseline the most?
+13. In five years, will personal success be defined more by speed or by sustainable pace?
 
 **Tips for speaking practice:**
-- Use honest but professional language.
-- Give one personal example and one team-level fix.
-- Include a simple trade-off in your answer.
+
+- Use one real overload period with timeline and actions.
+- Include one trade-off: short-term velocity vs long-term stability.
+- Keep the answer structure clear: signal -> response -> outcome.
 
 ---
 

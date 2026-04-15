@@ -16,56 +16,57 @@ description: Discuss technical debt in simple language and explain how you align
 <summary><strong>1) Vocabulary </strong></summary>
 
 - **technical debt** /ˈtɛknɪkəl dɛt/ (n) - old code problems caused by past shortcuts  
-  _Example 1:_ We spend too much time fixing old code in this module.  
-  _Example 2:_ During release week, technical debt helped us make a safer decision.  
-  _Example 3:_ We mentioned technical debt in stand-up when blockers appeared.
+  _Example 1:_ We spent too much time patching old checkout logic every sprint.  
+  _Example 2:_ I showed debt cost using incident count and support hours.  
+  _Example 3:_ Debt became easier to discuss after we attached numbers, not opinions.
 
 - **legacy code** /ˈlɛɡəsi koʊd/ (n) - older code still in use  
-  _Example 1:_ The login flow still depends on legacy code.  
-  _Example 2:_ In retro, we linked legacy code to one real production issue.  
-  _Example 3:_ After QA feedback, legacy code was added to our rollout checklist.
+  _Example 1:_ The login flow still depends on legacy code from our old monolith.  
+  _Example 2:_ One tiny change in legacy code broke two downstream services.  
+  _Example 3:_ We mapped risky legacy areas before planning new features.
 
 - **refactor** /ˌriːˈfæktər/ (v/n) - improve structure without changing feature behavior  
-  _Example 1:_ We planned a refactor before adding more features.  
-  _Example 2:_ During release week, refactor helped us make a safer decision.  
-  _Example 3:_ In one incident review, refactor explained why the bug happened.
+  _Example 1:_ We planned a small refactor in payment validation before scale-up.  
+  _Example 2:_ We split the refactor into three low-risk pull requests.  
+  _Example 3:_ Refactor slowed one sprint, but reduced bug-fix load later.
 
 - **maintenance** /ˈmeɪntənəns/ (n) - ongoing fixes and updates  
-  _Example 1:_ Maintenance cost became too high for this service.  
-  _Example 2:_ For one customer case, maintenance changed how we prioritized tasks.  
-  _Example 3:_ We mentioned maintenance in stand-up when blockers appeared.
+  _Example 1:_ Maintenance cost became too high for our order state module.  
+  _Example 2:_ We measured maintenance by counting repeated bug categories.  
+  _Example 3:_ Better maintenance planning gave us fewer emergency fixes.
 
 - **hotfix** /ˈhɑːtˌfɪks/ (n) - quick fix for urgent production issues  
-  _Example 1:_ We shipped a hotfix during on-call.  
-  _Example 2:_ In a recent sprint, hotfix became a key point in our planning discussion.  
-  _Example 3:_ This quarter, hotfix helped us reduce repeated support requests.
+  _Example 1:_ We shipped a hotfix at midnight to fix duplicate payment capture.  
+  _Example 2:_ Too many hotfixes signaled we were ignoring core debt.  
+  _Example 3:_ After that, we added hotfix root-cause review to sprint retro.
 
 - **regression** /rɪˈɡrɛʃən/ (n) - old behavior breaks after a change  
-  _Example 1:_ We added tests to catch regression early.  
-  _Example 2:_ In a recent sprint, regression became a key point in our planning discussion.  
-  _Example 3:_ I used regression in a stakeholder update so everyone could follow.
+  _Example 1:_ We added integration tests to catch regression in discount logic.  
+  _Example 2:_ A missed regression delayed release by two days last month.  
+  _Example 3:_ Now regression risk is reviewed in every rollout checklist.
 
 - **backlog** /ˈbækˌlɔːɡ/ (n) - list of future work items  
-  _Example 1:_ We tracked refactor tasks in our backlog.  
-  _Example 2:_ Our team used backlog to explain the trade-off to product.  
-  _Example 3:_ This quarter, backlog helped us reduce repeated support requests.
+  _Example 1:_ We tracked debt items in backlog with risk level and owner.  
+  _Example 2:_ Product accepted backlog cleanup after seeing release incident trends.  
+  _Example 3:_ Backlog visibility made debt conversations less emotional.
 
 - **risk** /rɪsk/ (n) - chance of a negative outcome  
-  _Example 1:_ Releasing without cleanup increased risk.  
-  _Example 2:_ In a recent sprint, risk became a key point in our planning discussion.  
-  _Example 3:_ I used risk in a stakeholder update so everyone could follow.
+  _Example 1:_ Releasing without cleanup increased rollback risk significantly.  
+  _Example 2:_ We labeled risk by impact and probability before launch decisions.  
+  _Example 3:_ Risk language helped non-engineers understand why cleanup mattered.
 
 - **downtime** /ˈdaʊnˌtaɪm/ (n) - period when system is unavailable  
-  _Example 1:_ Legacy bugs caused downtime twice last month.  
-  _Example 2:_ For one customer case, downtime changed how we prioritized tasks.  
-  _Example 3:_ After QA feedback, downtime was added to our rollout checklist.
+  _Example 1:_ Legacy query issues caused downtime twice during peak traffic.  
+  _Example 2:_ We prioritized fixes based on downtime impact, not developer preference.  
+  _Example 3:_ Reducing downtime was the main argument for refactor time.
 
 - **change plan** /tʃeɪndʒ plæn/ (n) - step-by-step approach for updates  
-  _Example 1:_ We proposed a change plan with small weekly steps.  
-  _Example 2:_ In retro, we linked change plan to one real production issue.  
-  _Example 3:_ After QA feedback, change plan was added to our rollout checklist.
+  _Example 1:_ We proposed a change plan with canary rollout and rollback checkpoints.  
+  _Example 2:_ The plan included test scope, owner, and communication timing.  
+  _Example 3:_ A clear change plan reduced panic during release day.
 
 **Additional useful terms:**
+
 - **code review** /koʊd rɪˈvjuː/ (n) - peer check before merge
 - **test coverage** /tɛst ˈkʌvərɪdʒ/ (n) - amount of code protected by tests
 - **rollback** /ˈroʊlˌbæk/ (n/v) - return to previous stable version
@@ -96,6 +97,7 @@ description: Discuss technical debt in simple language and explain how you align
   I explained that one week of cleanup could save many support hours.
 
 ### Useful Sentence Patterns
+
 - This part is hard to maintain because...
 - We had a lot of bugs here, so...
 - We decided to fix it before adding new features.
@@ -109,6 +111,7 @@ description: Discuss technical debt in simple language and explain how you align
 <summary><strong>3) Collocations, Chunking & Phrasal Verbs</strong></summary>
 
 ### Strong Collocations
+
 - manage technical debt
 - refactor legacy code
 - reduce regression risk
@@ -123,10 +126,12 @@ description: Discuss technical debt in simple language and explain how you align
 - align engineering and product
 
 **Examples (real work):**
-- In one release week, we had to manage technical debt while still trying to refactor legacy code.
-- In retro, we agreed to reduce regression risk earlier so the same issue would not repeat.
+
+- In one sprint, we paused a low-impact feature to stabilize a debt-heavy payment module.
+- After phased cleanup, incident alerts dropped and release confidence improved.
 
 ### Useful Chunking & Sentence Starters
+
 - We saw the same bug again and again...
 - The main issue was...
 - To explain it to product, I said...
@@ -137,10 +142,12 @@ description: Discuss technical debt in simple language and explain how you align
 - If we had skipped this, ...
 
 **Examples (using starters):**
-- "A real issue we faced was repeated timeout errors, so we paused rollout and checked logs first."
-- "To reduce risk, we shipped to 10% of users first, then expanded after QA sign-off."
+
+- "To explain it to product, I showed one chart: bug recurrence by module over the last three sprints."
+- "We accepted a delay because rollback risk in the current state was too high."
 
 ### Useful Phrasal Verbs
+
 - **clean up** -> We cleaned up the oldest part of the checkout code.
 - **break up** -> We broke up the refactor into small tickets.
 - **slow down** -> We slowed down feature work for one sprint.
@@ -196,25 +203,35 @@ Good teams use a balanced plan: fix high-risk code first, keep some feature deli
 <summary><strong>6) List of Questions + Ideas</strong></summary>
 
 ### Core Questions (must-practice)
-1. What does technical debt look like in your project?
-2. How do you explain refactor value to non-technical people?
-3. When do you fix old code instead of building new features?
-4. How do you reduce regression during refactor?
 
-### High-Value Case Questions
-5. Share a case where cleanup work improved release quality.
-6. Tell me about a refactor that failed or took longer than expected.
-7. Describe how your team tracked debt work in backlog.
+1. What does technical debt look like in your current codebase?
+2. How do you explain debt impact to PMs in business language?
+3. When do you choose debt cleanup over new feature delivery?
+4. How do you make a safe change plan before refactor starts?
 
-### Critical Discussion Questions
-8. Is it okay to ship with known debt under deadline pressure?
-9. Should every sprint include dedicated cleanup time?
-10. What is the risk of postponing refactor for too long?
+### High-Value Discussion Questions
+
+5. What are the benefits and limits of doing debt cleanup every sprint?
+6. How do migration checklists and rollback plans reduce risk in real releases?
+7. How does debt management affect engineering learning and team stress?
+
+### Follow-up Questions (Challenge Assumptions)
+
+8. You delayed refactor to hit deadline. What risk did the team accept explicitly?
+9. If cleanup work had no visible user impact, how would you defend it to leadership?
+10. If a rollback happened anyway, which part of your change brief was missing?
+
+### Reflection Questions
+
+11. Which debt area do you avoid because it feels too risky?
+12. What habit helped you discuss debt without sounding defensive?
+13. In five years, should teams reward feature speed and debt reduction equally?
 
 **Tips for speaking practice:**
-- Use one concrete bug example.
-- Mention both short-term cost and long-term gain.
-- Keep the explanation simple and measurable.
+
+- Anchor answers in one real release, not generic statements.
+- Use one checklist item and one rollback step in your explanation.
+- Keep the trade-off explicit: short-term roadmap speed vs long-term stability.
 
 ---
 

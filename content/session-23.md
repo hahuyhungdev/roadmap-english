@@ -17,56 +17,57 @@ description: Talk about personal drivers, value conflicts, meaningful work, and 
 <summary><strong>1) Vocabulary </strong></summary>
 
 - **motivation** /ˌmoʊtəˈveɪʃən/ (n) - reason you want to do work  
-  _Example 1:_ My strongest motivation is solving user-facing problems.  
-  _Example 2:_ I used this when practicing follow-up questions under pressure.  
-  _Example 3:_ As a result, my interview stories became clearer and more confident.
+  _Example 1:_ My strongest motivation is solving high-impact user pain, not only shipping features.  
+  _Example 2:_ I felt this clearly when checkout error fixes reduced support load.  
+  _Example 3:_ Impact-based motivation keeps me consistent in hard sprints.
 
 - **core value** /kɔr ˈvæljuː/ (n) - principle that guides your decisions  
-  _Example 1:_ One core value for me is ownership.  
-  _Example 2:_ I used this when practicing follow-up questions under pressure.  
-  _Example 3:_ As a result, my interview stories became clearer and more confident.
+  _Example 1:_ One core value for me is reliability under pressure.  
+  _Example 2:_ I choose projects where I can improve that value, even if visibility is lower.  
+  _Example 3:_ Values give direction when options look similar.
 
 - **autonomy** /ɔːˈtɑːnəmi/ (n) - freedom to make decisions in your work  
-  _Example 1:_ I realized I value autonomy more than job title.  
-  _Example 2:_ This helped me explain one difficult workplace situation more clearly.  
-  _Example 3:_ This made my examples sound more real, not textbook-like.
+  _Example 1:_ I value autonomy because it lets me solve problems end-to-end.  
+  _Example 2:_ Without autonomy, I become less proactive and less creative.  
+  _Example 3:_ Balanced autonomy with clear accountability works best for me.
 
 - **purpose** /ˈpɝːpəs/ (n) - meaningful reason behind your work  
-  _Example 1:_ Purpose helps me stay consistent during hard sprints.  
-  _Example 2:_ I used this when practicing follow-up questions under pressure.  
-  _Example 3:_ As a result, my interview stories became clearer and more confident.
+  _Example 1:_ Purpose for me is building systems that reduce real friction for users.  
+  _Example 2:_ When purpose is clear, difficult tasks feel more manageable.  
+  _Example 3:_ Purpose protects motivation during repetitive maintenance work.
 
 - **culture fit** /ˈkʌltʃər fɪt/ (n) - how well your values match company culture  
-  _Example 1:_ I care about culture fit, not only compensation.  
-  _Example 2:_ This helped me explain one difficult workplace situation more clearly.  
-  _Example 3:_ This made my examples sound more real, not textbook-like.
+  _Example 1:_ Culture fit matters because values drive daily behavior under pressure.  
+  _Example 2:_ I look for teams where feedback is direct and respectful.  
+  _Example 3:_ Good culture fit improves both growth and retention.
 
 - **self-awareness** /ˌsɛlf əˈwɛrnəs/ (n) - understanding your real strengths and limits  
-  _Example 1:_ Self-awareness improved my career decisions.  
-  _Example 2:_ I used this when practicing follow-up questions under pressure.  
-  _Example 3:_ As a result, my interview stories became clearer and more confident.
+  _Example 1:_ Self-awareness helped me stop chasing roles that looked good but drained me.  
+  _Example 2:_ I now choose environments where my strengths create measurable value.  
+  _Example 3:_ Better awareness improved decision quality over time.
 
 - **misalignment** /ˌmɪsəˈlaɪnmənt/ (n) - mismatch between your values and your environment  
-  _Example 1:_ I left one role due to value misalignment.  
-  _Example 2:_ This helped me explain one difficult workplace situation more clearly.  
-  _Example 3:_ This made my examples sound more real, not textbook-like.
+  _Example 1:_ Value misalignment appeared when speed was rewarded but transparency was ignored.  
+  _Example 2:_ I stayed for one quarter, then changed teams to protect long-term motivation.  
+  _Example 3:_ Misalignment is expensive if ignored too long.
 
 - **intrinsic motivation** /ɪnˈtrɪnzɪk ˌmoʊtəˈveɪʃən/ (n) - internal motivation from the work itself  
-  _Example 1:_ Intrinsic motivation is stronger for me than external rewards.  
-  _Example 2:_ I used this when practicing follow-up questions under pressure.  
-  _Example 3:_ As a result, my interview stories became clearer and more confident.
+  _Example 1:_ Intrinsic motivation keeps me engaged in complex debugging work.  
+  _Example 2:_ External rewards matter, but they cannot replace meaningful daily tasks.  
+  _Example 3:_ This mindset reduced burnout risk in long projects.
 
 - **career anchor** /kəˈrɪr ˈæŋkər/ (n) - stable priority in your career choices  
-  _Example 1:_ Learning and ownership are my career anchors.  
-  _Example 2:_ In interview prep, I used this idea to build stronger behavioral answers.  
-  _Example 3:_ Now I use it to keep answers practical, honest, and easy to follow.
+  _Example 1:_ My career anchors are growth depth, ethical culture, and team trust.  
+  _Example 2:_ Anchors help me reject attractive but misaligned offers.  
+  _Example 3:_ They make long-term planning less reactive.
 
 - **reflection** /rɪˈflɛkʃən/ (n) - careful review of your experiences  
-  _Example 1:_ Regular reflection helped me redefine success.  
-  _Example 2:_ In interview prep, I used this idea to build stronger behavioral answers.  
-  _Example 3:_ Now I use it to keep answers practical, honest, and easy to follow.
+  _Example 1:_ Weekly reflection helped me see which work gave energy and which work drained it.  
+  _Example 2:_ I adjusted my goals based on that pattern, not on external pressure.  
+  _Example 3:_ Reflection turned vague motivation into clear decisions.
 
 **Additional useful terms:**
+
 - **energy source** /ˈɛnərdʒi sɔrs/ (n) - work activity that gives motivation
 - **drain factor** /dreɪn ˈfæktər/ (n) - activity that reduces motivation
 - **value conflict** /ˈvæljuː ˈkɑːnflɪkt/ (n) - clash between personal and company values
@@ -97,6 +98,7 @@ description: Talk about personal drivers, value conflicts, meaningful work, and 
   In my next role, I want stronger alignment with these values.
 
 ### Useful Sentence Patterns
+
 - What motivates me most is...
 - A value I will not compromise on is...
 - I discovered this when...
@@ -110,6 +112,7 @@ description: Talk about personal drivers, value conflicts, meaningful work, and 
 <summary><strong>3) Collocations, Chunking & Phrasal Verbs</strong></summary>
 
 ### Strong Collocations
+
 - identify core values
 - build self-awareness
 - maintain long-term motivation
@@ -124,10 +127,12 @@ description: Talk about personal drivers, value conflicts, meaningful work, and 
 - communicate motivation clearly
 
 **Examples (real work):**
-- In one release week, we had to identify core values while still trying to build self-awareness.
-- In retro, we agreed to maintain long-term motivation earlier so the same issue would not repeat.
+
+- I accepted one less-visible project because it aligned with my growth anchors.
+- Six months later, that decision improved both my technical depth and confidence.
 
 ### Useful Chunking & Sentence Starters
+
 - Early in my career, I believed...
 - Over time, I realized...
 - A clear example is...
@@ -138,10 +143,12 @@ description: Talk about personal drivers, value conflicts, meaningful work, and 
 - In the long term, I want...
 
 **Examples (using starters):**
-- "A real issue we faced was repeated timeout errors, so we paused rollout and checked logs first."
-- "To reduce risk, we shipped to 10% of users first, then expanded after QA sign-off."
+
+- "What drains my energy is unclear ownership and constant priority changes."
+- "My values align with this role because it combines impact, feedback, and learning depth."
 
 ### Useful Phrasal Verbs
+
 - **figure out** -> I figured out what really motivates me.
 - **line up with** -> My values line up with teams that value ownership.
 - **burn out** -> I burn out when goals are unclear for too long.
@@ -197,22 +204,32 @@ Balanced answers are best. Show ambition, but also show clarity about what kind 
 <summary><strong>6) List of Questions + Ideas</strong></summary>
 
 ### Core Questions (must-practice)
-1. What motivates you as a software engineer?
-2. What are your top three work values?
-3. How did your motivation change over the years?
-4. What kind of culture helps you perform best?
 
-### High-Value Case Questions
-5. Share a time when you realized your priorities had changed.
-6. Tell me about a value mismatch with a team or project.
-7. Describe one decision you made based on your values.
+1. What truly motivates you in engineering work today?
+2. What are your top work values, and how did you discover them?
+3. How has your motivation changed since you started your career?
+4. What kind of team culture helps you perform at your best?
 
-### Critical Discussion Questions
-8. Is motivation mostly internal or external?
-9. Should candidates prioritize culture fit over compensation?
-10. Can strong motivation exist in a toxic environment?
+### High-Value Discussion Questions
+
+5. What are the benefits and limits of choosing values over compensation?
+6. When should culture fit matter more than role title?
+7. How might motivation patterns differ for juniors and seniors?
+
+### Follow-up Questions (Challenge Assumptions)
+
+8. You said impact motivates you. Which type of impact matters most, and why?
+9. If compensation is high but values are misaligned, how long would you stay?
+10. If your stated values are not visible in your behavior, what should change first?
+
+### Reflection Questions
+
+11. Which value is easiest to say but hardest to live?
+12. What decision proved your motivation was real, not just words?
+13. In long-term career health, what matters more: purpose, pay, or people?
 
 **Tips for speaking practice:**
+
 - Avoid generic answers like "I love coding."
 - Use one moment of self-discovery.
 - Link values to concrete behavior.

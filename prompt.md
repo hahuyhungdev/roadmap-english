@@ -6,8 +6,9 @@ preparing for foreign-company interviews.
 This curriculum has 5 phases:
 
 - Phase 1–2: IT and business topics (technical, analytical)
-- Phase 3: Mixed topics — IT + real life (burnout, money, identity,
-  relationships, morality, career uncertainty)
+- Phase 3: Mixed topics — IT + real life (mental health, fake identity,
+  jealousy/comparison, bullying, success pressure, loneliness,
+  attention/distraction, morality, crime/punishment)
 - Phase 4: Behavioral and interview topics
 - Phase 5: Mock interviews
 
@@ -28,6 +29,21 @@ TARGET LEARNER:
 - B1–B2 English level (IELTS 6.0–7.0)
 - Learns with a non-technical teacher in 1-on-1 sessions
 
+PERSONALIZATION PRIORITIES (FIXED):
+
+- Prioritize practical speaking language for real developer scenarios
+  and interview follow-up questions.
+- Learner is frontend-focused: prioritize frontend contexts (components,
+  UI states, Storybook, design handoff, accessibility), while keeping
+  enough general cross-team language for PM/QA/stakeholder conversations.
+- Use explicit trade-offs naturally (speed vs quality, short-term fix
+  vs long-term maintainability, salary vs learning, stability vs growth).
+- Keep examples close to real life for a 25-27-year-old Vietnamese
+  engineer (remote teamwork, family pressure, social comparison,
+  online identity, digital distraction).
+- Avoid overlap between adjacent sessions: each session must have
+  one unique core tension.
+
 TARGET LEVEL:
 
 - B1–B2 (IELTS 6.0–7.0)
@@ -42,8 +58,10 @@ CRITICAL RULES:
 1. Keep the exact lesson structure and markdown format.
 2. Do not change section order or section names.
 3. Match language and examples to the session topic — not all sessions are IT.
-4. For IT sessions: use real engineering terms naturally
-   (technical debt, refactor, bug, release, deployment, backlog, on-call).
+4. For IT sessions: use real engineering terms that match the session
+   and the learner profile. Prefer frontend-relevant terms when appropriate
+   (component, UI state, props, accessibility, Storybook), while still using
+   general engineering/business terms when needed.
 5. For life/discussion sessions: use natural conversational vocabulary
    relevant to that topic. Do not force IT terms into non-IT sessions.
 6. Avoid fake-sounding phrases: maintenance tax, debt register,
@@ -56,12 +74,37 @@ CRITICAL RULES:
 10. Dialogues must sound like real conversations — not textbook answers.
 11. Reading text must sound like explanation to a colleague or friend,
     not a textbook chapter.
-12. Questions must be practical: interview-style, discussion-style,
-    or IELTS speaking Part 3 style.
+12. Questions must be discussion or interview-style questions about [TOPIC],
+    suitable for speaking practice at B1-B2 level.
 13. For Phase 3 sessions: end with a short bridge (1–2 sentences)
     connecting the topic back to work, career, or interview context.
 14. Debate prompts must include 2 short arguments — one for each side —
     written at B1–B2 level. No abstract theory.
+15. Before writing Session N, check Session N-1 and Session N-2 and
+    avoid repeating the same core angle, dialogue scenario, or debate frame.
+16. Vocabulary anti-duplication: at least 70% of main terms must be new
+    compared with Session N-1 and Session N-2.
+17. Dialogue anti-duplication: 3 dialogues must use 3 different cases;
+    do not reuse the same situation from nearby sessions.
+18. Keep one primary tension per lesson. If a point belongs mainly to
+    another session in roadmap.md, do not include it.
+19. For all interview-facing sessions, include at least one answer that
+    can be spoken clearly in 45-90 seconds.
+20. Keep the tone direct and human. Do not sound motivational or abstract.
+21. In the questions section, move from simple real experience to critical
+    analysis, then follow-up challenge, and end with future-oriented thinking.
+22. Questions must explore benefits, limitations, trade-offs, and risks.
+23. Questions must examine impact on skills, learning, or human behavior.
+24. Include at least one comparison question (beginner vs experienced).
+25. Add follow-up questions that challenge assumptions.
+26. Avoid generic yes/no questions.
+27. Avoid overly theoretical or abstract wording.
+28. Vocabulary, collocations, and phrasal verbs must be common spoken
+    workplace English, not rare report-style or blog-style jargon.
+29. Keep a frontend + general balance in IT sessions:
+    frontend-first examples, plus transferable cross-team language.
+30. Prefer words learners can use immediately in daily standups,
+    code reviews, QA discussions, and interviews.
 
 ---
 
@@ -87,9 +130,9 @@ description: [ONE CLEAR SENTENCE]
 <details open>
 <summary><strong>1) Vocabulary</strong></summary>
 
-Generate 10 main terms + 5 additional useful terms for this session topic.
+Generate 10-15 main terms + 5 additional useful terms for this session topic.
 
-For each of the 10 MAIN terms, use this exact format:
+For each MAIN term, use this exact format:
 
 ---
 
@@ -137,6 +180,8 @@ RULES FOR VOCABULARY SECTION:
 - Register label helps the learner know when and where to use the word
 - For non-IT sessions: choose vocabulary relevant to that topic,
   do not force IT terms
+- Do not repeat more than 30% of main vocabulary items from Session N-1 and N-2
+  (max 4 repeated terms if you generate 15 main terms)
 
 </details>
 
@@ -162,6 +207,7 @@ RULES FOR VOCABULARY SECTION:
 ### Useful Phrasal Verbs
 
 - 5 phrasal verbs with short realistic examples
+- Must be high-frequency, everyday workplace usage
 
 </details>
 
@@ -179,6 +225,7 @@ Each answer must include:
 - One real or realistic case
 - One simple explanation
 - One trade-off or honest reflection where relevant
+- Distinct context from the other dialogues in the same session
 
 </details>
 
@@ -210,16 +257,31 @@ _Your turn: Which side do you agree with more? Why?_
 
 ### Core Questions (must-practice)
 
-- 4 practical questions
+- 4 practical questions that start from real-world usage or lived experience
 
 ### High-Value Discussion Questions
 
-- 3 deeper questions for extended speaking practice
+- 3 critical and analytical questions
+- These questions must explore benefits, limitations, trade-offs, and risks
+- Include at least 1 comparison question (beginner vs experienced)
+
+### Follow-up Questions (Challenge Assumptions)
+
+- 3 follow-up questions that push the learner to justify and refine their ideas
 
 ### Reflection Questions
 
-- 3 personal questions to help the learner connect the topic to
-  their own life or experience
+- 3 personal questions about impact on skills, learning, or human behavior
+- End this section with 1 future-oriented or philosophical question
+
+**Question tone and style:**
+
+- Curious, natural, and conversational
+- Like a teacher guiding a discussion
+- Not too academic, not too basic
+- Suitable for speaking (B1-B2)
+- Avoid generic yes/no questions
+- Avoid overly theoretical wording
 
 **Tips for speaking practice:**
 
@@ -236,9 +298,13 @@ FINAL QUALITY CHECK before output:
   "This is a crucial skill...", "Let's delve into...", "Navigating the complexities of..."
 - No abstract theory without a concrete example
 - Vocabulary matches the topic — not forced IT terms in life sessions
+- Vocabulary/collocations/phrasal verbs are everyday usable, not overly deep jargon
 - Debate prompt has clear, simple arguments on both sides
 - Clear in one read — no sentence needs to be read twice
 - Structure is fully consistent with the format above
+- Core lesson angle is unique vs Session N-1 and Session N-2
+- No copy-paste sentence patterns from nearby sessions
+- Section 7 question flow is: practical -> analytical -> follow-up -> future-oriented
 
 ---
 

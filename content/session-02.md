@@ -16,56 +16,57 @@ description: Describe your system at a high level and explain how you work with 
 <summary><strong>1) Vocabulary </strong></summary>
 
 - **architecture** /ˈɑːrkəˌtɛktʃər/ (n) - overall system structure  
-  _Example 1:_ Our architecture is simple for users but modular for developers.  
-  _Example 2:_ For one customer case, architecture changed how we prioritized tasks.  
-  _Example 3:_ We mentioned architecture in stand-up when blockers appeared.
+  _Example 1:_ Our architecture has one web app, one API layer, and one async worker queue.  
+  _Example 2:_ I explain architecture differently to PMs and to backend engineers.  
+  _Example 3:_ In interviews, I use a simple flow instead of deep implementation details.
 
-- **monolith** /ˈmɑːnəlɪθ/ (n) - one large application with many parts  
-  _Example 1:_ We still use a monolith for admin features.  
-  _Example 2:_ In retro, we linked monolith to one real production issue.  
-  _Example 3:_ In one incident review, monolith explained why the bug happened.
+- **user flow** /ˈjuːzər floʊ/ (n) - step-by-step path a user takes in the product  
+  _Example 1:_ We simplified the checkout user flow from five steps to three.  
+  _Example 2:_ Product and design reviewed the same flow before development started.  
+  _Example 3:_ In interviews, I explain user flow first, then technical details.
 
-- **microservice** /ˈmaɪkroʊˌsɝːvɪs/ (n) - small service focused on one job  
-  _Example 1:_ Payment is handled by a separate microservice.  
-  _Example 2:_ For one customer case, microservice changed how we prioritized tasks.  
-  _Example 3:_ This quarter, microservice helped us reduce repeated support requests.
+- **API contract** /ˌeɪ piː ˈaɪ ˈkɑntrækt/ (n) - clear agreement on request, response, and error format  
+  _Example 1:_ We updated the API contract before frontend implementation.  
+  _Example 2:_ Clear contract examples reduced integration bugs in QA.  
+  _Example 3:_ When the contract changed late, we flagged risk immediately.
 
-- **data pipeline** /ˈdeɪtə ˈpaɪpˌlaɪn/ (n) - flow of data from source to destination  
-  _Example 1:_ The data pipeline updates dashboards every hour.  
-  _Example 2:_ For one customer case, data pipeline changed how we prioritized tasks.  
-  _Example 3:_ I used data pipeline in a stakeholder update so everyone could follow.
+- **UI state** /ˌjuːˈaɪ steɪt/ (n) - visual state like loading, empty, success, or error  
+  _Example 1:_ We documented each UI state before coding the checkout page.  
+  _Example 2:_ QA used state notes to test edge cases earlier.  
+  _Example 3:_ Missing one error state caused confusion in the first release.
 
 - **stakeholder** /ˈsteɪkˌhoʊldər/ (n) - person or team affected by system results  
-  _Example 1:_ Product and support are key stakeholders for our release.  
-  _Example 2:_ During release week, stakeholder helped us make a safer decision.  
-  _Example 3:_ I used stakeholder in a stakeholder update so everyone could follow.
+  _Example 1:_ Product, QA, support, and sales were key stakeholders in this release.  
+  _Example 2:_ Each stakeholder cared about different risks and timelines.  
+  _Example 3:_ We reduced confusion by tailoring updates for each group.
 
 - **requirement** /rɪˈkwaɪrmənt/ (n) - what the product must do  
-  _Example 1:_ We clarified requirements before writing code.  
-  _Example 2:_ For one customer case, requirement changed how we prioritized tasks.  
-  _Example 3:_ I used requirement in a stakeholder update so everyone could follow.
+  _Example 1:_ We clarified requirements before coding the coupon validation logic.  
+  _Example 2:_ One missing requirement caused rework in both frontend and backend.  
+  _Example 3:_ Now we confirm acceptance criteria before development starts.
 
 - **handoff** /ˈhændˌɔːf/ (n) - passing work between teams  
-  _Example 1:_ Clear handoff notes reduced delays with QA.  
-  _Example 2:_ In a recent sprint, handoff became a key point in our planning discussion.  
-  _Example 3:_ In one incident review, handoff explained why the bug happened.
+  _Example 1:_ Clear handoff notes helped QA test edge cases without waiting for engineers.  
+  _Example 2:_ We added wireframe annotations to improve design-to-engineering handoff.  
+  _Example 3:_ Better handoff reduced last-day release surprises.
 
 - **dependency** /dɪˈpɛndənsi/ (n) - another team or system you need  
-  _Example 1:_ We were blocked by an API dependency from the billing team.  
-  _Example 2:_ In retro, we linked dependency to one real production issue.  
-  _Example 3:_ We mentioned dependency in stand-up when blockers appeared.
+  _Example 1:_ We were blocked by a dependency on billing API authentication changes.  
+  _Example 2:_ To avoid delay, we built with a mock endpoint first.  
+  _Example 3:_ We tracked dependency risk in weekly planning, not only daily stand-up.
 
 - **incident** /ˈɪnsɪdənt/ (n) - unexpected production problem  
-  _Example 1:_ During an incident, we gave updates every 30 minutes.  
-  _Example 2:_ In a recent sprint, incident became a key point in our planning discussion.  
-  _Example 3:_ In one incident review, incident explained why the bug happened.
+  _Example 1:_ During an incident, one frontend route failed after deployment.  
+  _Example 2:_ Clear incident updates helped support answer users faster.  
+  _Example 3:_ Our review focused on root cause and communication gaps.
 
-- **SLA** /ˌɛs ɛl ˈeɪ/ (n) - expected response or uptime target  
-  _Example 1:_ We monitor SLA because enterprise clients care about uptime.  
-  _Example 2:_ In a recent sprint, sla became a key point in our planning discussion.  
-  _Example 3:_ After QA feedback, sla was added to our rollout checklist.
+- **release note** /rɪˈliːs noʊt/ (n) - short summary of what changed in a release  
+  _Example 1:_ We wrote a release note with new features and known limitations.  
+  _Example 2:_ QA and support used the note to prepare for launch day.  
+  _Example 3:_ Clear release notes reduced repeated stakeholder questions.
 
 **Additional useful terms:**
+
 - **owner** /ˈoʊnər/ (n) - person responsible for a system area
 - **scope** /skoʊp/ (n) - boundaries of a project
 - **timeline** /ˈtaɪmˌlaɪn/ (n) - schedule of work
@@ -96,6 +97,7 @@ description: Describe your system at a high level and explain how you work with 
   If we skip alignment, we usually get rework later.
 
 ### Useful Sentence Patterns
+
 - At a high level, our system...
 - The main users are..., and they care about...
 - I communicate with... mainly about...
@@ -109,24 +111,27 @@ description: Describe your system at a high level and explain how you work with 
 <summary><strong>3) Collocations, Chunking & Phrasal Verbs</strong></summary>
 
 ### Strong Collocations
+
 - explain system architecture
+- map user flow
+- clarify API contract
+- document UI states
 - map stakeholder needs
 - align product requirements
 - reduce handoff delays
 - manage cross-team dependencies
-- communicate release status
 - escalate production incidents
-- define service boundaries
 - track timeline risks
-- share progress updates
 - avoid scope confusion
 - improve team alignment
 
 **Examples (real work):**
-- In one release week, we had to explain system architecture while still trying to map stakeholder needs.
-- In retro, we agreed to align product requirements earlier so the same issue would not repeat.
+
+- In one release, we used one user-flow diagram and one API contract summary to align product, QA, and support.
+- When one backend dependency slipped, we updated timeline and scope early, so no team was surprised at the end.
 
 ### Useful Chunking & Sentence Starters
+
 - At a high level, the system...
 - From the user side,...
 - From the business side,...
@@ -137,10 +142,12 @@ description: Describe your system at a high level and explain how you work with 
 - The main lesson was...
 
 **Examples (using starters):**
-- "A real issue we faced was repeated timeout errors, so we paused rollout and checked logs first."
-- "To reduce risk, we shipped to 10% of users first, then expanded after QA sign-off."
+
+- "From the business side, support needed clear error behavior before launch, not deep service details."
+- "A real issue we faced was unclear wireframe ownership, so we added annotations before sprint planning."
 
 ### Useful Phrasal Verbs
+
 - **depend on** -> This release depends on backend API changes.
 - **hand over** -> We hand over test notes to QA before release.
 - **sync up** -> I sync up with product twice a week.
@@ -157,7 +164,7 @@ description: Describe your system at a high level and explain how you work with 
 **Interviewer:** Can you describe the system you work on?
 
 **You:**  
-At a high level, we have a web app, a backend API, and a reporting service. Users create orders in the app, then data moves to billing and analytics.
+At a high level, we have a frontend web app, a backend API, and one analytics service. Users browse products, add items to cart, and complete checkout in three clear steps.
 
 I keep this explanation simple because non-technical stakeholders care more about flow and risk than implementation details.
 
@@ -196,25 +203,35 @@ A strong answer in interviews shows both technical understanding and communicati
 <summary><strong>6) List of Questions + Ideas</strong></summary>
 
 ### Core Questions (must-practice)
-1. How would you describe your system in 60 seconds?
-2. Who are your main stakeholders and what do they care about?
-3. How do you keep product and engineering aligned?
-4. What is one communication mistake your team learned from?
 
-### High-Value Case Questions
-5. Share a case where dependency blocked your work.
-6. Tell me about a handoff that went wrong and how you fixed it.
-7. Describe a release where stakeholder updates helped avoid risk.
+1. How do you describe your system in 60-90 seconds to a non-engineer?
+2. Which stakeholders were critical in your last release, and what did each one need?
+3. How do you turn a wireframe into clear engineering questions?
+4. How do you summarize a brief doc before planning starts?
 
-### Critical Discussion Questions
-8. Should engineers spend less time in meetings and more time coding?
-9. Is deep technical detail useful in stakeholder meetings?
-10. What is better: one big update or many short async updates?
+### High-Value Discussion Questions
+
+5. What are the benefits and limits of one shared project brief?
+6. When is async communication better than meetings, and when is it risky?
+7. How does stakeholder communication quality affect engineering learning and decision speed?
+
+### Follow-up Questions (Challenge Assumptions)
+
+8. You prefer async updates. How do you prevent misunderstandings from growing?
+9. If PM and engineering read the same wireframe differently, who should resolve scope first?
+10. If your architecture is correct but stakeholders are confused, what did you miss?
+
+### Reflection Questions
+
+11. Which stakeholder is hardest for you to communicate with, and why?
+12. What communication habit improved your project outcomes the most?
+13. In the future, will strong engineers be defined more by coding skill or alignment skill?
 
 **Tips for speaking practice:**
-- Explain flow before details.
-- Use stakeholder names (PM, QA, Sales, Ops).
-- Include one trade-off in your answer.
+
+- Start with one real project handoff instead of abstract theory.
+- Name the trade-off clearly: detail depth vs decision speed.
+- Use plain language first, then add one technical term if needed.
 
 ---
 

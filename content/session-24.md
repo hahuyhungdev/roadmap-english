@@ -17,56 +17,57 @@ description: Practice salary conversation structure, evidence-based negotiation,
 <summary><strong>1) Vocabulary </strong></summary>
 
 - **compensation** /kˌɑmpənsˈeɪʃən/ (n) - total pay package  
-  _Example 1:_ I evaluate compensation as salary plus benefits.  
-  _Example 2:_ I used this when practicing follow-up questions under pressure.  
-  _Example 3:_ As a result, my interview stories became clearer and more confident.
+  _Example 1:_ I evaluate compensation using base salary, bonus, equity, and growth support.  
+  _Example 2:_ This gave me a clearer comparison between two offers with different structures.  
+  _Example 3:_ Total compensation thinking prevented short-term decisions.
 
 - **salary range** /sˈælɚi rˈeɪndʒ/ (n) - minimum and maximum expected pay  
-  _Example 1:_ I prepared a realistic salary range before negotiation.  
-  _Example 2:_ In interview prep, I used this idea to build stronger behavioral answers.  
-  _Example 3:_ Now I use it to keep answers practical, honest, and easy to follow.
+  _Example 1:_ I prepared a salary range based on market data and role scope.  
+  _Example 2:_ I communicated range confidently without sounding rigid.  
+  _Example 3:_ This improved negotiation quality on both sides.
 
 - **negotiation** /nɪɡˌoʊʃiˈeɪʃən/ (n) - discussion to reach agreement  
-  _Example 1:_ Negotiation worked better when I used market data.  
-  _Example 2:_ In interview prep, I used this idea to build stronger behavioral answers.  
-  _Example 3:_ Now I use it to keep answers practical, honest, and easy to follow.
+  _Example 1:_ Negotiation was smoother when I connected my ask to measurable impact.  
+  _Example 2:_ I stayed flexible on package structure while protecting core expectations.  
+  _Example 3:_ This kept the tone professional and collaborative.
 
 - **market benchmark** /mˈɑrkət bˈɛntʃmˌɑrk/ (n) - salary data from similar roles  
-  _Example 1:_ I checked market benchmarks on levels.fyi and Glassdoor.  
-  _Example 2:_ This helped me explain one difficult workplace situation more clearly.  
-  _Example 3:_ This made my examples sound more real, not textbook-like.
+  _Example 1:_ I used market benchmark data from three sources before discussing compensation.  
+  _Example 2:_ Benchmarks helped me avoid unrealistic requests.  
+  _Example 3:_ Data made the conversation objective.
 
 - **non-salary benefits** /nˈɑn sˈælɚi bˈɛnəfɪts/ (n) - value beyond base pay  
-  _Example 1:_ Non-salary benefits like remote flexibility mattered to me.  
-  _Example 2:_ This helped me explain one difficult workplace situation more clearly.  
-  _Example 3:_ This made my examples sound more real, not textbook-like.
+  _Example 1:_ Non-salary benefits like learning budget and flexible hours improved long-term value.  
+  _Example 2:_ I traded a small base increase for stronger growth support.  
+  _Example 3:_ This choice matched my career priorities.
 
 - **constructive feedback** /kənstrˈʌktɪv fˈidbˌæk/ (n) - useful feedback focused on improvement  
-  _Example 1:_ I gave constructive feedback with specific examples.  
-  _Example 2:_ In interview prep, I used this idea to build stronger behavioral answers.  
-  _Example 3:_ Now I use it to keep answers practical, honest, and easy to follow.
+  _Example 1:_ I gave constructive feedback by describing behavior, impact, and one alternative action.  
+  _Example 2:_ This made hard conversations clearer and less defensive.  
+  _Example 3:_ The teammate later adopted the new communication pattern.
 
 - **defensive reaction** /dɪfˈɛnsɪv riˈækʃən/ (n) - emotional resistance to feedback  
-  _Example 1:_ I try to avoid defensive reactions during review.  
-  _Example 2:_ This helped me explain one difficult workplace situation more clearly.  
-  _Example 3:_ This made my examples sound more real, not textbook-like.
+  _Example 1:_ My first defensive reaction was to explain too much instead of listening.  
+  _Example 2:_ I learned to ask clarifying questions before responding.  
+  _Example 3:_ This improved feedback quality significantly.
 
 - **action plan** /ˈækʃən plˈæn/ (n) - clear steps after feedback  
-  _Example 1:_ I created an action plan after performance review.  
-  _Example 2:_ This helped me explain one difficult workplace situation more clearly.  
-  _Example 3:_ This made my examples sound more real, not textbook-like.
+  _Example 1:_ I created an action plan with owner, deadline, and success metrics.  
+  _Example 2:_ This turned feedback from opinion into execution.  
+  _Example 3:_ Progress became visible in the next review cycle.
 
 - **follow-up** /fˈɑloʊ ˈʌp/ (n) - checking progress after changes  
-  _Example 1:_ I scheduled follow-up with my manager in four weeks.  
-  _Example 2:_ This helped me explain one difficult workplace situation more clearly.  
-  _Example 3:_ This made my examples sound more real, not textbook-like.
+  _Example 1:_ I scheduled follow-up every two weeks to review behavior changes.  
+  _Example 2:_ Frequent follow-up prevented old habits from returning.  
+  _Example 3:_ It also built trust with my manager.
 
 - **visible improvement** /vˈɪzəbəl ˌɪmprˈuvmənt/ (n) - clear progress others can see  
-  _Example 1:_ I showed visible improvement in communication and delivery.  
-  _Example 2:_ This gave structure to my answer in mock interview sessions.  
-  _Example 3:_ It also helped me show both ownership and reflection in my answers.
+  _Example 1:_ Visible improvement appeared when stakeholders said updates were finally clear.  
+  _Example 2:_ I supported that with metrics: fewer clarification messages and faster approvals.  
+  _Example 3:_ Evidence made feedback conversations more credible.
 
 **Additional useful terms:**
+
 - **offer package** /ˈɔfɚ pˈækədʒ/ (n) - full job offer details
 - **negotiation timing** /nɪɡˌoʊʃiˈeɪʃən tˈaɪmɪŋ/ (n) - best moment to discuss compensation
 - **feedback loop** /fˈidbˌæk lˈup/ (n) - cycle of feedback and action
@@ -97,6 +98,7 @@ description: Practice salary conversation structure, evidence-based negotiation,
   Let us review progress after one month.
 
 ### Useful Sentence Patterns
+
 - My expected range is...
 - I based this on...
 - If needed, I am open to...
@@ -110,6 +112,7 @@ description: Practice salary conversation structure, evidence-based negotiation,
 <summary><strong>3) Collocations, Chunking & Phrasal Verbs</strong></summary>
 
 ### Strong Collocations
+
 - negotiate compensation professionally
 - prepare salary benchmarks
 - discuss total package
@@ -124,10 +127,12 @@ description: Practice salary conversation structure, evidence-based negotiation,
 - maintain professional tone
 
 **Examples (real work):**
-- In one release week, we had to negotiate compensation professionally while still trying to prepare salary benchmarks.
-- In retro, we agreed to discuss total package earlier so the same issue would not repeat.
+
+- During one offer process, I negotiated based on scope and impact evidence instead of emotion.
+- We reached agreement by adjusting package structure, not only base salary.
 
 ### Useful Chunking & Sentence Starters
+
 - Before negotiation, I...
 - A fair range for this role is...
 - If salary flexibility is limited,...
@@ -138,10 +143,12 @@ description: Practice salary conversation structure, evidence-based negotiation,
 - Next time, I will...
 
 **Examples (using starters):**
-- "A real issue we faced was repeated timeout errors, so we paused rollout and checked logs first."
-- "To reduce risk, we shipped to 10% of users first, then expanded after QA sign-off."
+
+- "If salary flexibility is limited, I am open to discussing growth budget and role progression timeline."
+- "To act on that feedback, I defined three weekly actions and shared progress transparently."
 
 ### Useful Phrasal Verbs
+
 - **bring up** -> I brought up compensation after discussing role scope.
 - **back up** -> I backed up my range with market data.
 - **work on** -> I worked on communication after feedback.
@@ -197,22 +204,32 @@ In interview answers, show calm tone, real examples, and clear follow-up steps.
 <summary><strong>6) List of Questions + Ideas</strong></summary>
 
 ### Core Questions (must-practice)
-1. How do you prepare for salary negotiation?
-2. What do you do if your expected salary is above budget?
-3. How do you receive critical feedback professionally?
-4. How do you show visible improvement after feedback?
 
-### High-Value Case Questions
-5. Share a successful negotiation and what worked.
-6. Tell me about feedback that changed your behavior.
-7. Describe how you gave difficult feedback to a teammate.
+1. How do you prepare data before salary negotiation?
+2. What do you say when your salary expectation is above current budget?
+3. How do you respond to critical feedback without becoming defensive?
+4. How do you turn feedback into a measurable action plan?
 
-### Critical Discussion Questions
-8. Should candidates negotiate every offer?
-9. Is compensation or growth opportunity more important early in career?
-10. Why do many feedback processes fail in teams?
+### High-Value Discussion Questions
+
+5. What are the benefits and limits of negotiating every offer?
+6. When should growth opportunity matter more than immediate compensation?
+7. How should feedback style differ between junior and senior engineers?
+
+### Follow-up Questions (Challenge Assumptions)
+
+8. You said you are flexible. What is your true non-negotiable point?
+9. If feedback is vague, how do you avoid fake improvement?
+10. If negotiation succeeds but trust declines, was it still a good outcome?
+
+### Reflection Questions
+
+11. Which part of negotiation is hardest for you in English?
+12. What feedback changed your behavior most in the last year?
+13. In long-term growth, what matters more: pay progression or feedback discipline?
 
 **Tips for speaking practice:**
+
 - Use polite, confident language.
 - Include one real negotiation or feedback case.
 - End with concrete outcomes.

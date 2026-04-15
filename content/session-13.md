@@ -1,108 +1,110 @@
 ---
 sessionNumber: 13
-title: Self-Perception & Confidence
-topic: Imposter Syndrome, Comparison, and Self-Worth
+title: Comparison, Jealousy & Self-Worth
+topic: Imposter Feelings and Confidence Rebuild in Real Developer Life
 phase: PHASE 3 - PRACTICAL DISCUSSION
 level: B1-B2
-description: Talk about confidence in real situations: comparing with peers, self-doubt after setbacks, and practical ways to rebuild self-trust.
+description: Talk about jealousy triggers, comparison habits, confidence loss after setbacks, and practical methods to rebuild self-worth.
 ---
 
-# Session 13: Self-Perception & Confidence
+# Session 13: Comparison, Jealousy & Self-Worth
 
 **Level:** B1-B2  
-**Focus:** Imposter syndrome, comparison, self-worth.
-**Scope:** Talk about confidence in real situations: comparing with peers, self-doubt after setbacks, and practical ways to rebuild self-trust.
+**Focus:** Handle comparison pressure without losing confidence or direction.
+**Scope:** Discuss jealousy, imposter feelings, realistic self-evaluation, and practical confidence recovery.
 
 <details open>
 <summary><strong>1) Vocabulary </strong></summary>
 
-- **imposter syndrome** /ˌɪmpˈɔstɚ sˈɪndrˌoʊm/ (n) - feeling not good enough despite real results  
-  _Example 1:_ I had imposter syndrome when I joined a stronger team.  
-  _Example 2:_ I started paying attention to this when my energy dropped for several weeks.  
-  _Example 3:_ Over time, this gave me a healthier and more realistic perspective.
+- **comparison spiral** /kəmˈpɛrəsən ˈspaɪrəl/ (n) - repeated comparing that lowers focus and confidence  
+  _Example 1:_ My comparison spiral started when I checked promotion posts every night.  
+  _Example 2:_ It made me ignore my own progress in debugging and ownership.  
+  _Example 3:_ I stopped the spiral by limiting social media and reviewing weekly wins.
 
-- **comparison trap** /kəmpˈɛrəsən trˈæp/ (n) - unhealthy habit of comparing with others  
-  _Example 1:_ LinkedIn updates can create a comparison trap.  
-  _Example 2:_ I started paying attention to this when my energy dropped for several weeks.  
-  _Example 3:_ Over time, this gave me a healthier and more realistic perspective.
+- **jealousy trigger** /ˈdʒɛləsi ˈtrɪɡɚ/ (n) - event that activates envy or insecurity  
+  _Example 1:_ A jealousy trigger for me was seeing peers move to big-name companies quickly.  
+  _Example 2:_ Instead of hiding it, I wrote what exactly I envied: title, salary, or skill.  
+  _Example 3:_ This made my self-improvement plan more honest.
 
-- **career checkpoint** /kɚˈɪr tʃˈɛkpˌɔɪnt/ (n) - way to measure progress  
-  _Example 1:_ I now use impact and learning as my career benchmark.  
-  _Example 2:_ I noticed this clearly during a stressful period last year.  
-  _Example 3:_ This helped me make better choices with less stress.
+- **imposter feeling** /ɪmˈpɑstɚ ˈfilɪŋ/ (n) - feeling that your success is undeserved  
+  _Example 1:_ I had imposter feeling when I kept comparing myself with people who seemed far ahead.  
+  _Example 2:_ It got better when I asked for feedback and improved one gap at a time.  
+  _Example 3:_ I now explain imposter feeling as temporary, not identity.
 
-- **self-doubt** /sˈɛlf dˈaʊt/ (n) - lack of confidence in your ability  
-  _Example 1:_ Self-doubt increased after one failed release.  
-  _Example 2:_ In my daily life, this became important when my schedule got overloaded.  
-  _Example 3:_ After that, I changed one habit and it made a real difference.
+- **silent competition** /ˈsaɪlənt ˌkɑmpəˈtɪʃən/ (n) - unspoken pressure to outperform friends or peers  
+  _Example 1:_ Silent competition in friend groups made career choices feel like a race.  
+  _Example 2:_ I learned to ask: "Do I want this, or do I just want to look successful?"  
+  _Example 3:_ That question reduced bad decisions driven by ego.
 
-- **growth mindset** /ɡrˈoʊθ mˈaɪndsˌɛt/ (n) - belief that skills can improve with effort  
-  _Example 1:_ Growth mindset helped me recover faster from mistakes.  
-  _Example 2:_ This topic came up in a real conversation with friends about work pressure.  
-  _Example 3:_ Now I can explain this topic more clearly in discussions and interviews.
+- **worth metric** /wɝθ ˈmɛtrɪk/ (n) - standard you use to evaluate your own value  
+  _Example 1:_ My old worth metric was only title and salary.  
+  _Example 2:_ My new metric includes skill depth, reliability, and learning speed.  
+  _Example 3:_ The change made my confidence more stable.
 
-- **evidence log** /ˈɛvədəns lˈɔɡ/ (n) - list of achievements and progress  
-  _Example 1:_ I keep an evidence log of wins and feedback.  
-  _Example 2:_ I started paying attention to this when my energy dropped for several weeks.  
-  _Example 3:_ Over time, this gave me a healthier and more realistic perspective.
+- **validation loop** /ˌvæləˈdeɪʃən lup/ (n) - habit of depending on external approval repeatedly  
+  _Example 1:_ Validation loop made me anxious when people around me were quiet, even when my work was strong.  
+  _Example 2:_ I reduced it by collecting objective feedback and concrete outcomes.  
+  _Example 3:_ External praise still helps, but it is no longer my main source of confidence.
 
-- **seniority gap** /sinjˈɔrɪti ɡˈæp/ (n) - difference in experience level  
-  _Example 1:_ The seniority gap felt big in my first month.  
-  _Example 2:_ This topic came up in a real conversation with friends about work pressure.  
-  _Example 3:_ Now I can explain this topic more clearly in discussions and interviews.
+- **skill narrative** /skɪl ˈnærətɪv/ (n) - personal story about your capability and growth  
+  _Example 1:_ My skill narrative changed from "I am behind" to "I am building depth steadily."  
+  _Example 2:_ This narrative helped me answer interviews without sounding insecure.  
+  _Example 3:_ A strong narrative is based on evidence, not motivation quotes.
 
-- **realistic goal** /rˌiəlˈɪstɪk ɡˈoʊl/ (n) - target that is challenging but possible  
-  _Example 1:_ I set realistic goals each quarter.  
-  _Example 2:_ In my daily life, this became important when my schedule got overloaded.  
-  _Example 3:_ After that, I changed one habit and it made a real difference.
+- **progress evidence** /ˈprɑɡrɛs ˈɛvədəns/ (n) - concrete proof of improvement over time  
+  _Example 1:_ Progress evidence for me was clearer explanations and faster problem solving.  
+  _Example 2:_ I track this monthly to avoid emotional conclusions about my career.  
+  _Example 3:_ Evidence keeps confidence realistic and grounded.
 
-- **external validation** /ɪkstˈɝnəl vˌælədˈeɪʃən/ (n) - approval from others  
-  _Example 1:_ I relied too much on external validation before.  
-  _Example 2:_ This topic came up in a real conversation with friends about work pressure.  
-  _Example 3:_ Now I can explain this topic more clearly in discussions and interviews.
+- **confidence rebuild** /ˈkɑnfədəns riˈbɪld/ (n) - process of restoring belief in your abilities  
+  _Example 1:_ Confidence rebuild started after one failed presentation.  
+  _Example 2:_ I practiced short explanation drills and got feedback from one trusted senior.  
+  _Example 3:_ Three months later, I could explain trade-offs clearly under pressure.
 
-- **self-awareness** /sˈɛlf əwˈɛrnəs/ (n) - understanding your strengths and limits  
-  _Example 1:_ Self-awareness helped me choose better projects.  
-  _Example 2:_ This topic came up in a real conversation with friends about work pressure.  
-  _Example 3:_ Now I can explain this topic more clearly in discussions and interviews.
+- **peer benchmark** /pɪr ˈbɛntʃmɑrk/ (n) - healthy way to compare with peers for learning, not self-attack  
+  _Example 1:_ I use peer benchmark to identify missing skills, not to judge my worth.  
+  _Example 2:_ It helps when benchmark is specific, like API design clarity, not vague "success."  
+  _Example 3:_ This keeps comparison useful and less emotional.
 
 **Additional useful terms:**
-- **progress marker** /prˈɑɡrˌɛs mˈɑrkɚ/ (n) - sign that you are improving
-- **confidence gap** /kˈɑnfədəns ɡˈæp/ (n) - difference between skill and self-belief
-- **peer learning** /pˈɪr lˈɝnɪŋ/ (n) - learning through colleagues
-- **promotion pressure** /prəmˈoʊʃən prˈɛʃɚ/ (n) - stress to advance quickly
-- **long game** /lˈɔŋ ɡˈeɪm/ (n) - long-term career perspective
+
+- **envy gap** /ˈɛnvi ɡæp/ (n) - distance between what you have and what you wish peers had less of
+- **invisible effort** /ɪnˈvɪzəbəl ˈɛfɚt/ (n) - hard work others do not see online
+- **self-respect baseline** /sɛlf rɪˈspɛkt ˈbeɪslaɪn/ (n) - minimum standard for how you treat yourself
+- **personal scoreboard** /ˈpɝsənəl ˈskɔrbɔrd/ (n) - your own tracking system for progress
+- **long-game mindset** /lɔŋ ɡeɪm ˈmaɪndsɛt/ (n) - focus on multi-year growth over short-term comparison
 
 </details>
 
 <details open>
 <summary><strong>2) Grammar & Useful Patterns (B2)</strong></summary>
 
-- **Present Perfect for personal growth**  
-  I have become more confident by tracking real progress.
+- **Present Perfect for emotional patterns**  
+  I have felt less anxious since I stopped measuring myself by titles only.
 
-- **Past Simple for key learning moment**  
-  I realized I was comparing my beginning to someone else's peak.
+- **Past Simple for turning point**  
+  I changed my benchmark after one project where I delivered strong impact but got no public praise.
 
 - **Contrast language**  
-  Comparing can motivate me, but it can also damage confidence.
+  Comparison can be useful for learning, but harmful for self-worth.
 
-- **Advice language**  
-  We should compare with our past self, not only with others.
+- **Reframing language**  
+  I am not behind; I am on a different timeline with different priorities.
 
-- **Conditionals for mindset**  
-  If I focus only on titles, I feel constant pressure.
+- **Conditionals for mindset risk**  
+  If I chase external validation only, my confidence becomes unstable.
 
 - **Reflection language**  
-  I used to think success meant promotion, but now I value ownership and learning.
+  I used to copy other people goals, but now I define progress by evidence.
 
 ### Useful Sentence Patterns
-- A time I felt imposter syndrome was...
-- What helped me most was...
-- I changed my benchmark from... to...
-- Comparison can be useful when..., but...
-- A practical habit I use is...
-- My definition of success now is...
+
+- A jealousy trigger for me is...
+- I noticed a comparison spiral when...
+- I changed my worth metric from... to...
+- The evidence that helped me was...
+- One confidence rebuild habit I use is...
+- My long-game view now is...
 
 </details>
 
@@ -110,86 +112,91 @@ description: Talk about confidence in real situations: comparing with peers, sel
 <summary><strong>3) Collocations, Chunking & Phrasal Verbs</strong></summary>
 
 ### Strong Collocations
-- manage self-doubt
-- build healthy confidence
-- track real progress
-- avoid comparison trap
-- set realistic goals
-- improve through feedback
-- focus on long-term growth
-- develop self-awareness
-- handle promotion pressure
-- learn from stronger peers
-- reflect on achievements
-- redefine personal success
+
+- identify jealousy triggers
+- interrupt comparison spiral
+- reframe negative self-talk
+- collect progress evidence
+- build stable self-worth
+- reduce validation dependence
+- set healthy peer benchmarks
+- recover from confidence dips
+- define personal success metrics
+- practice realistic self-evaluation
+- protect long-term motivation
+- turn envy into learning goals
 
 **Examples (real work):**
-- In one release week, we had to manage self-doubt while still trying to build healthy confidence.
-- In retro, we agreed to track real progress earlier so the same issue would not repeat.
+
+- After reading promotion announcements, I interrupted comparison spiral by reviewing my personal scoreboard.
+- That habit did not remove jealousy immediately, but it prevented emotional career decisions.
 
 ### Useful Chunking & Sentence Starters
-- Early in my career,...
-- I often compared myself to...
-- The problem with that was...
-- I changed my approach by...
-- A small habit that helped was...
-- This improved my confidence, but...
-- In interviews, I now explain...
-- My long-term goal is...
+
+- I felt behind when...
+- The story I told myself was...
+- What changed my perspective was...
+- I stopped doing..., and started...
+- One metric I trust now is...
+- I still feel jealousy sometimes, but...
+- The practical lesson for me is...
+- In interviews, I explain growth by...
 
 **Examples (using starters):**
-- "A real issue we faced was repeated timeout errors, so we paused rollout and checked logs first."
-- "To reduce risk, we shipped to 10% of users first, then expanded after QA sign-off."
+
+- "The story I told myself was wrong: I saw their highlight and compared it to my daily struggle."
+- "I still feel jealousy sometimes, but now I convert it into one concrete learning target."
 
 ### Useful Phrasal Verbs
-- **measure up** -> I felt I did not measure up at first.
-- **look up to** -> I look up to senior engineers, but I do not copy their path exactly.
-- **catch up** -> I focused on catching up in one skill at a time.
-- **write down** -> I write down wins after each sprint.
-- **move past** -> I moved past one failure by reviewing what I learned.
+
+- **measure up** -> I felt I could not measure up when I saw stronger peers.
+- **look up to** -> I look up to seniors for skill patterns, not for lifestyle comparison.
+- **catch up** -> I stopped trying to catch up in everything and focused on one gap.
+- **write down** -> I write down weekly wins to balance negative self-talk.
+- **move past** -> I moved past one confidence dip by reviewing evidence, not emotion.
 
 </details>
 
 <details open>
 <summary><strong>4) Typical Dialogues</strong></summary>
 
-### Dialogue 1 - Imposter Syndrome Example
+### Dialogue 1 - Jealousy and Honesty
 
-**Teacher:** Have you experienced imposter syndrome?
-
-**Learner:**  
-Yes, especially after joining a team of very senior engineers. I felt my code reviews were weaker than theirs.
-
-I asked for feedback, improved one skill each sprint, and tracked progress. Confidence grew slowly but steadily.
-
-### Dialogue 2 - Comparison Trade-off
-
-**Teacher:** Does comparison motivate or hurt you?
+**Teacher:** Do you feel jealous when peers grow faster?
 
 **Learner:**  
-Both. Comparison can push me to learn faster, but too much comparison hurts focus and confidence.
+Yes, sometimes. My jealousy trigger is seeing fast promotions online. I used to feel ashamed about that.
 
-Now I use comparison only for ideas, not as my main self-worth measure.
+Now I name it directly and convert it into one skill goal, like improving architecture communication.
 
-### Dialogue 3 - Defining Success
+### Dialogue 2 - Rebuilding Confidence
 
-**Teacher:** How do you define success now?
+**Teacher:** What helped you rebuild confidence after a setback?
 
 **Learner:**  
-I used to think success was title and salary only. Now I look at impact, ownership, and sustainable growth.
+After one failed demo, I started a progress evidence file with concrete outcomes. It included clearer explanations, better focus sessions, and stronger follow-through.
 
-This keeps me motivated, even when promotion timing is slower.
+That evidence helped me trust my growth again.
+
+### Dialogue 3 - Healthy Comparison
+
+**Teacher:** Is comparison always negative?
+
+**Learner:**  
+Not always. Healthy comparison gives direction. Unhealthy comparison attacks self-worth.
+
+I compare skills, not identity. That keeps me motivated without feeling inferior.
 
 </details>
 
 <details open>
 <summary><strong>5) Reading Text</strong></summary>
 
-Many developers feel pressure from social media, peer progress, and promotion expectations. This can create self-doubt, even when performance is strong. The goal is not to stop comparing completely, but to compare in a healthy way.
+Comparison is normal in tech because progress is visible: titles, salary updates, and public posts. The problem starts when comparison becomes identity judgment instead of learning input.
 
-Useful benchmarks are practical: quality of work, ownership, feedback, and skill growth over time. These are more stable than external signals like titles or online posts.
+Jealousy is not a personal failure. It is a signal. If used well, it can reveal what you truly want to improve. If ignored, it turns into self-attack and unstable motivation.
 
-In professional speaking, honesty and balance matter. You can admit self-doubt and still show clear growth actions.
+Strong professionals build confidence with evidence, not constant external validation. In speaking practice, show one emotional truth and one practical recovery action.
 
 </details>
 
@@ -197,25 +204,35 @@ In professional speaking, honesty and balance matter. You can admit self-doubt a
 <summary><strong>6) List of Questions + Ideas</strong></summary>
 
 ### Core Questions (must-practice)
-1. What does success mean to you now?
-2. Have you ever felt imposter syndrome at work?
-3. How do you stay motivated without unhealthy comparison?
-4. What career benchmark do you use today?
 
-### High-Value Case Questions
-5. Share one moment when self-doubt affected your work.
-6. Tell me about a feedback moment that improved your confidence.
-7. Describe a personal habit that helps you track progress.
+1. What usually triggers comparison or jealousy for you in career life?
+2. How do you stop a comparison spiral when it starts?
+3. Which worth metric do you use now to evaluate your progress?
+4. What practical habit helped your confidence rebuild after a setback?
 
-### Critical Discussion Questions
-8. Debate prompt: Does comparing yourself to others motivate or damage you?
-9. Is title more important than impact in tech careers?
-10. Should companies discuss imposter syndrome more openly?
+### High-Value Discussion Questions
+
+5. What are the benefits and limits of comparing yourself with high-performing peers?
+6. When does external validation help growth, and when does it become harmful?
+7. How should confidence-building differ for beginners vs experienced engineers?
+
+### Follow-up Questions (Challenge Assumptions)
+
+8. You said comparison motivates you. What hidden emotional cost have you paid?
+9. If your title improves but self-worth stays low, what is missing?
+10. If a friend is stuck in jealousy, would you advise empathy first or discipline first?
+
+### Reflection Questions
+
+11. Which sentence about yourself are you trying to stop repeating?
+12. What changed most in your mindset about success in the last year?
+13. In the long term, should self-worth come more from results or from values?
 
 **Tips for speaking practice:**
-- Be honest, but show action.
-- Use one real story and one lesson.
-- Keep language simple and personal.
+
+- Use one honest emotional example and one concrete behavior change.
+- Keep language direct: trigger -> thought -> action -> result.
+- Avoid perfect answers; realistic answers sound more credible.
 
 ---
 

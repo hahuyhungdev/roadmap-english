@@ -17,56 +17,57 @@ description: Final performance check with targeted gap analysis and concrete nex
 <summary><strong>1) Vocabulary </strong></summary>
 
 - **gap analysis** /ɡˈæp ənˈæləsəs/ (n) - review of strengths and weaknesses  
-  _Example 1:_ Gap analysis helped me focus on two priority skills.  
-  _Example 2:_ On a real project, gap analysis helped us explain the trade-off to product.  
-  _Example 3:_ That experience showed how gap analysis affects both speed and stability.
+  _Example 1:_ Gap analysis showed my strongest area was behavioral storytelling.  
+  _Example 2:_ It also showed weak follow-up handling under time pressure.  
+  _Example 3:_ This clarity made my final plan realistic.
 
 - **consistency** /kənsˈɪstənsi/ (n) - stable performance across many questions  
-  _Example 1:_ Consistency is more important than one perfect answer.  
-  _Example 2:_ During planning, we used consistency to make a safer release decision.  
-  _Example 3:_ In retro, we connected consistency with one clear lesson learned.
+  _Example 1:_ Consistency mattered more than one impressive but isolated answer.  
+  _Example 2:_ I aimed for stable B2 clarity across all sections.  
+  _Example 3:_ Stable performance increased confidence for real interviews.
 
 - **performance baseline** /pɚfˈɔrməns bˈeɪslˌaɪn/ (n) - current level used for improvement tracking  
-  _Example 1:_ Mock 1 gave me a performance baseline.  
-  _Example 2:_ In one sprint, performance baseline came up when we investigated a production issue.  
-  _Example 3:_ That experience showed how performance baseline affects both speed and stability.
+  _Example 1:_ Mock 1 gave me a baseline for filler count and answer length.  
+  _Example 2:_ Baseline metrics helped me track real progress, not feelings.  
+  _Example 3:_ Measured improvement was more motivating than guesswork.
 
 - **improvement roadmap** /ˌɪmprˈuvmənt rˈoʊdmˌæp/ (n) - step-by-step development plan  
-  _Example 1:_ I created a four-week improvement roadmap.  
-  _Example 2:_ For a customer-facing bug, improvement roadmap guided what we fixed first.  
-  _Example 3:_ That experience showed how improvement roadmap affects both speed and stability.
+  _Example 1:_ My improvement roadmap includes daily timed drills and weekly review cycles.  
+  _Example 2:_ Each action has one measurable target.  
+  _Example 3:_ Roadmap structure keeps momentum after mock interviews end.
 
 - **priority gap** /praɪˈɔrəti ɡˈæp/ (n) - weakness with highest improvement value  
-  _Example 1:_ My priority gap was answer structure under pressure.  
-  _Example 2:_ In our weekly review, priority gap was tied to delivery quality and risk.  
-  _Example 3:_ In retro, we connected priority gap with one clear lesson learned.
+  _Example 1:_ My priority gap was vague opening sentences in discussion questions.  
+  _Example 2:_ Fixing this gap improved all answer types, not just one section.  
+  _Example 3:_ Choosing one gap at a time improved execution.
 
 - **strength signal** /strˈɛŋkθ sˈɪɡnəl/ (n) - behavior showing clear competency  
-  _Example 1:_ Strong examples were my main strength signal.  
-  _Example 2:_ On a real project, strength signal helped us explain the trade-off to product.  
-  _Example 3:_ That experience showed how strength signal affects both speed and stability.
+  _Example 1:_ My strength signal was calm structure during hard follow-up questions.  
+  _Example 2:_ I supported claims with metrics and decision logic.  
+  _Example 3:_ Interviewers responded better to that clarity.
 
 - **band target** /bˈænd tˈɑrɡət/ (n) - communication level goal  
-  _Example 1:_ My band target is stable B2+/IELTS 7 style speaking.  
-  _Example 2:_ On a real project, band target helped us explain the trade-off to product.  
-  _Example 3:_ After that case, we added band target to our checklist for future releases.
+  _Example 1:_ My band target is stable B2+ with clear structure under pressure.  
+  _Example 2:_ I track target with weekly mock scores and transcript review.  
+  _Example 3:_ Consistency matters more than one perfect day.
 
 - **post-mortem review** /pˈoʊst mˈɔrtəm rˌivjˈu/ (n) - structured reflection after a major practice session  
-  _Example 1:_ We used post-mortem review after the mock.  
-  _Example 2:_ In our weekly review, post-mortem review was tied to delivery quality and risk.  
-  _Example 3:_ After that case, we added post-mortem review to our checklist for future releases.
+  _Example 1:_ My post-mortem review included top strengths, top gaps, and root causes.  
+  _Example 2:_ I used this to avoid repeating the same speaking mistakes.  
+  _Example 3:_ Post-mortem turned feedback into strategy.
 
 - **practice cadence** /prˈæktəs kˈeɪdəns/ (n) - regular training schedule  
-  _Example 1:_ Weekly practice cadence kept my progress steady.  
-  _Example 2:_ In our weekly review, practice cadence was tied to delivery quality and risk.  
-  _Example 3:_ In retro, we connected practice cadence with one clear lesson learned.
+  _Example 1:_ My practice cadence is 20 minutes daily plus one full mock per week.  
+  _Example 2:_ Cadence consistency matters more than occasional long practice sessions.  
+  _Example 3:_ Regular cadence kept improvement stable.
 
 - **actionable feedback** /ˈækʃənəbəl fˈidbˌæk/ (n) - feedback you can apply directly  
-  _Example 1:_ Actionable feedback helped me improve fast.  
-  _Example 2:_ For a customer-facing bug, actionable feedback guided what we fixed first.  
-  _Example 3:_ After that case, we added actionable feedback to our checklist for future releases.
+  _Example 1:_ Actionable feedback for me was: shorten opening to one sentence and add one metric.  
+  _Example 2:_ Specific feedback changed behavior faster than general comments.  
+  _Example 3:_ I now request feedback in this format intentionally.
 
 **Additional useful terms:**
+
 - **confidence dip** /kˈɑnfədəns dˈɪp/ (n) - moment when confidence drops
 - **response quality** /rɪspˈɑns kwˈɑləti/ (n) - usefulness and clarity of an answer
 - **tracking metric** /trˈækɪŋ mˈɛtrɪk/ (n) - measurable indicator of progress
@@ -97,6 +98,7 @@ description: Final performance check with targeted gap analysis and concrete nex
   I am committed to reviewing recorded answers every weekend.
 
 ### Useful Sentence Patterns
+
 - My strongest part today was...
 - One clear gap is...
 - Compared to last time, I...
@@ -110,6 +112,7 @@ description: Final performance check with targeted gap analysis and concrete nex
 <summary><strong>3) Collocations, Chunking & Phrasal Verbs</strong></summary>
 
 ### Strong Collocations
+
 - run final mock interview
 - evaluate speaking consistency
 - identify key performance gaps
@@ -124,10 +127,12 @@ description: Final performance check with targeted gap analysis and concrete nex
 - convert feedback into action
 
 **Examples (real work):**
-- In one release week, we had to run final mock interview while still trying to evaluate speaking consistency.
-- In retro, we agreed to identify key performance gaps earlier so the same issue would not repeat.
+
+- Comparing Mock 1 and final mock showed progress in timing, structure, and confidence under follow-ups.
+- The biggest gain came from focusing on two gaps only, not trying to fix everything.
 
 ### Useful Chunking & Sentence Starters
+
 - In this final mock,...
 - My strongest answer was...
 - The weakest part was...
@@ -138,10 +143,12 @@ description: Final performance check with targeted gap analysis and concrete nex
 - I will review progress by...
 
 **Examples (using starters):**
-- "A real issue we faced was repeated timeout errors, so we paused rollout and checked logs first."
-- "To reduce risk, we shipped to 10% of users first, then expanded after QA sign-off."
+
+- "The weakest part was long, unfocused opening answers under pressure."
+- "To fix that, I practiced one-minute openings with a timer and transcript review."
 
 ### Useful Phrasal Verbs
+
 - **look back** -> Looking back, my structure is much better now.
 - **tighten up** -> I need to tighten up my opening answers.
 - **work on** -> I will work on faster follow-up responses.
@@ -197,22 +204,32 @@ Interview progress comes from repetition and feedback loops. Clear structure, co
 <summary><strong>6) List of Questions + Ideas</strong></summary>
 
 ### Core Questions (must-practice)
-1. What were your strongest answers in the final mock?
-2. What were your two biggest remaining gaps?
-3. How will you practice before real interviews?
-4. How do you measure speaking improvement week by week?
 
-### High-Value Case Questions
-5. Compare your Mock 1 and Mock 2 performance with examples.
-6. Share one answer that improved a lot and why.
-7. Describe one weakness that is still hard to fix and your plan.
+1. What were your strongest responses in the final mock, and why?
+2. What are your top two remaining gaps before real interviews?
+3. How will you structure your 30-day improvement plan?
+4. Which metrics will you track weekly to measure speaking progress?
 
-### Critical Discussion Questions
-8. Is consistent B2 performance better than occasional advanced answers?
-9. How much mock practice is enough before real interviews?
-10. Should candidates focus more on language fluency or answer content?
+### High-Value Discussion Questions
+
+5. What are the benefits and limits of heavy mock-interview practice?
+6. When should candidates prioritize fluency, and when should they prioritize content depth?
+7. How should final preparation differ between beginners and experienced candidates?
+
+### Follow-up Questions (Challenge Assumptions)
+
+8. You said your progress is strong. Which weak signal suggests risk remains?
+9. If metrics improve but confidence still drops in real interviews, what is missing?
+10. If your plan is realistic but boring, how will you keep consistency?
+
+### Reflection Questions
+
+11. Which feedback point do you still resist emotionally?
+12. What one practice habit gave you the highest return?
+13. In final interview readiness, what matters more: strict routine or adaptive strategy?
 
 **Tips for speaking practice:**
+
 - Keep one weekly review cycle: practice -> record -> review -> adjust.
 - Focus on top two gaps only, not everything at once.
 - Use practical metrics: answer length, filler count, and clarity score.

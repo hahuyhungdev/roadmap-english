@@ -16,56 +16,57 @@ description: Explain how you use AI tools in daily engineering work, where they 
 <summary><strong>1) Vocabulary </strong></summary>
 
 - **code assistant** /koʊd əˈsɪstənt/ (n) - AI tool that suggests code  
-  _Example 1:_ I use a code assistant to scaffold React form components.  
-  _Example 2:_ During release week, code assistant helped us make a safer decision.  
-  _Example 3:_ After QA feedback, code assistant was added to our rollout checklist.
+  _Example 1:_ I use a code assistant to scaffold React form components and test stubs.  
+  _Example 2:_ We reduced setup time, but still reviewed every suggestion before merge.  
+  _Example 3:_ In interviews, I explain code assistant as support, not replacement.
 
 - **boilerplate** /ˈbɔɪlərˌpleɪt/ (n) - repeated code patterns  
-  _Example 1:_ AI is helpful for boilerplate, but I review every line before commit.  
-  _Example 2:_ In a recent sprint, boilerplate became a key point in our planning discussion.  
-  _Example 3:_ This quarter, boilerplate helped us reduce repeated support requests.
+  _Example 1:_ AI is useful for boilerplate in API handlers and validation schemas.  
+  _Example 2:_ Boilerplate generation saved time during sprint kickoff.  
+  _Example 3:_ We still enforce lint and review to keep boilerplate quality consistent.
 
 - **unit test** /ˈjuːnɪt tɛst/ (n) - small test for one function or component  
-  _Example 1:_ We ask AI for unit test ideas, then adjust edge cases manually.  
-  _Example 2:_ For one customer case, unit test changed how we prioritized tasks.  
-  _Example 3:_ In one incident review, unit test explained why the bug happened.
+  _Example 1:_ We ask AI for unit test drafts, then add edge cases manually.  
+  _Example 2:_ Missing unit tests caused a pricing bug to reach staging last month.  
+  _Example 3:_ Better unit test coverage reduced rework in code review.
 
 - **debugging** /diˈbʌɡɪŋ/ (n) - finding and fixing problems  
-  _Example 1:_ AI helps me read logs faster during debugging.  
-  _Example 2:_ For one customer case, debugging changed how we prioritized tasks.  
-  _Example 3:_ After QA feedback, debugging was added to our rollout checklist.
+  _Example 1:_ AI helps me summarize long logs during debugging.  
+  _Example 2:_ It speeds up hypothesis generation, but root cause still needs human checks.  
+  _Example 3:_ I use debugging notes to explain issues clearly in stand-up.
 
 - **prompt** /prɑːmpt/ (n) - instruction given to an AI tool  
   _Example 1:_ A clear prompt gives better output and fewer random suggestions.  
-  _Example 2:_ For one customer case, prompt changed how we prioritized tasks.  
-  _Example 3:_ This quarter, prompt helped us reduce repeated support requests.
+  _Example 2:_ Our prompt template includes context, expected format, and constraints.  
+  _Example 3:_ Better prompts reduced time spent rewriting AI output.
 
 - **hallucination** /həˌluːsəˈneɪʃən/ (n) - incorrect AI output that sounds confident  
-  _Example 1:_ We saw hallucination in API usage, so we verified docs first.  
-  _Example 2:_ In a recent sprint, hallucination became a key point in our planning discussion.  
-  _Example 3:_ We mentioned hallucination in stand-up when blockers appeared.
+  _Example 1:_ We saw hallucination in an authentication snippet, so we checked official docs.  
+  _Example 2:_ One hallucinated function name caused integration delay for half a day.  
+  _Example 3:_ Now we mark uncertain AI output before using it in production code.
 
 - **security-critical** /sɪˈkjʊrəti ˈkrɪtɪkəl/ (adj) - related to sensitive security logic  
-  _Example 1:_ We never paste security-critical code into external tools.  
-  _Example 2:_ From a business view, this risk was clearly security-critical.  
-  _Example 3:_ Later, stakeholders said the safer option was less security-critical.
+  _Example 1:_ We never paste security-critical code or customer tokens into external AI tools.  
+  _Example 2:_ Security-critical modules always require senior review and threat checks.  
+  _Example 3:_ This rule slows us down, but protects production systems.
 
 - **compliance** /kəmˈplaɪəns/ (n) - following legal or company rules  
-  _Example 1:_ Compliance rules limit what data we can share with AI tools.  
-  _Example 2:_ In a recent sprint, compliance became a key point in our planning discussion.  
-  _Example 3:_ After QA feedback, compliance was added to our rollout checklist.
+  _Example 1:_ Compliance rules limit what customer data can appear in prompts.  
+  _Example 2:_ We anonymize logs before AI-assisted analysis to stay compliant.  
+  _Example 3:_ Compliance checks are part of our pull request template.
 
 - **review** /rɪˈvjuː/ (n/v) - checking code quality and correctness  
   _Example 1:_ Human review is still mandatory before merge.  
-  _Example 2:_ In a recent sprint, review became a key point in our planning discussion.  
-  _Example 3:_ We mentioned review in stand-up when blockers appeared.
+  _Example 2:_ Review catches logic gaps that AI-generated tests may miss.  
+  _Example 3:_ We require one reviewer to check maintainability, not only correctness.
 
 - **regression** /rɪˈɡrɛʃən/ (n) - new change breaks old behavior  
-  _Example 1:_ AI suggestions can cause regression if we skip tests.  
-  _Example 2:_ For one customer case, regression changed how we prioritized tasks.  
-  _Example 3:_ After QA feedback, regression was added to our rollout checklist.
+  _Example 1:_ AI suggestions can cause regression if we skip domain-specific tests.  
+  _Example 2:_ One regression passed unit tests but failed in real checkout flow.  
+  _Example 3:_ Regression prevention now includes contract tests and manual smoke checks.
 
 **Additional useful terms:**
+
 - **context window** /ˈkɑːntɛkst ˈwɪndoʊ/ (n) - amount of text AI can process at once
 - **autocomplete** /ˌɔːtoʊkəmˈpliːt/ (n) - automatic code suggestions
 - **false positive** /ˌfɔːls ˈpɑːzətɪv/ (n) - warning that looks real but is not
@@ -96,6 +97,7 @@ description: Explain how you use AI tools in daily engineering work, where they 
   Last sprint, AI helped us generate tests, but we rewrote many assertions.
 
 ### Useful Sentence Patterns
+
 - I use AI mostly for..., not for...
 - It saves time, but...
 - A real example is...
@@ -109,6 +111,7 @@ description: Explain how you use AI tools in daily engineering work, where they 
 <summary><strong>3) Collocations, Chunking & Phrasal Verbs</strong></summary>
 
 ### Strong Collocations
+
 - generate test drafts
 - speed up debugging
 - review AI output
@@ -123,10 +126,12 @@ description: Explain how you use AI tools in daily engineering work, where they 
 - set clear usage boundaries
 
 **Examples (real work):**
-- In one release week, we had to generate test drafts while still trying to speed up debugging.
-- In retro, we agreed to review AI output earlier so the same issue would not repeat.
+
+- In one sprint, AI helped us draft tests quickly, but manual review removed several risky assumptions.
+- We saved coding time overall, yet added stricter verification before production deployment.
 
 ### Useful Chunking & Sentence Starters
+
 - In my daily workflow, I use AI to...
 - A good use case is...
 - One bad use case is...
@@ -137,10 +142,12 @@ description: Explain how you use AI tools in daily engineering work, where they 
 - In production code, I always...
 
 **Examples (using starters):**
-- "A real issue we faced was repeated timeout errors, so we paused rollout and checked logs first."
-- "To reduce risk, we shipped to 10% of users first, then expanded after QA sign-off."
+
+- "A good use case is generating initial test cases, then adapting them to real business rules."
+- "To stay safe, we never copy AI output directly into security-sensitive modules."
 
 ### Useful Phrasal Verbs
+
 - **speed up** -> AI can speed up test setup.
 - **check over** -> I always check over generated code.
 - **leave out** -> Sometimes AI leaves out edge cases.
@@ -196,25 +203,35 @@ In interviews, practical answers are best: explain where AI saves time, where it
 <summary><strong>6) List of Questions + Ideas</strong></summary>
 
 ### Core Questions (must-practice)
-1. How do you use AI tools in your daily workflow?
-2. Which tasks are good for AI support and which are not?
-3. How do you prevent bugs from AI-generated code?
-4. What team rule do you follow when using AI tools?
 
-### High-Value Case Questions
-5. Share a case where AI saved real engineering time.
-6. Tell me about a bug caused by AI output and what changed after that.
-7. Describe how AI changed your role in code review.
+1. How do you use AI in one real daily workflow from start to finish?
+2. Which tasks do you still do manually, and why?
+3. How do you package context before writing a prompt?
+4. What verification steps do you run before accepting AI output?
 
-### Critical Discussion Questions
-8. Does AI make junior developers learn slower?
-9. Should teams allow AI in all parts of the codebase?
-10. Who is responsible when AI-generated code fails in production?
+### High-Value Discussion Questions
+
+5. What are the benefits and limits of prompt-based coding support?
+6. How do speed gains from AI compare with quality and security risks?
+7. How does heavy AI usage change learning paths for beginners vs experienced engineers?
+
+### Follow-up Questions (Challenge Assumptions)
+
+8. You said AI saves time. Where did rework increase later?
+9. If a prompt gives clean code but wrong logic, what failed in your process?
+10. If AI output passes tests but hurts maintainability, should you still merge it?
+
+### Reflection Questions
+
+11. Which part of your workflow became better because of AI, and which part got worse?
+12. What personal rule helps you stay responsible when using AI?
+13. In the long term, will prompt quality become as important as coding quality?
 
 **Tips for speaking practice:**
-- Mention one real tool and one real task.
-- Include one trade-off in each answer.
-- Keep your language operational, not abstract.
+
+- Use one concrete prompt example and explain your context clearly.
+- Always include one risk-control step (review, test, or security check).
+- Keep answers grounded in decisions, not tool hype.
 
 ---
 

@@ -16,62 +16,63 @@ description: Explain incident investigation steps (logs, timeline, root cause) a
 <details open>
 <summary><strong>1) Vocabulary </strong></summary>
 
-- **root cause** /rˈut kˈɑz/ (n) - the main reason a problem happened  
-  _Example 1:_ The root cause was a missing validation check.  
-  _Example 2:_ We used this in a production case to decide the next safe step.  
-  _Example 3:_ Using this consistently made handoff and review much smoother.
+- **root cause** /rˈut kˈɑz/ (n) - the main reason a failure happened  
+  _Example 1:_ The root cause was a missing index on a high-traffic query.  
+  _Example 2:_ We confirmed root cause by comparing query plans before and after deploy.  
+  _Example 3:_ In interviews, I explain root cause with evidence, not guesses.
 
-- **incident** /ˈɪnsədənt/ (n) - serious production problem  
-  _Example 1:_ We had an incident during peak payment hours.  
-  _Example 2:_ In one release, this became important when priorities changed quickly.  
-  _Example 3:_ After that case, we added it to our normal workflow.
+- **timeline** /ˈtaɪmˌlaɪn/ (n) - clear sequence of what happened and when  
+  _Example 1:_ We built a timeline from deployment logs and alert timestamps.  
+  _Example 2:_ It showed the first failure happened four minutes after migration.  
+  _Example 3:_ A clear timeline helped leadership understand impact quickly.
 
-- **timeline** /tˈaɪmlaɪn/ (n) - sequence of events over time  
-  _Example 1:_ We created a timeline to understand what failed first.  
-  _Example 2:_ We used this in a production case to decide the next safe step.  
-  _Example 3:_ Using this consistently made handoff and review much smoother.
+- **log review** /lˈɔɡ rɪvjˈu/ (n) - checking logs to find patterns and errors  
+  _Example 1:_ Log review linked API timeouts to one database lock.  
+  _Example 2:_ We reviewed backend logs with payment gateway response codes side by side.  
+  _Example 3:_ It reduced debate because all teams looked at the same evidence.
 
-- **log analysis** /lˈɔɡ ənˈæləsəs/ (n) - reading logs to find patterns and errors  
-  _Example 1:_ Log analysis showed repeated timeout errors.  
-  _Example 2:_ We discussed this in stand-up to keep the team aligned.  
-  _Example 3:_ Now I mention this early so product and engineering stay on the same page.
+- **hypothesis** /haɪpˈɑθəsəs/ (n) - testable explanation of what might be wrong  
+  _Example 1:_ Our first hypothesis was cache failure, but metrics disproved it.  
+  _Example 2:_ We tested each hypothesis in order of impact and probability.  
+  _Example 3:_ Good debugging means changing hypotheses when data changes.
 
-- **5 Whys** /fˈaɪv wˈaɪz/ (n) - method of asking why several times  
-  _Example 1:_ We used 5 Whys to avoid shallow conclusions.  
-  _Example 2:_ We used this in a production case to decide the next safe step.  
-  _Example 3:_ Using this consistently made handoff and review much smoother.
+- **reproduction steps** /rˌiprədˈʌkʃən stˈɛps/ (n) - repeatable steps to trigger the issue  
+  _Example 1:_ QA wrote reproduction steps for one specific coupon flow.  
+  _Example 2:_ These steps helped engineers verify the fix quickly.  
+  _Example 3:_ We now require reproduction steps in every RCA note.
 
-- **downtime** /dˈaʊntˌaɪm/ (n) - period when service is unavailable  
-  _Example 1:_ Downtime lasted about 45 minutes.  
-  _Example 2:_ We discussed this in stand-up to keep the team aligned.  
-  _Example 3:_ Now I mention this early so product and engineering stay on the same page.
+- **impact window** /ˈɪmpækt wˈɪndoʊ/ (n) - exact time period users were affected  
+  _Example 1:_ The impact window was from 10:12 to 10:54 AM.  
+  _Example 2:_ This number helped support answer customer complaints accurately.  
+  _Example 3:_ Impact window is clearer than saying "about one hour".
 
-- **affected users** /əfˈɛktɪd jˈuzɚz/ (n) - users impacted by the issue  
-  _Example 1:_ Around 2,000 users were affected.  
-  _Example 2:_ We used this in a production case to decide the next safe step.  
-  _Example 3:_ Using this consistently made handoff and review much smoother.
+- **affected users** /əfˈɛktɪd ˈjuːzɚz/ (n) - number of users impacted by a failure  
+  _Example 1:_ We estimated about 8,000 affected users during the incident window.  
+  _Example 2:_ Product used this number to plan customer communication.  
+  _Example 3:_ I always mention affected users when explaining impact.
 
-- **lost transactions** /lˈɔst trænzˈækʃənz/ (n) - payments/orders that failed  
-  _Example 1:_ The bug caused lost transactions for three hours.  
-  _Example 2:_ We discussed this in stand-up to keep the team aligned.  
-  _Example 3:_ Now I mention this early so product and engineering stay on the same page.
+- **business impact** /ˈbɪznəs ˈɪmpækt/ (n) - measurable effect on users, revenue, or support load  
+  _Example 1:_ Business impact included checkout drop and a spike in support tickets.  
+  _Example 2:_ Sharing impact clearly helped leadership prioritize response.  
+  _Example 3:_ Even rough impact estimates improve decision quality.
 
-- **mitigation** /mˌɪtɪɡˈeɪʃən/ (n) - short-term action to reduce damage  
-  _Example 1:_ Our first mitigation was to disable one unstable endpoint.  
-  _Example 2:_ We used this in a production case to decide the next safe step.  
-  _Example 3:_ Using this consistently made handoff and review much smoother.
+- **mitigation** /mˌɪtɪɡˈeɪʃən/ (n) - short-term action to reduce damage fast  
+  _Example 1:_ Our first mitigation was disabling one faulty validation branch.  
+  _Example 2:_ Mitigation restored partial service before full fix deployment.  
+  _Example 3:_ We separate mitigation from final fix in all incident reviews.
 
-- **post-mortem** /pˈoʊst mˈɔrtəm/ (n) - review after incident  
-  _Example 1:_ We wrote a post-mortem and tracked follow-up tasks.  
-  _Example 2:_ We discussed this in stand-up to keep the team aligned.  
-  _Example 3:_ Now I mention this early so product and engineering stay on the same page.
+- **corrective action** /kɚˈɛktɪv ˈækʃən/ (n) - long-term change that removes the root weakness  
+  _Example 1:_ Corrective action included query optimization and migration checks in CI.  
+  _Example 2:_ We assigned owners and due dates for each corrective action.  
+  _Example 3:_ Corrective actions matter more than long discussions in post-incident meetings.
 
 **Additional useful terms:**
-- **alert fatigue** /əlˈɝt fətˈiɡ/ (n) - too many alerts reduce response quality
-- **detection gap** /dɪtˈɛkʃən ɡˈæp/ (n) - delay between issue start and detection
-- **containment** /kəntˈeɪnmənt/ (n) - actions to stop issue spread
-- **permanent fix** /pˈɝmənənt fˈɪks/ (n) - long-term solution
-- **owner** /ˈoʊnɚ/ (n) - person responsible for follow-up
+
+- **error rate** /ˈɛrɚ reɪt/ (n) - percentage of requests that fail
+- **status update** /ˈsteɪtəs ˈʌpˌdeɪt/ (n) - short progress message during incident response
+- **evidence** /ˈɛvədəns/ (n) - facts that support your conclusion
+- **confidence level** /kˈɑnfədəns lˈɛvəl/ (n) - certainty of your diagnosis
+- **RCA summary** /ˌɑɹ si ˈeɪ sˈʌmɚi/ (n) - short final report of cause, impact, and actions
 
 </details>
 
@@ -97,6 +98,7 @@ description: Explain incident investigation steps (logs, timeline, root cause) a
   We will add monitoring so the same issue is detected faster.
 
 ### Useful Sentence Patterns
+
 - The incident started when...
 - The root cause was...
 - We confirmed it by...
@@ -110,42 +112,48 @@ description: Explain incident investigation steps (logs, timeline, root cause) a
 <summary><strong>3) Collocations, Chunking & Phrasal Verbs</strong></summary>
 
 ### Strong Collocations
+
 - identify root cause
-- quantify business impact
-- analyze production logs
-- restore service quickly
-- reduce detection time
-- ship a hotfix safely
-- write a clear post-mortem
-- assign follow-up owners
-- prevent repeat incidents
-- improve alert quality
-- track reliability metrics
-- communicate status updates
+- build incident timeline
+- review logs and metrics
+- test debugging hypotheses
+- reproduce issue steps
+- quantify impact window
+- estimate affected users
+- explain business impact
+- apply short-term mitigation
+- define corrective actions
+- document evidence
+- assign action owners
 
 **Examples (real work):**
-- In one release week, we had to identify root cause while still trying to quantify business impact.
-- In retro, we agreed to analyze production logs earlier so the same issue would not repeat.
+
+- In one payment incident, we first built the timeline, then reviewed API and database logs.
+- That sequence helped us stop guessing and quantify impact with numbers leadership could act on.
 
 ### Useful Chunking & Sentence Starters
+
 - At first, we thought...
 - After log analysis, we found...
-- The main impact was...
-- We took a short-term step to...
-- The permanent fix was...
+- The main impact window was...
+- Our first mitigation was...
+- The corrective action was...
+- Evidence showed that...
 - A key lesson was...
 - Next time, we will...
 
 **Examples (using starters):**
-- "A real issue we faced was repeated timeout errors, so we paused rollout and checked logs first."
-- "To reduce risk, we shipped to 10% of users first, then expanded after QA sign-off."
+
+- "After log analysis, we found lock contention started right after one schema change."
+- "The corrective action was adding migration guardrails and query performance alerts."
 
 ### Useful Phrasal Verbs
-- **track down** -> We tracked down the failing query.
-- **shut off** -> We shut off one feature flag to stabilize traffic.
-- **bring back** -> We brought back full service after the fix.
-- **write up** -> I wrote up the timeline for the post-mortem.
-- **follow through** -> We followed through on every prevention task.
+
+- **trace back** -> We traced back the error spike to one deployment step.
+- **rule out** -> We ruled out cache issues after checking hit-rate metrics.
+- **narrow down** -> We narrowed down the failure to one endpoint and one query.
+- **patch up** -> We patched up the query path before full refactor.
+- **write up** -> I wrote up RCA findings with impact numbers and owners.
 
 </details>
 
@@ -159,7 +167,7 @@ description: Explain incident investigation steps (logs, timeline, root cause) a
 **You:**  
 We had a payment incident after a release. Users got timeout errors during checkout. We checked logs, compared old and new queries, and found an index issue as the root cause.
 
-We rolled back first, then shipped a safer fix. It restored service quickly, but we lost some transactions before mitigation.
+We rolled back first, then shipped a safer fix. It restored service quickly, but many users were affected before mitigation.
 
 ### Dialogue 2 - Quantifying Impact
 
@@ -196,25 +204,35 @@ A good post-mortem should be practical: what happened, what we fixed, and what a
 <summary><strong>6) List of Questions + Ideas</strong></summary>
 
 ### Core Questions (must-practice)
-1. How do you investigate a production bug step by step?
-2. What data do you use to find root cause?
-3. How do you quantify incident impact for non-technical teams?
-4. What makes a post-mortem useful?
 
-### High-Value Case Questions
-5. Share a real incident and your role in the investigation.
-6. Tell me about a wrong assumption during debugging and how you corrected it.
-7. Describe one prevention change that reduced future incident risk.
+1. How do you run RCA step by step after a production failure?
+2. Which logs, metrics, and traces do you check first, and why?
+3. How do you quantify impact window, affected transactions, and revenue risk?
+4. How do you present RCA findings to non-technical stakeholders?
 
-### Critical Discussion Questions
-8. Should teams optimize for faster recovery or perfect diagnosis first?
-9. Is it okay to ship a quick hotfix with known limitations?
-10. Who should own post-mortem follow-up actions?
+### High-Value Discussion Questions
+
+5. What are the benefits and limits of deep diagnosis before choosing a fix?
+6. When is a fast mitigation acceptable, and when does it create bigger long-term risk?
+7. How should RCA depth differ between beginner and experienced engineers?
+
+### Follow-up Questions (Challenge Assumptions)
+
+8. You said your root cause is clear. Which alternative cause did you rule out, and how?
+9. If business impact looked low at first but grew later, what did your analysis miss?
+10. If teams disagree on evidence, who makes the final RCA decision and why?
+
+### Reflection Questions
+
+11. Which part of RCA is hardest for you to explain in English?
+12. What debugging habit most improved your diagnosis quality?
+13. In the long term, will engineers be judged more by recovery speed or diagnosis quality?
 
 **Tips for speaking practice:**
-- Use a clear sequence: incident -> analysis -> fix -> prevention.
-- Include at least one number in impact.
-- Keep blame out; focus on learning and system improvement.
+
+- Use a clear sequence: signal -> analysis -> impact -> action.
+- Include at least two numbers: impact window and affected transactions.
+- Separate mitigation and corrective action in your answer.
 
 ---
 

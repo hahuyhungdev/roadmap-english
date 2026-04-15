@@ -17,61 +17,62 @@ description: Talk about real-time response: role in outage, coordination, status
 <summary><strong>1) Vocabulary </strong></summary>
 
 - **outage** /ˈaʊtədʒ/ (n) - period when service is down  
-  _Example 1:_ We had a major outage during a marketing campaign.  
-  _Example 2:_ This came up during sprint planning when we balanced speed and quality.  
-  _Example 3:_ This helped us reduce rework in the next sprint.
+  _Example 1:_ We had a major outage during a seasonal campaign launch.  
+  _Example 2:_ My first task was opening a response channel and assigning roles.  
+  _Example 3:_ In interviews, I describe outage handling in time order.
 
 - **on-call** /ˈɑn kˈɔl/ (adj/n) - engineer responsible for urgent issues  
-  _Example 1:_ I was on-call when the alerts started.  
-  _Example 2:_ In one release, this became important when priorities changed quickly.  
-  _Example 3:_ After that case, we added it to our normal workflow.
+  _Example 1:_ I was on-call when alerts fired at 2:10 AM.  
+  _Example 2:_ On-call ownership included triage, coordination, and clear updates.  
+  _Example 3:_ We improved on-call handover to reduce response delays.
 
-- **escalation** /ˌɛskəlˈeɪʃən/ (n) - raising issue to higher support level  
-  _Example 1:_ We escalated to database team within 10 minutes.  
-  _Example 2:_ We discussed this in stand-up to keep the team aligned.  
-  _Example 3:_ Now I mention this early so product and engineering stay on the same page.
+- **incident commander** /ˈɪnsədənt kəmˈændɚ/ (n) - person coordinating incident response  
+  _Example 1:_ The incident commander assigned one owner for each response stream.  
+  _Example 2:_ This reduced duplicate messages and confusion in the first 20 minutes.  
+  _Example 3:_ Clear command structure lowered stress for the whole team.
 
-- **war room** /wˈɔr rˈum/ (n) - focused channel/meeting during incident  
-  _Example 1:_ We opened a war room to coordinate quickly.  
-  _Example 2:_ We used this in a production case to decide the next safe step.  
-  _Example 3:_ Using this consistently made handoff and review much smoother.
+- **bridge call** /bɹˈɪdʒ kˈɔl/ (n) - live call for incident coordination  
+  _Example 1:_ We started a bridge call for engineering, support, and product leads.  
+  _Example 2:_ One person spoke to customers, while engineers focused on service restore.  
+  _Example 3:_ Bridge calls work best with short, structured updates.
 
-- **status update** /stˈætəs əpdˈeɪt/ (n) - clear progress message during incident  
-  _Example 1:_ We sent status updates every 15 minutes.  
-  _Example 2:_ We discussed this in stand-up to keep the team aligned.  
-  _Example 3:_ Now I mention this early so product and engineering stay on the same page.
+- **status cadence** /stˈætəs kˈeɪdəns/ (n) - fixed rhythm for updates during an incident  
+  _Example 1:_ We used a 15-minute status cadence during the outage.  
+  _Example 2:_ Predictable cadence kept stakeholders calm and aligned.  
+  _Example 3:_ Cadence is more useful than random updates under pressure.
 
-- **containment** /kəntˈeɪnmənt/ (n) - action to stop issue from getting worse  
-  _Example 1:_ First containment step was disabling one faulty job.  
-  _Example 2:_ This came up during sprint planning when we balanced speed and quality.  
-  _Example 3:_ This helped us reduce rework in the next sprint.
+- **stakeholder broadcast** /stˈeɪkhoʊldɚ bɹˈɔdkˌæst/ (n) - short update shared to non-engineering teams  
+  _Example 1:_ We posted a stakeholder broadcast with impact, action, and ETA.  
+  _Example 2:_ Support used the message to answer customer tickets consistently.  
+  _Example 3:_ One clear broadcast prevented conflicting internal messages.
 
-- **rollback** /rˈoʊlbˌæk/ (n/v) - return to previous stable version  
-  _Example 1:_ We rolled back the release to restore service.  
-  _Example 2:_ We discussed this in stand-up to keep the team aligned.  
-  _Example 3:_ Now I mention this early so product and engineering stay on the same page.
+- **escalation** /ˌɛskəlˈeɪʃən/ (n) - raising an issue to a higher support level  
+  _Example 1:_ We escalated to database team within 12 minutes.  
+  _Example 2:_ Escalation worked because ownership boundaries were clear.  
+  _Example 3:_ I explain escalation timing when describing incident communication quality.
 
-- **blast radius** /blˈæst rˈeɪdiəs/ (n) - how widely an issue spreads  
-  _Example 1:_ Feature flags helped reduce blast radius.  
-  _Example 2:_ We discussed this in stand-up to keep the team aligned.  
-  _Example 3:_ Now I mention this early so product and engineering stay on the same page.
+- **rollback decision** /rˈoʊlbˌæk dəsˈɪʒən/ (n) - explicit choice to revert release under pressure  
+  _Example 1:_ We made a rollback decision after error rate passed 20%.  
+  _Example 2:_ Rolling back fast restored service but delayed one planned feature launch.  
+  _Example 3:_ Good rollback decisions are based on thresholds, not panic.
 
-- **post-mortem** /pˈoʊst mˈɔrtəm/ (n) - review after incident  
-  _Example 1:_ Our post-mortem focused on process gaps, not blame.  
-  _Example 2:_ We discussed this in stand-up to keep the team aligned.  
-  _Example 3:_ Now I mention this early so product and engineering stay on the same page.
+- **ETA** /ˌi ti ˈeɪ/ (n) - estimated time to recovery  
+  _Example 1:_ We updated ETA every cycle as evidence changed.  
+  _Example 2:_ Honest ETA updates built trust even before full recovery.  
+  _Example 3:_ I avoid fake-precise ETAs when uncertainty is high.
 
-- **runbook** /ˈrʌnˌbʊk/ (n) - predefined incident handling guide  
-  _Example 1:_ The runbook gave us clear first-response steps.  
-  _Example 2:_ We used this in a production case to decide the next safe step.  
-  _Example 3:_ Using this consistently made handoff and review much smoother.
+- **service restoration** /sˈɝvəs ɹˌɛstɚˈeɪʃən/ (n) - process of bringing service back to stable state  
+  _Example 1:_ Service restoration happened in two steps: partial traffic, then full traffic.  
+  _Example 2:_ We confirmed stability before announcing full restoration.  
+  _Example 3:_ Recovery communication was as important as technical actions.
 
 **Additional useful terms:**
-- **incident commander** /ˈɪnsədənt kəmˈændɚ/ (n) - person leading incident response
-- **handover** /hˈændoʊvɚ/ (n) - transfer of incident context
-- **ETA** /i ti eɪ/ (n) - estimated time to recovery
-- **service degradation** /sˈɝvəs dˌɛɡrədˈeɪʃən/ (n) - service works but with poor quality
-- **communication channel** /kəmjˌunəkˈeɪʃən tʃˈænəl/ (n) - place for updates and coordination
+
+- **handover note** /hˈændoʊvɚ nˈoʊt/ (n) - summary when incident ownership shifts
+- **severity level** /səvˈɛɹəti lˈɛvəl/ (n) - incident urgency classification
+- **customer update** /kˈʌstəmɚ ˈʌpdeɪt/ (n) - external status message for users
+- **comms owner** /kˈɑmz ˈoʊnɚ/ (n) - person responsible for communication stream
+- **recovery checkpoint** /ɹɪkˈʌvɚi tʃˈɛkpɔɪnt/ (n) - predefined step to verify stability during restore
 
 </details>
 
@@ -97,6 +98,7 @@ description: Talk about real-time response: role in outage, coordination, status
   We will improve alert rules to detect this earlier.
 
 ### Useful Sentence Patterns
+
 - During the incident, my role was...
 - The first thing we did was...
 - We kept everyone updated by...
@@ -110,24 +112,27 @@ description: Talk about real-time response: role in outage, coordination, status
 <summary><strong>3) Collocations, Chunking & Phrasal Verbs</strong></summary>
 
 ### Strong Collocations
+
 - handle production outage
-- coordinate incident response
-- send regular status updates
-- reduce blast radius
-- execute rollback plan
-- restore customer trust
-- manage team stress
-- document incident timeline
-- run post-mortem review
-- improve on-call readiness
-- close communication gaps
-- prevent repeat failures
+- coordinate bridge call
+- assign incident roles
+- send status broadcasts
+- escalate to right team
+- make rollback decision
+- publish realistic ETA
+- protect communication clarity
+- reduce stakeholder panic
+- verify recovery checkpoints
+- hand over context cleanly
+- confirm service restoration
 
 **Examples (real work):**
-- In one release week, we had to handle production outage while still trying to coordinate incident response.
-- In retro, we agreed to send regular status updates earlier so the same issue would not repeat.
+
+- During one outage, engineering fixed service while comms owner posted updates every 15 minutes.
+- This split kept technical work focused and reduced confusion across product and support.
 
 ### Useful Chunking & Sentence Starters
+
 - As soon as alerts fired,...
 - My first priority was...
 - We quickly set up...
@@ -138,15 +143,17 @@ description: Talk about real-time response: role in outage, coordination, status
 - The key lesson was...
 
 **Examples (using starters):**
-- "A real issue we faced was repeated timeout errors, so we paused rollout and checked logs first."
-- "To reduce risk, we shipped to 10% of users first, then expanded after QA sign-off."
+
+- "As soon as alerts fired, we opened a bridge call and assigned one incident commander."
+- "One hard decision was rolling back fast even though it delayed the campaign feature."
 
 ### Useful Phrasal Verbs
+
 - **jump in** -> I jumped in to coordinate updates.
-- **lock down** -> We locked down deployments during investigation.
-- **roll back** -> We rolled back the newest release.
-- **calm down** -> I focused on clear steps to calm down the team.
-- **write up** -> We wrote up the incident report the same day.
+- **lock down** -> We locked down deployments while restoration was in progress.
+- **roll back** -> We rolled back the newest release after threshold breach.
+- **hand off** -> I handed off clean context to the next on-call engineer.
+- **speak up** -> I spoke up when ETA confidence was too low.
 
 </details>
 
@@ -197,25 +204,35 @@ After recovery, post-mortem work is critical. Without it, teams repeat the same 
 <summary><strong>6) List of Questions + Ideas</strong></summary>
 
 ### Core Questions (must-practice)
-1. What do you do in the first 10 minutes of an outage?
-2. How do you split roles during incident response?
-3. How do you communicate with non-technical stakeholders under pressure?
-4. What makes a good post-mortem?
 
-### High-Value Case Questions
-5. Share a case where rollback was the best decision.
-6. Tell me about a hard trade-off during incident handling.
-7. Describe one change that improved your on-call process.
+1. What are your first 10-minute actions during a production outage?
+2. How do you assign roles across incident commander, responders, and comms owner?
+3. How do you keep status cadence clear for product and support teams?
+4. When do you decide rollback instead of continuing investigation?
 
-### Critical Discussion Questions
-8. Should teams optimize for fast rollback or root cause first?
-9. Is it okay to pause feature work after a major outage?
-10. How often should teams run incident drills?
+### High-Value Discussion Questions
+
+5. What are the benefits and limits of strict communication cadence during outages?
+6. When does fast rollback protect the business, and when can it hide deeper risks?
+7. How should outage communication expectations differ for beginners vs experienced engineers?
+
+### Follow-up Questions (Challenge Assumptions)
+
+8. You said communication went well. Which audience still felt uncertain, and why?
+9. If ETA keeps changing, how do you maintain trust without overpromising?
+10. If engineers want more diagnosis time but leadership wants immediate rollback, how do you resolve it?
+
+### Reflection Questions
+
+11. Which incident-communication skill is hardest for you in English?
+12. What personal habit helps you stay calm and clear under pressure?
+13. In the long term, will teams value technical recovery more or communication quality more?
 
 **Tips for speaking practice:**
-- Speak in timeline order.
-- Include one emotion + one action (stress -> clear steps).
-- Mention both technical and communication outcomes.
+
+- Speak in timeline order with timestamps.
+- Include one communication artifact: status update or stakeholder broadcast.
+- Show one trade-off decision and its consequence.
 
 ---
 

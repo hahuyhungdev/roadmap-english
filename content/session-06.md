@@ -1,77 +1,78 @@
 ---
 sessionNumber: 6
 title: Documentation as a Product
-topic: Writing Docs That Create Business Value
+topic: Frontend Docs That Reduce Rework
 phase: PHASE 1 - TECH & BUSINESS
 level: B1-B2
-description: Talk about runbooks, API docs, handover notes, and how documentation improves team speed with clear metrics.
+description: Talk about component docs, UI state specs, design token notes, Storybook pages, and prompt-assisted drafting with clear metrics.
 ---
 
 # Session 6: Documentation as a Product
 
 **Level:** B1-B2  
-**Focus:** Docs create value: onboarding, reducing support load, and team alignment.
-**Scope:** Talk about runbooks, API docs, handover notes, and how documentation improves team speed with clear metrics.
+**Focus:** Docs create value: faster frontend handoff, fewer QA loops, and clearer cross-team decisions.
+**Scope:** Talk about frontend docs and general team docs: UI states, handoff notes, Storybook pages, and prompt-assisted drafting with measurable impact.
 
 <details open>
 <summary><strong>1) Vocabulary </strong></summary>
 
-- **runbook** /ˈrʌnˌbʊk/ (n) - step-by-step guide for operations or incidents  
-  _Example 1:_ We updated the runbook for on-call handover.  
-  _Example 2:_ We used this in a production case to decide the next safe step.  
-  _Example 3:_ Using this consistently made handoff and review much smoother.
+- **component guideline** /kəmˈpoʊnənt ˈɡaɪdˌlaɪn/ (n) - document explaining when and how to use a UI component  
+  _Example 1:_ We wrote a component guideline for our button variants before redesign work.  
+  _Example 2:_ New frontend engineers now choose components faster with fewer mistakes.  
+  _Example 3:_ PM and QA also use the guideline to understand expected behavior.
 
-- **onboarding** /ˈɑːnˌbɔːrdɪŋ/ (n) - process for helping new members start quickly  
-  _Example 1:_ Better docs reduced onboarding time from three days to one.  
-  _Example 2:_ This came up during sprint planning when we balanced speed and quality.  
-  _Example 3:_ This helped us reduce rework in the next sprint.
+- **onboarding** /ˈɑːnˌbɔːrdɪŋ/ (n) - process to help new team members become productive  
+  _Example 1:_ Better frontend docs reduced onboarding time from four days to two.  
+  _Example 2:_ Our onboarding checklist includes local setup, component structure, and naming rules.  
+  _Example 3:_ It reduced repeated "which component should I use?" messages.
 
-- **knowledge base** /ˈnɑːlɪdʒ beɪs/ (n) - central place for shared team information  
-  _Example 1:_ We moved scattered notes into one knowledge base.  
-  _Example 2:_ This came up during sprint planning when we balanced speed and quality.  
-  _Example 3:_ This helped us reduce rework in the next sprint.
+- **design token** /dɪˈzaɪn ˈtoʊkən/ (n) - reusable value for color, spacing, typography, or radius  
+  _Example 1:_ We replaced hard-coded colors with design tokens in the new theme update.  
+  _Example 2:_ Token docs helped us keep spacing consistent across pages.  
+  _Example 3:_ Designers and frontend stayed aligned after token names were standardized.
 
-- **support ticket** /səˈpɔːrt ˈtɪkɪt/ (n) - user or internal request for help  
-  _Example 1:_ Clear troubleshooting docs reduced support tickets.  
-  _Example 2:_ We discussed this in stand-up to keep the team aligned.  
-  _Example 3:_ Now I mention this early so product and engineering stay on the same page.
+- **UI state spec** /ˌjuːˈaɪ steɪt spɛk/ (n) - notes for loading, empty, error, and success states  
+  _Example 1:_ We added a UI state spec so empty cart and payment error screens were not forgotten.  
+  _Example 2:_ QA test coverage improved after states were documented clearly.  
+  _Example 3:_ This reduced last-minute bug fixes before release.
 
-- **API reference** /ˌeɪ piː ˈaɪ ˈrɛfərəns/ (n) - technical documentation for endpoints and usage  
-  _Example 1:_ We improved API reference with real request examples.  
-  _Example 2:_ We discussed this in stand-up to keep the team aligned.  
-  _Example 3:_ Now I mention this early so product and engineering stay on the same page.
+- **handoff note** /ˈhændˌɔːf noʊt/ (n) - short note shared between design, frontend, QA, or backend  
+  _Example 1:_ We wrote a handoff note before implementation so everyone understood scope.  
+  _Example 2:_ QA used the note to prepare test cases earlier.  
+  _Example 3:_ It reduced repeated questions in sprint chat.
 
-- **playbook** /ˈpleɪˌbʊk/ (n) - practical guide for repeating tasks  
-  _Example 1:_ Our deployment playbook helps new engineers avoid mistakes.  
-  _Example 2:_ In one release, this became important when priorities changed quickly.  
-  _Example 3:_ After that case, we added it to our normal workflow.
+- **Storybook page** /ˈstɔriˌbʊk peɪdʒ/ (n) - isolated visual documentation page for a component  
+  _Example 1:_ We published a Storybook page for each new form component.  
+  _Example 2:_ Designers used it to verify states without running the full app.  
+  _Example 3:_ It helped QA reproduce UI issues faster.
 
-- **owner** /ˈoʊnər/ (n) - person responsible for keeping docs updated  
-  _Example 1:_ Each critical document has one owner.  
-  _Example 2:_ This came up during sprint planning when we balanced speed and quality.  
-  _Example 3:_ This helped us reduce rework in the next sprint.
+- **wireframe note** /ˈwaɪərˌfreɪm noʊt/ (n) - simple note on a wireframe explaining UI behavior  
+  _Example 1:_ We added wireframe notes for hover states and validation messages.  
+  _Example 2:_ Frontend and design aligned faster after these notes were added.  
+  _Example 3:_ It reduced back-and-forth during sprint implementation.
 
-- **versioning** /ˈvɝːʒənɪŋ/ (n) - tracking document updates over time  
-  _Example 1:_ Versioning helped us avoid old instructions.  
-  _Example 2:_ This came up during sprint planning when we balanced speed and quality.  
-  _Example 3:_ This helped us reduce rework in the next sprint.
+- **accessibility check** /əkˌsɛsəˈbɪləti tʃɛk/ (n) - quick check for keyboard, labels, and screen-reader support  
+  _Example 1:_ We added an accessibility check before merging the checkout modal.  
+  _Example 2:_ This helped us catch missing aria-label values before QA.  
+  _Example 3:_ Accessibility issues dropped in later releases.
 
-- **audience** /ˈɔːdiəns/ (n) - people the doc is written for  
-  _Example 1:_ We write separate docs for developers and non-technical teams.  
-  _Example 2:_ This came up during sprint planning when we balanced speed and quality.  
-  _Example 3:_ This helped us reduce rework in the next sprint.
+- **changelog** /ˈtʃeɪndʒˌlɔɡ/ (n) - short list of what changed in a release  
+  _Example 1:_ We updated the changelog after changing button sizes and spacing tokens.  
+  _Example 2:_ Product and QA used it to verify expected UI updates.  
+  _Example 3:_ It reduced confusion after deployment.
 
-- **clarity** /ˈklærəti/ (n) - easy to understand language and structure  
-  _Example 1:_ We use simple language to improve clarity.  
-  _Example 2:_ We discussed this in stand-up to keep the team aligned.  
-  _Example 3:_ Now I mention this early so product and engineering stay on the same page.
+- **doc owner** /dɑːk ˈoʊnər/ (n) - person responsible for keeping one doc accurate  
+  _Example 1:_ Each key frontend doc has one doc owner.  
+  _Example 2:_ The owner updates docs when component behavior changes.  
+  _Example 3:_ This prevents outdated examples from spreading.
 
 **Additional useful terms:**
+
 - **checklist** /ˈtʃɛkˌlɪst/ (n) - short list of required steps
-- **FAQ** /ˌɛf eɪ ˈkjuː/ (n) - common questions and answers
-- **diagram** /ˈdaɪəˌɡræm/ (n) - visual explanation of system flow
-- **template** /ˈtɛmˌplət/ (n) - reusable document structure
-- **handover note** /ˈhændˌoʊvər noʊt/ (n) - context shared during ownership transfer
+- **props table** /prɑːps ˈteɪbəl/ (n) - simple table listing component props
+- **usage example** /ˈjuːsɪdʒ ɪɡˈzæmpəl/ (n) - sample showing correct component usage
+- **acceptance criteria** /əkˈsɛptəns kraɪˈtɪriə/ (n) - clear conditions for completed work
+- **doc update** /dɑːk ˈʌpdeɪt/ (n) - quick update when behavior changes
 
 </details>
 
@@ -79,24 +80,25 @@ description: Talk about runbooks, API docs, handover notes, and how documentatio
 <summary><strong>2) Grammar & Useful Patterns (B2)</strong></summary>
 
 - **Present Simple for process**  
-  We document every release so support can respond faster.
+  We document every component change so implementation stays consistent.
 
 - **Present Perfect for outcomes**  
-  Good docs have reduced repeated questions from new hires.
+  Better frontend docs have reduced repeated QA clarification messages.
 
 - **Passive voice for standards**  
-  Each runbook is reviewed every quarter.
+  Each component guideline is reviewed at the end of every sprint.
 
 - **Purpose language**  
-  We keep docs short so readers can find answers quickly.
+  We keep docs concise so frontend and non-frontend teammates can align quickly.
 
 - **Conditionals for risk**  
-  If docs are outdated, people can follow the wrong steps.
+  If UI state docs are outdated, teams can implement inconsistent behavior.
 
 - **Comparison language**  
-  After we added examples, onboarding became much easier.
+  After we added Storybook examples, onboarding became much easier.
 
 ### Useful Sentence Patterns
+
 - We treat documentation as...
 - This document is for..., so...
 - A useful doc should include...
@@ -110,43 +112,48 @@ description: Talk about runbooks, API docs, handover notes, and how documentatio
 <summary><strong>3) Collocations, Chunking & Phrasal Verbs</strong></summary>
 
 ### Strong Collocations
-- write clear runbooks
-- reduce support tickets
-- speed up onboarding
-- document deployment steps
-- update API references
-- define document ownership
+
+- write component guidelines
+- define design tokens
+- document UI states
+- add wireframe notes
+- publish Storybook pages
+- share handoff notes
+- include accessibility checks
 - keep docs up to date
-- share operational knowledge
-- improve cross-team clarity
-- reduce repeated questions
-- standardize troubleshooting steps
-- support non-technical readers
+- update the changelog
+- reduce QA ping-pong
+- speed up onboarding
+- align design and frontend
 
 **Examples (real work):**
-- In one release week, we had to write clear runbooks while still trying to reduce support tickets.
-- In retro, we agreed to speed up onboarding earlier so the same issue would not repeat.
+
+- In one release week, we documented UI states and handoff notes before coding, so QA found fewer edge-case bugs.
+- We also updated Storybook early, and design approval became faster.
 
 ### Useful Chunking & Sentence Starters
+
 - We treat docs as a product because...
-- The target reader is...
-- A common mistake is...
-- We fixed that by...
+- The target reader for this doc is...
+- A common documentation gap is...
+- We fixed that by adding...
 - The biggest benefit was...
-- One trade-off is...
-- To keep quality, we...
+- One trade-off is writing time now versus...
+- To keep quality, we run...
 - We measure impact with...
 
 **Examples (using starters):**
-- "A real issue we faced was repeated timeout errors, so we paused rollout and checked logs first."
-- "To reduce risk, we shipped to 10% of users first, then expanded after QA sign-off."
+
+- "A common documentation gap was missing handoff notes, so we added one short template for every feature."
+- "To keep quality, we review docs after each release and assign one clear owner."
 
 ### Useful Phrasal Verbs
-- **write down** -> We write down incident steps right after resolution.
-- **point to** -> Support can point to one doc instead of asking engineers.
-- **clean up** -> We clean up old pages every month.
-- **hand over** -> Good docs make handover much smoother.
-- **look up** -> New developers can look up setup steps quickly.
+
+- **write down** -> We write down edge cases before final component implementation.
+- **point out** -> QA points out missing states before release.
+- **fill in** -> We fill in missing wireframe notes before development starts.
+- **hand over** -> Good docs help hand over frontend tasks without context loss.
+- **look up** -> New developers can look up prop behavior in the docs quickly.
 
 </details>
 
@@ -158,38 +165,38 @@ description: Talk about runbooks, API docs, handover notes, and how documentatio
 **Interviewer:** Why do you care about documentation?
 
 **You:**  
-Because docs save team time. We had repeated setup questions from new engineers, so I wrote a clear onboarding guide with screenshots and commands.
+Because docs save real frontend time. We had repeated confusion about button variants and form states, so I wrote a component guideline with Storybook links.
 
-After that, onboarding became faster. Writing docs took effort, but support load dropped.
+Onboarding became faster in one sprint. Writing docs took effort upfront, but QA loops dropped later.
 
-### Dialogue 2 - Writing for Different Readers
+### Dialogue 2 - Design Handoff and UI States
 
-**Interviewer:** How do you write for non-technical stakeholders?
-
-**You:**  
-I avoid deep jargon and explain impact first. For example, in release notes I write what changed for users, known risks, and rollback plan.
-
-It is less technical detail, but much clearer for product and customer teams.
-
-### Dialogue 3 - Measurable Result
-
-**Interviewer:** Share one metric from documentation work.
+**Interviewer:** How do you use docs when design and backend are not aligned?
 
 **You:**  
-After we updated the incident runbook, average response time improved from 25 minutes to 15 minutes during on-call.
+I start with wireframe notes and a UI state spec for loading, empty, and error states. Then I add one short handoff note and link each case in Storybook.
 
-We still review the runbook often, because old docs can create new problems.
+This takes extra time early, but it reduces rework during implementation and QA.
+
+### Dialogue 3 - Prompt-Assisted Drafting
+
+**Interviewer:** Do you use AI when writing docs?
+
+**You:**  
+Yes, we use a prompt template to draft first-pass component docs with props and states. Then frontend engineers review all examples before publishing.
+
+It improves writing speed, but we never skip human review because wrong docs can cause UI bugs in production.
 
 </details>
 
 <details open>
 <summary><strong>5) Reading Text</strong></summary>
 
-Many teams treat documentation as extra work. In reality, it is part of product quality. Clear docs reduce confusion, lower support requests, and help teams move faster without repeating the same explanations.
+Many frontend teams treat documentation as extra work. In reality, it is part of delivery quality. A practical flow starts with wireframe annotations, then component guidelines, then Storybook examples with clear states.
 
-Good documentation is practical. It uses simple steps, real examples, and clear ownership. If no one owns a document, it becomes outdated and risky.
+Good frontend documentation is practical and specific. It includes props, variants, state behavior, accessibility checks, and ownership. If no one owns the doc, it becomes outdated and creates rework.
 
-In interviews, give one real example and one measurable result. That shows you understand documentation as business value, not just writing.
+Teams can use AI prompts to draft faster, but final review must stay human. In interviews, share one case where docs reduced QA loops or implementation confusion, and include one measurable result.
 
 </details>
 
@@ -197,25 +204,35 @@ In interviews, give one real example and one measurable result. That shows you u
 <summary><strong>6) List of Questions + Ideas</strong></summary>
 
 ### Core Questions (must-practice)
-1. Why do you treat documentation as a product?
-2. What makes a runbook useful in real incidents?
-3. How do you write docs for non-technical readers?
-4. How do you keep documentation updated?
 
-### High-Value Case Questions
-5. Share a case where better docs reduced support tickets.
-6. Tell me about a bad document and how you improved it.
-7. Describe one onboarding improvement through documentation.
+1. Why do you treat frontend documentation as part of delivery, not extra work?
+2. How do you create a mini doc bundle: component guideline, handoff note, and Storybook page?
+3. How do design tokens and clear state notes help your team in real projects?
+4. How do you use prompts to draft frontend docs while keeping quality high?
 
-### Critical Discussion Questions
-8. Should engineers be measured on documentation quality?
-9. Is short documentation always better than detailed documentation?
-10. Who should own documents in cross-team projects?
+### High-Value Discussion Questions
+
+5. What are the benefits and limits of writing short docs versus detailed docs?
+6. When do wireframe notes prevent rework, and when are they still not enough for frontend delivery?
+7. How does frontend documentation quality affect onboarding speed and long-term team learning?
+
+### Follow-up Questions (Challenge Assumptions)
+
+8. You said short docs are better. What important context could be lost?
+9. If Storybook is up to date but teams still misunderstand behavior, what is missing?
+10. If AI drafting saves time but introduces one wrong rule, who is responsible?
+
+### Reflection Questions
+
+11. Which doc type is hardest for you to write clearly in English?
+12. What review habit improved your documentation quality the most?
+13. In the future, will engineers be judged partly by documentation quality, like code quality?
 
 **Tips for speaking practice:**
-- Mention target audience in your answer.
-- Use one metric if possible.
-- Include one trade-off: writing time now vs fewer issues later.
+
+- Use one real doc artifact in each answer (component guideline, UI state spec, or Storybook page).
+- Include one trade-off: upfront writing time vs lower rework later.
+- Add one measurable result (QA cycle count, onboarding time, or bug-fix time).
 
 ---
 
