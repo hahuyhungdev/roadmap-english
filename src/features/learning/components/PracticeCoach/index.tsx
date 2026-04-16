@@ -2,7 +2,7 @@
 
 import { useRef, useEffect, useState, useEffectEvent } from "react";
 import useSoniox from "@/hooks/useSoniox";
-import { useCoachSession } from "./useCoachSession";
+import { useCoachSession } from "../../hooks/useCoachSession";
 import {
   StatusBar,
   PracticeCoachHeader,
@@ -10,17 +10,13 @@ import {
   ErrorBar,
   ExpandedPanel,
   CollapsedFAB,
-} from "./PracticeCoachSubcomponents";
+} from "./Subcomponents";
 
 interface PracticeCoachProps {
   lessonTitle?: string;
   lessonContent?: string;
 }
 
-/**
- * PracticeCoach - Main component for speaking practice
- * Orchestrates UI state and delegates logic to custom hooks
- */
 export default function PracticeCoach({
   lessonTitle,
   lessonContent,
@@ -123,7 +119,7 @@ export default function PracticeCoach({
     });
   };
 
-  // ==== Handlers ====
+  // ==== Handlers (useEffectEvent — fired from effects/async flows) ====
   const handleStart = useEffectEvent(() => {
     if (!hasStartedRef.current) {
       startRef.current({ source: "mic" });

@@ -10,14 +10,8 @@ import {
   RefreshCw,
   ChevronDown,
 } from "lucide-react";
-import type { Turn } from "./useCoachSession";
-
-// ============ HELPERS ============
-function formatTime(s: number) {
-  const m = Math.floor(s / 60);
-  const sec = s % 60;
-  return `${m}:${String(sec).padStart(2, "0")}`;
-}
+import type { Turn } from "../../types/coach";
+import { formatTime } from "../../utils/time";
 
 // ============ STATUS BAR ============
 export const StatusBar: FC<{

@@ -1,32 +1,32 @@
 # Copilot Agent Instructions
 
-> **CRITICAL — READ THIS FIRST BEFORE DOING ANYTHING ELSE**
+> **CRITICAL — Read this before doing ANY work**
 >
-> You MUST manage `.copilot/plan.json` as your task tracker.
-> Do NOT use VS Code's built-in Todos feature. Do NOT use any other system.
-> `.copilot/plan.json` is the ONLY source of truth for task tracking.
+> You have dedicated tools for task tracking. Use them — do NOT use VS Code's built-in Todos.
 
-## Step 0 — Before starting ANY task
+## Before starting a task
 
-1. Check if `.copilot/plan.json` exists.
-2. If it does NOT exist → create it immediately (see format below) before doing any work.
-3. If it exists → read it, find the current step, continue from there.
+1. Call `copilot_agent_plan_read` — check if a plan already exists.
+2. If no plan → call `copilot_agent_plan_write` to create one with all steps defined upfront.
+3. If plan exists → find the first non-done step and continue from there.
 
-## Every step — MANDATORY protocol
+## Before EVERY step
 
-Before executing each step:
+1. Call `copilot_agent_check_paused` — if `paused: true`, **STOP immediately** and wait.
+2. Call `copilot_agent_inject_read` — if `hasMessage: true`, follow the instruction first.
+3. Call `copilot_agent_step_update` with `status: "running"` to mark the step as started.
 
-1. **Check** `.copilot/PAUSED` — if this file exists, STOP immediately. Do NOT proceed.
-2. **Check** `.copilot/inject.md` — if this file exists, read it, follow the instruction, then DELETE the file.
-3. **Update** `.copilot/plan.json` — set step status to `"running"` before starting.
-4. After completing — set status to `"done"` or `"error"` and update `current_step`.
+## After EVERY step
 
-## plan.json format
+- On success → call `copilot_agent_step_update` with `status: "done"`.
+- On failure → call `copilot_agent_step_update` with `status: "error"` and `error: "<reason>"`, then **STOP**.
+
+## plan.json format (for copilot_agent_plan_write)
 
 ```json
 {
   "task": "Short description of the overall task",
-  "created_at": "2026-01-01T00:00:00Z",
+  "created_at": "ISO timestamp",
   "current_step": 1,
   "steps": [
     {
@@ -44,19 +44,10 @@ Before executing each step:
 }
 ```
 
-## Step statuses
-
-- `pending` — not started
-- `running` — currently executing (set this BEFORE starting)
-- `done` — completed successfully
-- `error` — failed (set `error` field with reason, then STOP)
-- `skipped` — skipped by human instruction
-
 ## Hard rules
 
 - NEVER use VS Code Todos or any other task tracking system.
-- NEVER skip writing to plan.json before and after each step.
-- NEVER skip the PAUSED check.
-- If a step fails → set `"error"`, write reason in `error` field, STOP and wait.
-- If `requires_confirmation` is true → set status to `"paused"`, STOP and wait.
+- ALWAYS call `copilot_agent_check_paused` before each step.
+- ALWAYS call `copilot_agent_step_update` before AND after each step.
 - Keep steps small and atomic — one file or one logical change per step.
+- If `requires_confirmation: true` on a step → call `copilot_agent_step_update` with `status: "paused"`, then STOP and wait.

@@ -1,20 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
-
-export interface Review {
-  original_transcript: string;
-  corrected_version: string;
-  explanation: string;
-  better_alternatives: string[];
-}
-
-export interface Turn {
-  id: string;
-  role: "user" | "coach";
-  text: string;
-  review?: Review;
-}
+import type { Review, Turn } from "../types/coach";
 
 type HistoryMsg = { role: "user" | "assistant"; content: string };
 
@@ -92,7 +79,6 @@ export function useCoachSession({
         { role: "assistant", content: fullReply },
       ];
 
-      // Create coach turn and update state as text streams in
       const coachId = `c-${Date.now()}`;
       setTurns((prev) => [
         ...prev,
@@ -112,7 +98,6 @@ export function useCoachSession({
         setTurns((prev) =>
           prev.map((t) => (t.id === coachId ? { ...t, text: currentText } : t)),
         );
-        // Small delay for visual streaming effect
         await new Promise((resolve) => setTimeout(resolve, 30));
       }
 
