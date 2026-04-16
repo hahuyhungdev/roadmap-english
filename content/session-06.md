@@ -4,14 +4,14 @@ title: Documentation as a Product
 topic: Frontend Docs That Reduce Rework
 phase: PHASE 1 - TECH & BUSINESS
 level: B1-B2
-description: Talk about component docs, UI state specs, design token notes, Storybook pages, and prompt-assisted drafting with clear metrics.
+description: Talk about practical team docs that reduce repeated questions, rework, and QA confusion.
 ---
 
 # Session 6: Documentation as a Product
 
 **Level:** B1-B2  
-**Focus:** Docs create value: faster frontend handoff, fewer QA loops, and clearer cross-team decisions.
-**Scope:** Talk about frontend docs and general team docs: UI states, handoff notes, Storybook pages, and prompt-assisted drafting with measurable impact.
+**Focus:** Docs create value: faster onboarding, fewer QA loops, and clearer team decisions.
+**Scope:** Talk about practical docs teams use every sprint: setup guides, API reference, release checklist, troubleshooting notes, and changelog updates.
 
 <details open>
 <summary><strong>1) Vocabulary </strong></summary>
@@ -26,30 +26,30 @@ description: Talk about component docs, UI state specs, design token notes, Stor
   _Example 2:_ Our onboarding checklist includes local setup, component structure, and naming rules.  
   _Example 3:_ It reduced repeated "which component should I use?" messages.
 
-- **design token** /dɪˈzaɪn ˈtoʊkən/ (n) - reusable value for color, spacing, typography, or radius  
-  _Example 1:_ We replaced hard-coded colors with design tokens in the new theme update.  
-  _Example 2:_ Token docs helped us keep spacing consistent across pages.  
-  _Example 3:_ Designers and frontend stayed aligned after token names were standardized.
+- **API reference** /ˌeɪ piː ˈaɪ ˈrɛfərəns/ (n) - documentation for endpoint behavior, parameters, and responses  
+  _Example 1:_ We updated the API reference before integrating the new payment endpoint.  
+  _Example 2:_ Clear request and response examples reduced backend questions.  
+  _Example 3:_ QA used the API reference to verify error cases.
 
-- **UI state spec** /ˌjuːˈaɪ steɪt spɛk/ (n) - notes for loading, empty, error, and success states  
-  _Example 1:_ We added a UI state spec so empty cart and payment error screens were not forgotten.  
-  _Example 2:_ QA test coverage improved after states were documented clearly.  
-  _Example 3:_ This reduced last-minute bug fixes before release.
+- **release checklist** /rɪˈliːs ˈtʃɛkˌlɪst/ (n) - short list of checks before deployment  
+  _Example 1:_ We added a release checklist for smoke tests and rollback steps.  
+  _Example 2:_ The checklist helped us catch one missing migration before launch.  
+  _Example 3:_ It made release day calmer for both engineering and QA.
 
-- **handoff note** /ˈhændˌɔːf noʊt/ (n) - short note shared between design, frontend, QA, or backend  
-  _Example 1:_ We wrote a handoff note before implementation so everyone understood scope.  
-  _Example 2:_ QA used the note to prepare test cases earlier.  
-  _Example 3:_ It reduced repeated questions in sprint chat.
+- **troubleshooting guide** /ˈtrʌbəlˌʃuːtɪŋ ɡaɪd/ (n) - document with common issues and quick fixes  
+  _Example 1:_ We wrote a troubleshooting guide for login and token refresh errors.  
+  _Example 2:_ Support resolved basic issues without waiting for engineers.  
+  _Example 3:_ New team members used it during on-call shadowing.
 
-- **Storybook page** /ˈstɔriˌbʊk peɪdʒ/ (n) - isolated visual documentation page for a component  
-  _Example 1:_ We published a Storybook page for each new form component.  
-  _Example 2:_ Designers used it to verify states without running the full app.  
-  _Example 3:_ It helped QA reproduce UI issues faster.
+- **setup guide** /ˈsɛtˌʌp ɡaɪd/ (n) - step-by-step instructions to run the project locally  
+  _Example 1:_ We improved the setup guide for Mac and Linux developers.  
+  _Example 2:_ New hires now run the app successfully on day one.  
+  _Example 3:_ It reduced repeated environment setup questions.
 
-- **wireframe note** /ˈwaɪərˌfreɪm noʊt/ (n) - simple note on a wireframe explaining UI behavior  
-  _Example 1:_ We added wireframe notes for hover states and validation messages.  
-  _Example 2:_ Frontend and design aligned faster after these notes were added.  
-  _Example 3:_ It reduced back-and-forth during sprint implementation.
+- **UI state note** /ˌjuːˈaɪ steɪt noʊt/ (n) - short note for loading, empty, error, and success cases  
+  _Example 1:_ We added UI state notes so error and empty pages were not missed.  
+  _Example 2:_ QA coverage improved after these states were written clearly.  
+  _Example 3:_ It reduced last-minute UI bug fixes.
 
 - **accessibility check** /əkˌsɛsəˈbɪləti tʃɛk/ (n) - quick check for keyboard, labels, and screen-reader support  
   _Example 1:_ We added an accessibility check before merging the checkout modal.  
@@ -57,7 +57,7 @@ description: Talk about component docs, UI state specs, design token notes, Stor
   _Example 3:_ Accessibility issues dropped in later releases.
 
 - **changelog** /ˈtʃeɪndʒˌlɔɡ/ (n) - short list of what changed in a release  
-  _Example 1:_ We updated the changelog after changing button sizes and spacing tokens.  
+  _Example 1:_ We updated the changelog after changing login flow and API behavior.  
   _Example 2:_ Product and QA used it to verify expected UI updates.  
   _Example 3:_ It reduced confusion after deployment.
 
@@ -69,8 +69,8 @@ description: Talk about component docs, UI state specs, design token notes, Stor
 **Additional useful terms:**
 
 - **checklist** /ˈtʃɛkˌlɪst/ (n) - short list of required steps
-- **props table** /prɑːps ˈteɪbəl/ (n) - simple table listing component props
-- **usage example** /ˈjuːsɪdʒ ɪɡˈzæmpəl/ (n) - sample showing correct component usage
+- **known issue** /noʊn ˈɪʃuː/ (n) - problem documented but not fixed yet
+- **sample request** /ˈsæmpəl rɪˈkwɛst/ (n) - example API request for developers
 - **acceptance criteria** /əkˈsɛptəns kraɪˈtɪriə/ (n) - clear conditions for completed work
 - **doc update** /dɑːk ˈʌpdeɪt/ (n) - quick update when behavior changes
 
@@ -95,7 +95,7 @@ description: Talk about component docs, UI state specs, design token notes, Stor
   If UI state docs are outdated, teams can implement inconsistent behavior.
 
 - **Comparison language**  
-  After we added Storybook examples, onboarding became much easier.
+  After we added clearer setup and API examples, onboarding became much easier.
 
 ### Useful Sentence Patterns
 
@@ -114,22 +114,22 @@ description: Talk about component docs, UI state specs, design token notes, Stor
 ### Strong Collocations
 
 - write component guidelines
-- define design tokens
+- update API reference
 - document UI states
-- add wireframe notes
-- publish Storybook pages
-- share handoff notes
+- maintain setup guide
+- write troubleshooting guide
+- use release checklist
 - include accessibility checks
 - keep docs up to date
 - update the changelog
 - reduce QA ping-pong
 - speed up onboarding
-- align design and frontend
+- align backend and frontend
 
 **Examples (real work):**
 
-- In one release week, we documented UI states and handoff notes before coding, so QA found fewer edge-case bugs.
-- We also updated Storybook early, and design approval became faster.
+- In one release week, we documented UI states and API examples before coding, so QA found fewer edge-case bugs.
+- We also updated the setup guide early, and onboarding time dropped for new teammates.
 
 ### Useful Chunking & Sentence Starters
 
@@ -144,15 +144,15 @@ description: Talk about component docs, UI state specs, design token notes, Stor
 
 **Examples (using starters):**
 
-- "A common documentation gap was missing handoff notes, so we added one short template for every feature."
-- "To keep quality, we review docs after each release and assign one clear owner."
+- "A common documentation gap was outdated setup steps, so we rewrote them after each release."
+- "To keep quality, we review docs after each sprint and assign one clear owner."
 
 ### Useful Phrasal Verbs
 
 - **write down** -> We write down edge cases before final component implementation.
 - **point out** -> QA points out missing states before release.
-- **fill in** -> We fill in missing wireframe notes before development starts.
-- **hand over** -> Good docs help hand over frontend tasks without context loss.
+- **fill in** -> We fill in missing API examples before integration starts.
+- **clean up** -> We clean up outdated docs at the end of each sprint.
 - **look up** -> New developers can look up prop behavior in the docs quickly.
 
 </details>
@@ -165,38 +165,38 @@ description: Talk about component docs, UI state specs, design token notes, Stor
 **Interviewer:** Why do you care about documentation?
 
 **You:**  
-Because docs save real frontend time. We had repeated confusion about button variants and form states, so I wrote a component guideline with Storybook links.
+Because docs save real team time. We had repeated confusion about API behavior and UI states, so I wrote a short component guideline with example requests.
 
 Onboarding became faster in one sprint. Writing docs took effort upfront, but QA loops dropped later.
 
-### Dialogue 2 - Design Handoff and UI States
+### Dialogue 2 - API and UI States
 
 **Interviewer:** How do you use docs when design and backend are not aligned?
 
 **You:**  
-I start with wireframe notes and a UI state spec for loading, empty, and error states. Then I add one short handoff note and link each case in Storybook.
+I start with UI state notes for loading, empty, and error states. Then I update API reference examples so frontend and backend read the same contract.
 
 This takes extra time early, but it reduces rework during implementation and QA.
 
-### Dialogue 3 - Prompt-Assisted Drafting
+### Dialogue 3 - Keeping Docs Updated
 
-**Interviewer:** Do you use AI when writing docs?
+**Interviewer:** What is the hardest part of documentation in real projects?
 
 **You:**  
-Yes, we use a prompt template to draft first-pass component docs with props and states. Then frontend engineers review all examples before publishing.
+The hardest part is keeping docs updated after fast releases. We now assign one doc owner and review key pages at the end of each sprint.
 
-It improves writing speed, but we never skip human review because wrong docs can cause UI bugs in production.
+It takes extra discipline, but outdated docs dropped a lot.
 
 </details>
 
 <details open>
 <summary><strong>5) Reading Text</strong></summary>
 
-Many frontend teams treat documentation as extra work. In reality, it is part of delivery quality. A practical flow starts with wireframe annotations, then component guidelines, then Storybook examples with clear states.
+Many teams treat documentation as extra work. In reality, it is part of delivery quality. A practical flow starts with a setup guide, clear API examples, and short notes for important UI states.
 
-Good frontend documentation is practical and specific. It includes props, variants, state behavior, accessibility checks, and ownership. If no one owns the doc, it becomes outdated and creates rework.
+Good documentation is practical and specific. It includes setup steps, common errors, API examples, release checks, and ownership. If no one owns the doc, it becomes outdated and creates rework.
 
-Teams can use AI prompts to draft faster, but final review must stay human. In interviews, share one case where docs reduced QA loops or implementation confusion, and include one measurable result.
+In interviews, share one real case where docs reduced repeated questions or QA loops, and include one measurable result.
 
 </details>
 
@@ -206,31 +206,31 @@ Teams can use AI prompts to draft faster, but final review must stay human. In i
 ### Core Questions (must-practice)
 
 1. Why do you treat frontend documentation as part of delivery, not extra work?
-2. How do you create a mini doc bundle: component guideline, handoff note, and Storybook page?
-3. How do design tokens and clear state notes help your team in real projects?
-4. How do you use prompts to draft frontend docs while keeping quality high?
+2. How do you create a practical doc bundle: setup guide, API reference, and release checklist?
+3. How do clear state notes and API examples help your team in real projects?
+4. How do you keep docs updated when releases are fast?
 
 ### High-Value Discussion Questions
 
 5. What are the benefits and limits of writing short docs versus detailed docs?
-6. When do wireframe notes prevent rework, and when are they still not enough for frontend delivery?
+6. When do simple UI state notes prevent rework, and when are they still not enough?
 7. How does frontend documentation quality affect onboarding speed and long-term team learning?
 
 ### Follow-up Questions (Challenge Assumptions)
 
 8. You said short docs are better. What important context could be lost?
-9. If Storybook is up to date but teams still misunderstand behavior, what is missing?
-10. If AI drafting saves time but introduces one wrong rule, who is responsible?
+9. If API docs are updated but teams still misunderstand behavior, what is missing?
+10. If a doc is technically correct but too long, why might people still ignore it?
 
 ### Reflection Questions
 
-11. Which doc type is hardest for you to write clearly in English?
+11. Which doc type is hardest for you to write clearly in English right now?
 12. What review habit improved your documentation quality the most?
 13. In the future, will engineers be judged partly by documentation quality, like code quality?
 
 **Tips for speaking practice:**
 
-- Use one real doc artifact in each answer (component guideline, UI state spec, or Storybook page).
+- Use one real doc artifact in each answer (setup guide, API example, or release checklist).
 - Include one trade-off: upfront writing time vs lower rework later.
 - Add one measurable result (QA cycle count, onboarding time, or bug-fix time).
 
