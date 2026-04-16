@@ -158,7 +158,7 @@ description: Talk about stepping up without title: spotting gaps, unblocking tea
 </details>
 
 <details open>
-<summary><strong>4) Typical Dialogues</strong></summary>
+<summary><strong>4) Dialogues</strong></summary>
 
 ### Dialogue 1 - Beyond Formal Role
 
@@ -189,8 +189,22 @@ Looking back, that was the right decision for the release.
 
 </details>
 
+
 <details open>
-<summary><strong>5) Reading Text</strong></summary>
+<summary><strong>5) Debate Prompt</strong></summary>
+
+**Should engineers take initiative and work beyond their assigned scope, or focus strictly on what they are given?**
+
+**Side A:** Taking ownership beyond your title is how you grow into a senior role. If you only do what you are assigned, you stay invisible and miss chances to make a real difference.
+
+**Side B:** Going outside your assigned work creates confusion, steps on other people's areas, and can break things you don't fully understand. Doing your own job very well is more valuable than trying to do everyone's.
+
+_Your turn: Which side do you agree with more? Why?_
+
+</details>
+
+<details open>
+<summary><strong>6) Reading Text</strong></summary>
 
 Ownership is not the same as title. In many teams, people who move work forward are the ones who notice risk early, align others, and follow through.
 
@@ -201,7 +215,7 @@ In interviews, strong ownership stories are practical. Show the problem, what yo
 </details>
 
 <details open>
-<summary><strong>6) List of Questions + Ideas</strong></summary>
+<summary><strong>7) Questions & Practice Ideas</strong></summary>
 
 ### Core Questions (must-practice)
 

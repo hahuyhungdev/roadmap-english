@@ -16,35 +16,35 @@ description: Discuss pressure from family and society, fear of disappointing oth
 <details open>
 <summary><strong>1) Vocabulary </strong></summary>
 
-- **success script** /səkˈsɛs skrɪpt/ (n) - socially expected path for what "successful life" should look like  
-  _Example 1:_ My family success script was: high salary, house by 30, stable company.  
-  _Example 2:_ That script gave motivation, but also heavy anxiety when my path was different.  
-  _Example 3:_ I now use it as reference, not as a strict rule.
+- **social pressure** /ˈsoʊʃəl ˈprɛʃər/ (n) - stress caused by expectations from family, friends, or society  
+  _Example 1:_ Social pressure from relatives made me question my career choices every holiday.  
+  _Example 2:_ Once I named the pressure clearly, I could respond more calmly.  
+  _Example 3:_ Social pressure is real, but it should inform decisions, not make them.
 
-- **family benchmark** /ˈfæməli ˈbɛntʃmɑrk/ (n) - standard family uses to evaluate your progress  
-  _Example 1:_ Family benchmark was mostly income and job title in my case.  
-  _Example 2:_ I added my own benchmarks: health, learning depth, and consistency.  
-  _Example 3:_ This reduced repeated conflict in conversations at home.
+- **family expectation** /ˈfæməli ˌekspɛkˈteɪʃən/ (n) - what your family hopes or requires you to achieve  
+  _Example 1:_ Family expectation in my case was a stable salary and early house ownership.  
+  _Example 2:_ I explained my actual timeline honestly instead of pretending to agree.  
+  _Example 3:_ Managing expectations early prevents bigger conflicts later.
 
 - **status pressure** /ˈsteɪtəs ˈprɛʃɚ/ (n) - stress caused by social comparison of success symbols  
   _Example 1:_ Status pressure increased during holiday gatherings with relatives.  
   _Example 2:_ I felt behind even when my real progress was strong.  
   _Example 3:_ Naming status pressure helped me respond calmly instead of reacting emotionally.
 
-- **obligation debt** /ˌɑbləˈɡeɪʃən det/ (n) - emotional burden from feeling you must repay family sacrifice  
-  _Example 1:_ Obligation debt made me accept jobs I did not actually want.  
-  _Example 2:_ I learned gratitude does not require self-destruction.  
-  _Example 3:_ Clear communication reduced this hidden pressure.
+- **sense of guilt** /sɛns əv ɡɪlt/ (n) - feeling that you have let someone down or failed a duty  
+  _Example 1:_ I felt a strong sense of guilt when I chose a lower-salary role my parents did not support.  
+  _Example 2:_ That guilt was valid, but it was not a good reason to make the wrong career move.  
+  _Example 3:_ I reduced it by explaining the decision clearly and showing a realistic growth plan.
 
 - **fear of disappointing** /fɪr əv ˌdɪsəˈpɔɪntɪŋ/ (n) - anxiety about failing others expectations  
   _Example 1:_ Fear of disappointing made me hide stress and overpromise.  
   _Example 2:_ Later, I used honest updates with family about my real timeline.  
   _Example 3:_ That honesty improved trust, even without full agreement.
 
-- **income narrative** /ˈɪnkʌm ˈnærətɪv/ (n) - story people build around your value based on salary  
-  _Example 1:_ Income narrative can ignore skill depth and long-term growth.  
-  _Example 2:_ I explain that one high salary move can reduce future flexibility too.  
-  _Example 3:_ This helps conversations become more practical.
+- **financial pressure** /faɪˈnænʃəl ˈprɛʃər/ (n) - stress around earning enough money to meet your own and family's needs  
+  _Example 1:_ Financial pressure made me take a high-paying role I was not ready for.  
+  _Example 2:_ I balance financial pressure by tracking my actual monthly costs, not imagined ones.  
+  _Example 3:_ In interviews, I discuss financial pressure honestly when asked about career motivation.
 
 - **reputation burden** /ˌrɛpjəˈteɪʃən ˈbɝdən/ (n) - stress of maintaining an image of success  
   _Example 1:_ Reputation burden was heavy when I acted "fine" but felt exhausted.  
@@ -56,10 +56,10 @@ description: Discuss pressure from family and society, fear of disappointing oth
   _Example 2:_ I used a six-month plan to show realistic growth steps.  
   _Example 3:_ Concrete timelines reduced emotional arguments.
 
-- **trade-off map** /ˈtreɪd ɔf mæp/ (n) - clear comparison of options and what each option costs  
-  _Example 1:_ My trade-off map compared salary, health, learning, and stability.  
-  _Example 2:_ It helped me reject one high-pay role with unsustainable hours.  
-  _Example 3:_ I now use this map before major decisions.
+- **priority list** /praɪˈɔrəti lɪst/ (n) - a clear ranking of what matters most when making a decision  
+  _Example 1:_ My priority list before accepting any role is: learning quality, health, income, and stability — in that order.  
+  _Example 2:_ Writing out a priority list stopped me from making emotional decisions under family pressure.  
+  _Example 3:_ I update the list every six months as life conditions change.
 
 - **self-defined success** /sɛlf dɪˈfaɪnd səkˈsɛs/ (n) - personal definition of success based on your own values  
   _Example 1:_ Self-defined success for me is stable health plus meaningful technical growth.  
@@ -68,11 +68,11 @@ description: Discuss pressure from family and society, fear of disappointing oth
 
 **Additional useful terms:**
 
-- **filial pressure** /ˈfɪliəl ˈprɛʃɚ/ (n) - pressure to meet family duty expectations
-- **social timeline** /ˈsoʊʃəl ˈtaɪmlaɪn/ (n) - expected schedule for life milestones
-- **value negotiation** /ˈvælju nəˌɡoʊʃiˈeɪʃən/ (n) - conversation balancing your values with others expectations
-- **life priority stack** /laɪf praɪˈɔrəti stæk/ (n) - ranked order of what matters most now
-- **pressure reset** /ˈprɛʃɚ riˈsɛt/ (n) - process of redefining what success means for yourself
+- **peer pressure** /pɪr ˈprɛʃər/ (n) - influence from friends or colleagues to follow a certain lifestyle
+- **life milestone** /laɪf ˈmaɪlstoʊn/ (n) - major achievement expected at a certain age (house, marriage, promotion)
+- **long-term stability** /lɔŋ tɜrm stəˈbɪləti/ (n) - consistent income, health, and security over years
+- **personal boundaries** /ˈpɜrsənəl ˈbaʊndrɪz/ (n) - limits you set to protect your own wellbeing and decisions
+- **realistic timeline** /riˈælɪstɪk ˈtaɪmlaɪn/ (n) - achievable plan based on your actual situation
 
 </details>
 
@@ -158,7 +158,7 @@ description: Discuss pressure from family and society, fear of disappointing oth
 </details>
 
 <details open>
-<summary><strong>4) Typical Dialogues</strong></summary>
+<summary><strong>4) Dialogues</strong></summary>
 
 ### Dialogue 1 - Family Conversation
 
@@ -189,19 +189,31 @@ I still care about income, but I no longer use income as the only success metric
 
 </details>
 
+
 <details open>
-<summary><strong>5) Reading Text</strong></summary>
+<summary><strong>5) Debate Prompt</strong></summary>
 
-Success pressure in your 20s often comes from two directions: family expectations and social comparison. Both can be useful signals, but both can also push people into decisions they cannot sustain.
+**Should you prioritize your family's expectations about income and career status, or follow your own goals?**
 
-Healthy response is not rebellion or blind obedience. It is clear decision logic. People need a practical map of trade-offs: money, health, learning, and stability.
+**Side A:** If your family sacrificed so you could have an education and a career, meeting their basic expectations is a fair responsibility. Completely ignoring what matters to them is not freedom — it is selfishness.
 
-In speaking practice, strong answers show respect for family values while still defending personal boundaries and realistic timelines.
+**Side B:** Choosing a job to satisfy your family instead of yourself leads to long-term unhappiness and resentment. You will perform worse and grow less. In the end, that hurts your family too.
+
+_Your turn: Which side do you agree with more? Why?_
 
 </details>
 
 <details open>
-<summary><strong>6) List of Questions + Ideas</strong></summary>
+<summary><strong>6) Reading Text</strong></summary>
+
+Success pressure in your 20s often comes from two directions: family expectations and social comparison. Both can be useful signals, but both can also push people into decisions they cannot sustain.
+
+Healthy response is not rebellion or blind obedience. It is clear decision logic. People need a practical ranking of trade-offs: money, health, learning, and stability. In interviews, this topic surfaces when employers ask about motivation, relocation, or why you left a previous role. A strong answer is honest about external pressure and still shows a clear, evidence-based decision.
+
+</details>
+
+<details open>
+<summary><strong>7) Questions & Practice Ideas</strong></summary>
 
 ### Core Questions (must-practice)
 

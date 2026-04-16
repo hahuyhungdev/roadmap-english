@@ -158,7 +158,7 @@ description: Discuss bullying and exclusion in groups, evidence-based response, 
 </details>
 
 <details open>
-<summary><strong>4) Typical Dialogues</strong></summary>
+<summary><strong>4) Dialogues</strong></summary>
 
 ### Dialogue 1 - Exclusion Pattern
 
@@ -189,8 +189,22 @@ Without consequences, harmful behavior usually repeats.
 
 </details>
 
+
 <details open>
-<summary><strong>5) Reading Text</strong></summary>
+<summary><strong>5) Debate Prompt</strong></summary>
+
+**When you see a teammate being excluded or treated unfairly, should you speak up, or is it safer to stay out of it?**
+
+**Side A:** If you stay silent when someone is being treated badly, you are part of the problem. Speaking up — even quietly and carefully — makes the team safer for everyone, including yourself.
+
+**Side B:** Speaking up without real power or support can backfire badly. You might become a target yourself, and the person you tried to help might not even want you involved. Read the situation carefully first.
+
+_Your turn: Which side do you agree with more? Why?_
+
+</details>
+
+<details open>
+<summary><strong>6) Reading Text</strong></summary>
 
 Bullying and exclusion are not just emotional issues. They reduce quality, increase silence, and push people out of groups. Many cases continue because witnesses stay passive and authority acts too late.
 
@@ -201,7 +215,7 @@ In interview-style answers, avoid dramatic language. Show professional action, e
 </details>
 
 <details open>
-<summary><strong>6) List of Questions + Ideas</strong></summary>
+<summary><strong>7) Questions & Practice Ideas</strong></summary>
 
 ### Core Questions (must-practice)
 

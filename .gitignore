@@ -32,3 +32,5 @@ dist-ssr
 .env
 .env.local
 .env.development.local
+# Copilot Agent runtime files
+.copilot/

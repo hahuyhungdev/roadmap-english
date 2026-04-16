@@ -158,7 +158,7 @@ description: Discuss energy collapse signals, practical recovery routines, bound
 </details>
 
 <details open>
-<summary><strong>4) Typical Dialogues</strong></summary>
+<summary><strong>4) Dialogues</strong></summary>
 
 ### Dialogue 1 - Early Warning
 
@@ -189,8 +189,22 @@ After one month, my stress level dropped and my focus quality improved.
 
 </details>
 
+
 <details open>
-<summary><strong>5) Reading Text</strong></summary>
+<summary><strong>5) Debate Prompt</strong></summary>
+
+**Is burnout mainly the company's fault, or is it the individual's responsibility to manage?**
+
+**Side A:** Companies set the deadlines, the workload, and the team size. If those are unrealistic, burnout is inevitable no matter how well you manage yourself. The company has to fix the root cause.
+
+**Side B:** No company will protect your energy for you. You have to learn to set limits, say no to extra work, and take breaks. If you wait for the company to fix it, you will keep burning out.
+
+_Your turn: Which side do you agree with more? Why?_
+
+</details>
+
+<details open>
+<summary><strong>6) Reading Text</strong></summary>
 
 Burnout usually starts before people say they are burned out. Many people still function, but attention quality, patience, and communication slowly decline. If you wait for a visible breakdown, recovery becomes expensive.
 
@@ -201,7 +215,7 @@ In interviews, strong answers include one warning signal, one intervention, and 
 </details>
 
 <details open>
-<summary><strong>6) List of Questions + Ideas</strong></summary>
+<summary><strong>7) Questions & Practice Ideas</strong></summary>
 
 ### Core Questions (must-practice)
 

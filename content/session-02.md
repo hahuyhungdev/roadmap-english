@@ -157,7 +157,7 @@ description: Describe your system at a high level and explain how you work with 
 </details>
 
 <details open>
-<summary><strong>4) Typical Dialogues</strong></summary>
+<summary><strong>4) Dialogues</strong></summary>
 
 ### Dialogue 1 - Explain the System
 
@@ -188,8 +188,22 @@ We moved faster, but we still rechecked everything when the real API arrived to 
 
 </details>
 
+
 <details open>
-<summary><strong>5) Reading Text</strong></summary>
+<summary><strong>5) Debate Prompt</strong></summary>
+
+**When talking to non-engineers, should you simplify the technical details or keep them accurate?**
+
+**Side A:** If you oversimplify, people make wrong decisions because they don't understand the real constraints. It's better to spend more time explaining things correctly than to be misunderstood.
+
+**Side B:** Most non-engineers don't need every detail. If you keep it simple and focused on impact, they understand faster and trust you more. Too many technical terms just confuse people.
+
+_Your turn: Which side do you agree with more? Why?_
+
+</details>
+
+<details open>
+<summary><strong>6) Reading Text</strong></summary>
 
 Engineers often explain systems to people who are not technical. In that case, clear language is more important than deep detail. You can describe the system as a flow: input, process, output, and business result.
 
@@ -200,7 +214,7 @@ A strong answer in interviews shows both technical understanding and communicati
 </details>
 
 <details open>
-<summary><strong>6) List of Questions + Ideas</strong></summary>
+<summary><strong>7) Questions & Practice Ideas</strong></summary>
 
 ### Core Questions (must-practice)
 

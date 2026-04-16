@@ -158,7 +158,7 @@ description: Talk about one failure story clearly: what happened, your responsib
 </details>
 
 <details open>
-<summary><strong>4) Typical Dialogues</strong></summary>
+<summary><strong>4) Dialogues</strong></summary>
 
 ### Dialogue 1 - Owning a Failure
 
@@ -189,8 +189,22 @@ That approach helped the team focus on prevention, not blame.
 
 </details>
 
+
 <details open>
-<summary><strong>5) Reading Text</strong></summary>
+<summary><strong>5) Debate Prompt</strong></summary>
+
+**When you make a mistake at work, should you admit it immediately or wait until you fully understand what happened?**
+
+**Side A:** Admit it quickly, even if you don't have all the answers yet. Waiting makes it look like you are hiding something. People trust you more when you are honest early and take responsibility.
+
+**Side B:** If you speak too soon, you may give wrong information and look unprepared. Take the time to understand what happened fully, then explain clearly. A careful explanation is more useful than a rushed apology.
+
+_Your turn: Which side do you agree with more? Why?_
+
+</details>
+
+<details open>
+<summary><strong>6) Reading Text</strong></summary>
 
 In interviews, failure stories can become your strongest answers if you show real ownership. Companies know mistakes happen. What they care about is how you respond under pressure and what you learn.
 
@@ -201,7 +215,7 @@ Trust rebuild is not one speech. It comes from consistent action over time.
 </details>
 
 <details open>
-<summary><strong>6) List of Questions + Ideas</strong></summary>
+<summary><strong>7) Questions & Practice Ideas</strong></summary>
 
 ### Core Questions (must-practice)
 

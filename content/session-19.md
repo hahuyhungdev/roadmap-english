@@ -41,10 +41,10 @@ description: Discuss moral gray zones in digital life and project work: data mis
   _Example 2:_ The debate focused on launch date, but user harm potential was high.  
   _Example 3:_ We escalated and delayed the launch.
 
-- **pressure directive** /ˈprɛʃɚ dəˈrɛktɪv/ (n) - instruction from authority that pushes risky behavior  
-  _Example 1:_ Pressure directive was to "ship now and fix quietly later."  
-  _Example 2:_ I requested written approval and risk disclosure before proceeding.  
-  _Example 3:_ That request changed the decision path.
+- **management pressure** /ˈmænɪdʒmənt ˈprɛʃɚ/ (n) - instruction or expectation from leadership that pushes you toward a risky decision  
+  _Example 1:_ Management pressure was to ship now and fix the issue quietly later.  
+  _Example 2:_ I asked for written approval and a risk assessment before proceeding.  
+  _Example 3:_ That request changed the decision path and protected the team.
 
 - **escalation duty** /ˌɛskəˈleɪʃən ˈduti/ (n) - responsibility to report serious ethical risk  
   _Example 1:_ Escalation duty starts when user harm risk is credible.  
@@ -61,10 +61,10 @@ description: Discuss moral gray zones in digital life and project work: data mis
   _Example 2:_ Action was uncomfortable but necessary for fairness.  
   _Example 3:_ Consistent consequences improved accountability culture.
 
-- **accountability trail** /əˌkaʊntəˈbɪləti treɪl/ (n) - documented record of decisions and approvals  
-  _Example 1:_ Accountability trail showed who approved the risky change and when.  
-  _Example 2:_ Clear records prevented blame-shifting after incident review.  
-  _Example 3:_ We now require trails for all high-risk decisions.
+- **audit trail** /ˈɔːdɪt treɪl/ (n) - documented record showing who approved or made each decision  
+  _Example 1:_ The audit trail showed who approved the risky change and when.  
+  _Example 2:_ Clear records prevented blame-shifting after the incident review.  
+  _Example 3:_ We now require an audit trail for all high-risk decisions.
 
 **Additional useful terms:**
 
@@ -119,16 +119,16 @@ description: Discuss moral gray zones in digital life and project work: data mis
 - reject report manipulation
 - escalate with evidence
 - assess legal risk
-- enforce accountability trail
+- enforce audit trail
 - protect user consent
-- challenge pressure directives
+- challenge management pressures
 - avoid legal breaches
 - document decision ownership
 - accept consequence-based decisions
 
 **Examples (real work):**
 
-- We rejected a pressure directive to ship first because consent violation risk was unclear.
+- We rejected a management pressure to ship first because consent violation risk was unclear.
 - The delay hurt short-term momentum, but prevented legal and reputation damage.
 
 ### Useful Chunking & Sentence Starters
@@ -158,7 +158,7 @@ description: Discuss moral gray zones in digital life and project work: data mis
 </details>
 
 <details open>
-<summary><strong>4) Typical Dialogues</strong></summary>
+<summary><strong>4) Dialogues</strong></summary>
 
 ### Dialogue 1 - Hidden Defect Decision
 
@@ -189,24 +189,36 @@ Escalation can feel risky, but silence can create bigger punishment later.
 
 </details>
 
+
 <details open>
-<summary><strong>5) Reading Text</strong></summary>
+<summary><strong>5) Debate Prompt</strong></summary>
 
-In real projects and digital life, moral failure often starts with small shortcuts: hiding one defect, changing one metric definition, or reusing data for a "temporary" purpose. These actions can look practical under deadline pressure.
+**Is it ever acceptable to bend a company rule if you believe the outcome is clearly better?**
 
-The key is consequence thinking. Short-term convenience can create legal exposure, trust damage, and disciplinary outcomes. Ethical maturity means seeing that chain early and acting before harm spreads.
+**Side A:** Rules are not always written for every situation. Sometimes bending a small process rule to help a real user or fix a real problem is the right thing to do, and a good manager will understand that.
 
-In speaking practice, avoid abstract moral speeches. Use one concrete scenario, one escalation action, and one consequence.
+**Side B:** Once you start deciding which rules to follow and which to bend, you lose your team's trust. Rules exist for reasons you may not fully understand, and breaking them — even with good intentions — can have serious consequences.
+
+_Your turn: Which side do you agree with more? Why?_
 
 </details>
 
 <details open>
-<summary><strong>6) List of Questions + Ideas</strong></summary>
+<summary><strong>6) Reading Text</strong></summary>
+
+In real projects and digital life, moral failure often starts with small shortcuts: hiding one defect, changing one metric definition, or reusing data for a "temporary" purpose. These actions can look practical under deadline pressure.
+
+The key is consequence thinking. Short-term convenience can create legal exposure, trust damage, and disciplinary outcomes. Ethical maturity means seeing that chain early and acting before harm spreads. In interviews, ethical judgment questions test how you respond to real pressure, not abstract principles. A strong answer names one clear red line, the escalation you chose, and the outcome — without drama.
+
+</details>
+
+<details open>
+<summary><strong>7) Questions & Practice Ideas</strong></summary>
 
 ### Core Questions (must-practice)
 
 1. What moral gray zone have you seen in real projects or digital life?
-2. How do you respond when pressure directives conflict with user safety?
+2. How do you respond when management pressures conflict with user safety?
 3. What evidence should you include before escalating an ethical risk?
 4. What is your personal red line in data and reporting decisions?
 

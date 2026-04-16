@@ -40,20 +40,20 @@ description: Explain your stack choices and the trade-offs behind technical deci
   _Example 2:_ Better maintainability reduced time spent on small bug fixes.  
   _Example 3:_ I treat maintainability as a delivery speed multiplier, not optional cleanup.
 
-- **technical debt** /ˈtɛknɪkəl dɛt/ (n) - shortcuts that create future problems  
-  _Example 1:_ We accepted technical debt by skipping schema cleanup before launch.  
-  _Example 2:_ We documented that debt so it would not disappear from planning.  
-  _Example 3:_ In interviews, I mention debt together with a payoff plan.
+- **vendor lock-in** /ˈvɛndər lɑːk ɪn/ (n) - dependence on one provider that makes switching expensive  
+  _Example 1:_ We avoided vendor lock-in by keeping business logic separate from the cloud SDK.  
+  _Example 2:_ The team chose an open-source auth library to reduce vendor lock-in risk.  
+  _Example 3:_ In interviews, I explain this trade-off: managed services are fast to start but lock-in costs can grow.
 
-- **refactor** /ˌriːˈfæktər/ (v/n) - improve code structure without changing behavior  
-  _Example 1:_ We did a targeted refactor in checkout validation before scaling traffic.  
-  _Example 2:_ The refactor reduced duplicate logic in three services.  
-  _Example 3:_ It delayed one feature, but release stability improved.
+- **proof of concept** /pruːf əv ˈkɑːnsɛpt/ (n) - a small test to check if an idea will work before building the full solution  
+  _Example 1:_ We built a two-day proof of concept before committing to the new state library.  
+  _Example 2:_ The proof of concept revealed a performance issue in the data-fetching layer.  
+  _Example 3:_ Without a proof of concept, we would have built the wrong foundation.
 
-- **regression** /rɪˈɡrɛʃən/ (n) - old feature breaks after a new change  
-  _Example 1:_ We added API contract tests to prevent regression in mobile clients.  
-  _Example 2:_ One regression slipped because mock data did not match production payloads.  
-  _Example 3:_ Now we validate against OpenAPI examples before merging.
+- **backward compatibility** /ˈbækwərd kəmˌpætəˈbɪləti/ (n) - new code still works correctly with older versions or systems  
+  _Example 1:_ We kept the old API endpoint to preserve backward compatibility for mobile clients.  
+  _Example 2:_ Breaking backward compatibility caused a major incident when iOS users could not log in.  
+  _Example 3:_ I always check backward compatibility before removing a shared utility.
 
 - **deployment** /dɪˈplɔɪmənt/ (n) - process of releasing software  
   _Example 1:_ We improved deployment by adding migration checks in CI.  
@@ -157,7 +157,7 @@ description: Explain your stack choices and the trade-offs behind technical deci
 </details>
 
 <details open>
-<summary><strong>4) Typical Dialogues</strong></summary>
+<summary><strong>4) Dialogues</strong></summary>
 
 ### Dialogue 1 - Stack Choice
 
@@ -188,8 +188,22 @@ We migrated to a better tool. It cost more, but incident handling improved a lot
 
 </details>
 
+
 <details open>
-<summary><strong>5) Reading Text</strong></summary>
+<summary><strong>5) Debate Prompt</strong></summary>
+
+**Should you pick the best technical tool for the job, even if the team doesn't know it yet?**
+
+**Side A:** Using the tool the team already knows is safer and faster. Learning a new tool takes time, and during that time you ship less and make more mistakes.
+
+**Side B:** If you always pick the familiar tool, your team stops growing. Sometimes the right tool really does save months of pain, and the learning cost is worth it.
+
+_Your turn: Which side do you agree with more? Why?_
+
+</details>
+
+<details open>
+<summary><strong>6) Reading Text</strong></summary>
 
 Good engineers do not choose tools only because they are popular. They choose tools that fit team size, product goals, and risk level. A strong answer in interviews explains both the benefit and the cost.
 
@@ -200,7 +214,7 @@ When possible, show one real case from your team. That sounds natural and credib
 </details>
 
 <details open>
-<summary><strong>6) List of Questions + Ideas</strong></summary>
+<summary><strong>7) Questions & Practice Ideas</strong></summary>
 
 ### Core Questions (must-practice)
 

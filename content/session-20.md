@@ -158,7 +158,7 @@ description: Practice handling toxic behavior calmly: de-escalation, boundary se
 </details>
 
 <details open>
-<summary><strong>4) Typical Dialogues</strong></summary>
+<summary><strong>4) Dialogues</strong></summary>
 
 ### Dialogue 1 - Difficult Colleague
 
@@ -189,8 +189,22 @@ Escalation helped reset expectations and protect team productivity.
 
 </details>
 
+
 <details open>
-<summary><strong>5) Reading Text</strong></summary>
+<summary><strong>5) Debate Prompt</strong></summary>
+
+**When you have a conflict with a difficult colleague, should you talk to them directly first, or involve your manager early?**
+
+**Side A:** Always try to talk directly to the person first. Going to management immediately damages the relationship before you give it a real chance. Most conflicts can be solved with one honest conversation.
+
+**Side B:** Some people will not change behavior through a direct conversation. If the situation is affecting your work, escalating early saves time and prevents the problem from getting worse.
+
+_Your turn: Which side do you agree with more? Why?_
+
+</details>
+
+<details open>
+<summary><strong>6) Reading Text</strong></summary>
 
 Conflict in teams is normal, but difficult behavior needs clear handling. If teams ignore toxic patterns, quality and trust both decline. Engineers should use calm language, specific examples, and clear boundaries.
 
@@ -201,7 +215,7 @@ In interviews, show emotional control and practical steps. That demonstrates mat
 </details>
 
 <details open>
-<summary><strong>6) List of Questions + Ideas</strong></summary>
+<summary><strong>7) Questions & Practice Ideas</strong></summary>
 
 ### Core Questions (must-practice)
 

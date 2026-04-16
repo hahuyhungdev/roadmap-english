@@ -158,7 +158,7 @@ description: Talk about practical team docs that reduce repeated questions, rewo
 </details>
 
 <details open>
-<summary><strong>4) Typical Dialogues</strong></summary>
+<summary><strong>4) Dialogues</strong></summary>
 
 ### Dialogue 1 - Why Docs Matter
 
@@ -189,8 +189,22 @@ It takes extra discipline, but outdated docs dropped a lot.
 
 </details>
 
+
 <details open>
-<summary><strong>5) Reading Text</strong></summary>
+<summary><strong>5) Debate Prompt</strong></summary>
+
+**Is writing documentation really part of an engineer's job, or is it someone else's responsibility?**
+
+**Side A:** Engineers write the code, so only they understand it well enough to document it correctly. If they skip docs, onboarding takes longer and bugs are harder to fix. It's part of the job.
+
+**Side B:** Good engineers should spend their time solving hard technical problems, not writing text. That's what technical writers and PMs are for. Documentation takes time away from what engineers do best.
+
+_Your turn: Which side do you agree with more? Why?_
+
+</details>
+
+<details open>
+<summary><strong>6) Reading Text</strong></summary>
 
 Many teams treat documentation as extra work. In reality, it is part of delivery quality. A practical flow starts with a setup guide, clear API examples, and short notes for important UI states.
 
@@ -201,7 +215,7 @@ In interviews, share one real case where docs reduced repeated questions or QA l
 </details>
 
 <details open>
-<summary><strong>6) List of Questions + Ideas</strong></summary>
+<summary><strong>7) Questions & Practice Ideas</strong></summary>
 
 ### Core Questions (must-practice)
 

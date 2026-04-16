@@ -158,7 +158,7 @@ description: Cover one real project only: business problem, system flow, your ow
 </details>
 
 <details open>
-<summary><strong>4) Typical Dialogues</strong></summary>
+<summary><strong>4) Dialogues</strong></summary>
 
 ### Dialogue 1 - End-to-End Story
 
@@ -189,8 +189,22 @@ So next time, I would keep the same rollout strategy but improve cross-team alig
 
 </details>
 
+
 <details open>
-<summary><strong>5) Reading Text</strong></summary>
+<summary><strong>5) Debate Prompt</strong></summary>
+
+**In an interview walkthrough, should you focus more on your technical decisions or the business impact?**
+
+**Side A:** Interviewers at tech companies care most about how you think technically — your architecture choices, how you handled edge cases, and why you made certain tradeoffs. Business impact is secondary.
+
+**Side B:** Hundreds of candidates can describe their architecture. If you connect your work to a real business result — fewer errors, faster load time, higher conversion — your story stands out and is easier to remember.
+
+_Your turn: Which side do you agree with more? Why?_
+
+</details>
+
+<details open>
+<summary><strong>6) Reading Text</strong></summary>
 
 A strong project walkthrough is not a long technical explanation. It is a simple story with four parts: problem, system, role, and impact.
 
@@ -201,7 +215,7 @@ When you practice, keep it practical. Use one real project, one real trade-off, 
 </details>
 
 <details open>
-<summary><strong>6) List of Questions + Ideas</strong></summary>
+<summary><strong>7) Questions & Practice Ideas</strong></summary>
 
 ### Core Questions (must-practice)
 

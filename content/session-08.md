@@ -158,7 +158,7 @@ description: Explain incident investigation steps (logs, timeline, root cause) a
 </details>
 
 <details open>
-<summary><strong>4) Typical Dialogues</strong></summary>
+<summary><strong>4) Dialogues</strong></summary>
 
 ### Dialogue 1 - Structured Incident Explanation
 
@@ -189,8 +189,22 @@ It took extra effort, but our detection time became much faster.
 
 </details>
 
+
 <details open>
-<summary><strong>5) Reading Text</strong></summary>
+<summary><strong>5) Debate Prompt</strong></summary>
+
+**When a production system breaks, should you find the root cause before fixing anything, or fix it first?**
+
+**Side A:** You have to fix the immediate problem first. Every minute of downtime costs real money or hurts real users. Understand the root cause after you restore service, not during.
+
+**Side B:** If you fix the symptom without understanding the cause, the problem will come back, sometimes worse. A quick fix that fails again is more damaging than taking a few extra minutes to diagnose properly.
+
+_Your turn: Which side do you agree with more? Why?_
+
+</details>
+
+<details open>
+<summary><strong>6) Reading Text</strong></summary>
 
 Root cause analysis is not only about finding who made a mistake. It is about understanding the full chain: trigger, weak point, impact, and recovery. Calm, structured communication is very important in this process.
 
@@ -201,7 +215,7 @@ A good post-mortem should be practical: what happened, what we fixed, and what a
 </details>
 
 <details open>
-<summary><strong>6) List of Questions + Ideas</strong></summary>
+<summary><strong>7) Questions & Practice Ideas</strong></summary>
 
 ### Core Questions (must-practice)
 

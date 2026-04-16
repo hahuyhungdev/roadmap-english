@@ -157,7 +157,7 @@ description: Explain your role in simple business language, with real examples a
 </details>
 
 <details open>
-<summary><strong>4) Typical Dialogues</strong></summary>
+<summary><strong>4) Dialogues</strong></summary>
 
 ### Dialogue 1 - Explain Your Role
 
@@ -188,8 +188,22 @@ We decided to fix it before adding new features. We moved a feature to next spri
 
 </details>
 
+
 <details open>
-<summary><strong>5) Reading Text</strong></summary>
+<summary><strong>5) Debate Prompt</strong></summary>
+
+**Should engineers learn to speak in business language, or is that the PM's job?**
+
+**Side A:** Engineers should focus on writing good code. Explaining business value is what product managers are paid to do. When engineers try to speak "business language," they often say things that are inaccurate or oversimplified.
+
+**Side B:** When an engineer can explain why their work matters in business terms, they get more support, better priorities, and more trust from leadership. It takes practice, but it changes how people see your work.
+
+_Your turn: Which side do you agree with more? Why?_
+
+</details>
+
+<details open>
+<summary><strong>6) Reading Text</strong></summary>
 
 When you explain your role, do not list only technical tasks. Explain what changed for users and for the business. A good answer is simple: what problem existed, what you changed, and what result you got.
 
@@ -200,7 +214,7 @@ In interviews, practical language works best. Say what happened in a real releas
 </details>
 
 <details open>
-<summary><strong>6) List of Questions + Ideas</strong></summary>
+<summary><strong>7) Questions & Practice Ideas</strong></summary>
 
 ### Core Questions (must-practice)
 

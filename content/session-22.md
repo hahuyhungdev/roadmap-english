@@ -158,39 +158,55 @@ description: Discuss how you decide with incomplete data: assumptions, downside 
 </details>
 
 <details open>
-<summary><strong>4) Typical Dialogues</strong></summary>
+<summary><strong>4) Dialogues</strong></summary>
 
 ### Dialogue 1 - Decision Without Full Data
 
-**Teacher:** Tell me about a difficult career decision with incomplete information.
+**Interviewer:** Tell me about a time you had to make a decision without complete information.
 
-**Learner:**  
-I had two offers: one stable, one risky but with stronger mentorship. I did not know which company would perform better.
+**You:**  
+I had two offers at the same time — one at a stable company, one at an early-stage startup with stronger mentorship. I did not know how either would perform over the next year.
 
-I chose the riskier one and prepared a backup plan. It was stressful, but my skills improved much faster.
+I listed my decision criteria: learning speed, mentorship quality, and downside risk. The startup scored higher on the first two, so I chose it and built a six-month backup plan in case it did not work out.
 
-### Dialogue 2 - Fear and Confidence
+It was stressful at first, but my technical range expanded much faster than it would have in the safe role.
 
-**Friend:** What scares you most when taking career risks?
+### Dialogue 2 - Explaining Uncertainty to Stakeholders
 
-**Friend:**  
-The fear of making the wrong choice. I worry about losing time or money.
+**Interviewer:** How do you handle situations where leadership pushes for a clear answer but you do not have enough data yet?
 
-To manage that, I focus on downside planning instead of trying to predict everything.
+**You:**  
+I give them my best current estimate with explicit assumptions. I say something like: "Based on what I know now, I recommend option A. Here is what I am assuming, and here is the signal that would change my decision."
 
-### Dialogue 3 - Luck vs Effort
+That way I am not blocking the team, but I am also not pretending I have certainty I do not have. It keeps trust intact even when the answer changes later.
 
-**Teacher:** How do you think about luck in career success?
+### Dialogue 3 - Reversible vs Irreversible Decisions
 
-**Learner:**  
-Luck matters, but preparation still matters more in the long run. Good luck helps, but you need skills to use the opportunity.
+**Interviewer:** How do you decide when to act fast and when to slow down?
 
-So I cannot control timing, but I can control readiness.
+**You:**  
+I think about whether the decision is reversible. If I can undo it quickly, I move fast and adjust based on feedback. If the cost to reverse is high, I slow down, collect more data, and define a clear downside plan first.
+
+For example, choosing a new UI library for one feature is low-stakes — I can swap it. But choosing a new authentication approach affects all teams, so that needs proper review before we commit.
+
+</details>
+
+
+<details open>
+<summary><strong>5) Debate Prompt</strong></summary>
+
+**When you don't have all the information you need, is it better to wait for more data or decide now?**
+
+**Side A:** Acting on incomplete data leads to costly mistakes. A few extra hours or days of research can change the whole decision. Patience here is not weakness — it is discipline.
+
+**Side B:** Waiting for perfect information is just avoiding the decision. In most real situations, you already have enough to act. Delaying a clear decision when data is "good enough" wastes time and slows the team.
+
+_Your turn: Which side do you agree with more? Why?_
 
 </details>
 
 <details open>
-<summary><strong>5) Reading Text</strong></summary>
+<summary><strong>6) Reading Text</strong></summary>
 
 Career decisions are often made with incomplete information. You rarely know exactly how a new role, team, or company will turn out. Waiting for perfect certainty can lead to missed opportunities.
 
@@ -201,7 +217,7 @@ This mindset is useful in interviews and real work. Strong candidates can explai
 </details>
 
 <details open>
-<summary><strong>6) List of Questions + Ideas</strong></summary>
+<summary><strong>7) Questions & Practice Ideas</strong></summary>
 
 ### Core Questions (must-practice)
 

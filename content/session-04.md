@@ -157,7 +157,7 @@ description: Discuss technical debt in simple language and explain how you align
 </details>
 
 <details open>
-<summary><strong>4) Typical Dialogues</strong></summary>
+<summary><strong>4) Dialogues</strong></summary>
 
 ### Dialogue 1 - Explain Technical Debt
 
@@ -188,8 +188,22 @@ This approach is not always fastest today, but it avoids bigger delays later.
 
 </details>
 
+
 <details open>
-<summary><strong>5) Reading Text</strong></summary>
+<summary><strong>5) Debate Prompt</strong></summary>
+
+**Should you stop and fix technical debt before adding new features, or ship first and fix later?**
+
+**Side A:** Technical debt slows down every sprint. If you keep adding features on top of bad code, bugs multiply and the team gets slower. Fix it before it gets worse.
+
+**Side B:** Customers don't care about clean code. They care about new features. You can refactor in small steps while still shipping. Stopping everything to clean up is hard to justify to stakeholders.
+
+_Your turn: Which side do you agree with more? Why?_
+
+</details>
+
+<details open>
+<summary><strong>6) Reading Text</strong></summary>
 
 Technical debt is normal in real projects, especially when deadlines are tight. The problem starts when teams keep adding new features without fixing old weak areas. Then small changes become risky, and bug fixing takes too much time.
 
@@ -200,7 +214,7 @@ Good teams use a balanced plan: fix high-risk code first, keep some feature deli
 </details>
 
 <details open>
-<summary><strong>6) List of Questions + Ideas</strong></summary>
+<summary><strong>7) Questions & Practice Ideas</strong></summary>
 
 ### Core Questions (must-practice)
 

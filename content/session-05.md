@@ -157,7 +157,7 @@ description: Explain how you use AI tools in daily engineering work, where they 
 </details>
 
 <details open>
-<summary><strong>4) Typical Dialogues</strong></summary>
+<summary><strong>4) Dialogues</strong></summary>
 
 ### Dialogue 1 - Daily Use
 
@@ -188,8 +188,22 @@ So now we move faster with AI, but quality checks are stricter.
 
 </details>
 
+
 <details open>
-<summary><strong>5) Reading Text</strong></summary>
+<summary><strong>5) Debate Prompt</strong></summary>
+
+**Do AI coding tools make engineers more productive, or do they make engineers weaker over time?**
+
+**Side A:** AI tools help engineers skip the boring parts and focus on harder problems. A developer who uses AI well can do more in a day than one who refuses to use it.
+
+**Side B:** When you rely on AI to write your code, you stop training your own problem-solving skills. Over time, you lose the ability to work without it, and that's a real risk.
+
+_Your turn: Which side do you agree with more? Why?_
+
+</details>
+
+<details open>
+<summary><strong>6) Reading Text</strong></summary>
 
 AI tools are now part of many developer workflows. They help with boilerplate, test ideas, and quick debugging support. This can reduce routine work and let engineers focus on harder tasks.
 
@@ -200,7 +214,7 @@ In interviews, practical answers are best: explain where AI saves time, where it
 </details>
 
 <details open>
-<summary><strong>6) List of Questions + Ideas</strong></summary>
+<summary><strong>7) Questions & Practice Ideas</strong></summary>
 
 ### Core Questions (must-practice)
 

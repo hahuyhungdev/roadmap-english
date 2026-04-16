@@ -158,7 +158,7 @@ description: Talk about jealousy triggers, comparison habits, confidence loss af
 </details>
 
 <details open>
-<summary><strong>4) Typical Dialogues</strong></summary>
+<summary><strong>4) Dialogues</strong></summary>
 
 ### Dialogue 1 - Jealousy and Honesty
 
@@ -189,19 +189,33 @@ I compare skills, not identity. That keeps me motivated without feeling inferior
 
 </details>
 
+
 <details open>
-<summary><strong>5) Reading Text</strong></summary>
+<summary><strong>5) Debate Prompt</strong></summary>
+
+**Is comparing yourself to stronger engineers a useful way to grow, or does it mostly just hurt you?**
+
+**Side A:** Seeing what better engineers can do shows you exactly where your gaps are. It motivates you to practice more and set higher standards for yourself. Competition is useful.
+
+**Side B:** Comparing yourself to others mainly makes you feel like you are not good enough. It damages your confidence and distracts you from your own real progress. You grow faster when you focus on yourself.
+
+_Your turn: Which side do you agree with more? Why?_
+
+</details>
+
+<details open>
+<summary><strong>6) Reading Text</strong></summary>
 
 Comparison is normal in tech because progress is visible: titles, salary updates, and public posts. The problem starts when comparison becomes identity judgment instead of learning input.
 
 Jealousy is not a personal failure. It is a signal. If used well, it can reveal what you truly want to improve. If ignored, it turns into self-attack and unstable motivation.
 
-Strong professionals build confidence with evidence, not constant external validation. In speaking practice, show one emotional truth and one practical recovery action.
+Strong professionals build confidence with evidence, not constant external validation. In interviews, this topic comes up when you are asked about setbacks or imposter feelings. A strong answer shows one honest comparison moment, what you learned from it, and how your confidence recovered.
 
 </details>
 
 <details open>
-<summary><strong>6) List of Questions + Ideas</strong></summary>
+<summary><strong>7) Questions & Practice Ideas</strong></summary>
 
 ### Core Questions (must-practice)
 

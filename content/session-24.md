@@ -158,7 +158,7 @@ description: Practice salary conversation structure, evidence-based negotiation,
 </details>
 
 <details open>
-<summary><strong>4) Typical Dialogues</strong></summary>
+<summary><strong>4) Dialogues</strong></summary>
 
 ### Dialogue 1 - Salary Negotiation
 
@@ -189,8 +189,22 @@ This is direct but respectful. It may feel uncomfortable, but it keeps trust.
 
 </details>
 
+
 <details open>
-<summary><strong>5) Reading Text</strong></summary>
+<summary><strong>5) Debate Prompt</strong></summary>
+
+**Should you always negotiate a salary offer, or is it sometimes better to accept without negotiating?**
+
+**Side A:** Always negotiate. Companies expect it and usually leave room in the offer. The worst outcome is they say no and the offer stays the same. Never accepting the first number is just good financial sense.
+
+**Side B:** If the offer is already fair and you really want the job, negotiating can feel awkward and start the relationship on a transactional note. Sometimes the goodwill of a clean acceptance is worth more than a small raise.
+
+_Your turn: Which side do you agree with more? Why?_
+
+</details>
+
+<details open>
+<summary><strong>6) Reading Text</strong></summary>
 
 Salary and feedback discussions are both communication tests. In negotiation, preparation matters: know market data, know your impact, and stay flexible on total package options.
 
@@ -201,7 +215,7 @@ In interview answers, show calm tone, real examples, and clear follow-up steps.
 </details>
 
 <details open>
-<summary><strong>6) List of Questions + Ideas</strong></summary>
+<summary><strong>7) Questions & Practice Ideas</strong></summary>
 
 ### Core Questions (must-practice)
 

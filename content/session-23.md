@@ -158,7 +158,7 @@ description: Talk about personal drivers, value conflicts, meaningful work, and 
 </details>
 
 <details open>
-<summary><strong>4) Typical Dialogues</strong></summary>
+<summary><strong>4) Dialogues</strong></summary>
 
 ### Dialogue 1 - Real Motivation
 
@@ -189,8 +189,22 @@ A fast team is good, but not if quality and trust are ignored.
 
 </details>
 
+
 <details open>
-<summary><strong>5) Reading Text</strong></summary>
+<summary><strong>5) Debate Prompt</strong></summary>
+
+**Is it better to stay at one company long-term, or change jobs every two to three years?**
+
+**Side A:** Staying at one company lets you go deeper, build real trust, and take on larger responsibilities. Senior roles are often given to people who have proved themselves over time in the same place.
+
+**Side B:** Changing jobs every few years is the fastest way to grow your salary and see how different teams work. Most engineers in top companies got there by moving around, not staying put.
+
+_Your turn: Which side do you agree with more? Why?_
+
+</details>
+
+<details open>
+<summary><strong>6) Reading Text</strong></summary>
 
 Motivation answers in interviews often sound generic. Strong answers are personal and practical. You should explain what gives you energy, what drains you, and how your values shaped real decisions.
 
@@ -201,7 +215,7 @@ Balanced answers are best. Show ambition, but also show clarity about what kind 
 </details>
 
 <details open>
-<summary><strong>6) List of Questions + Ideas</strong></summary>
+<summary><strong>7) Questions & Practice Ideas</strong></summary>
 
 ### Core Questions (must-practice)
 

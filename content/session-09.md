@@ -36,15 +36,15 @@ description: Talk about real-time response: role in outage, coordination, status
   _Example 2:_ One person spoke to customers, while engineers focused on service restore.  
   _Example 3:_ Bridge calls work best with short, structured updates.
 
-- **status cadence** /stˈætəs kˈeɪdəns/ (n) - fixed rhythm for updates during an incident  
-  _Example 1:_ We used a 15-minute status cadence during the outage.  
-  _Example 2:_ Predictable cadence kept stakeholders calm and aligned.  
-  _Example 3:_ Cadence is more useful than random updates under pressure.
+- **update frequency** /ˈʌpdeɪt ˈfriːkwənsi/ (n) - how often you send status messages during an incident  
+  _Example 1:_ We agreed on a 15-minute update frequency during the outage.  
+  _Example 2:_ Regular updates kept stakeholders calm and stopped interruptions.  
+  _Example 3:_ Update frequency matters more than length — short and on-time wins.
 
-- **stakeholder broadcast** /stˈeɪkhoʊldɚ bɹˈɔdkˌæst/ (n) - short update shared to non-engineering teams  
-  _Example 1:_ We posted a stakeholder broadcast with impact, action, and ETA.  
+- **status update** /ˈsteɪtəs ˈʌpdeɪt/ (n) - short message telling non-technical teams what is happening and what comes next  
+  _Example 1:_ We posted a status update with impact scope, current action, and ETA.  
   _Example 2:_ Support used the message to answer customer tickets consistently.  
-  _Example 3:_ One clear broadcast prevented conflicting internal messages.
+  _Example 3:_ One clear status update prevented conflicting messages across teams.
 
 - **escalation** /ˌɛskəlˈeɪʃən/ (n) - raising an issue to a higher support level  
   _Example 1:_ We escalated to database team within 12 minutes.  
@@ -61,10 +61,10 @@ description: Talk about real-time response: role in outage, coordination, status
   _Example 2:_ Honest ETA updates built trust even before full recovery.  
   _Example 3:_ I avoid fake-precise ETAs when uncertainty is high.
 
-- **service restoration** /sˈɝvəs ɹˌɛstɚˈeɪʃən/ (n) - process of bringing service back to stable state  
-  _Example 1:_ Service restoration happened in two steps: partial traffic, then full traffic.  
-  _Example 2:_ We confirmed stability before announcing full restoration.  
-  _Example 3:_ Recovery communication was as important as technical actions.
+- **service recovery** /ˈsɝvəs rɪˈkʌvəri/ (n) - process of bringing a system back to a stable, working state  
+  _Example 1:_ Service recovery happened in two steps: partial traffic restored first, then full rollout.  
+  _Example 2:_ We confirmed stability before announcing full recovery to users.  
+  _Example 3:_ Recovery communication was as important as the technical fix itself.
 
 **Additional useful terms:**
 
@@ -72,7 +72,7 @@ description: Talk about real-time response: role in outage, coordination, status
 - **severity level** /səvˈɛɹəti lˈɛvəl/ (n) - incident urgency classification
 - **customer update** /kˈʌstəmɚ ˈʌpdeɪt/ (n) - external status message for users
 - **comms owner** /kˈɑmz ˈoʊnɚ/ (n) - person responsible for communication stream
-- **recovery checkpoint** /ɹɪkˈʌvɚi tʃˈɛkpɔɪnt/ (n) - predefined step to verify stability during restore
+- **health check** /hɛlθ tʃɛk/ (n) - quick test to confirm a system is running correctly after changes
 
 </details>
 
@@ -122,9 +122,9 @@ description: Talk about real-time response: role in outage, coordination, status
 - publish realistic ETA
 - protect communication clarity
 - reduce stakeholder panic
-- verify recovery checkpoints
+- run health checks
 - hand over context cleanly
-- confirm service restoration
+- confirm service recovery
 
 **Examples (real work):**
 
@@ -158,7 +158,7 @@ description: Talk about real-time response: role in outage, coordination, status
 </details>
 
 <details open>
-<summary><strong>4) Typical Dialogues</strong></summary>
+<summary><strong>4) Dialogues</strong></summary>
 
 ### Dialogue 1 - Real-Time Response
 
@@ -189,8 +189,22 @@ It took extra team time, but future incidents became easier to handle.
 
 </details>
 
+
 <details open>
-<summary><strong>5) Reading Text</strong></summary>
+<summary><strong>5) Debate Prompt</strong></summary>
+
+**During a production incident, should you send status updates every few minutes, or focus on fixing and explain later?**
+
+**Side A:** Stakeholders and teammates need to know what is happening. Regular updates — even short ones — prevent panic, stop people from interrupting you, and show you have control of the situation.
+
+**Side B:** Sending updates every few minutes during an active incident wastes critical time and can spread the wrong information before you fully understand what is wrong. Fix it first, explain it clearly after.
+
+_Your turn: Which side do you agree with more? Why?_
+
+</details>
+
+<details open>
+<summary><strong>6) Reading Text</strong></summary>
 
 Production incidents test both technical skills and communication skills. During pressure, teams need simple priorities: contain damage, restore service, and keep stakeholders informed.
 
@@ -201,13 +215,13 @@ After recovery, post-mortem work is critical. Without it, teams repeat the same 
 </details>
 
 <details open>
-<summary><strong>6) List of Questions + Ideas</strong></summary>
+<summary><strong>7) Questions & Practice Ideas</strong></summary>
 
 ### Core Questions (must-practice)
 
 1. What are your first 10-minute actions during a production outage?
 2. How do you assign roles across incident commander, responders, and comms owner?
-3. How do you keep status cadence clear for product and support teams?
+3. How do you keep update frequency clear for product and support teams?
 4. When do you decide rollback instead of continuing investigation?
 
 ### High-Value Discussion Questions
@@ -231,7 +245,7 @@ After recovery, post-mortem work is critical. Without it, teams repeat the same 
 **Tips for speaking practice:**
 
 - Speak in timeline order with timestamps.
-- Include one communication artifact: status update or stakeholder broadcast.
+- Include one communication artifact: status update or status update.
 - Show one trade-off decision and its consequence.
 
 ---

@@ -158,7 +158,7 @@ description: Discuss online image pressure, authenticity in LinkedIn/GitHub, cre
 </details>
 
 <details open>
-<summary><strong>4) Typical Dialogues</strong></summary>
+<summary><strong>4) Dialogues</strong></summary>
 
 ### Dialogue 1 - Profile Rewrite
 
@@ -189,19 +189,31 @@ My rule is simple: if I cannot defend a claim in an interview, I should not post
 
 </details>
 
+
 <details open>
-<summary><strong>5) Reading Text</strong></summary>
+<summary><strong>5) Debate Prompt</strong></summary>
 
-Professional branding is useful, but it becomes risky when image is far from reality. In hiring and networking, mismatch becomes visible when people ask for concrete details and examples.
+**Is it okay to present a polished, curated version of yourself online, or is it dishonest?**
 
-Authentic branding does not mean weak branding. It means clear claims, evidence, and consistent narrative. This approach protects both confidence and reputation.
+**Side A:** Everyone puts their best work online. That is just how personal branding works. Choosing what to share is not lying — it is showing what you are proud of and what you want to be known for.
 
-In speaking practice, strong answers include one example of image pressure, one correction, and one credibility lesson.
+**Side B:** If your online profile shows skills you don't really have, it will catch up with you in interviews or on the job. A gap between your profile and your real ability destroys trust fast.
+
+_Your turn: Which side do you agree with more? Why?_
 
 </details>
 
 <details open>
-<summary><strong>6) List of Questions + Ideas</strong></summary>
+<summary><strong>6) Reading Text</strong></summary>
+
+Professional branding is useful, but it becomes risky when image is far from reality. In hiring and networking, mismatch becomes visible when people ask for concrete details and examples.
+
+Authentic branding does not mean weak branding. It means clear claims, evidence, and consistent narrative. In interviews, credibility questions often follow profile claims. A strong candidate can describe one real gap, how they are closing it, and why honesty about limits builds more trust than a polished facade.
+
+</details>
+
+<details open>
+<summary><strong>7) Questions & Practice Ideas</strong></summary>
 
 ### Core Questions (must-practice)
 

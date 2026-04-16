@@ -158,7 +158,7 @@ description: Discuss attention loss, digital distraction patterns, deep-work rou
 </details>
 
 <details open>
-<summary><strong>4) Typical Dialogues</strong></summary>
+<summary><strong>4) Dialogues</strong></summary>
 
 ### Dialogue 1 - Distraction Diagnosis
 
@@ -189,19 +189,31 @@ The solution is not quitting tools. It is using intentional rules.
 
 </details>
 
+
 <details open>
-<summary><strong>5) Reading Text</strong></summary>
+<summary><strong>5) Debate Prompt</strong></summary>
 
-Most people rarely struggle because of lack of intelligence. They struggle because attention is fragmented all day. Constant switching weakens reasoning depth and increases avoidable mistakes.
+**Should companies block distracting apps during work hours, or trust engineers to manage their own attention?**
 
-Deep work is not a luxury for researchers only. It is necessary for difficult thinking, problem solving, and high-quality communication. People who protect focus usually produce better work with less stress.
+**Side A:** Deep technical work needs long blocks of focus. If apps like social media are one click away, most people will check them constantly. A company that removes the temptation protects everyone's output.
 
-In speaking practice, use one clear distraction pattern and one practical routine that changed results.
+**Side B:** Blocking apps treats engineers like children who can't make their own decisions. Engineers do their best work when they feel trusted, not monitored. Forced restrictions create resentment, not focus.
+
+_Your turn: Which side do you agree with more? Why?_
 
 </details>
 
 <details open>
-<summary><strong>6) List of Questions + Ideas</strong></summary>
+<summary><strong>6) Reading Text</strong></summary>
+
+Most people rarely struggle because of lack of intelligence. They struggle because attention is fragmented all day. Constant switching weakens reasoning depth and increases avoidable mistakes.
+
+Deep work is not a luxury for researchers only. It is necessary for difficult thinking, problem solving, and high-quality communication. People who protect focus usually produce better work with less stress. In remote-first teams, focus habits are visible in meeting quality, async communication, and code review depth — and that visibility is a real career signal.
+
+</details>
+
+<details open>
+<summary><strong>7) Questions & Practice Ideas</strong></summary>
 
 ### Core Questions (must-practice)
 

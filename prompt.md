@@ -127,7 +127,6 @@ description: [ONE CLEAR SENTENCE]
 **Focus:** [ONE PRACTICAL FOCUS SENTENCE]
 
 <details open>
-<details open>
 <summary><strong>1) Vocabulary</strong></summary>
 
 Generate 10-15 main terms + 5 additional useful terms for this session topic.
@@ -216,9 +215,10 @@ RULES FOR VOCABULARY SECTION:
 
 Write 3 dialogues using the most natural format for this session:
 
-- IT/Phase 2 sessions: use Interviewer → Candidate format
+- IT/Phase 1-2 sessions: use Interviewer → You format
 - Phase 3 life topics: use Teacher → Learner or Friend → Friend format
-- Phase 4 behavioral: use Interviewer → Candidate format
+- Phase 4 behavioral: use Interviewer → You format
+- Phase 5 mock: use Interviewer → You format
 
 Each answer must include:
 

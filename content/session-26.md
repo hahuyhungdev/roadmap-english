@@ -158,7 +158,7 @@ description: Final performance check with targeted gap analysis and concrete nex
 </details>
 
 <details open>
-<summary><strong>4) Typical Dialogues</strong></summary>
+<summary><strong>4) Dialogues</strong></summary>
 
 ### Dialogue 1 - Post-Mock Reflection
 
@@ -189,8 +189,22 @@ This is structured and realistic. It takes time, but progress is visible.
 
 </details>
 
+
 <details open>
-<summary><strong>5) Reading Text</strong></summary>
+<summary><strong>5) Debate Prompt</strong></summary>
+
+**In your final interview prep, should you focus on fixing your weakest areas or strengthening what you already do well?**
+
+**Side A:** Your weakest area is the most likely reason you won't get the offer. Fix the gap first. One bad answer in a critical area can cancel out ten good ones.
+
+**Side B:** Two days before the interview is not enough time to turn a weak area into a strength. Focus on what you do well, build your confidence, and show up sharp. Patching every gap at the last minute creates anxiety, not readiness.
+
+_Your turn: Which side do you agree with more? Why?_
+
+</details>
+
+<details open>
+<summary><strong>6) Reading Text</strong></summary>
 
 The final mock interview is not only a test. It is a planning tool. Strong candidates use it to identify realistic next steps, not just to celebrate good answers.
 
@@ -201,7 +215,7 @@ Interview progress comes from repetition and feedback loops. Clear structure, co
 </details>
 
 <details open>
-<summary><strong>6) List of Questions + Ideas</strong></summary>
+<summary><strong>7) Questions & Practice Ideas</strong></summary>
 
 ### Core Questions (must-practice)
 

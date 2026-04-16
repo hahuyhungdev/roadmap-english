@@ -158,7 +158,7 @@ description: Discuss loneliness in remote and digital life, shallow connection p
 </details>
 
 <details open>
-<summary><strong>4) Typical Dialogues</strong></summary>
+<summary><strong>4) Dialogues</strong></summary>
 
 ### Dialogue 1 - Hidden Loneliness
 
@@ -189,19 +189,31 @@ Reliable support takes effort, but it protects mental stability.
 
 </details>
 
+
 <details open>
-<summary><strong>5) Reading Text</strong></summary>
+<summary><strong>5) Debate Prompt</strong></summary>
 
-Many professionals are highly connected but still lonely. The issue is not message count. It is depth, consistency, and emotional safety in relationships.
+**Does remote work hurt your career growth, even if you feel productive day to day?**
 
-Technology can support real connection, but it can also replace it with shallow interaction. Without intentional habits, social drift becomes normal.
+**Side A:** In-office workers have conversations at lunch, pick up context from passing conversations, and are more visible to leadership. Over time, that informal access compounds into faster promotions and better opportunities.
 
-In speaking practice, strong answers show one loneliness pattern and one concrete change that improved connection quality.
+**Side B:** Remote work is fine for career growth if you are proactive about communication. You can build real relationships over video calls and chat. What slows your career is being passive, not being remote.
+
+_Your turn: Which side do you agree with more? Why?_
 
 </details>
 
 <details open>
-<summary><strong>6) List of Questions + Ideas</strong></summary>
+<summary><strong>6) Reading Text</strong></summary>
+
+Many professionals are highly connected but still lonely. The issue is not message count. It is depth, consistency, and emotional safety in relationships.
+
+Technology can support real connection, but it can also replace it with shallow interaction. Without intentional habits, social drift becomes normal. In remote and hybrid teams, connection habits directly affect collaboration quality — engineers who invest in real communication get more context, more support, and faster feedback, which is a practical career advantage.
+
+</details>
+
+<details open>
+<summary><strong>7) Questions & Practice Ideas</strong></summary>
 
 ### Core Questions (must-practice)
 

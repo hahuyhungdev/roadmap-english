@@ -158,7 +158,7 @@ description: Practice how to defend choices with cost/risk/timeline language whe
 </details>
 
 <details open>
-<summary><strong>4) Typical Dialogues</strong></summary>
+<summary><strong>4) Dialogues</strong></summary>
 
 ### Dialogue 1 - Product Pushback
 
@@ -189,8 +189,22 @@ This keeps discussion professional and focused on outcomes.
 
 </details>
 
+
 <details open>
-<summary><strong>5) Reading Text</strong></summary>
+<summary><strong>5) Debate Prompt</strong></summary>
+
+**When a stakeholder pushes back on your technical decision, should you defend it or adapt quickly?**
+
+**Side A:** If you genuinely believe your decision is correct, you should defend it with clear reasoning and data. Changing your position just because someone pushed back is not good engineering.
+
+**Side B:** Adapting your position when someone challenges you is not weakness. Relationships with stakeholders matter more than winning technical arguments, and a small compromise often moves things forward faster.
+
+_Your turn: Which side do you agree with more? Why?_
+
+</details>
+
+<details open>
+<summary><strong>6) Reading Text</strong></summary>
 
 Influence in engineering is not about being the loudest person. It is about clear reasoning, good timing, and respectful communication. Many decisions involve conflicting priorities: speed, quality, cost, and user impact.
 
@@ -201,7 +215,7 @@ Strong engineers are firm on important risks but flexible on details. That balan
 </details>
 
 <details open>
-<summary><strong>6) List of Questions + Ideas</strong></summary>
+<summary><strong>7) Questions & Practice Ideas</strong></summary>
 
 ### Core Questions (must-practice)
 

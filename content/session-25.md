@@ -157,7 +157,7 @@ description: Full simulation with pressure and follow-up questions; focus on str
 </details>
 
 <details open>
-<summary><strong>4) Typical Dialogues</strong></summary>
+<summary><strong>4) Dialogues</strong></summary>
 
 ### Dialogue 1 - Behavioral Story
 
@@ -188,8 +188,22 @@ I also want to understand how feedback is given and followed up.
 
 </details>
 
+
 <details open>
-<summary><strong>5) Reading Text</strong></summary>
+<summary><strong>5) Debate Prompt</strong></summary>
+
+**In an interview, is it better to pause and think carefully before answering, or respond quickly even if the answer is not perfect?**
+
+**Side A:** Taking a moment to structure your thoughts shows that you are careful and methodical, not reactive. A well-organized answer delivered after a short pause is far more impressive than a rushed, jumbled one.
+
+**Side B:** Long silences make interviewers uncomfortable and signal uncertainty. A confident response that is 80% right and delivered quickly feels better than a perfect answer that takes 30 seconds of silence to start.
+
+_Your turn: Which side do you agree with more? Why?_
+
+</details>
+
+<details open>
+<summary><strong>6) Reading Text</strong></summary>
 
 Mock Interview 1 is for realistic pressure, not perfect answers. The goal is to hear your own speaking patterns and find weak points early. Focus on structure, clarity, and natural language.
 
@@ -200,7 +214,7 @@ After the mock, do self-diagnosis first. Identify your top two strengths and top
 </details>
 
 <details open>
-<summary><strong>6) List of Questions + Ideas</strong></summary>
+<summary><strong>7) Questions & Practice Ideas</strong></summary>
 
 ### Core Questions (must-practice)
 
