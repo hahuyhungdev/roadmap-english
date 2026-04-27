@@ -68,10 +68,10 @@ export default function LessonAssistant({
     }
   }, [mode]);
 
-  // Auto-scroll to bottom
+  // Scroll when a new message row is added, but don't chase streamed content.
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages, loading]);
+  }, [messages.length]);
 
   async function onSubmit(e?: FormEvent) {
     if (e && typeof (e as FormEvent).preventDefault === "function") {
