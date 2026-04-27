@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { eq } from "drizzle-orm";
+import { eq, inArray } from "drizzle-orm";
 import { db } from "@/lib/db";
 import { lessonNotes } from "@/lib/schema";
 
@@ -9,11 +9,44 @@ function isValidSessionSlug(value: unknown): value is string {
 
 /**
  * GET /api/lesson-notes?sessionSlug=session-01
- * Returns: { sessionSlug, content, updatedAt }
+ * Returns one note: { sessionSlug, content, updatedAt }
+ *
+ * GET /api/lesson-notes?sessionSlugs=session-01,session-02
+ * Returns many notes: { notes: [{ sessionSlug, content, updatedAt }] }
  */
 export async function GET(req: Request) {
   try {
     const { searchParams } = new URL(req.url);
+    const sessionSlugs = searchParams
+      .get("sessionSlugs")
+      ?.split(",")
+      .map((slug) => slug.trim())
+      .filter(Boolean);
+
+    if (sessionSlugs?.length) {
+      const uniqueSessionSlugs = Array.from(new Set(sessionSlugs)).slice(0, 100);
+      const rows = await db
+        .select({
+          sessionSlug: lessonNotes.sessionSlug,
+          content: lessonNotes.content,
+          updatedAt: lessonNotes.updatedAt,
+        })
+        .from(lessonNotes)
+        .where(inArray(lessonNotes.sessionSlug, uniqueSessionSlugs));
+
+      const bySlug = new Map(rows.map((row) => [row.sessionSlug, row]));
+      return NextResponse.json({
+        notes: uniqueSessionSlugs.map((slug) => {
+          const row = bySlug.get(slug);
+          return {
+            sessionSlug: slug,
+            content: row?.content ?? "",
+            updatedAt: row?.updatedAt ? row.updatedAt.toISOString() : null,
+          };
+        }),
+      });
+    }
+
     const sessionSlug = searchParams.get("sessionSlug")?.trim();
 
     if (!isValidSessionSlug(sessionSlug)) {
