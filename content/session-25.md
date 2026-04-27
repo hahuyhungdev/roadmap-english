@@ -3,13 +3,13 @@ sessionNumber: 25
 title: Mock Interview 1
 topic: Full Simulation - Behavioral + Discussion + Q&A
 phase: PHASE 5 - MOCK INTERVIEW
-level: B1-B2
+level: B2
 description: Full simulation with pressure and follow-up questions; focus on structure, fluency, and content clarity.
 ---
 
 # Session 25: Mock Interview 1
 
-**Level:** B1-B2
+**Level:** B2
 **Focus:** Simulate a full interview with behavioral questions, discussion topics, and short Q&A.
 **Scope:** Full simulation with pressure and follow-up questions; focus on structure, fluency, and content clarity.
 
@@ -43,7 +43,7 @@ description: Full simulation with pressure and follow-up questions; focus on str
 
 - **clarity** /klˈɛrəti/ (n) - easy-to-understand speaking
   - _Example 1:_ Clarity improved when I used context -> action -> impact structure.
-  - _Example 2:_ I removed unnecessary technical detail for non-technical interviewers.
+  - _Example 2:_ I removed unnecessary technical detail for mixed interview panels.
   - _Example 3:_ Clear answers created better follow-up discussion.
 
 - **pushback** /ˈpʊʃˌbæk/ (n) - challenge from interviewer

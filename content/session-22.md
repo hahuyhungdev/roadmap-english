@@ -3,13 +3,13 @@ sessionNumber: 22
 title: Decision Making Under Uncertainty
 topic: Acting Without Full Information
 phase: PHASE 4 - BEHAVIORAL & INTERVIEW
-level: B1-B2
+level: B2
 description: Discuss how you decide with incomplete data: assumptions, downside planning, trade-offs, and final decision logic.
 ---
 
 # Session 22: Decision Making Under Uncertainty
 
-**Level:** B1-B2
+**Level:** B2
 **Focus:** Acting without full information.
 **Scope:** Discuss how you decide with incomplete data: assumptions, downside planning, trade-offs, and final decision logic.
 

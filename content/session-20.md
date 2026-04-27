@@ -3,13 +3,13 @@ sessionNumber: 20
 title: Conflict with Difficult People
 topic: De-escalation, Boundaries, and Professional Response
 phase: PHASE 4 - BEHAVIORAL & INTERVIEW
-level: B1-B2
+level: B2
 description: Practice handling toxic behavior calmly: de-escalation, boundary setting, documentation, and escalation path.
 ---
 
 # Session 20: Conflict with Difficult People
 
-**Level:** B1-B2
+**Level:** B2
 **Focus:** Emotional conflict, toxic situations.
 **Scope:** Practice handling toxic behavior calmly: de-escalation, boundary setting, documentation, and escalation path.
 

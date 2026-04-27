@@ -3,13 +3,13 @@ sessionNumber: 24
 title: Negotiation & Professional Feedback
 topic: Salary Talks and Growth Conversations
 phase: PHASE 4 - BEHAVIORAL & INTERVIEW
-level: B1-B2
+level: B2
 description: Practice salary conversation structure, evidence-based negotiation, and giving/receiving feedback with clear follow-up actions.
 ---
 
 # Session 24: Negotiation & Professional Feedback
 
-**Level:** B1-B2
+**Level:** B2
 **Focus:** Salary negotiation + giving/receiving feedback.
 **Scope:** Practice salary conversation structure, evidence-based negotiation, and giving/receiving feedback with clear follow-up actions.
 

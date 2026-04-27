@@ -3,13 +3,13 @@ sessionNumber: 21
 title: Ownership & Initiative
 topic: Taking Responsibility Beyond Your Role
 phase: PHASE 4 - BEHAVIORAL & INTERVIEW
-level: B1-B2
+level: B2
 description: Talk about stepping up without title: spotting gaps, unblocking teams, following through, and driving results proactively.
 ---
 
 # Session 21: Ownership & Initiative
 
-**Level:** B1-B2
+**Level:** B2
 **Focus:** Taking responsibility beyond your role.
 **Scope:** Talk about stepping up without title: spotting gaps, unblocking teams, following through, and driving results proactively.
 

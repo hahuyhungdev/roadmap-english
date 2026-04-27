@@ -3,13 +3,13 @@ sessionNumber: 23
 title: Motivation & Personal Values
 topic: What Really Drives You at Work
 phase: PHASE 4 - BEHAVIORAL & INTERVIEW
-level: B1-B2
+level: B2
 description: Talk about personal drivers, value conflicts, meaningful work, and real examples of choices guided by your values.
 ---
 
 # Session 23: Motivation & Personal Values
 
-**Level:** B1-B2
+**Level:** B2
 **Focus:** What truly drives you (real, not textbook).
 **Scope:** Talk about personal drivers, value conflicts, meaningful work, and real examples of choices guided by your values.
 

@@ -3,13 +3,13 @@ sessionNumber: 26
 title: Final Mock Interview & Gap Analysis
 topic: End-to-End Simulation with Structured Improvement Plan
 phase: PHASE 5 - MOCK INTERVIEW
-level: B1-B2
+level: B2
 description: Final performance check with targeted gap analysis and concrete next-step practice plan.
 ---
 
 # Session 26: Final Mock Interview & Gap Analysis
 
-**Level:** B1-B2
+**Level:** B2
 **Focus:** Deliver consistent interview performance and finish with a clear, practical next-step plan.
 **Scope:** Final performance check with targeted gap analysis and concrete next-step practice plan.
 
