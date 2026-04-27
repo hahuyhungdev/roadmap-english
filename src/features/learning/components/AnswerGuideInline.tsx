@@ -10,7 +10,18 @@ export interface AnswerGuideItem {
   exampleAnswers?: string[];
 }
 
+const GUIDE_METADATA_BREAK =
+  /([^\n])\s+(\*\*(?:Useful language|Pattern to apply):\*\*|(?:Useful language|Pattern to apply):)/g;
+
+function normalizeGuideMarkdown(content: string) {
+  return content
+    .replace(/\r\n?/g, "\n")
+    .replace(GUIDE_METADATA_BREAK, "$1\n\n$2");
+}
+
 function MarkdownText({ content }: { content: string }) {
+  const normalizedContent = normalizeGuideMarkdown(content);
+
   return (
     <div className="guide-markdown text-[15.5px] leading-7 text-gray-700 md:text-base">
       <ReactMarkdown
@@ -27,7 +38,7 @@ function MarkdownText({ content }: { content: string }) {
           ),
         }}
       >
-        {content}
+        {normalizedContent}
       </ReactMarkdown>
     </div>
   );
