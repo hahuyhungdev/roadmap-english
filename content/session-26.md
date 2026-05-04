@@ -2,7 +2,7 @@
 sessionNumber: 18
 title: Final Mock: Think Clearly Under Pressure
 topic: Hard Follow-ups, Recovery, and Open Discussion
-phase: PHASE 2 - THE STRATEGIC & PSYCHOLOGICAL ENGINE
+phase: PHASE 3 - THE STRATEGIC & PSYCHOLOGICAL ENGINE
 level: B2
 description: Practice the final mock with hard follow-ups first, then a deeper open discussion on one complex topic.
 ---

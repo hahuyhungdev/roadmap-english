@@ -2,7 +2,7 @@
 sessionNumber: 14
 title: Making Decisions with Incomplete Data
 topic: Defaults, Gut Feelings, and Safer Tests
-phase: PHASE 2 - THE STRATEGIC & PSYCHOLOGICAL ENGINE
+phase: PHASE 3 - THE STRATEGIC & PSYCHOLOGICAL ENGINE
 level: B2
 description: Practice making decisions when the data is unclear, the pressure is real, and you still need to move.
 ---

@@ -2,7 +2,7 @@
 sessionNumber: 13
 title: Burnout Recovery & Sustainable Energy
 topic: Real Burnout, Energy Stability, and Practical Recovery
-phase: PHASE 2 - THE STRATEGIC & PSYCHOLOGICAL ENGINE
+phase: PHASE 3 - THE STRATEGIC & PSYCHOLOGICAL ENGINE
 level: B2
 description: Discuss the difference between normal tiredness and real burnout, and build recovery habits that actually help in daily life.
 ---

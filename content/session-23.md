@@ -2,7 +2,7 @@
 sessionNumber: 15
 title: Motivation, Meaning & Skills That Last
 topic: Meaningful Work, Adaptability, and Long-Term Career Value
-phase: PHASE 2 - THE STRATEGIC & PSYCHOLOGICAL ENGINE
+phase: PHASE 3 - THE STRATEGIC & PSYCHOLOGICAL ENGINE
 level: B2
 description: Discuss what keeps work meaningful when technologies change quickly, and how to build skills that stay useful longer than one tool or trend.
 ---

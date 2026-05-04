@@ -2,7 +2,7 @@
 sessionNumber: 10
 title: Defending Decisions Across Teams
 topic: Calm Pushback, Clear Trade-offs, and Reading the Room
-phase: PHASE 2 - THE STRATEGIC & PSYCHOLOGICAL ENGINE
+phase: PHASE 3 - THE STRATEGIC & PSYCHOLOGICAL ENGINE
 level: B2
 description: Practice defending technical decisions across different teams while staying calm and making trade-offs easy to understand.
 ---

@@ -2,7 +2,7 @@
 sessionNumber: 17
 title: Responsible Engineering & Hidden Cost
 topic: Greener Defaults, Hidden Cost, and Digital Responsibility
-phase: PHASE 2 - THE STRATEGIC & PSYCHOLOGICAL ENGINE
+phase: PHASE 3 - THE STRATEGIC & PSYCHOLOGICAL ENGINE
 level: B2
 description: Discuss how everyday engineering choices create hidden cost, shared-resource pressure, and real ethical trade-offs.
 ---

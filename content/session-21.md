@@ -2,7 +2,7 @@
 sessionNumber: 16
 title: Ownership, Initiative & Working Trust
 topic: Useful Initiative, Team Trust, and Better Coordination
-phase: PHASE 2 - THE STRATEGIC & PSYCHOLOGICAL ENGINE
+phase: PHASE 3 - THE STRATEGIC & PSYCHOLOGICAL ENGINE
 level: B2
 description: Practice talking about initiative and trust-building as practical ways to make modern teams work better.
 ---

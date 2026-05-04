@@ -2,7 +2,7 @@
 sessionNumber: 11
 title: Owning Mistakes & Rebuilding Trust
 topic: Clear Accountability, Team Trust, and Safer Reviews
-phase: PHASE 2 - THE STRATEGIC & PSYCHOLOGICAL ENGINE
+phase: PHASE 3 - THE STRATEGIC & PSYCHOLOGICAL ENGINE
 level: B2
 description: Learn to talk about mistakes in a way that keeps accountability clear and helps the team trust you again.
 ---

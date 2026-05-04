@@ -48,7 +48,7 @@ trade-off language, and technical storytelling through these sessions.
 
 ---
 
-## PHASE 2 - THE STRATEGIC & PSYCHOLOGICAL ENGINE
+## PHASE 3 - THE STRATEGIC & PSYCHOLOGICAL ENGINE
 
 ### Phase 2 Success Criteria
 

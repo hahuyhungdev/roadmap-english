@@ -2,7 +2,7 @@
 sessionNumber: 12
 title: Deep Work, Distraction & Focus Recovery
 topic: Focus Windows, Digital Distraction, and Mental Recovery
-phase: PHASE 2 - THE STRATEGIC & PSYCHOLOGICAL ENGINE
+phase: PHASE 3 - THE STRATEGIC & PSYCHOLOGICAL ENGINE
 level: B2
 description: Build a realistic focus routine by understanding distraction, energy timing, and mental recovery in normal work life.
 ---
